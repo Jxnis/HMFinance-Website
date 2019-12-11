@@ -1,8 +1,13 @@
-const mongoose = require('mongoose');
+const  mysql = require('mysql');
+const keys = require('../keys');
 
-// uses a database named 'test' in de default port 27017.
-// to check your port run 'mongo'. Check 'connecting to'.
-// e.g: connecting to: mongodb://127.0.0.1:27017
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+const dbOptions = {
+    host: 'localhost',
+    user: keys.MYSQL_USERNAME,
+    pass: keys.MYSQL_PASSWORD,
+    db: keys.MYSQL_DB_NAME,
+}
+const dbURL = `mysql://${dbOptions.user}:${dbOptions.pass}@${dbOptions.host}/${dbOptions.db}`
+const  connection = mysql.createConnection(dbURL);
+
+module.exports = connection;
