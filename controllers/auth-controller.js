@@ -5,5 +5,5 @@ const showSignup = (req, res, next) => {
 const showLogin = (req, res, next) => {
     res.render('login');
 }
-
+ 
 module.exports = { showSignup, showLogin };
