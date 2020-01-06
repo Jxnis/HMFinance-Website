@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Wild Code School', user: req.user });
 })
 
-router.get('/dashboard', (req, res, next) => {
+router.get('/dashboard', authorize, (req, res, next) => {
   res.render('dashboard', { user: req.user });
 })
 
