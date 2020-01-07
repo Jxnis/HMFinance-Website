@@ -5,7 +5,6 @@ const {
 	createUser,
 	authenticateUser,
 	logout,
-	authorize,
 	authorizeSuperUser
 } = require('../controllers/auth-controller');
 
