@@ -1,10 +1,10 @@
 const express = require('express');
 const {
-    showSignup,
-    showLogin,
-    createUser,
-    authenticateUser,
-    logout
+	showSignup,
+	showLogin,
+	createUser,
+	authenticateUser,
+	logout
 } = require('../controllers/auth-controller');
 
 const router = express.Router();
