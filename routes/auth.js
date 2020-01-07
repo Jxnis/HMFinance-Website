@@ -4,13 +4,15 @@ const {
 	showLogin,
 	createUser,
 	authenticateUser,
-	logout
+	logout,
+	authorize,
+	authorizeSuperUser
 } = require('../controllers/auth-controller');
 
 const router = express.Router();
 
-router.get('/signup', showSignup);
-router.post('/signup', createUser);
+router.get('/signup', authorizeSuperUser, showSignup);
+router.post('/signup', authorizeSuperUser, createUser);
 
 router.get('/login', showLogin);
 router.post('/login', authenticateUser);

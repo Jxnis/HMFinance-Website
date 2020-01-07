@@ -18,9 +18,9 @@ connection.query(`CREATE TABLE review (
 
 connection.query(`CREATE TABLE user (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(250) NOT NULL ,
+    email VARCHAR(250) NOT NULL ,
     passwordHash VARBINARY(160) NOT NULL,
-    IS_SA BOOLEAN NOT NULL
+    IS_SA BOOLEAN NOT NULL DEFAULT 0
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
