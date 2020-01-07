@@ -3,40 +3,40 @@ const connection = require('../db/config');
 const User = {};
 
 const cleanUser = (user) => ({
-        ...user,
-        passwordHash: 'hidden'
-    })
+	...user,
+	passwordHash: 'hidden'
+});
  
 
 User.create = (userInfo, callback) => {
-    connection.query(
-        `INSERT INTO user (email, passwordHash)
+	connection.query(
+		`INSERT INTO user (email, passwordHash)
             VALUES (
                 ?,
-                SHA(?)
+                SHA2(?, 256)
             )
         `,
-        [userInfo.email, userInfo.password],
-        (err, results, fields) => callback(err, results, fields)
-    )
-}
+		[userInfo.email, userInfo.password],
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
 
 User.findByEmailAndPassword = (email, password, callback) => {
-    connection.query(
-        `SELECT * FROM user WHERE email = ? AND passwordHash = SHA(?)`,
-        [email, password],
-        (err, results, fields) => callback(err, cleanUser(results[0]), fields)
-    )
+	connection.query(
+		'SELECT * FROM user WHERE email = ? AND passwordHash = SHA2(?, 256)',
+		[email, password],
+		(err, results, fields) => callback(err, cleanUser(results[0]), fields)
+	);
  
-}
+};
 
 User.findById = (id, callback) => {
-    connection.query(
-        `SELECT * FROM user WHERE id = ?`,
-        [id],
-        (err, results, fields) => callback(err, cleanUser(results[0]), fields)
-    )
+	connection.query(
+		'SELECT * FROM user WHERE id = ?',
+		[id],
+		(err, results, fields) => callback(err, cleanUser(results[0]), fields)
+	);
  
-}
+};
 
 module.exports = User;

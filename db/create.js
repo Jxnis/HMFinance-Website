@@ -12,8 +12,8 @@ connection.query(`CREATE TABLE review (
     commentEN TEXT(20000),
     titleEN VARCHAR(250)
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
+	if(err) console.log(err);
+	console.log('query complete');
 });
 
 connection.query(`CREATE TABLE user (
@@ -22,8 +22,8 @@ connection.query(`CREATE TABLE user (
     passwordHash VARBINARY(160) NOT NULL,
     IS_SA BOOLEAN NOT NULL
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
+	if(err) console.log(err);
+	console.log('query complete');
 });
 
 connection.query(`CREATE TABLE client (
@@ -33,8 +33,8 @@ connection.query(`CREATE TABLE client (
     isShowing BOOLEAN DEFAULT 0,
     clientURL VARCHAR(250)
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
+	if(err) console.log(err);
+	console.log('query complete');
 });
 
 connection.query(`CREATE TABLE contactUs (
@@ -45,9 +45,9 @@ connection.query(`CREATE TABLE contactUs (
     phone VARCHAR(250),
     locationURL VARCHAR(250)
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
-})
+	if(err) console.log(err);
+	console.log('query complete');
+});
 
 connection.query(`CREATE TABLE simulatorSegSocial (
     taxENI DECIMAL(3,2),
@@ -62,9 +62,9 @@ connection.query(`CREATE TABLE simulatorSegSocial (
     percentageRevenueExemption DECIMAL(9,2),
     grossWageExemption DECIMAL(9,2)
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
-    connection.end();
+	if(err) console.log(err);
+	console.log('query complete');
+	connection.end();
 });
 
 connection.query(`CREATE TABLE homepage (
@@ -74,17 +74,8 @@ connection.query(`CREATE TABLE homepage (
     aboutUsPT TEXT(20000),
     aboutUsEN TEXT(20000),
     introEN TEXT(20000),
-    titleEN VARCHAR(250),
-    reviewID INT NOT NULL,
-    clientID INT NOT NULL,
-    contactUsID INT NOT NULL,
-    CONSTRAINT fk_reviewID
-    FOREIGN KEY (reviewID) REFERENCES review(id),
-    CONSTRAINT fk_clientID
-    FOREIGN KEY (clientID) REFERENCES client(id),
-    CONSTRAINT fk_contactUsID
-    FOREIGN KEY (contactUsID) REFERENCES contactUs(id)
+    titleEN VARCHAR(250)
 )`, (err) => {
-    if(err) console.log(err);
-    console.log('query complete');
+	if(err) console.log(err);
+	console.log('query complete');
 });
