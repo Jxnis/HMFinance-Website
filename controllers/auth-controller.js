@@ -31,6 +31,12 @@ const authorize = (req, res, next) => {
 	next();
 };
 
+const authorizeSuperUser = (req, res, next) => {
+	if(!req.user || req.user.IS_SA !== 1) return res.redirect('./login');
+
+	next();
+};
+
 const logout = (req, res) => {
 	req.logout();
 	res.redirect('/');
@@ -43,4 +49,5 @@ module.exports = {
 	authenticateUser,
 	logout,
 	authorize,
+	authorizeSuperUser
 };
