@@ -7,7 +7,7 @@ const dbOptions = {
 	password: keys.MYSQL_PASSWORD,
 	database: keys.MYSQL_DB_NAME,
 };
-//const dbURL = `mysql://${dbOptions.user}:${dbOptions.password}@${dbOptions.host}/${dbOptions.database}`;
+//const dbURL = `mysql://${dbOptions.user}:${dbOptions.password}@${dbOptions.host}:3306/${dbOptions.database}`;
 const  connection = mysql.createConnection(dbOptions);
 
 module.exports = connection;
