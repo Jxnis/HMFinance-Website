@@ -13,7 +13,7 @@ const createUser = (req, res) => {
 	User.create(req.body, (err) => {
 		if (err) return res.render('error', { err });
  
-		res.redirect('/auth/login');
+		res.redirect('/dashboard');
 	});
 };
 
@@ -27,6 +27,7 @@ const authenticateUser = passport.authenticate(
 
 // Protects all routes of the dashboard
 const authorize = (req, res, next) => {
+	console.log('authorize');
 	if(!req.user) return res.redirect('./auth/login');
 
 	next();

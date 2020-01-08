@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Contact Us Information
+
+    div
+        a(href="/dashboard") Dashboard
+
+    div
+        p #{contactInfo.address1}
+        p #{contactInfo.address2}
+        p #{contactInfo.email}
+        p #{contactInfo.phone} 
+        p #{contactInfo.locationURL}  
