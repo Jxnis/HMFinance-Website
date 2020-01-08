@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 I'm a Review
+
+    div
+        a(href="/dashboard") Dashboard
+
+    div
+        form(action="/dashboard/review", method="post")
+            div
+                input(type="text", name="name" placeholder="Nome")      
+            div
+                input(type="submit", value="Signup")
