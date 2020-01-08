@@ -1,12 +1,12 @@
 const passport = require('passport');
-const User = require('../models/User');
+const User = require('../../models/back-office/User');
 
 const showSignup = (req, res) => {
-	res.render('signup');
+	res.render('back-office/signup');
 };
 
 const showLogin = (req, res) => {
-	res.render('login');
+	res.render('back-office/login');
 };
 
 const createUser = (req, res) => {

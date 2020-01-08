@@ -1,4 +1,4 @@
-const connection = require('../db/config');
+const connection = require('../../db/config');
 
 const Review = {};
 
