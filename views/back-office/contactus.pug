@@ -1,14 +1,14 @@
 extends layout
 
 block content
-    h1 I'm a Review
+    h1 Contact Us Information
 
     div
         a(href="/dashboard") Dashboard
 
     div
-        form(action="/dashboard/review", method="post")
-            div
-                input(type="text", name="name" placeholder="Nome")      
-            div
-                input(type="submit", value="Signup")
+        p #{contactInfo.address1}
+        p #{contactInfo.address2}
+        p #{contactInfo.email}
+        p #{contactInfo.phone} 
+        p #{contactInfo.locationURL}  
