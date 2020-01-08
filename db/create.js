@@ -2,8 +2,8 @@ const connection = require('./config');
 
 connection.query(`CREATE TABLE review (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(250) NOT NULL,
-    email VARCHAR(250) NOT NULL,
+    name VARCHAR(250),
+    email VARCHAR(250),
     commentPT TEXT(20000),
     titlePT VARCHAR(250),
     company VARCHAR(250),
@@ -64,7 +64,6 @@ connection.query(`CREATE TABLE simulatorSegSocial (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
 });
 
 connection.query(`CREATE TABLE homepage (
@@ -78,4 +77,5 @@ connection.query(`CREATE TABLE homepage (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
+	connection.end();
 });
