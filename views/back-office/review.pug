@@ -7,8 +7,31 @@ block content
         a(href="/dashboard") Dashboard
 
     div
+        h1 Adicionar uma Review
         form(action="/dashboard/review", method="post")
             div
-                input(type="text", name="name" placeholder="Nome")      
+                input(type="text", name="name" placeholder="Nome")
+            div
+                input(type="email", name="email" placeholder="Email")      
+            div
+                input(type="text", name="commentPT" placeholder="Comentário em Português")
+            div
+                input(type="text", name="titlePT" placeholder="Título em Português")
+            div
+                input(type="text", name="company" placeholder="Empresa")
+            div
+                input(type="text", name="commentEN" placeholder="Comentário em Inglês")
+            div
+                input(type="text", name="titleEN" placeholder="Título em Inglês")
+            div
+                input(type="radio" name="isApproved" value="0" id="notApproved")
+                label(for="notApproved") Não Aprovado
+                input(type="radio" name="isApproved" value="1" id="approved")
+                label(for="approved") Aprovado 
+            div
+                input(type="radio" name="isShowing" value="0" id="notShowing")
+                label(for="notShowing") Não Mostrar
+                input(type="radio" name="isShowing" value="1" id="showing")
+                label(for="showing") Mostrar        
             div
                 input(type="submit", value="Signup")
