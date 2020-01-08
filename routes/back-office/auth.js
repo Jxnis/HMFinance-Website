@@ -6,7 +6,7 @@ const {
 	authenticateUser,
 	logout,
 	authorizeSuperUser
-} = require('../controllers/auth-controller');
+} = require('../../controllers/back-office/auth-controller');
 
 const router = express.Router();
 

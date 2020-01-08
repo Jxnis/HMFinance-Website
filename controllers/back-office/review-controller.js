@@ -1,4 +1,4 @@
-const Review = require('../models/Review');
+const Review = require('../../models/back-office/Review');
 
 const addReview = (req, res) => {
 	console.log('controller');
