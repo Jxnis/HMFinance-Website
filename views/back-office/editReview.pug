@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    div
+        a(href="/dashboard") Dashboard
+
+    div
+        h1 Alterar a Review
+        
+        div
+            h2 Editar Review #{review.id}
+            form(action="/dashboard/reviews/edit", method="post")
+                div
+                    input(type="text", name="name" value=review.name)
+                div
+                    input(type="email", name="email" value=review.email)      
+                div
+                    input(type="text", name="commentPT" value=review.commentPT)
+                div
+                    input(type="text", name="titlePT" value=review.titlePT)
+                div
+                    input(type="text", name="company" value=review.company)
+                div
+                    input(type="text", name="commentEN" value=review.commentEN)
+                div
+                    input(type="text", name="titleEN" value=review.titleEN)
+                div
+                    label 0-Não Aprovado 1-Aprovado
+                    br 
+                    input(type="text" name="isApproved" value=review.isApproved)
+                div
+                    label 0-Não Mostrar 1-Mostrar
+                    br 
+                    input(type="text" name="isShowing" value=review.isShowing)
+                div
+                    label Id da Review (Não Editar!)
+                    br
+                    input(type="text" name="id" value=review.id)
+                div
+                    input(type="submit", value="Editar")
+            br
+            form(action="/dashboard/reviews/" + review.id + "/delete" method="post")
+                div
+                    input(type="submit", value="Apagar")

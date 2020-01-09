@@ -43,5 +43,23 @@ Review.edit = (reviewEdited, callback) => {
 	);
 };
 
+Review.getById = (reviewId, callback) => {
+	connection.query(
+		`SELECT * FROM review
+		WHERE id=?	
+		`, reviewId,
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+
+Review.delete = (reviewId, callback) => {
+	// console.log(reviewId);
+	connection.query(
+		`DELETE FROM review
+		WHERE id=?
+		`, reviewId,
+		(err, results, fields) => callback(err, results, fields)		
+	);
+};
 
 module.exports = Review;

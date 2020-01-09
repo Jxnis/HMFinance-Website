@@ -6,90 +6,15 @@ block content
 
     h1 Reviews
     div
+        a(href="/dashboard/reviews/new") Adicionar Review
+    div
         each review in reviews
             p Nome: #{review.name}
-            p Email: #{review.email}
-            p Comentário em Português: #{review.commentPT}
-            p Título em Português: #{review.titlePT}
-            p Empresa: #{review.company}
-            p Comentário em Inglês: #{review.commentEN}
-            p Título em Inglês: #{review.titleEN}
-            p Aprovado (0-Não | 1-Sim): #{review.isApproved}
-            p Mostrar (0-Não | 1-Sim): #{review.isShowing}
-            a(href="/dashboard/review/" + review.id + "/edit") Editar
-    div
-        h1 Reviews
-        div
-            each review in reviews
-                h2 Editar Review #{review.id}
-                form(action="/dashboard/review/edit", method="post")
-                    div
-                        input(type="text", name="name" value=review.name)
-                    div
-                        input(type="email", name="email" value=review.email)      
-                    div
-                        input(type="text", name~="commentPT" value=review.commentPT)
-                    div
-                        input(type="text", name="titlePT" value=review.titlePT)
-                    div
-                        input(type="text", name="company" value=review.company)
-                    div
-                        input(type="text", name="commentEN" value=review.commentEN)
-                    div
-                        input(type="text", name="titleEN" value=review.titleEN)
-                    div
-                        label 0-Não Aprovado 1-Aprovado
-                        br 
-                        input(type="text" name="isApproved" value=review.isApproved)
-                    div
-                        label 0-Não Mostrar 1-Mostrar
-                        br 
-                        input(type="text" name="isShowing" value=review.isShowing)
-                    div
-                        label Id da Review (Não Editar!)
-                        br
-                        input(type="text" name="id" value=review.id)
-                    div
-                        input(type="submit", value="Editar")
-                br
-                h2 Apagar Review
-                form(action="dashboard/review/delete" method="post")
-                    div
-                        label Id da Review (Não Editar!)
-                        br
-                        input(type="text" name="id" value=review.id)
-                    div
-                        input(type="submit", value="Apagar")
+            p Comentário: #{review.commentPT}
+            a(href="/dashboard/reviews/" + review.id + "/edit") Editar Review
+        
 
-    div
-        h1 Adicionar uma Review
-        form(action="/dashboard/review", method="post")
-            div
-                input(type="text", name="name" placeholder="Nome")
-            div
-                input(type="email", name="email" placeholder="Email")      
-            div
-                input(type="text", name="commentPT" placeholder="Comentário em Português")
-            div
-                input(type="text", name="titlePT" placeholder="Título em Português")
-            div
-                input(type="text", name="company" placeholder="Empresa")
-            div
-                input(type="text", name="commentEN" placeholder="Comentário em Inglês")
-            div
-                input(type="text", name="titleEN" placeholder="Título em Inglês")
-            div
-                input(type="radio" name="isApproved" value="0" id="notApproved")
-                label(for="notApproved") Não Aprovado
-                input(type="radio" name="isApproved" value="1" id="approved")
-                label(for="approved") Aprovado 
-            div
-                input(type="radio" name="isShowing" value="0" id="notShowing")
-                label(for="notShowing") Não Mostrar
-                input(type="radio" name="isShowing" value="1" id="showing")
-                label(for="showing") Mostrar        
-            div
-                input(type="submit", value="Adicionar")
+    
     
     
                       
