@@ -9,4 +9,6 @@ Contactus.get = (callback) => {
 	);
 };
 
+Contactus.post = 
+
 module.exports = Contactus;

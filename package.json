@@ -15,7 +15,7 @@
     "express": "~4.16.0",
     "express-session": "^1.17.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
+    "myorgan": "~1.9.0",
     "mysql": "^2.17.1",
     "node-sass-middleware": "0.11.0",
     "passport": "^0.4.1",
