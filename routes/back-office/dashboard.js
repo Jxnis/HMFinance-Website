@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { authorize } = require('../../controllers/back-office/auth-controller');
 const { addReview, getReviews, editReview } = require('../../controllers/back-office/review-controller');
-const { getContactus } = require('../../controllers/back-office/contactus-controller');
+const { getContactus, editContactus } = require('../../controllers/back-office/contactus-controller');
 
 
 router.get('/', authorize, (req, res) => {
@@ -21,5 +21,8 @@ router.post('/review/edit', authorize, editReview);
 
 //ContactUs
 router.get('/contactus', authorize, getContactus);
+
+// Edit Contacts
+router.post('/contactus', authorize, editContactus);
 
 module.exports = router;

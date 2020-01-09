@@ -15,6 +15,16 @@ const getContactus = (req, res) => {
 	});
 };
 
+const editContactus = (req, res) => {
+	console.log(req);
+	Contactus.edit(req.body, (err) => {
+		if (err) return res.render('error', { err });
+		res.redirect('/dashboard');
+	});
+};
+
+
 module.exports = {
-	getContactus
+	getContactus,
+	editContactus
 };
