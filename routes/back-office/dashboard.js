@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { authorize } = require('../../controllers/back-office/auth-controller');
+const { getContactus, editContactus } = require('../../controllers/back-office/contactus-controller');
 const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, deleteReview } = require('../../controllers/back-office/review-controller');
-const { getContactus } = require('../../controllers/back-office/contactus-controller');
+
+
 
 
 router.get('/', authorize, (req, res) => {
@@ -31,5 +33,8 @@ router.post('/reviews/:id/delete', authorize, deleteReview);
 
 //ContactUs
 router.get('/contactus', authorize, getContactus);
+
+// Edit Contacts
+router.post('/contactus', authorize, editContactus);
 
 module.exports = router;
