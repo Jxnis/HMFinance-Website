@@ -15,4 +15,33 @@ Review.add = (reviewInfo, callback) => {
 	);
 };
 
+Review.get = (callback) => {
+	connection.query(
+		'SELECT * FROM review',
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+
+Review.edit = (reviewEdited, callback) => {
+	console.log(reviewEdited);
+	connection.query(
+		`UPDATE review
+		SET 
+			name=?,
+			email=?,
+			commentPT=?,
+			titlePT=?,
+			company=?,
+			isApproved=?,
+			isShowing=?,
+			commentEN=?,
+			titleEN=?
+		WHERE id=? 			
+        `,
+		[reviewEdited.name, reviewEdited.email, reviewEdited.commentPT, reviewEdited.titlePT, reviewEdited.company, reviewEdited.isApproved, reviewEdited.isShowing, reviewEdited.commentEN, reviewEdited.titleEN, reviewEdited.id],
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+
+
 module.exports = Review;

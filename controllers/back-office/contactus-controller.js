@@ -10,7 +10,7 @@ const getContactus = (req, res) => {
 			//console.log('We got the contacts succefully');
 			//console.log(results[0].address1);
 			let contactInfo = results[0];
-			res.render('back-office/contactus', { contactInfo });
+			res.render('back-office/contactus', {user: req.user, contactInfo });
 		}
 	});
 };
