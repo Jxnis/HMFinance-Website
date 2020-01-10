@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div
+        a(href="/dashboard") Dashboard
+
+    div
+        h1 Add a new Client
+        form(action="/dashboard/clients/new", method="post")
+            div
+                input(type="text", name="name" placeholder="Nome")
+            div
+                input(type="url", name="logoURL" placeholder="Logo URL")      
+            div
+                input(type="url", name="clientURL" placeholder="Client URL")      
+            div
+                input(type="submit", value="Add")

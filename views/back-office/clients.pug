@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    
+    div
+        h1 Clients Info
+        div
+            a(href="/dashboard/clients/new") Adicionar Client
+
+        table
+            tbody
+                tr
+                    th 
+                        h3 Name
+                    th 
+                        h3 Logo URL
+                    th
+                        h3 Client URL
+                    th  
+                        h3 Showing
+                    
+            each client in clients
+                tr
+                    td #{client.name}
+                    td #{client.logoURL} 
+                    td #{client.clientURL}
+                    td
+                        form(action=`/dashboard/clients/${client.id}/toggle` method="post")
+                            input(
+                            type="submit" 
+                            value=`${client.isShowing ?
+                                "Showing" : "Not Showing"}`
+                            )
+                    td
+                        form(action=`/dashboard/clients/${client.id}/edit` method="get")
+                                input(
+                                type="submit" 
+                                value="Edit")                 
+                    td
+                        form(action=`/dashboard/clients/${client.id}/delete` method="post")
+                            input(
+                            value=client.id 
+                            type="hidden" 
+                            name="id"
+                            )
+                            input(
+                            type="submit"
+                            value="Delete"
+                            )
+                            
