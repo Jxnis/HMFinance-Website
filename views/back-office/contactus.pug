@@ -1,14 +1,28 @@
 extends layout
 
 block content
-    h1 Contact Us Information
-
+    
     div
-        a(href="/dashboard") Dashboard
+        h1 Update Contact Info
+        form(action="/dashboard/contactus", method="post")
+            div
+                input(type="text", name="address1" value=contactInfo.address1)
+            div
+                input(type="text", name="address2" value=contactInfo.address2)      
+            div
+                input(type="email", name="email" value=contactInfo.email)
+            div
+                input(type="number", name="phone" value=contactInfo.phone)
+            div
+                input(type="url", name="locaton" value=contactInfo.locationURL)
 
-    div
-        p #{contactInfo.address1}
-        p #{contactInfo.address2}
-        p #{contactInfo.email}
-        p #{contactInfo.phone} 
-        p #{contactInfo.locationURL}  
+            div 
+                input(type="hidden", name="id" value=contactInfo.id)
+
+            div 
+                input(type="submit", value="Save")
+
+
+        
+
+        
