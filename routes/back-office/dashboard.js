@@ -3,7 +3,7 @@ const router = express.Router();
 const { authorize } = require('../../controllers/back-office/auth-controller');
 const { getContactus, editContactus } = require('../../controllers/back-office/contactus-controller');
 const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, deleteReview } = require('../../controllers/back-office/review-controller');
-
+const { getSimulatorPage, editSimulator } = require('../../controllers/back-office/simulators-controller');
 
 
 
