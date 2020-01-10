@@ -50,16 +50,16 @@ connection.query(`CREATE TABLE contactUs (
 });
 
 connection.query(`CREATE TABLE simulatorSegSocial (
-    taxENI DECIMAL(3,2),
-    taxTI DECIMAL(3,2),
-    percentageServices DECIMAL(3,2),
-    percentageGoods DECIMAL(3,2),
-    percentageOthers DECIMAL(3,2),
+    taxENI DECIMAL(4,4),
+    taxTI DECIMAL(4,4),
+    percentageServices DECIMAL(4,4),
+    percentageGoods DECIMAL(4,4),
+    percentageOthers DECIMAL(4,4),
     minENICO DECIMAL(9,2),
     minTICO DECIMAL(9,2),
     minTISimplificado DECIMAL(9,2),
     revenueExemption DECIMAL(9,2),
-    percentageRevenueExemption DECIMAL(9,2),
+    percentageRevenueExemption DECIMAL(4,4),
     grossWageExemption DECIMAL(9,2)
 )`, (err) => {
 	if(err) console.log(err);
