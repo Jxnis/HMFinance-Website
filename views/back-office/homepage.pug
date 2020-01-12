@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    
+    div
+        h1 Update Homepage Info
+        form(action="/dashboard/homepage", method="post")
+            div
+                input(type="text", name="titlePT" value=homepageInfo.titlePT)
+            div
+                input(type="text", name="titleEN" value=homepageInfo.titleEN)      
+            div
+                input(type="text", name="introPT" value=homepageInfo.introPT)
+            div
+                input(type="text", name="introEN" value=homepageInfo.introEN)
+            div
+                input(type="text", name="aboutUsPT" value=homepageInfo.aboutUsPT)
+            div
+                input(type="text", name="aboutUsEN" value=homepageInfo.aboutUsEN)
+
+            div 
+                input(type="hidden", name="id" value=homepageInfo.id)
+
+            div 
+                input(type="submit", value="Save")
+
+
+        
