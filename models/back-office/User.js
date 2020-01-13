@@ -10,7 +10,7 @@ const cleanUser = (user) => ({
 //All users
 User.get = (callback) => {
 	connection.query(
-		'SELECT * FROM user',
+		'SELECT * FROM user WHERE IS_SA = 0',
 		(err, results, fields) => callback(err, cleanUser(results), fields)
 	);
  
