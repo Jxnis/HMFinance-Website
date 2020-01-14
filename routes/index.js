@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const {getAllInfo} = require('../controllers/homepage-controller-front');
 
 /* GET home page. */
-router.get('/', (req, res) => {
-	res.render('index', { title: 'Wild Code School', user: req.user });
-});
+router.get('/', getAllInfo);
 
 module.exports = router;
