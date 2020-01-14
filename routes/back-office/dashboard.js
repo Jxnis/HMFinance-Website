@@ -5,8 +5,6 @@ const { getContactus, editContactus } = require('../../controllers/back-office/c
 const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, deleteReview } = require('../../controllers/back-office/review-controller');
 const { getSimulatorPage, editSimulator } = require('../../controllers/back-office/simulators-controller');
 
-
-
 router.get('/', authorize, (req, res) => {
 	res.render('back-office/dashboard', { user: req.user });
 });
