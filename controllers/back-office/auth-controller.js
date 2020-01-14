@@ -52,15 +52,14 @@ const authenticateUser = passport.authenticate(
 // Protects all routes of the dashboard
 const authorize = (req, res, next) => {
 	console.log('authorize');
-	if(!req.user) return res.redirect('./auth/login');
+	if(!req.user) return res.redirect('/auth/login');
 
 	next();
 };
 
 // Only to Protect Sign Up on the Dashboard
 const authorizeSuperUser = (req, res, next) => {
-	if(!req.user || req.user.IS_SA !== 1) return res.redirect('./login');
-
+	if(!req.user || req.user.IS_SA !== 1) return res.redirect('/auth/login');
 	next();
 };
 
