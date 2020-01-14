@@ -9,36 +9,47 @@ block content
         
         div
             h2 Editar Review #{review.id}
-            form(action="/dashboard/reviews/edit", method="post")
+            form(action=`/dashboard/reviews/${review.id}/edit`, method="post")
                 div
+                    label Name
+                    br
                     input(type="text", name="name" value=review.name)
                 div
+                    label Email
+                    br
                     input(type="email", name="email" value=review.email)      
                 div
+                    label Comment PT
+                    br
                     input(type="text", name="commentPT" value=review.commentPT)
                 div
+                    label Title PT
+                    br
                     input(type="text", name="titlePT" value=review.titlePT)
                 div
+                    label Company
+                    br
                     input(type="text", name="company" value=review.company)
                 div
+                    label Comment EN
+                    br
                     input(type="text", name="commentEN" value=review.commentEN)
                 div
+                    label Title EN
+                    br
                     input(type="text", name="titleEN" value=review.titleEN)
                 div
-                    label 0-Não Aprovado 1-Aprovado
-                    br 
-                    input(type="text" name="isApproved" value=review.isApproved)
+                    label 0- Não Aprovado 1- Aprovado
+                    br
+                    input(type="number" name="isApproved" value=review.isApproved step=1 min=0 max=1)
                 div
                     label 0-Não Mostrar 1-Mostrar
                     br 
-                    input(type="text" name="isShowing" value=review.isShowing)
-                div
-                    label Id da Review (Não Editar!)
-                    br
-                    input(type="text" name="id" value=review.id)
+                    input(type="number" name="isShowing" value=review.isShowing step=1 min=0 max=1)
                 div
                     input(type="submit", value="Editar")
             br
             form(action="/dashboard/reviews/" + review.id + "/delete" method="post")
                 div
                     input(type="submit", value="Apagar")
+

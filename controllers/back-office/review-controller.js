@@ -20,7 +20,7 @@ const getReviews = (req, res) => {
 };
 
 const editReview = (req, res) => {
-	Review.edit(req.body, (err) => {
+	Review.edit(req, (err) => {
 		if (err) return res.render('error', { err });
 		res.redirect('/dashboard/reviews');
 	});
@@ -36,7 +36,7 @@ const getEditReviewPage = (req, res) => {
 	Review.getById(req.params.id, (err, results) => {
 		if(err) return res.render('error', { err });
 		let review = results[0];
-		res.render('back-office/editReview', { review });
+		res.render('back-office/editReview', {user: req.user, review });
 	});
 };
 

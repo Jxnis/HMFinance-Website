@@ -42,9 +42,9 @@ Clients.getById = (clientID, callback) => {
 	);
 };
 Clients.edit = (clientInfo, callback) => {
-	console.log(clientInfo.id);
+	console.log(clientInfo);
 	connection.query('UPDATE client SET name=?, logoURL=?, clientURL=? WHERE id=?',
-		[clientInfo.name, clientInfo.logoURL, clientInfo.clientURL, clientInfo.id],
+		[clientInfo.body.name, clientInfo.body.logoURL, clientInfo.body.clientURL, clientInfo.params.id],
 		(err, res, fields) => callback(err, res, fields) 
 	);
 };

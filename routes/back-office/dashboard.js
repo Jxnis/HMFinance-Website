@@ -24,7 +24,7 @@ router.get('/reviews/:id/edit', authorize, getEditReviewPage);
 // Add a review
 router.post('/reviews', authorize, addReview);
 // Edit a review
-router.post('/reviews/edit', authorize, editReview);
+router.post('/reviews/:id/edit', authorize, editReview);
 // Delete a review
 router.post('/reviews/:id/delete', authorize, deleteReview);
 
