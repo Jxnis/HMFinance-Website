@@ -23,7 +23,6 @@ Review.get = (callback) => {
 };
 
 Review.edit = (reviewEdited, callback) => {
-	console.log(reviewEdited);
 	connection.query(
 		`UPDATE review
 		SET 
@@ -38,7 +37,7 @@ Review.edit = (reviewEdited, callback) => {
 			titleEN=?
 		WHERE id=? 			
         `,
-		[reviewEdited.name, reviewEdited.email, reviewEdited.commentPT, reviewEdited.titlePT, reviewEdited.company, reviewEdited.isApproved, reviewEdited.isShowing, reviewEdited.commentEN, reviewEdited.titleEN, reviewEdited.id],
+		[reviewEdited.body.name, reviewEdited.body.email, reviewEdited.body.commentPT, reviewEdited.body.titlePT, reviewEdited.body.company, reviewEdited.body.isApproved, reviewEdited.body.isShowing, reviewEdited.body.commentEN, reviewEdited.body.titleEN, reviewEdited.params.id],
 		(err, results, fields) => callback(err, results, fields)
 	);
 };

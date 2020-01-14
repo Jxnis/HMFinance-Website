@@ -55,7 +55,7 @@ const getEditClientPage =  (req, res) => {
 };
 const editClients = (req, res) => {
 	// console.log(req.body);
-	Clients.edit(req.body, (err) => {
+	Clients.edit(req, (err) => {
 		if (err) return res.render('error', { err });
 		res.redirect('/dashboard/clients');
 	});
