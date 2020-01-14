@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div
+        a(href="/dashboard") Dashboard
+
+    div
+        h2 Edit Client
+        form(action=`/dashboard/clients/${client.id}/edit`, method="post")
+            div
+                input(type="text", name="name" value=client.name)
+            div
+                input(type="url", name="logoURL" value=client.logoURL)      
+            div
+                input(type="url", name="clientURL" value=client.clientURL)                
+            div
+                input(type="submit", value="Edit")

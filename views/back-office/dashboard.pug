@@ -3,15 +3,31 @@ extends layout
 block content
     h1 Dashboard
     
-    p This is your dashboard
+    h3 This is your dashboard
+
+    p Here you can access, modify or add information in your website
+
+
+    h2 Administration Management
+    p Here you can manage the users that have access to the dashboard. Only the SuperAdmin can do this.
+    div
+        a(href="/auth") > Users Management
+
+    h2 Website Sections
+    p You should choose the section in which you intend to make the changes
 
     div
-        a(href="/auth/signup") > Add User
+        a(href="/dashboard/homepage") > Homepage 
     
     div
         a(href='/dashboard/reviews') > Reviews
 
     div
-        a(href='/dashboard/contactus') > Edit Contact Us information
+        a(href='/dashboard/contactus') > Contact Us 
+
+    div
+        a(href='/dashboard/clients') > Clients 
+
     div
         a(href='/dashboard/simulators') > Simulators    
+

@@ -8,10 +8,13 @@ block content
     div
         a(href="/dashboard/reviews/new") Adicionar Review
     div
+        h3 List of the Reviews
         each review in reviews
-            p Nome: #{review.name}
-            p Comentário: #{review.commentPT}
-            a(href="/dashboard/reviews/" + review.id + "/edit") Editar Review
+            div
+                p Nome: #{review.name}
+                p Comentário: #{review.commentPT}
+            div
+                a(href="/dashboard/reviews/" + review.id + "/edit") Editar Review
         
 
     

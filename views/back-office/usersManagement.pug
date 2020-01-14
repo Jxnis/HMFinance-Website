@@ -1,0 +1,28 @@
+block content
+  h1 Users
+  div
+    a(href="/dashboard") Dashboard
+  
+  
+  h3 Users List
+  p Here you can delete users
+  table
+    tbody
+        tr
+            th 
+                h3 User  
+            th
+                p       
+    each user in users
+        tr
+            td #{user.email}
+            td
+              form(action=`/auth/${user.id}/delete` method="post")
+                  input(
+                  type="submit"
+                  value="Delete"
+                  )
+  h3 New User
+  div
+    a(href="/auth/signup") Add New User
+

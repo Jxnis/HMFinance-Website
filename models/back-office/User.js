@@ -7,7 +7,26 @@ const cleanUser = (user) => ({
 	passwordHash: 'hidden'
 });
  
+//All users
+User.get = (callback) => {
+	connection.query(
+		'SELECT * FROM user WHERE IS_SA = 0',
+		(err, results, fields) => callback(err, cleanUser(results), fields)
+	);
+ 
+};
+//Delete user by id
+User.delete = (params, callback) => {
+	const id = params.id;
+	console.log(id);
+	connection.query('DELETE FROM user WHERE id = ?',
+		[id],
+		(err, res, fields) => callback(err, res, fields) 
+	);
+};
 
+
+//SignUp
 User.create = (userInfo, callback) => {
 	connection.query(
 		`INSERT INTO user (email, passwordHash)
@@ -31,6 +50,7 @@ User.findByEmailAndPassword = (email, password, callback) => {
 };
 
 User.findById = (id, callback) => {
+	//console.log(id);
 	connection.query(
 		'SELECT * FROM user WHERE id = ?',
 		[id],
