@@ -1,4 +1,5 @@
 const Homepage = require('../models/homepage');
+const Translations = require('../locales/translations');
 
 const getAllInfo = (req, res, next) => {
 	Homepage.getAll((err, results) => {
@@ -7,7 +8,9 @@ const getAllInfo = (req, res, next) => {
 		} else {
 			console.log(results);
 			const data = results;
-			res.render('en/index', {data});
+			// res.render('en/index', {data});
+
+			res.render('en/index', {data, translations: Translations, locale: 'en'});
 		}
 	});
 };
