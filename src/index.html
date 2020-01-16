@@ -6,23 +6,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="../public/stylesheets/style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script> 
+	$(document).ready(function(){
+		$("#menubutton").click(function(){
+			$("#navbar").slideToggle();
+		});
+	});
+	$(document).ready(function(){
+		$("#navbar").click(function(){
+			$("#navbar").slideToggle();
+		});
+	});
+	</script>
+
+
 </head>
 
 <body>
+	<div id="menubuttondiv">
+		<img id="menubutton" src="../public/media/menu.png" alt="Company Constitution" height="40" width="40">
+	</div>
+
 	<div id="navbar">
 		<ul>
-			<li class="home"><a href="#services">Services</a></li>
+			<li class="clients"><a href="#clients">Clients</a></li>
+			<li class="services"><a href="#services">Services</a></li>
 			<li class="tutorials"><a class="active" href="#simulators">Simulators</a></li>
-			<li class="about"><a href="#aboutus">About Us</a></li>
+			<li class="aboutus"><a href="#aboutus">About Us</a></li>
+			<li class="contactus"><a href="#contactus">Contact Us</a></li>
 		</ul>
 	</div>
 
+	<div id="spacer"></div>
 	<div id="home">
 		<img class="separator" src="../public/media/7.jpg" alt="Company Constitution">
-		<div id="home_left">
-			<img id="logo" src="../public/media/logo.png" alt="Company Constitution">
+		<div id="logo">
+			<img src="../public/media/logo.png" alt="HM Finance">
+			<h2>Financial Personal Trainer</h2>
 		</div>
-		<div id="home_right"><h2>Financial Personal Trainer</h2></div>
+		<div id="describox"></div>
+		<div id="descri">
+			<h3 id="descri1">O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos.</h3>
+			<h3 id="descri2">O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado. </h3 id="descri2">
+			<h3 id="descri3">Com experiência em PME's e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais. </h3 id="descri3">
+			<h3 id="descri4">A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua. </h3 id="descri4">
+		</div>
+		
 	</div>
 
 	<div id="clients"><h1>CLIENTS</h1></div>
@@ -49,7 +80,7 @@
 
 	<div id="contactus"><h1>CONTACT US</h1></div>	
 
-	<div id="footer"><h3>Footer</h3></div>	
+	<div id="footer"><h3>FOOTER</h3></div>	
 
 </body>
 
