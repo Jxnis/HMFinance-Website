@@ -1,10 +1,9 @@
 block content
   h1 Homepage
 
-
-  
+ 
   p Language Option
-  form(action="/", method="get")
+  form(action="/setlanguage", method="post")
     select(name="language" id="language")
       option(value="pt") pt
       option(value="en") en

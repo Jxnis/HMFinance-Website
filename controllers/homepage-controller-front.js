@@ -1,18 +1,15 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 const Homepage = require('../models/homepage');
 const Translations = require('../locales/translations');
 
 
-const getBrowserLang = (req, res, next) => {
-	let language = req.acceptsLanguages('pt', 'en', 'en_US');
-	//console.log(language);
-	language ? req.language = language : req.language = 'en';
-	
-	next();
-};
-
 const getAllInfo = (req, res) => {
-	console.log(req.params);
-	let langBrowser = req.language;
+	//console.log(req.cookies.language);
+	let language = '';
+	let browserLang = req.language;
+	let cookieLang = req.cookies.language;
+	cookieLang ? language = cookieLang : language = browserLang; 
+	 
 	Homepage.getAll((err, results) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the contact information' });
@@ -21,12 +18,11 @@ const getAllInfo = (req, res) => {
 			const data = results;
 			// res.render('en/index', {data});
 
-			res.render('index', {data, translations: Translations, locale: langBrowser});
+			res.render('index', {data, translations: Translations, locale: language});
 		}
 	});
 };
 
 module.exports = {
-	getBrowserLang,
 	getAllInfo
 };
