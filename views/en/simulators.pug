@@ -3,18 +3,45 @@ block content
     div
         form(id="simulatorSS") 
             div    
+                label Trabalhador:
                 select(id="workers")
-                    option(value="ENI") Empresário em Nome Individual
                     option(value="TI") Trabalhador Independente
+                    option(value="ENI") Empresário em Nome Individual
             div    
-                select(id="workers")
-                    option(value="ENI") cont org
-                    option(value="TI") simp
-            
-
+                label Regime:
+                select(id="regime")
+                    option(value="Simp") Regime Simplificado
+                    option(value="CO") Contabilidade Organizada
             div    
-                label Profit/Year
+                label Quantos meses abriu atividade:
+                select(id="monthsOfActivity")
+                    option(value=">12") Mais que 1 ano de atividade
+                    option(value="<=12") Menos que 1 ano de atividade
+            div    
+                label Tipo de atividade:
+                select(id="typeOfActivity")
+                    option(value="Work Contract") Tem outro contrato de trabalho
+                    option(value="Freela") Apenas freelancing
+                    option(value="Pensionist") Reformado  
+            div
+                label Gross Wage on Other Contract
+                input(type="text" id="grossWage")
+            div
+                label Gross Revenue
+                input(type="text" id="grossRevenue")
+            div    
+                label Profit/Year:
                 input(type="text" id="profitYear")
+            div
+                label Gross Revenue on Services:
+                input(type="text" id="profitYearServices")
+                br
+                label Gross Revenue on Merchandise:
+                input(type="text" id="profitYearMerchandise")
+                br
+                label Gross Revenue on Others:
+                input(type="text" id="profitYearOthers")
+            
             div
                 input(type="submit" value="Calcular")
     script.
