@@ -1,19 +1,24 @@
-const typeOfWorker = document.getElementById('workers');
-const profitYear = document.getElementById('profitYear');
 const formSS = document.getElementById('simulatorSS');
+const typeOfWorker = document.getElementById('workers');
 const regime = document.getElementById('regime');
 const monthsOfActivity = document.getElementById('monthsOfActivity');
+const activity = document.getElementById('typeOfActivity');
+const grossWage = document.getElementById('grossWage');
+const grossRevenue = document.getElementById('grossRevenue');
+const profitYear = document.getElementById('profitYear');
+const profitYearServices = document.getElementById('profitYearServices');
+const profitYearMerchandise = document.getElementById('profitYearMerchandise');
+const profitYearOthers = document.getElementById('profitYearOthers');
 
-console.log(simulator)
-
-
+// console.log(simulator)
 
 const Tax = (e) => {
 	e.preventDefault();
 	let profit = profitYear.value;
 	let typeOfWork = typeOfWorker.value
-    let typeOfRegime = regime.value
-    let numberOfMonths = monthsOfActivity.value
+	let typeOfRegime = regime.value
+	let numberOfMonths = monthsOfActivity.value
+	let typeOfActivity = activity.value;
 
 	let output = 0;
 	
@@ -31,35 +36,113 @@ const Tax = (e) => {
 		} else {
 			console.log(output = 0);
 		}
-    }
+	}
     
-    if(typeOfWork === 'TI' && typeOfRegime === 'Simp' && numberOfMonths === '<=12'){
-        console.log(output=0)
-    }
-};
+	if(typeOfWork === 'TI' && typeOfRegime === 'Simp' && numberOfMonths === '<=12'){
+		console.log(output=0)
+	}
 
-
-const disableInputRegime = () => {
-	if(typeOfWorker.value === 'ENI'){
-		regime.setAttribute('disabled', '');
-	} else {
-		regime.removeAttribute('disabled');
-	}       
-};
-
-const disableInputActivity = () => {
-	if(regime.value === 'CO' || typeOfWorker.value === 'ENI'){
-		monthsOfActivity.setAttribute('disabled', '');
-	} else {
-		monthsOfActivity.removeAttribute('disabled');
+	if(typeOfActivity === 'Pensionist'){
+		console.log(output = 0);
+	}
+    
+	if(typeOfActivity === 'Freela'){
+        
 	}
 };
 
-const disableInputs = () => {
-	disableInputRegime();
-	disableInputActivity();
+formSS.addEventListener('submit', Tax);
+
+const ENIRemove = () => {
+	if(typeOfWorker.value === 'ENI'){
+		regime.setAttribute('disabled', '');
+		monthsOfActivity.setAttribute('disabled', '');
+		activity.setAttribute('disabled', '');
+		grossWage.setAttribute('disabled', '');
+		grossRevenue.setAttribute('disabled', '');
+		profitYearServices.setAttribute('disabled', '');
+		profitYearMerchandise.setAttribute('disabled', '');
+		profitYearOthers.setAttribute('disabled', '');
+	} else {
+		regime.removeAttribute('disabled');
+		monthsOfActivity.removeAttribute('disabled');
+		activity.removeAttribute('disabled');
+		grossWage.removeAttribute('disabled');
+		grossRevenue.removeAttribute('disabled');
+		profitYearServices.removeAttribute('disabled');
+		profitYearMerchandise.removeAttribute('disabled');
+		profitYearOthers.removeAttribute('disabled'); 
+	}
 };
 
-formSS.addEventListener('submit', Tax);
-typeOfWorker.addEventListener('change', disableInputs);
-regime.addEventListener('change', disableInputActivity);
+typeOfWorker.addEventListener('change', ENIRemove);
+
+const regimeRemove = () => {
+	if(regime.value === 'CO'){
+		monthsOfActivity.setAttribute('disabled', '');
+		activity.setAttribute('disabled', '');
+		grossWage.setAttribute('disabled', '');
+		grossRevenue.setAttribute('disabled', '');
+		profitYearServices.setAttribute('disabled', '');
+		profitYearMerchandise.setAttribute('disabled', '');
+		profitYearOthers.setAttribute('disabled', '');
+	} else {
+		monthsOfActivity.removeAttribute('disabled');
+		activity.removeAttribute('disabled');
+		grossWage.removeAttribute('disabled');
+		grossRevenue.removeAttribute('disabled');
+		profitYearServices.removeAttribute('disabled');
+		profitYearMerchandise.removeAttribute('disabled');
+		profitYearOthers.removeAttribute('disabled'); 
+	}
+};
+
+regime.addEventListener('change', regimeRemove);
+
+const monthsOfActivityRemove = () => {
+	if(monthsOfActivity.value === '<=12'){
+		activity.setAttribute('disabled', '');
+		grossWage.setAttribute('disabled', '');
+		grossRevenue.setAttribute('disabled', '');
+		profitYearServices.setAttribute('disabled', '');
+		profitYearMerchandise.setAttribute('disabled', '');
+		profitYearOthers.setAttribute('disabled', '');
+	} else {
+		activity.removeAttribute('disabled');
+		grossWage.removeAttribute('disabled');
+		grossRevenue.removeAttribute('disabled');
+		profitYearServices.removeAttribute('disabled');
+		profitYearMerchandise.removeAttribute('disabled');
+		profitYearOthers.removeAttribute('disabled');
+	}
+};
+
+monthsOfActivity.addEventListener('change', monthsOfActivityRemove);
+
+const activityRemove= () => {
+	if(activity.value === 'Pensionist'){
+		profitYear.removeAttribute('disabled', '');
+		grossWage.setAttribute('disabled', '');
+		grossRevenue.setAttribute('disabled', '');
+		profitYearServices.setAttribute('disabled', '');
+		profitYearMerchandise.setAttribute('disabled', '');
+		profitYearOthers.setAttribute('disabled', '');
+	} else if (activity.value === 'Freela'){
+		grossWage.setAttribute('disabled', '');
+		grossRevenue.setAttribute('disabled', '');
+		profitYear.setAttribute('disabled', '');
+		profitYearServices.removeAttribute('disabled');
+		profitYearMerchandise.removeAttribute('disabled');
+		profitYearOthers.removeAttribute('disabled');
+	} else {
+		profitYear.setAttribute('disabled', '');
+		grossWage.removeAttribute('disabled');
+		grossRevenue.removeAttribute('disabled');
+		profitYearServices.removeAttribute('disabled');
+		profitYearMerchandise.removeAttribute('disabled');
+		profitYearOthers.removeAttribute('disabled');
+	}
+};
+
+activity.addEventListener('change', activityRemove);
+
