@@ -10,7 +10,7 @@ const profitYearServices = document.getElementById('profitYearServices');
 const profitYearMerchandise = document.getElementById('profitYearMerchandise');
 const profitYearOthers = document.getElementById('profitYearOthers');
 
-// console.log(simulator)
+console.log(simulator)
 
 const Tax = (e) => {
 	e.preventDefault();
@@ -19,6 +19,9 @@ const Tax = (e) => {
 	let typeOfRegime = regime.value
 	let numberOfMonths = monthsOfActivity.value
 	let typeOfActivity = activity.value;
+	let grossRevenueOnServices = profitYearServices.value;
+	let grossRevenueOnMerchandise = profitYearMerchandise.value;
+	let grossRevenueOnOthers = profitYearOthers.value;
 
 	let output = 0;
 	
@@ -47,7 +50,28 @@ const Tax = (e) => {
 	}
     
 	if(typeOfActivity === 'Freela'){
-        
+		let taxServices = 0;
+		let taxMerchandise = 0;
+		let taxOthers = 0;
+		if(grossRevenueOnServices / 12 <= 20){
+			taxServices = 0;
+		} 
+		if(grossRevenueOnServices / 12 > 20) {
+			taxServices = grossRevenueOnServices * simulator.percentageServices;
+		}
+		if(grossRevenueOnMerchandise / 12 <= 20){
+			taxMerchandise = 0;
+		}
+		if(grossRevenueOnMerchandise / 12 > 20){
+			taxMerchandise = grossRevenueOnMerchandise * simulator.percentageGoods;
+		}
+		if(grossRevenueOnOthers / 12 <= 20){
+			taxOthers = 0;
+		}
+		if(grossRevenueOnOthers / 12 > 20){
+			taxOthers = grossRevenueOnOthers * simulator.percentageOthers;
+		}
+		console.log(output = (taxServices + taxMerchandise + taxOthers) * (1/3) * (0.214));
 	}
 };
 
