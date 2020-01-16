@@ -1,5 +1,18 @@
 block content
   h1 Homepage
+
+
+  
+  p Language Option
+  form(action="/", method="get")
+    select(name="language" id="language")
+      option(value="pt") pt
+      option(value="en") en
+    br
+    input(type="submit")
+     
+
+
   
   h1 #{translations[locale].SectionsTitles.Simulators}
 
