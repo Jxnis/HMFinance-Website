@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+@font-face {
+	font-family: "Aludra";
+	src: url("../media/aludra-regular.woff2') format('woff2"),
+			 url("../media/aludra-regular.woff') format('woff");
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -23,9 +29,28 @@ html, body {
 	line-height: 2;
 	text-align: center;
 	color: #202020;
+	width:100vw;
+	height:100vh;
+	perspective:1px;
+	perspective-origin:0 0;
+  overflow-x: hidden;
+	overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 @keyframes fadein {
+	from {
+			opacity:0;
+	}
+	to {
+			opacity:1;
+	}
+}
+
+@keyframes fadein2 {
 	from {
 			opacity:0;
 	}
@@ -50,6 +75,10 @@ h1:after {
 }
 
 h2, h3, h4, h5 {
+	/*font-family: "Roboto", sans-serif;*/
+	font-family: "Aludra";
+	font-weight: normal;
+	font-style: normal;
 	color: #404040;
 }
 
@@ -62,20 +91,41 @@ a:hover {
 		color: #A00000;
 }
 
+#menubuttondiv {
+	text-align: right;
+  width:100%; height:40px; 
+  position:absolute; 
+	top:0px; 
+	z-index:1; 
+  transform-origin: 0 0;
+  transform: scale(1024) 
+	translateZ(-1023px);
+}
+
+#menubutton {
+	margin: 20px;
+}
+
 #navbar {
+	display: none;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
 	margin-bottom: 2px;
 	transition: 0.5s box-shadow;
+	transform: translateZ(0);
+	z-index: 1;
 }
 
 #navbar ul {
 	list-style: none;
-  /*background-color: #F5F5F5;*/
-  text-align: center;
+	text-align: center;
 }
 
 #navbar li {
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 40px;
 }
 
 #navbar a {
@@ -91,6 +141,7 @@ a:hover {
 }
 
 #home {
+	pointer-events: none;
 	height: 100vh;
 }
  
@@ -98,40 +149,121 @@ a:hover {
 	position: absolute;
 	filter: grayscale(100%);
 	opacity: 0.25;
-	left: 0;
+	left: 50%;
+	top: 50%;
 	width: 100%;
-	height: 100vh;
-	object-fit: cover;
-}
-
-#home_left {
 	height: 100%;
-	width: 40%;
-	margin-left: 10%;
-	float: left;
+	object-fit: cover;
+	transform: translateZ(-1px) scale(2);
 }
 
 #logo {
+	position: absolute;
+	left: 12.5vw; 
+	top: 20vh;
 	width: 400px;
-	position: relative;
-  top: calc(50% - 73px);
-  transform: translateY(-50%);
+	display: inline-block;
+	opacity: 0;
+	animation: fadein2 1.5s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
 }
 
-#home_right {
-	height: 100%;
-	margin-right: 10%;
+#logo img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+#logo > h2 {
+	font-family: "Aludra";
+	font-weight: normal;
+	font-style: normal;
+	position: absolute;
+	width: 100%;
+  text-align: center;
+  bottom: 20;
+}
+
+#describox {
+	position: absolute;
+	left: 60vw; 
+	top: 50vh;
+	height: 100vh;
+	width: 35vw;
+	max-width: 400px;
+	background:rgba(255,255,255,0.5)
+	}
+
+#descri {
+	position: absolute;
+	left: 50vw; 
+	top: 50vh;
+	width: 40vw;
+	max-width: 600px;
+		}
+
+#descri1, #descri2, #descri3, #descri4 {
+	position: absolute;
+	margin: 0;
+	width: 50%;
+	line-height: 1.5;
+    animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	text-align: left;
+}
+
+#descri1{
+	animation-name: descri1;
+}
+
+#descri2{
+	animation-name: descri2;
+}
+
+#descri3{
+	animation-name: descri3;
+}
+
+#descri4{
+	animation-name: descri4;
+}
+
+@keyframes descri1 {
+	0%, 10% { left: 100%; opacity: 0; }
+	10%,20% { left: 40%; opacity: 1; }
+	25%, 100% { left: 0%; opacity: 0; }
+}
+
+@keyframes descri2 {
+	0%, 25% { left: 100%; opacity: 0; }
+  35%, 45% { left: 40%; opacity: 1; }
+  50%, 100% { left: 0%; opacity: 0; }
+}
+
+@keyframes descri3 {
+	0%, 50% { left: 100%; opacity: 0; }
+  60%, 70% { left: 40%; opacity: 1; }
+  75%, 100% { left: 0%; opacity: 0; }
+}
+
+@keyframes descri4 {
+	0%, 75% { left: 100%; opacity: 0; }
+  85%, 95% { left: 40%; opacity: 1; }
+  100% { left: 0%; opacity: 0; }
 }
 
 #clients {
+	transform: translateZ(0);
 	z-index: 1;
 	height: 100vh;
-	background: #F5F5F5;
+	background: #FFFFFF;
 }
 
 #services {
 	height: 100vh;
-	background: #FFFFFF;
+	background: #F5F5F5;
 }
 
 .servicesgrid {
@@ -160,15 +292,21 @@ a:hover {
 
 #simulators{
 	height: 100vh;
-	background: #F5F5F5;
+	background: #FFFFFF;
 }
 
 #aboutus {
 	height: 100vh;
-	background: #FFFFFF;
+	background: #F5F5F5;
 }
+
 #contactus {
 	height: 100vh;
+	background: #FFFFFF;
+}
+
+#footer {
+	height: 10vh;
 	background: #F5F5F5;
 }
 
