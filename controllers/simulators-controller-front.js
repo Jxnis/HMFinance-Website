@@ -5,6 +5,7 @@ const getSimulatorInfo = (req, res, next) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the contact information' });
 		} else {
+			console.log(results);
 			const simulator = results;
 			res.render('en/simulators', {simulator});
 		}

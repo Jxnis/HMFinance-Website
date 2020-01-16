@@ -1,2 +1,26 @@
 block content
     h1 Simulator
+    div
+        form(id="simulatorSS") 
+            div    
+                select(id="workers")
+                    option(value="ENI") Empresário em Nome Individual
+                    option(value="TI") Trabalhador Independente
+            div    
+                select(id="workers")
+                    option(value="ENI") cont org
+                    option(value="TI") simp
+            
+
+            div    
+                label Profit/Year
+                input(type="text" id="profitYear")
+            div
+                input(type="submit" value="Calcular")
+    script.
+        const simulator = !{JSON.stringify(simulator[0])}
+
+    script(src='/javascripts/SimulatorSS.js')
+        
+
+            
