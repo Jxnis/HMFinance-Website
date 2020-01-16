@@ -11,7 +11,7 @@ const getBrowserLang = (req, res, next) => {
 };
 
 const getAllInfo = (req, res) => {
-	//console.log(req.language);
+	console.log(req.params);
 	let langBrowser = req.language;
 	Homepage.getAll((err, results) => {
 		if(err) {
@@ -21,7 +21,7 @@ const getAllInfo = (req, res) => {
 			const data = results;
 			// res.render('en/index', {data});
 
-			res.render('en/index', {data, translations: Translations, locale: langBrowser});
+			res.render('index', {data, translations: Translations, locale: langBrowser});
 		}
 	});
 };

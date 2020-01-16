@@ -5,6 +5,7 @@ const {getSimulatorInfo} = require('../controllers/simulators-controller-front')
 
 /* GET home page. */
 router.get('/', getBrowserLang, getAllInfo);
+router.get('?language', getAllInfo);
 
 /* Render the simulator page */
 router.get('/simulators', getSimulatorInfo);
