@@ -1,0 +1,9 @@
+html, body {
+	height: 100vh;
+}
+
+#home {
+	height: 110vh;
+	display: block;
+	position: relative;
+}

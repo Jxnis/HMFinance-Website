@@ -11,16 +11,22 @@
 
 <body>
 <video id="intro">
-	<source src="../public/media/logo.mp4" autoplay preload="auto">
+	<source src="../public/media/logo.mp4" autoplay muted preload="auto">
 	Your browser does not support the video tag.
 </video>
 </body>
 
 <script type="text/javascript" language="javascript">
+	window.onload = function () {
+  var video = document.getElementById('intro');
+  video.muted = "muted";
+
+	document.getElementById('intro').play();
+	
 	function playVideo(){
 			var video = document.getElementById('intro');
-			document.getElementById('intro').play();
 			video.play();
+			document.getElementById('intro').play();
 			video.addEventListener('ended',function(){
 					window.location = '../src/index.html';
 			});
