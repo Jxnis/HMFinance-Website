@@ -28,17 +28,18 @@ const Translations = {
 			},
 
 			ServicesText: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+				HR: 'The HR department is responsible for salary management and processing, taking into account the specifics of your companys activity. You can count on our support to submit applications for employment incentives from IEFP and Social Security.',
+				Accounting: 'We select a Personal Trainer to help you with the  tasks, processes and organization of your business. We train your business and guide it so that it is in its best economic state to achieve its goals.',
+				Analytical: 'Analytical accounting is a branch of accounting that has a more internal and detailed approach, so it becomes critical in controlling costs, profit margin and decision making in the management of its activities. HMFinance gives you the data you need to make your decisions on time.',
+				Company: 'HMFinance supports you in the development of your line of business, accompanying you from the beginning of your idea through market research to the goal, indicating to you which type of company and tax regime is most advantageous and efficient for you to achieve your goals.',
+				Party: 'Third Party Management is an essential tool in managing your business. HMFinance makes available through PHC software a certified billing program for: - Billing preparation to customers (up to 5 invoices per month); - Validation and submission of SAFT-PT file;',
+				Others: '- Legalization of European and non-European citizens; - IRS Declaration - Model 3; - Annex G - Property gains; - Opening of the company; - Market studies; - Networking Group HMFinance Events;'
 			},
 
 			SubTitles: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Accounting: 'Your Business Financial PT',
+				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Others: 'European citizens Legalization, IRS Statements, independet workers'
@@ -101,23 +102,25 @@ const Translations = {
 			HomeText: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Accounting: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
 			},
 
 			ServicesText: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+				HR: 'O departamento de RH é responsável pela gestão e processamento salarial, tendo em atenção as especificidades da atividade da sua empresa. Pode contar com o nosso apoio para a submissão de candidaturas de incentivos ao emprego do IEFP e da Segurança Social.',
+				Accounting: 'Destacamos um Personal Trainer para o acompanhar nas tarefas, processos e organização do seu negócio. Treinamos a sua empresa e orientamo-la de modo a que esteja no seu melhor estado económico, para atingir as suas metas.',
+				Analytical: 'A Contabilidade analítica é um ramo da contabilidade que dispõe de uma abordagem mais interno e detalhado, por isso, torna-se fundamental no controle dos custos, margem de lucro e tomada de decisões na gestão das suas atividades. A HMFinance dá-lhe os dados necessários para que possa tomar as suas decisões atempadamente.',
+				Company: 'A HMFinance apoia-o no desenvolvimento da sua linha de negócio, acompanhando-o desde a ideia embrionária, passando pelo estudo de mercado, até à reta da meta, indicando-lhe para isso qual o tipo de empresa e regime fiscal mais vantajoso e eficiente para atingir os seus objetivos.',
+				Party: 'A Gestão de Terceiros é uma ferramenta essencial na gestão da sua empresa. A HMFinance disponibiliza através do software PHC um programa de faturação certificado para a: - Elaboração da faturação a clientes (até 5 faturas por mês); - Validação e submissão do ficheiro SAFT-PT;',
+				Others: '- Legalização de cidadãos europeus e não europeus; - Declaração de IRS – Modelo 3; - Anexo G - Mais Valias de imóveis; - Abertura da empresa; - Estudos de mercado; - Eventos Networking Group HMFinance;'
 			},
 
 			SubTitles: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Accounting: 'Your Business Financial PT',
+				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',				
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Others: 'European citizens Legalization, IRS Statements, independet workers'

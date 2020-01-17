@@ -1,0 +1,43 @@
+block content
+
+  h1 Services page
+
+  h3 Language Option
+    form(action="/setlanguage", method="post")
+      select(name="language" id="language")
+        option(value="pt") pt
+        option(value="en") en
+      br
+      input(type="submit" value="Submit")
+
+  p #{locale}
+
+  h2 #{translations[locale].Services.Titles.HR}
+  h3 #{translations[locale].Services.SubTitles.HR}
+  p #{translations[locale].Services.ServicesText.HR}
+
+  h2 #{translations[locale].Services.Titles.Accounting}
+  h3 #{translations[locale].Services.SubTitles.Accounting}
+  p #{translations[locale].Services.ServicesText.Accounting}
+  
+  h2 #{translations[locale].Services.Titles.Analytical}
+  h3 #{translations[locale].Services.SubTitles.Analytical}
+  p #{translations[locale].Services.ServicesText.Analytical}
+
+  h2 #{translations[locale].Services.Titles.Company}
+  h3 #{translations[locale].Services.SubTitles.Company}
+  p #{translations[locale].Services.ServicesText.Company}
+
+  h2 #{translations[locale].Services.Titles.Party}
+  h3 #{translations[locale].Services.SubTitles.Party}
+  p #{translations[locale].Services.ServicesText.Party}
+
+  h2 #{translations[locale].Services.Titles.Others}
+  h3 #{translations[locale].Services.SubTitles.Others}
+  p #{translations[locale].Services.ServicesText.Others}
+
+
+
+
+ 
+  
