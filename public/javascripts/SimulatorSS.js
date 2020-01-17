@@ -133,7 +133,7 @@ const Tax = (e) => {
 		}
 		output = (taxServices + taxMerchandise + taxOthers) * simulator.taxTI;
 	}
-	return resultsOutput.innerHTML = output;
+	return resultsOutput.innerHTML = output.toFixed(2);
 };
 
 
