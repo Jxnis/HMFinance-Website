@@ -24,26 +24,27 @@ block content
                     option(value="Freela") Apenas freelancing
                     option(value="Pensionist") Reformado  
             div
-                label Gross Wage on Other Contract
+                label Gross Wage on Other Contract/Month:
                 input(type="text" id="grossWage")
-            div
-                label Gross Revenue
-                input(type="text" id="grossRevenue")
             div    
                 label Profit/Year:
                 input(type="text" id="profitYear")
             div
-                label Gross Revenue on Services:
+                label Gross Revenue on Services/Year:
                 input(type="text" id="profitYearServices")
                 br
-                label Gross Revenue on Merchandise:
+                label Gross Revenue on Merchandise/Year:
                 input(type="text" id="profitYearMerchandise")
                 br
-                label Gross Revenue on Others:
+                label Gross Revenue on Others/Year:
                 input(type="text" id="profitYearOthers")
             
             div
                 input(type="submit" value="Calcular")
+            div
+                p Tax
+                p(id="output") 
+    
     script.
         const simulator = !{JSON.stringify(simulator[0])}
 
