@@ -1,0 +1,26 @@
+How to access back-end information in the front-end (index.pug):
+
+Here we have access to
+- all the data that is in the db (data),
+- the current language in use (locale),
+- and all the translations text we need to display the current language (translations);
+
+To access information
+- The data:
+    Example 1 - Show the first pt comment from the review table:
+            p #{data.review[0].commentPT}
+    Example 2 - Show the introEN from the homepage table:
+            p #{data.homepage[0].introEN}
+    Example 3 - Show the email from the contactUs table:
+            p #{data.contactUs[0].email}
+    Example 4 - Show the 2 name from the clients table:
+            p #{data.clients[1].name}
+
+- The language:
+    To access the current language just use #{locale}
+
+- The translations:
+    Example 1 - Show the Subtitle of the About Us section:
+            p #{translations[locale].AboutUs.Subtitle}
+    Example 2 - Show the HR text from the Services section for the services page:
+            p #{translations[locale].Services.ServicesText.HR}
