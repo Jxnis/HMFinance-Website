@@ -7,80 +7,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="../public/stylesheets/style.css">
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script> 
-	$(document).ready(function(){
-		$("#menubutton").click(function(){
-			$("#navbar").slideToggle();
+		$(document).ready(function(){
+			$("#menubutton").click(function(){
+				$("#navbar").slideToggle();
+			});
 		});
-	});
-	$(document).ready(function(){
-		$("#navbar").click(function(){
-			$("#navbar").slideToggle();
+		$(document).ready(function(){
+			$("#navbar").click(function(){
+				$("#navbar").slideToggle();
+			});
 		});
-	});
 	</script>
 
+	
 
 </head>
 
 <body>
 	<div id="menubuttondiv">
-		<img id="menubutton" src="../public/media/menu.png" alt="Company Constitution" height="40" width="40">
+		<img id="menubutton" src="../public/media/menu.png"  height="40" width="40">
 	</div>
 
 	<div id="navbar">
 		<ul>
-			<li class="clients"><a href="#clients">Clients</a></li>
-			<li class="services"><a href="#services">Services</a></li>
-			<li class="tutorials"><a class="active" href="#simulators">Simulators</a></li>
-			<li class="aboutus"><a href="#aboutus">About Us</a></li>
-			<li class="contactus"><a href="#contactus">Contact Us</a></li>
+			<li><a href="#clients" >Clients</a></li>
+			<li><a href="#services" >Services</a></li>
+			<li><a href="#simulators" >Simulators</a></li>
+			<li><a href="#contactus" >Contact Us</a></li>
+			<li><a href="#reviews" >Reviews</a></li>
 		</ul>
 	</div>
 
-	<div id="spacer"></div>
+
+
 	<div id="home">
-		<img class="separator" src="../public/media/7.jpg" alt="Company Constitution">
+		<div class="pcontainer">
+			<img class="pimage" src="../public/media/7.jpg" data-speed="-1">
+			<div id="graytowhiteseparator"><h1>CLIENTS</h1></div>
+		</div>
+
 		<div id="logo">
 			<img src="../public/media/logo.png" alt="HM Finance">
 			<h2>Financial Personal Trainer</h2>
 		</div>
-		<div id="describox"></div>
+
 		<div id="descri">
 			<h3 id="descri1">O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos.</h3>
 			<h3 id="descri2">O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado. </h3 id="descri2">
 			<h3 id="descri3">Com experiência em PME's e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais. </h3 id="descri3">
 			<h3 id="descri4">A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua. </h3 id="descri4">
 		</div>
+		<div id="describox"></div>
+
+	</div>
+
+	
+	<div id="clients">
+	</div>
+	
+	
+	<div id="services">
+		
+		<div id="whitetograyseparator"><h1>SERVICES</h1></div>
+		
+		<div class="pcontainer">
+			<img class="pimage" src="../public/media/1.jpg" data-speed="-1">
+			<div id="graytowhiteseparator"><h1>SIMULATORS</h1></div>
+		</div>
+
+		<div class="servicesgrid">
+			<div class="servicesgrid1"><img src="../public/media/business.png"  height="70" width="70"></div>
+			<div class="servicesgrid2"><img src="../public/media/chrome_reader_mode.png"  height="70" width="70"></div>
+			<div class="servicesgrid3"><img src="../public/media/find_in_page.png"  height="70" width="70"></div>
+			<div class="servicesgrid4">Company Constitution</div>
+			<div class="servicesgrid5">Accounting - The Financial PT of Your Business</div>
+			<div class="servicesgrid6">Analytical Accounting</div>
+			<div class="servicesgrid7"><img src="../public/media/folder_shared.png"  height="70" width="70"></div>
+			<div class="servicesgrid8"><img src="../public/media/note_add.png"  height="70" width="70"></div>
+			<div class="servicesgrid9"><img src="../public/media/people.png"  height="70" width="70"></div>
+			<div class="servicesgrid10">Human Resources</div>
+			<div class="servicesgrid11">Third Party Management</div>
+			<div class="servicesgrid12">Other Services (Domiciliation of Correspondence, IRS, Self-Employed)</div>
+		</div>
+	</div>
+
+	<div id="simulators">
 		
 	</div>
 
-	<div id="clients"><h1>CLIENTS</h1></div>
+	<div id="contactus">
 
-	<div id="services"><h1>SERVICES</h1>
-	<div class="servicesgrid">
-		<div class="servicesgrid1"><img src="../public/media/business.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid2"><img src="../public/media/chrome_reader_mode.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid3"><img src="../public/media/find_in_page.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid4">Company Constitution</div>
-		<div class="servicesgrid5">Accounting - The Financial PT of Your Business</div>
-		<div class="servicesgrid6">Analytical Accounting</div>
-		<div class="servicesgrid7"><img src="../public/media/folder_shared.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid8"><img src="../public/media/note_add.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid9"><img src="../public/media/people.png" alt="Company Constitution" height="70" width="70"></div>
-		<div class="servicesgrid10">Human Resources</div>
-		<div class="servicesgrid11">Third Party Management</div>
-		<div class="servicesgrid12">Other Services (Domiciliation of Correspondence, IRS, Self-Employed)</div>
+		<div class="pcontainer">
+			<div id="whitetograyseparator"><h1>CONTACT US</h1></div>
+			<img class="pimage" src="../public/media/5.jpg" data-speed="-1">
+			<div id="graytowhiteseparator"><h1>REVIEWS</h1></div>
+		</div>
 	</div>
+	
+	<div id="reviews">
+		
+	</div>	
 
-	<div id="simulators"><h1>SIMULATORS</h1></div>
+	<div id="footer">
+		<div class="footergrid">
+			<div class="footergrid1"><a href=""><img src="../public/media/thumb_up.png"  height="20" width="20">  Facebook</a></div>
+			<div class="footergrid2"><a href=""><img src="../public/media/camera_alt.png"  height="20" width="20">  Instagram</a></div>
+			<div class="footergrid3"><a href=""><img src="../public/media/email.png"  height="20" width="20">  ?</a></div>
+			<div class="footergrid4"><a href=""><img src="../public/media/email.png"  height="20" width="20">  Email</a></div>
+			<div class="footergrid5"><h4>© 2020 HM Finance</h4></div>
+			<div class="footergrid6"><h4>Designed by Wild Code School</h4></div>
+			</div>
+		</div>	
+	</div>
+	<script>
+		$('.pimage').each(function(){
+			var img = $(this);
+			var imgParent = $(this).parent();
+			function parallaxImg () {
+				var speed = img.data('speed');
+				var imgY = imgParent.offset().top;
+				var winY = $(this).scrollTop();
+				var winH = $(this).height();
+				var parentH = imgParent.innerHeight();  
+				var winBottom = winY + winH;
 
-	<div id="aboutus"><h1>ABOUT US</h1></div>
-
-	<div id="contactus"><h1>CONTACT US</h1></div>	
-
-	<div id="footer"><h3>FOOTER</h3></div>	
+				if (winBottom > imgY && winY < imgY + parentH) {
+					var imgBottom = ((winBottom - imgY) * speed);
+					var imgTop = winH + parentH;
+					var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+				}
+				img.css({
+					top: imgPercent + '%',
+					transform: 'translate(-50%, -' + imgPercent + '%)'
+				});
+			}
+			$(document).on({
+				scroll: function () {
+					parallaxImg();
+				}, ready: function () {
+					parallaxImg();
+				}
+			});
+		});
+	</script>
 
 </body>
 
