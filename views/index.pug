@@ -4,106 +4,108 @@ block content
 
     h1 Homepage
 
-
     
     p Language Option
-    form(action="/", method="get")
+    form(action="/setlanguage", method="post")
       select(name="language" id="language")
         option(value="pt") pt
         option(value="en") en
       br
       input(type="submit")
+
+
+
       
 
 
-  h3 Newsletter Singup Form
+    h3 Newsletter Singup Form
 
-  p There is a hidden message for you. Click to see it.
-  input#clickMe(type='button', value='clickme', onclick='mailchimptoggle();')
+    p There is a hidden message for you. Click to see it.
+    input#clickMe(type='button', value='clickme', onclick='mailchimptoggle();')
 
-  form.centered.mt-10.ml-10.mr-10(action='/signupmail', method='POST')
-    .form-group
-      label.form-label(for='firstname') First Name
-      input#firstname.form-input(type='text', name='firstname')
-    .form-group
-      label.form-label(for='lastname') Last Name
-      input#lastname.form-input(type='text', name='lastname')
-    .form-group
-      label.form-label(for='email') Email
-      input#email.form-input(type='text', name='email')
-    input.btn.btn-primary(type='submit', value='Submit')
-
-    
+    form.centered.mt-10.ml-10.mr-10(action='/signupmail', method='POST')
+      .form-group
+        label.form-label(for='firstname') First Name
+        input#firstname.form-input(type='text', name='firstname')
+      .form-group
+        label.form-label(for='lastname') Last Name
+        input#lastname.form-input(type='text', name='lastname')
+      .form-group
+        label.form-label(for='email') Email
+        input#email.form-input(type='text', name='email')
+      input.btn.btn-primary(type='submit', value='Submit')
 
 
 
-    
-    h1 #{translations[locale].SectionsTitles.Simulators}
 
-    h2 #{translations[locale].Services.Titles.Party}
 
-    h3 #{translations[locale].Services.ServicesText.HR}
 
-    h4 #{translations[locale].AboutUs.Subtitle}
+      h1 #{translations[locale].SectionsTitles.Simulators}
 
-    h5 #{translations[locale].ContactUs.FormTitle}
-    
-    div
-      h2 Reviews
-      each review in data.review
-        p #{review.id}
-        p #{review.name}
-        p #{review.email}
-        p #{review.commentPT}
-        p #{review.titlePT}
-        p #{review.company}
-        p #{review.isApproved}
-        p #{review.isShowing}
-        p #{review.commentEN}
-        p #{review.titleEN}
-        br
-        br
+      h2 #{translations[locale].Services.Titles.Party}
 
-    div
-      h2 Homepage Data
-      each homepage in data.homepage
-        p #{homepage.id}
-        p #{homepage.titlePT}
-        p #{homepage.introPT}
-        p #{homepage.aboutUsPT}
-        p #{homepage.aboutUsEN}
-        p #{homepage.introEN}
-        p #{homepage.titleEN}
-        br
-        br
-    
-    div
-      h2 Contact Us
-      each contactUs in data.contactUs
-        p #{contactUs.id}
-        p #{contactUs.address1}
-        p #{contactUs.address2}
-        p #{contactUs.email}
-        p #{contactUs.phone}
-        p #{contactUs.locationURL}
-        br
-        br
+      h3 #{translations[locale].Services.ServicesText.HR}
 
-    div
-      h2 Clients
-      each client in data.clients
-        p #{client.id}
-        p #{client.name}
-        p #{client.logoURL}
-        p #{client.isShowing}
-        p #{client.clientURL}
-        br
-        br
+      h4 #{translations[locale].AboutUs.Subtitle}
 
-    script(src='/javascripts/test.js')
-    script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
-    script(src='/javascripts/mailchimp.js')
-  
-  
+      h5 #{translations[locale].ContactUs.FormTitle}
+
+      div
+        h2 Reviews
+        each review in data.review
+          p #{review.id}
+          p #{review.name}
+          p #{review.email}
+          p #{review.commentPT}
+          p #{review.titlePT}
+          p #{review.company}
+          p #{review.isApproved}
+          p #{review.isShowing}
+          p #{review.commentEN}
+          p #{review.titleEN}
+          br
+          br
+
+      div
+        h2 Homepage Data
+        each homepage in data.homepage
+          p #{homepage.id}
+          p #{homepage.titlePT}
+          p #{homepage.introPT}
+          p #{homepage.aboutUsPT}
+          p #{homepage.aboutUsEN}
+          p #{homepage.introEN}
+          p #{homepage.titleEN}
+          br
+          br
+
+      div
+        h2 Contact Us
+        each contactUs in data.contactUs
+          p #{contactUs.id}
+          p #{contactUs.address1}
+          p #{contactUs.address2}
+          p #{contactUs.email}
+          p #{contactUs.phone}
+          p #{contactUs.locationURL}
+          br
+          br
+
+      div
+        h2 Clients
+        each client in data.clients
+          p #{client.id}
+          p #{client.name}
+          p #{client.logoURL}
+          p #{client.isShowing}
+          p #{client.clientURL}
+          br
+          br
+
+      script(src='/javascripts/test.js')
+      script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
+      script(src='/javascripts/mailchimp.js')
+
+
 
 
