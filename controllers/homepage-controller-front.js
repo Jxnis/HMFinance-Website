@@ -17,8 +17,8 @@ const getAllInfo = (req, res) => {
 			//console.log(results);
 			const data = results;
 			// res.render('en/index', {data});
-			//res.json({data});
-			res.render('index', {data, translations: Translations, locale: language});
+			res.json({data});
+			//res.render('index', {data, translations: Translations, locale: language});
 		}
 	});
 };
