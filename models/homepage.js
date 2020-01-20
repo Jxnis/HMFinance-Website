@@ -26,7 +26,7 @@ Homepage.getAll = (callback) => {
 										callback(err);
 									} else {
 										homepage=results;
-										connection.query('SELECT * FROM review',
+										connection.query('SELECT * FROM review WHERE isApproved = 1 AND isShowing = 1',
 											(err, results) => {
 												if(err){
 													callback(err);

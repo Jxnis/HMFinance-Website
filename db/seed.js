@@ -8,7 +8,7 @@ connection.query(`INSERT INTO user (email, passwordHash, IS_SA) VALUES (
 	if(err) console.log(err);
 	console.log('query complete');
 	// connection.end();
-});
+}); 
 
 connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locationURL) VALUES (
 	'Avenida do Brasil 4, 2700-129 Amadora',
@@ -19,7 +19,7 @@ connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locat
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	// connection.end();
+	connection.end();
 });
 
 connection.query(
@@ -55,4 +55,4 @@ connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, abou
 	if(err) console.log(err);
 	console.log('query complete');
 	connection.end();
-});
+}); 
