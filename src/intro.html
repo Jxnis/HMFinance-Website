@@ -17,21 +17,14 @@
 </body>
 
 <script type="text/javascript" language="javascript">
-	window.onload = function () {
+window.onload = function () {
   var video = document.getElementById('intro');
   video.muted = "muted";
-
-	document.getElementById('intro').play();
-	
-	function playVideo(){
-			var video = document.getElementById('intro');
-			video.play();
-			document.getElementById('intro').play();
-			video.addEventListener('ended',function(){
-					window.location = '../src/index.html';
-			});
-	}
-	playVideo();	
+	video.play();
+	video.addEventListener('ended',function () {
+		window.location = '../src/index.html';
+		})	
+	};
 </script>
 
 </html>
