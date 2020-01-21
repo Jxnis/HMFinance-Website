@@ -10,7 +10,7 @@ const { getServices} = require('../controllers/services-controller-front');
 /* GET home page. */
 router.get('/', getBrowserLang, getAllInfo);
 /* Save language as a cookie */
-router.post('/setlanguage', setCookie);
+router.get('/setlanguage/:language', setCookie);
 
 /* Render the simulator page */
 router.get('/simulators', getSimulatorInfo);
