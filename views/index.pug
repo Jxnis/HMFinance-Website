@@ -1,5 +1,228 @@
+extends layout
+
 block content
 
+  #menubuttondiv
+    img#menubutton(src='/media/menu.png', width='40', height='40')
+  #navbar
+    ul
+      li
+        a(href='#clients') #{translations[locale].SectionsTitles.Clients}
+      li
+        a(href='#services') #{translations[locale].SectionsTitles.Services}
+      li
+        a(href='#simulators') #{translations[locale].SectionsTitles.Simulators}
+      li
+        a(href='#contactus') #{translations[locale].SectionsTitles.ContactUs}
+      li
+        a(href='#reviews') #{translations[locale].SectionsTitles.Reviews}
+
+  h3 #{translations[locale].Others.Language}
+  form(action="/setlanguage", method="post")
+    select(name="language" id="language")
+      option(value="pt") #{translations.both.PT}
+      option(value="en") #{translations.both.EN}
+    input(type="submit" value="Submit")
+
+  #home
+    .pcontainer
+      img.pimage(src='../media/1.jpg', data-speed='-1')
+      #graytowhiteseparator
+        h1 #{translations[locale].SectionsTitles.Clients}
+    #logo
+      img(src='../media/logo.png', alt='HM Finance')
+      h2 #{translations[locale].Others.PersonalT}
+    #descri
+      h3#descri1
+        p O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos.
+      h3#descri2
+        p O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado.
+      h3#descri3
+        p Com experiência em PME's e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais.
+      h3#descri4
+        p A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua.
+    #describox
+
+
+  #services
+    #whitetograyseparator
+      h1 #{translations[locale].SectionsTitles.Services}
+    .pcontainer
+      img.pimage(src='../media/2.jpg', data-speed='-1')
+      .servicesgrid
+        .servicesgrid1
+          img(src='../media/business.png', width='70', height='70')
+        .servicesgrid2
+          img(src='../media/chrome_reader_mode.png', width='70', height='70')
+        .servicesgrid3
+          img(src='../media/find_in_page.png', width='70', height='70')
+        .servicesgrid4 #{translations[locale].Services.Titles.Company}
+        .servicesgrid5 #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
+        .servicesgrid6 #{translations[locale].Services.Titles.Analytical}
+        .servicesgrid7
+          img(src='../media/folder_shared.png', width='70', height='70')
+        .servicesgrid8
+          img(src='../media/note_add.png', width='70', height='70')
+        .servicesgrid9
+          img(src='../media/people.png', width='70', height='70')
+        .servicesgrid10 #{translations[locale].Services.Titles.HR}
+        .servicesgrid11 #{translations[locale].Services.Titles.Party}
+        .servicesgrid12 #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
+      #graytowhiteseparator
+        h1 #{translations[locale].SectionsTitles.Simulators}
+    a#simulators.anchor
+
+
+    #simulators
+    br
+    p [Simulators]
+    br
+
+    #contactus
+      #whitetograyseparator
+        h1 #{translations[locale].SectionsTitles.ContactUs}
+      .pcontainer
+        img.pimage(src='../media/3.jpg', data-speed='-1')
+        .contactusgrid
+          .contactusgrid1
+            h3 #{translations[locale].ContactUs.Email}
+            p #{data.contactUs[0].email}
+            br
+            br
+            h3 #{translations[locale].ContactUs.Phone}
+            p #{data.contactUs[0].phone}
+            br
+            br
+            h3 #{translations[locale].ContactUs.Address}
+            p #{data.contactUs[0].address1}
+            br
+            p #{data.contactUs[0].address2}
+            br
+            br
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739', allowfullscreen='', width='100%', height='100%', frameborder='0')
+          .contactusgrid2
+            form
+              h3 #{translations[locale].ContactUs.FormName}
+              input(type='text', name='name', onfocus="this.value=''", value='Your Name:')
+              h3 #{translations[locale].ContactUs.FormEmail}
+              input(type='text', name='email', onfocus="this.value=''", value='Your Email:')
+              h3 #{translations[locale].ContactUs.FormMessage}
+              textarea#question(name='question', rows='10') How Can We Help?
+              input(type='submit', value='SEND')
+        #graytowhiteseparator
+          h1 #{translations[locale].SectionsTitles.Reviews}
+      a#reviews.anchor
+
+
+    #reviews
+      p [Reviews]
+
+    #footer
+      .footergrid
+        .footergrid1
+          a(href='')
+            img(src='../media/thumb_up.png', width='20', height='20')
+            p #{translations.both.Footer.Face}
+        .footergrid2
+          a(href='')
+            img(src='../media/camera_alt.png', width='20', height='20')
+            p #{translations.both.Footer.Insta}
+        .footergrid3
+          a(href='')
+            img(src='../media/email.png', width='20', height='20')
+            p #{translations.both.Footer.LinkIn}
+        .footergrid4
+          a(href='')
+            img(src='../media/email.png', width='20', height='20')
+            p #{translations.both.Footer.Email}
+        .footergrid5
+          h4 #{translations.both.Footer.HMFin}
+        .footergrid6
+          h4 #{translations.both.Footer.WCS}
+
+  script.
+    $('textarea#question').focus(function() {
+      $(this).val('');
+    });
+    $('.pimage').each(function(){
+      var img = $(this);
+      var imgParent = $(this).parent();
+      
+      function parallaxImg () {
+        var speed = img.data('speed');
+        var imgY = imgParent.offset().top;
+        var winY = $(this).scrollTop();
+        var winH = $(this).height();
+        var parentH = imgParent.innerHeight();
+        var winBottom = winY + winH;
+
+        if (winBottom > imgY && winY < imgY + parentH) {
+          var imgBottom = ((winBottom - imgY) * speed);
+          var imgTop = winH + parentH;
+          var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+        }
+        img.css({
+          top: imgPercent + '%',
+          transform: 'translate(-50%, -' + imgPercent + '%)'
+        });
+      }
+
+      $(document).on({
+        scroll: function () {
+          parallaxImg();
+        }, ready: function () {
+          parallaxImg();
+        }
+      });
+    });
+
+    ;(function($, win) {
+      $.fn.inViewport = function(cb) {
+        return this.each(function(i,el){
+          function visPx(){
+            var H = $(this).height(),
+            r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+            return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
+          } visPx();
+          $(win).on("resize scroll", visPx);
+        });
+      };
+    }(jQuery, window));
+    $(".servicesgrid1").inViewport(function(px){
+      if(px) $(".servicesgrid1").addClass("showscroll1")
+      if(px) $(".servicesgrid2").addClass("showscroll2")
+      if(px) $(".servicesgrid3").addClass("showscroll3")
+      if(px) $(".servicesgrid4").addClass("showscroll1")
+      if(px) $(".servicesgrid5").addClass("showscroll2")
+      if(px) $(".servicesgrid6").addClass("showscroll3")
+      if(px) $(".servicesgrid7").addClass("showscroll4")
+      if(px) $(".servicesgrid8").addClass("showscroll5")
+      if(px) $(".servicesgrid9").addClass("showscroll6")
+      if(px) $(".servicesgrid10").addClass("showscroll4")
+      if(px) $(".servicesgrid11").addClass("showscroll5")
+      if(px) $(".servicesgrid12").addClass("showscroll6")
+      ;
+    });
+    $(".footergrid1").inViewport(function(px){
+      if(px) $(".footergrid1").addClass("showscroll1")
+      if(px) $(".footergrid2").addClass("showscroll2")
+      if(px) $(".footergrid3").addClass("showscroll3")
+      if(px) $(".footergrid4").addClass("showscroll4")
+      if(px) $(".footergrid5").addClass("showscroll5")
+      if(px) $(".footergrid6").addClass("showscroll6")
+      ;
+    });
+    $(".contactusgrid").inViewport(function(px){
+      if(px) $(".contactusgrid1").addClass("showscroll1")
+      if(px) $(".contactusgrid2").addClass("showscroll2")
+      ;
+    });
+
+  
+
+
+
+  <!-- From here down is just testing stuff -->
   div(onscroll='mailchimptoggle();')
 
     h1 Homepage
@@ -7,14 +230,7 @@ block content
     h1 primeiro cliente 
     p #{data.clients[0].name}
     
-    h3 Language Option
-    form(action="/setlanguage", method="post")
-      select(name="language" id="language")
-        option(value="pt") pt
-        option(value="en") en
-      br
-      input(type="submit" value="Submit")
-
+    
 
     h3 Newsletter Singup Form
 

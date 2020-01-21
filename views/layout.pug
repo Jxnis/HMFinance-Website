@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title HM Finance
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    script.
+      $(document).ready(function(){
+        $("#menubutton").click(function(){
+            $("#navbar").slideToggle();
+        });
+      });
+      $(document).ready(function(){
+        $("#navbar").click(function(){
+            $("#navbar").slideToggle();
+        });
+      });
+  body
+    block content
