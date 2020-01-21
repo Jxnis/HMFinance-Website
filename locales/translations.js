@@ -1,12 +1,30 @@
 const Translations = {
+	both: {
+		PT: 'pt',
+		EN: 'en',
+		Footer: {
+			Face: 'Facebook',
+			Insta: 'Instagram',
+			LinkIn: 'LinkedIn',
+			Email: 'E-mail',
+			HMFin: '© 2020 HM Finance',
+			WCS: 'Designed by Wild Code School'
+		}
+	},
+
 	en: {
-		
+		Others: {
+			Language: 'Language',
+			PersonalT: 'Financial Personal Trainer'
+		},
+
 		SectionsTitles: {
 			Services: 'Services',
 			Simulators: 'Simulators',
 			AboutUs: 'About us',
 			ContactUs: 'Contact us',
-			Clients: 'Clients'
+			Clients: 'Clients',
+			Reviews: 'Reviews'
 
 		},
 		Services: {
@@ -64,11 +82,14 @@ const Translations = {
 		},
 
 		ContactUs: {
+			Email: 'E-mail',
+			Phone: 'Phone Number',
+			Address: 'Address',
+			MapTitle: 'We are here for you. Say hi.',
 			FormTitle: 'We love you, contact us',
 			FormName: 'Insert name',
 			FormEmail: 'Insert email',
 			FormMessage: 'Insert message',
-			MapTitle: 'We are here for you. Say hi.',
 		},
 
 		Review: {
@@ -80,13 +101,19 @@ const Translations = {
 
 
 	pt: {
-		
+		Others: {
+			Language: 'Lingua',
+			PersonalT: 'Personal Trainer Financeiro'
+
+		},
+
 		SectionsTitles: {
 			Services: 'Serviços',
 			Simulators: 'Simuladores',
 			AboutUs: 'Sobre Nós',
 			ContactUs: 'Contacte-nos',
-			Clients: 'Clientes'
+			Clients: 'Clientes',
+			Reviews: 'Comentários'
 
 		},
 		Services: {
@@ -139,17 +166,20 @@ const Translations = {
 		},
             
 		AboutUs: {
-			Title: 'Born in Lisbon',
+			Title: 'Nascida em Lisboa',
 			SubTitle: 'Eu adoro Finanças e Contabilidade',
 			Text: 'O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos. O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado. Com experiência em PME&#39;s e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais. A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua.',                    
 		},
 
 		ContactUs: {
+			Email: 'E-mail',
+			Phone: 'Telemóvel',
+			Address: 'Morada',
+			MapTitle: 'Estamos aqui para sí, venha conhecer-nos.',
 			FormTitle: 'Por favor, Contacte-nos',
 			FormName: 'Insira Nome',
 			FormEmail: 'Insira Nome',
 			FormMessage: 'Insira Mensagem',
-			MapTitle: 'Estamos aqui para sí, venha conhecer-nos.',
 		},
 
 		Review: {

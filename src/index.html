@@ -129,8 +129,8 @@
 			<div id="graytowhiteseparator"><h1>REVIEWS</h1></div>
 		</div>
 	
-	<a class="anchor" id="reviews"></a>
-</div>
+		<a class="anchor" id="reviews"></a>
+	</div>
 
 	<div id="reviews">
 		[Reviews]
@@ -149,8 +149,8 @@
 
 	<script>
 		$('textarea#question').focus(function() {
-   $(this).val('');
-	});
+			$(this).val('');
+		});
 
 		$('.pimage').each(function(){
 			var img = $(this);
@@ -171,59 +171,59 @@
 					top: imgPercent + '%',
 					transform: 'translate(-50%, -' + imgPercent + '%)'
 				});
-  	}
+  			}
 
-		$(document).on({
-    scroll: function () {
-      parallaxImg();
-    }, ready: function () {
-      parallaxImg();
-    }
-  });
-	});
-
-	;(function($, win) {
-		$.fn.inViewport = function(cb) {
-			return this.each(function(i,el){
-				function visPx(){
-					var H = $(this).height(),
-							r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
-					return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
-				} visPx();
-				$(win).on("resize scroll", visPx);
+			$(document).on({
+				scroll: function () {
+					parallaxImg();
+				}, ready: function () {
+					parallaxImg();
+				}
 			});
-		};
-	}(jQuery, window));
-	$(".servicesgrid1").inViewport(function(px){
-			if(px) $(".servicesgrid1").addClass("showscroll1")
-			if(px) $(".servicesgrid2").addClass("showscroll2")
-			if(px) $(".servicesgrid3").addClass("showscroll3")
-			if(px) $(".servicesgrid4").addClass("showscroll1")
-			if(px) $(".servicesgrid5").addClass("showscroll2")
-			if(px) $(".servicesgrid6").addClass("showscroll3")  
-			if(px) $(".servicesgrid7").addClass("showscroll4")
-			if(px) $(".servicesgrid8").addClass("showscroll5")
-			if(px) $(".servicesgrid9").addClass("showscroll6")
-			if(px) $(".servicesgrid10").addClass("showscroll4")
-			if(px) $(".servicesgrid11").addClass("showscroll5")
-			if(px) $(".servicesgrid12").addClass("showscroll6") 
-			;
-	});
-	$(".footergrid1").inViewport(function(px){
-			if(px) $(".footergrid1").addClass("showscroll1") 
-			if(px) $(".footergrid2").addClass("showscroll2") 
-			if(px) $(".footergrid3").addClass("showscroll3")
-			if(px) $(".footergrid4").addClass("showscroll4")  
-			if(px) $(".footergrid5").addClass("showscroll5")  
-			if(px) $(".footergrid6").addClass("showscroll6")  
-			;
-	});
-	$(".contactusgrid").inViewport(function(px){
-			if(px) $(".contactusgrid1").addClass("showscroll1") 
-			if(px) $(".contactusgrid2").addClass("showscroll2") 
-			;
-	});
-</script>
+		});
+
+		;(function($, win) {
+			$.fn.inViewport = function(cb) {
+				return this.each(function(i,el){
+					function visPx(){
+						var H = $(this).height(),
+								r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+						return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+					} visPx();
+					$(win).on("resize scroll", visPx);
+				});
+			};
+		}(jQuery, window));
+		$(".servicesgrid1").inViewport(function(px){
+				if(px) $(".servicesgrid1").addClass("showscroll1")
+				if(px) $(".servicesgrid2").addClass("showscroll2")
+				if(px) $(".servicesgrid3").addClass("showscroll3")
+				if(px) $(".servicesgrid4").addClass("showscroll1")
+				if(px) $(".servicesgrid5").addClass("showscroll2")
+				if(px) $(".servicesgrid6").addClass("showscroll3")  
+				if(px) $(".servicesgrid7").addClass("showscroll4")
+				if(px) $(".servicesgrid8").addClass("showscroll5")
+				if(px) $(".servicesgrid9").addClass("showscroll6")
+				if(px) $(".servicesgrid10").addClass("showscroll4")
+				if(px) $(".servicesgrid11").addClass("showscroll5")
+				if(px) $(".servicesgrid12").addClass("showscroll6") 
+				;
+		});
+		$(".footergrid1").inViewport(function(px){
+				if(px) $(".footergrid1").addClass("showscroll1") 
+				if(px) $(".footergrid2").addClass("showscroll2") 
+				if(px) $(".footergrid3").addClass("showscroll3")
+				if(px) $(".footergrid4").addClass("showscroll4")  
+				if(px) $(".footergrid5").addClass("showscroll5")  
+				if(px) $(".footergrid6").addClass("showscroll6")  
+				;
+		});
+		$(".contactusgrid").inViewport(function(px){
+				if(px) $(".contactusgrid1").addClass("showscroll1") 
+				if(px) $(".contactusgrid2").addClass("showscroll2") 
+				;
+		});
+	</script>
 
 </body>
 
