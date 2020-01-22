@@ -19,7 +19,7 @@ connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locat
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
+	// connection.end();
 });
 
 connection.query(
@@ -57,3 +57,14 @@ connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, abou
 	// connection.end();
 });
 
+connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
+	VALUES (2020, 1, 0.28),
+	(2019, 1, 0.28),
+	(2018, 1.01, 0.28),
+	(2017, 1.02, 0.28),
+	(2016, 1.02, 0.28)
+`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
+	connection.end();
+});
