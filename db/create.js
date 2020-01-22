@@ -43,7 +43,7 @@ connection.query(`CREATE TABLE contactUs (
     address2 VARCHAR(250),
     email VARCHAR(250),
     phone VARCHAR(250),
-    locationURL VARCHAR(250)
+    locationURL VARCHAR(2000)
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
@@ -77,5 +77,16 @@ connection.query(`CREATE TABLE homepage (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
+});
+
+connection.query(`CREATE TABLE simulatorMaisValias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    year SMALLINT,
+    coeficient DECIMAL(5,2),
+    taxIRS DECIMAL(4,4)
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
 	connection.end();
 });
+
