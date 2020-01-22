@@ -54,5 +54,6 @@ connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, abou
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
-}); 
+	// connection.end();
+});
+

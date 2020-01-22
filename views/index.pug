@@ -120,9 +120,12 @@ block content
           h1 #{translations[locale].SectionsTitles.Reviews}
       a#reviews.anchor
 
-
     #reviews
-      p [Reviews]
+      each review in data.review
+        p #{review.company}
+        p #{locale === 'en' ? review.titlePT : review.titleEN}
+        p #{locale === 'pt' ? review.commentPT : review.commentEN}
+        //- p(id=`comment${review.id}`)   
 
     #footer
       .footergrid
@@ -256,8 +259,6 @@ block content
         input#email.form-input(type='text', name='email')
       input.btn.btn-primary(type='submit', value='Submit')
 
-
-
     h1 #{translations[locale].SectionsTitles.Simulators}
 
     h2 #{translations[locale].Services.Titles.Party}
@@ -322,7 +323,11 @@ block content
         br
         br
 
-    script(src='/javascripts/test.js')
+    //- script.
+    //-   const locale = !{JSON.stringify(locale)}
+    //-   const data = !{JSON.stringify(data)}
+
+    //- script(src='/javascripts/homepage.js')
     script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
     script(src='/javascripts/mailchimp.js')
 
