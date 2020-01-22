@@ -18,11 +18,16 @@ block content
         a(href='#reviews') #{translations[locale].SectionsTitles.Reviews}
 
   h3 #{translations[locale].Others.Language}
-  form(action="/setlanguage", method="post")
-    select(name="language" id="language")
-      option(value="pt") #{translations.both.PT}
-      option(value="en") #{translations.both.EN}
-    input(type="submit" value="Submit")
+  //- form(action="/setlanguage", method="post")
+  //-   select(name="language" id="language")
+  //-     option(value="pt") #{translations.both.PT}
+  //-     option(value="en") #{translations.both.EN}
+  //-   input(type="submit" value="Submit")
+  div
+    li
+      a(href='#clients') #{translations.both.PT} PT 
+    li
+      a(href='#clients') #{translations.both.EN} PT
 
   #home
     .pcontainer
@@ -228,7 +233,7 @@ block content
     h1 Homepage
 
     h1 primeiro cliente 
-    p #{data.clients[0].name}
+    //- p #{data.clients[0].name}
     
     
 
@@ -281,25 +286,25 @@ block content
     div
       h2 Homepage Data
       
-      p #{data.homepage[0].id}
-      p #{data.homepage[0].titlePT}
-      p #{data.homepage[0].introPT}
-      p #{data.homepage[0].aboutUsPT}
-      p #{data.homepage[0].aboutUsEN}
-      p #{data.homepage[0].introEN}
-      p #{data.homepage[0].titleEN}
+      //- p #{data.homepage[0].id}
+      //- p #{data.homepage[0].titlePT}
+      //- p #{data.homepage[0].introPT}
+      //- p #{data.homepage[0].aboutUsPT}
+      //- p #{data.homepage[0].aboutUsEN}
+      //- p #{data.homepage[0].introEN}
+      //- p #{data.homepage[0].titleEN}
       br
       br
 
     div
       h2 Contact Us
       
-      p #{data.contactUs[0].id}
-      p #{data.contactUs[0].address1}
-      p #{data.contactUs[0].address2}
-      p #{data.contactUs[0].email}
-      p #{data.contactUs[0].phone}
-      p #{data.contactUs[0].locationURL}
+      //- p #{data.contactUs[0].id}
+      //- p #{data.contactUs[0].address1}
+      //- p #{data.contactUs[0].address2}
+      //- p #{data.contactUs[0].email}
+      //- p #{data.contactUs[0].phone}
+      //- p #{data.contactUs[0].locationURL}
       br
       br
 
