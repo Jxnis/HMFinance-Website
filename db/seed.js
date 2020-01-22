@@ -24,7 +24,7 @@ connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locat
 
 connection.query(
 	`INSERT INTO simulatorSegSocial (taxENI, taxTI, percentageServices, percentageGoods, percentageOthers, minENICO, minTICO, minTISimplificado, revenueExemption, percentageRevenueExemption, grossWageExemption) VALUES (
-	0.252, 0.214, 0.7, 0.2, 0.2, 164.73, 139.88, 20, 2490, 0.7, 435.76	
+	0.252, 0.214, 0.7, 0.2, 0.2, 164.73, 139.88, 20, 2490, 0.7, 438.81	
 )`, (err) => {
 		if(err) console.log(err);
 		console.log('query complete');
