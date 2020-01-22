@@ -136,8 +136,6 @@ const Tax = (e) => {
 	return resultsOutput.innerHTML = output.toFixed(2);
 };
 
-
-
 formSS.addEventListener('submit', Tax);
 
 const ENIRemove = () => {
