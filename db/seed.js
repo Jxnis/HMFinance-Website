@@ -1,26 +1,63 @@
 const connection = require('./config');
 
-connection.query(`INSERT INTO user (email, passwordHash, IS_SA) VALUES (
-    'hugotavaresmaia@gmail.com',
-	SHA2('HMFinance!?#', 256),
-	1
-)`, (err) => {
-	if(err) console.log(err);
-	console.log('query complete');
-	// connection.end();
-}); 
-
-connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locationURL) VALUES (
-	'Avenida do Brasil 4,',
-	'2700-129 Amadora',
-	'geral@hmfinance.pt',
-	'966805329',
-	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739'
-)`, (err) => {
+connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal) VALUES 
+('Rustico','PC','0.00','0.00','0.05'),
+('Rustico','RA','0.00','0.00','0.05'),
+('Outros','PC','0.00','0.00','0.065'),
+('Outros','RA','0.00','0.00','0.065'),
+('HPP','PC','0.00','92407.00','0.00'),
+('HPP','PC','92407.00','126403.00','0.02'),
+('HPP','PC','126403.00','172348.00','0.05'),
+('HPP','PC','172348.00','287213.00','0.07'),
+('HPP','PC','287213.00','574323.00','0.08'),
+('HPP','PC','574323.00','0.00','0.06'),
+('HSA','PC','0.00','92407.00','0.01'),
+('HSA','PC','92407.00','126403.00','0.02'),
+('HSA','PC','126403.00','172348.00','0.05'),
+('HSA','PC','172348.00','287213.00','0.07'),
+('HSA','PC','287213.00','550836.00','0.08'),
+('HSA','PC','550836.00','0.00','0.06'),
+('HPP','RA','0.00','115508.75','0.00'),
+('HPP','RA','115508.75','158003.75','0.02'),
+('HPP','RA','158003.75','215435.00','0.05'),
+('HPP','RA','215435.00','359016.25','0.07'),
+('HPP','RA','359016.25','717903.75','0.08'),
+('HPP','RA','717903.75','0.00','0.06'),
+('HSA','RA','0.00','115508.75','0.01'),
+('HSA','RA','115508.75','158003.75','0.02'),
+('HSA','RA','158003.75','215435.00','0.05'),
+('HSA','RA','215435.00','359016.25','0.07'),
+('HSA','RA','359016.25','688545.00','0.08'),
+('HSA','RA','688545.00','0.00','0.06')
+`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
 	// connection.end();
 });
+
+
+// connection.query(`INSERT INTO user (email, passwordHash, IS_SA) VALUES (
+//     'hugotavaresmaia@gmail.com',
+// 	SHA2('HMFinance!?#', 256),
+// 	1
+// )`, (err) => {
+// 	if(err) console.log(err);
+// 	console.log('query complete');
+// 	// connection.end();
+// }); 
+
+// connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locationURL) VALUES (
+// 	'Avenida do Brasil 4,',
+// 	'2700-129 Amadora',
+// 	'geral@hmfinance.pt',
+// 	'966805329',
+// 	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739'
+// )`, (err) => {
+// 	if(err) console.log(err);
+// 	console.log('query complete');
+// 	connection.end();
+// });
+
 
 connection.query(
 	`INSERT INTO simulatorSegSocial (taxENI, taxTI, percentageServices, percentageGoods, percentageOthers, minENICO, minTICO, minTISimplificado, revenueExemption, percentageRevenueExemption, grossWageExemption) VALUES (
@@ -68,3 +105,4 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 	console.log('query complete');
 	connection.end();
 });
+
