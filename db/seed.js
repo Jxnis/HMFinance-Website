@@ -36,27 +36,27 @@ connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal) VA
 });
 
 
-// connection.query(`INSERT INTO user (email, passwordHash, IS_SA) VALUES (
-//     'hugotavaresmaia@gmail.com',
-// 	SHA2('HMFinance!?#', 256),
-// 	1
-// )`, (err) => {
-// 	if(err) console.log(err);
-// 	console.log('query complete');
-// 	// connection.end();
-// }); 
+connection.query(`INSERT INTO user (email, passwordHash, IS_SA) VALUES (
+    'hugotavaresmaia@gmail.com',
+	SHA2('HMFinance!?#', 256),
+	1
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
+	// connection.end();
+}); 
 
-// connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locationURL) VALUES (
-// 	'Avenida do Brasil 4,',
-// 	'2700-129 Amadora',
-// 	'geral@hmfinance.pt',
-// 	'966805329',
-// 	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739'
-// )`, (err) => {
-// 	if(err) console.log(err);
-// 	console.log('query complete');
-// 	connection.end();
-// });
+connection.query(`INSERT INTO contactUs (address1, address2, email, phone, locationURL) VALUES (
+	'Avenida do Brasil 4,',
+	'2700-129 Amadora',
+	'geral@hmfinance.pt',
+	'966805329',
+	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739'
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
+	// connection.end();
+});
 
 
 //connection.query(

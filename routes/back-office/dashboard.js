@@ -4,7 +4,7 @@ const { authorize } = require('../../controllers/back-office/auth-controller');
 const { getContactus, editContactus } = require('../../controllers/back-office/contactus-controller');
 const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, deleteReview } = require('../../controllers/back-office/review-controller');
 const { getClients, getNewClientPage, addNewClient, toggleClientisShowing, getEditClientPage, editClients, deleteClients } = require('../../controllers/back-office/clients-controller');
-const { getSegSocialSimulatorPage, editSegSocialSimulator, getAllSimulatorsPage, getMaisValiasSimulatorPage, getIMTSimulatorsPage, editIMTSimulatorsPage } = require('../../controllers/back-office/simulators-controller');
+const { getSegSocialSimulatorPage, editSegSocialSimulator, getAllSimulatorsPage, getMaisValiasSimulatorPage, getIMTSimulatorsPage, editMaisValiasSimulator, editIMTSimulatorsPage } = require('../../controllers/back-office/simulators-controller');
 const { getHomepage, editHomepage } = require('../../controllers/back-office/homepage-controller');
 
 
@@ -43,6 +43,8 @@ router.post('/simulators/segsocial', authorize, editSegSocialSimulator);
 
 // Render simulator Mais Valias
 router.get('/simulators/maisvalias', authorize, getMaisValiasSimulatorPage);
+// Edit Mais Valias Simulator
+router.post('/simulators/maisvalias', authorize, editMaisValiasSimulator);
 
 // Render simulator IMT
 router.get('/simulators/imt', authorize, getIMTSimulatorsPage);

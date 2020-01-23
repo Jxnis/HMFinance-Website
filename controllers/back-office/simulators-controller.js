@@ -11,7 +11,6 @@ const getSegSocialSimulatorPage = (req, res) => {
 			res.status(500).json({ message: 'Error getting all the contact information' });
 		} else {
 			let simulator = results[0];
-			console.log(simulator);
 			res.render('back-office/simulatorSegSocial', {user: req.user, simulator});
 		}		
 	});
@@ -25,7 +24,22 @@ const editSegSocialSimulator = (req, res) => {
 };
 
 const getMaisValiasSimulatorPage = (req, res) => {
-	res.render('back-office/simulatorMaisValias', {user: req.user});
+	Simulator.getMaisValias((err, results) => {
+		if(err) {
+			res.status(500).json({ message: 'Error getting all the contact information' });
+		} else {
+			let simulatorMaisValias = results;
+			res.render('back-office/simulatorMaisValias', {user: req.user, simulatorMaisValias});
+		}
+	});
+};
+
+const editMaisValiasSimulator = (req, res) => {
+	Simulator.editMaisValias(req.body, (err) => {
+		// console.log('req:', req.body);
+		if (err) return res.render('error', { err });
+		res.redirect('/dashboard/simulators');
+	});
 };
 
 const getIMTSimulatorsPage = (req, res)  => {
@@ -48,9 +62,6 @@ const editIMTSimulatorsPage = (req, res) => {
 	});
 };
 
-// const renderSSSimulator = (req, res) => {
-// 	res.render('back-office/simulatorSS', {user: req.user});
-// };
 
 module.exports = {
 	getSegSocialSimulatorPage,
@@ -58,5 +69,6 @@ module.exports = {
 	getAllSimulatorsPage,
 	getMaisValiasSimulatorPage,
 	getIMTSimulatorsPage,
-	editIMTSimulatorsPage
+	editIMTSimulatorsPage,
+	editMaisValiasSimulator
 };
