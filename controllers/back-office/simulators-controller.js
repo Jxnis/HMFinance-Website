@@ -1,4 +1,4 @@
-const Simulator = require('../../models/back-office/Simulator');
+const { Simulator, SimulatorIMT } = require('../../models/back-office/Simulator');
 
 const getAllSimulatorsPage = (req, res) => {
 	res.render('back-office/simulators', {user: req.user});
@@ -29,15 +29,22 @@ const getMaisValiasSimulatorPage = (req, res) => {
 };
 
 const getIMTSimulatorsPage = (req, res)  => {
-	Simulator.get((err, results) => {
+	SimulatorIMT.get((err, results) => {
 		if(err) {
 			//  If an error has occurred, then the user is informed of the error
-			res.status(500).json({ message: 'Error getting all the contact information' });
+			res.status(500).json({ message: 'Error getting all the imt simulator information' });
 		} else {
-			let imtsimulator = results[0];
-			console.log(imtsimulator);
-			res.render('back-office/simulatorIMT', {user: req.user, imtsimulator});
+			
+			res.render('back-office/simulatorIMT', {user: req.user, imtsimulator : results});
 		}		
+	});
+};
+
+const editIMTSimulatorsPage = (req, res) => {
+	console.log(req.body);
+	SimulatorIMT.edit(req.body, (err) => {
+		if (err) return res.render('error', { err });
+		res.redirect('/dashboard/simulators');
 	});
 };
 
@@ -50,5 +57,6 @@ module.exports = {
 	editSegSocialSimulator,
 	getAllSimulatorsPage,
 	getMaisValiasSimulatorPage,
-	getIMTSimulatorsPage
+	getIMTSimulatorsPage,
+	editIMTSimulatorsPage
 };
