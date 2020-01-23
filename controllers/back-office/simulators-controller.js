@@ -29,7 +29,16 @@ const getMaisValiasSimulatorPage = (req, res) => {
 };
 
 const getIMTSimulatorsPage = (req, res)  => {
-	res.render('back-office/simulatorIMT', {user: req.user});
+	Simulator.get((err, results) => {
+		if(err) {
+			//  If an error has occurred, then the user is informed of the error
+			res.status(500).json({ message: 'Error getting all the contact information' });
+		} else {
+			let imtsimulator = results[0];
+			console.log(imtsimulator);
+			res.render('back-office/simulatorIMT', {user: req.user, imtsimulator});
+		}		
+	});
 };
 
 // const renderSSSimulator = (req, res) => {
