@@ -20,13 +20,13 @@ block content
 
   //Clicking here it changes the language
   div 
-    a(href='/setlanguage/pt') #{translations.both.PT}
-    a(href='/setlanguage/en') #{translations.both.EN}
+    a(href='/setlanguage/pt') #{translations.both.pt}
+    a(href='/setlanguage/en') #{translations.both.en}
     //form(action="/setlanguage", method="post") 
-    //select(name="language" id="language" onchange="/setlanguage")
-      option(value="pt") #{translations.both.PT}
-      option(value="en") 
-    //input(type="submit" value="Submit")
+      select(name="language" id="language" onchange="/setlanguage")
+        option(value="pt") #{translations.both.PT}
+        option(value="en") 
+      Input(type="submit" value="Submit")
 
 
   #home
@@ -56,20 +56,20 @@ block content
       img.pimage(src='../media/2.jpg', data-speed='-1')
       .servicesgrid
         .servicesgrid1
-          img(src='../media/business.png', width='70', height='70')
+          img(src='../media/Company.jpg', width='100', height='100')
         .servicesgrid2
-          img(src='../media/chrome_reader_mode.png', width='70', height='70')
+          img(src='../media/accountingPT.jpg', width='100', height='100')
         .servicesgrid3
-          img(src='../media/find_in_page.png', width='70', height='70')
+          img(src='../media/Analytical.jpg', width='100', height='100')
         .servicesgrid4 #{translations[locale].Services.Titles.Company}
         .servicesgrid5 #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
         .servicesgrid6 #{translations[locale].Services.Titles.Analytical}
         .servicesgrid7
-          img(src='../media/folder_shared.png', width='70', height='70')
+          img(src='../media/HR.jpg', width='100', height='100')
         .servicesgrid8
-          img(src='../media/note_add.png', width='70', height='70')
+          img(src='../media/thirdparty.jpg', width='100', height='100')
         .servicesgrid9
-          img(src='../media/people.png', width='70', height='70')
+          img(src='../media/others.jpg', width='100', height='100')
         .servicesgrid10 #{translations[locale].Services.Titles.HR}
         .servicesgrid11 #{translations[locale].Services.Titles.Party}
         .servicesgrid12 #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
