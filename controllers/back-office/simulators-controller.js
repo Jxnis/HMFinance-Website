@@ -1,6 +1,10 @@
 const Simulator = require('../../models/back-office/Simulator');
 
-const getSimulatorPage = (req, res) => {
+const getAllSimulatorsPage = (req, res) => {
+	res.render('back-office/simulators', {user: req.user});
+};
+
+const getSegSocialSimulatorPage = (req, res) => {
 	Simulator.get((err, results) => {
 		if(err) {
 			//  If an error has occurred, then the user is informed of the error
@@ -8,23 +12,34 @@ const getSimulatorPage = (req, res) => {
 		} else {
 			let simulator = results[0];
 			console.log(simulator);
-			res.render('back-office/simulators', {user: req.user, simulator});
+			res.render('back-office/simulatorSegSocial', {user: req.user, simulator});
 		}		
 	});
 };
 
-const editSimulator = (req, res) => {
+const editSegSocialSimulator = (req, res) => {
 	Simulator.edit(req.body, (err) => {
 		if (err) return res.render('error', { err });
 		res.redirect('/dashboard/simulators');
 	});
-}
+};
+
+const getMaisValiasSimulatorPage = (req, res) => {
+	res.render('back-office/simulatorMaisValias', {user: req.user});
+};
+
+const getIMTSimulatorsPage = (req, res)  => {
+	res.render('back-office/simulatorIMT', {user: req.user});
+};
 
 // const renderSSSimulator = (req, res) => {
 // 	res.render('back-office/simulatorSS', {user: req.user});
 // };
 
 module.exports = {
-	getSimulatorPage,
-	editSimulator
+	getSegSocialSimulatorPage,
+	editSegSocialSimulator,
+	getAllSimulatorsPage,
+	getMaisValiasSimulatorPage,
+	getIMTSimulatorsPage
 };

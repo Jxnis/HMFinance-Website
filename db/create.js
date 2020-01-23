@@ -37,6 +37,7 @@ const connection = require('./config');
 // 	console.log('query complete');
 // });
 
+
 // connection.query(`CREATE TABLE contactUs (
 //     id INT AUTO_INCREMENT PRIMARY KEY,
 //     address1 VARCHAR(250),
@@ -48,6 +49,7 @@ const connection = require('./config');
 // 	if(err) console.log(err);
 // 	console.log('query complete');
 // });
+
 
 // connection.query(`CREATE TABLE simulatorSegSocial (
 //     taxENI DECIMAL(4,4),
@@ -90,5 +92,16 @@ connection.query(`CREATE TABLE imt (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
+});
+
+connection.query(`CREATE TABLE simulatorMaisValias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    year SMALLINT,
+    coeficient DECIMAL(5,2),
+    taxIRS DECIMAL(4,4)
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
 	connection.end();
 });
+
