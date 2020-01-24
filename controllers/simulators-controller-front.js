@@ -5,13 +5,26 @@ const getSimulatorInfo = (req, res, next) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the contact information' });
 		} else {
+			req.simulator = results;
+			next();
+		}
+	});
+};
+
+const getMaisValiasInfo = (req, res, next) => {
+	Simulator.getMaisValias((err, results) => {
+		if(err) {
+			res.status(500).json({ message: 'Error getting all the contact information' });
+		} else {
 			console.log(results);
-			const simulator = results;
-			res.render('en/simulators', {simulator});
+			const maisValias = results;
+			const simulator = req.simulator;
+			res.render('en/simulators', {maisValias, simulator});
 		}
 	});
 };
 
 module.exports = {
-	getSimulatorInfo
+	getSimulatorInfo,
+	getMaisValiasInfo
 };
