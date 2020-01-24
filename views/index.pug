@@ -19,12 +19,19 @@ block content
       li
         a(href='#reviews') #{translations[locale].SectionsTitles.Reviews}
 
+
+
   h3 #{translations[locale].Others.Language}
   //Clicking here it changes the language
   div 
     a(href='/setlanguage/pt') #{translations.both.pt}
     a(href='/setlanguage/en') #{translations.both.en}
     //form(action="/setlanguage", method="post") 
+    //select(name="language" id="language" onchange="/setlanguage")
+      option(value="pt") #{translations.both.PT}
+      option(value="en") 
+    //input(type="submit" value="Submit")
+
 
   #home
     .pcontainer
@@ -100,9 +107,10 @@ block content
 
 
     #simulators
-    br
-    p [Simulators]
-    br
+      br
+      #sims
+        a(href='' target='_blank')
+      br
 
     #contactus
       #whitetograyseparator
@@ -139,7 +147,9 @@ block content
           h1 #{translations[locale].SectionsTitles.Reviews}
       a#reviews.anchor
 
+
     #reviews
+
       each review in data.review
         h3 Name
         p #{review.name}
@@ -148,6 +158,58 @@ block content
         h3 Review
         p #{locale === 'pt' ? review.commentPT : review.commentEN}
         br   
+
+      #reviewimg
+        #reviewimg1
+          img(src='../media/testimony.png')
+          br
+          br
+          i
+            b - Reviewer 1
+        #reviewimg2
+          img(src='../media/testimony.png')
+          br
+          br
+          i
+            b - Reviewer 2
+        #reviewimg3
+          img(src='../media/testimony.png')
+          br
+          br
+          i
+            b - Reviewer 3
+        #reviewimg4
+          img(src='../media/testimony.png')
+          br
+          br
+          i
+            b - Reviewer 4
+      #reviewbox
+        #reviewbox1
+          h5 &ldquo;
+          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          br
+          br
+          h5 &rdquo;
+        #reviewbox2
+          h5 &ldquo;
+          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          br
+          br
+          h5 &rdquo;
+        #reviewbox3
+          h5 &ldquo;
+          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          br
+          br
+          h5 &rdquo;
+        #reviewbox4
+          h5 &ldquo;
+          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          br
+          br
+          h5 &rdquo;
+
 
     #footer
       .footergrid
@@ -273,7 +335,7 @@ block content
         input#email.form-input(type='text', name='email')
       input.btn.btn-primary(type='submit', value='Submit')
 
-   
+
     script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
     script(src='/javascripts/mailchimp.js')
 

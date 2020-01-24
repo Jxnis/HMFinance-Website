@@ -10,9 +10,6 @@ const profitYearMerchandise = document.getElementById('profitYearMerchandise');
 const profitYearOthers = document.getElementById('profitYearOthers');
 const resultsOutput = document.getElementById('output');
 
-console.log(simulator);
-
-//Add also the max value
 
 const Tax = (e) => {
 	e.preventDefault();
