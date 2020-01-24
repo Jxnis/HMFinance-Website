@@ -48,23 +48,20 @@ block content
   #clients
     .clientsgrid
       .clientsgrid1
-        img(src='../media/companylogo.png')
+        img(src=`${data.clients[0].logoURL}`)
         div
-          h3 Company 1
-          br
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          h3 #{data.clients[0].name}
+          
       .clientsgrid2
-        img(src='../media/companylogo.png')
+        img(src=`${data.clients[1].logoURL}`)
         div
-          h3 Company 2
-          br
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          h3 #{data.clients[1].name}
+          
       .clientsgrid3
-        img(src='../media/companylogo.png')
+        img(src=`${data.clients[02].logoURL}`)
         div
-          h3 Company 3
-          br
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          h3 #{data.clients[2].name}
+          
     #mid
   #services
     #whitetograyseparator
@@ -132,11 +129,11 @@ block content
           .contactusgrid2
             form
               h3 #{translations[locale].ContactUs.FormName}
-              input(type='text', name='name', onfocus="this.value=''", value='Your Name:')
+              input(type='text', name='name', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Name}`)
               h3 #{translations[locale].ContactUs.FormEmail}
-              input(type='text', name='email', onfocus="this.value=''", value='Your Email:')
+              input(type='text', name='email', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Email}`)
               h3 #{translations[locale].ContactUs.FormMessage}
-              textarea#question(name='question', rows='10') How Can We Help?
+              textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
               input(type='submit', value='SEND')
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}

@@ -107,14 +107,13 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 });
 
  */
-connection.query(`INSERT INTO reviews (year, coeficient, taxIRS) 
-	VALUES (2020, 1, 0.28),
-	(2019, 1, 0.28),
-	(2018, 1.01, 0.28),
-	(2017, 1.02, 0.28),
-	(2016, 1.02, 0.28)
+connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
+	VALUES ('Monark', 'http://www.monark.pt/files/uploads/16.jpg', 1, 'http://www.monark.pt/'),
+	('Eva Barros - Interior Design', 'http://www.evabarrosdesign.com/img/logo.svg', 1, 'http://www.evabarrosdesign.com/'),
+	('Move Cycle', 'https://i.imgur.com/VPaY2F6.jpg', 1, 'https://www.moovecycle.com/'),
+	('NutriStore', 'https://www.nutristore.eu/image/catalog/1%20Nutri/Logo/logo-transp-orange-black.png', 1, 'http://www.nutristore.eu/')
 `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	//connection.end();
+	connection.end();
 });
