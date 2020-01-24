@@ -102,7 +102,8 @@ block content
         .servicesgrid6 
           img(src='../media/people.png')
           h3
-            | #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
+            | #{translations[locale].Services.Titles.Others} 
+
       #graytowhiteseparator
         h1 #{translations[locale].SectionsTitles.Simulators}
     a#simulators.anchor
@@ -151,6 +152,15 @@ block content
 
 
     #reviews
+      each review in data.review
+        h3 Name
+        p #{review.name}
+        h3 Title
+        p #{locale === 'pt' ? review.titlePT : review.titleEN}
+        h3 Review
+        p #{locale === 'pt' ? review.commentPT : review.commentEN}
+        br   
+
       #reviewimg
         #reviewimg1
           img(src='../media/testimony.png')
@@ -309,13 +319,12 @@ block content
   <!-- From here down is just testing stuff -->
   div(onscroll='mailchimptoggle();')
 
-
-
     h1 Homepage
 
     h1 primeiro cliente 
     p #{data.clients[0].name}
     
+
     h3 Newsletter Singup Form
 
     p There is a hidden message for you. Click to see it.
@@ -332,6 +341,7 @@ block content
         label.form-label(for='email') Email
         input#email.form-input(type='text', name='email')
       input.btn.btn-primary(type='submit', value='Submit')
+
 
     h1 #{translations[locale].SectionsTitles.Simulators}
 
