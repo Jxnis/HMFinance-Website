@@ -7,6 +7,11 @@ block content
   #navbar
     ul
       li
+        //Clicking here it changes the language
+        div 
+          a(href='/setlanguage/pt') #{translations.both.pt}
+          a(href='/setlanguage/en') #{translations.both.en}
+      li
         a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
       li
         a(href='#clients') #{translations[locale].SectionsTitles.Clients}
@@ -18,19 +23,6 @@ block content
         a(href='#contactus') #{translations[locale].SectionsTitles.ContactUs}
       li
         a(href='#reviews') #{translations[locale].SectionsTitles.Reviews}
-
-
-
-  h3 #{translations[locale].Others.Language}
-  //Clicking here it changes the language
-  div 
-    a(href='/setlanguage/pt') #{translations.both.pt}
-    a(href='/setlanguage/en') #{translations.both.en}
-    //form(action="/setlanguage", method="post") 
-    //select(name="language" id="language" onchange="/setlanguage")
-      option(value="pt") #{translations.both.PT}
-      option(value="en") 
-    //input(type="submit" value="Submit")
 
 
   #home
@@ -65,7 +57,7 @@ block content
           h3 #{data.clients[1].name}
           
       .clientsgrid3
-        img(src=`${data.clients[02].logoURL}`)
+        img(src=`${data.clients[2].logoURL}`)
         div
           h3 #{data.clients[2].name}
           
@@ -149,63 +141,41 @@ block content
 
 
     #reviews
-
-      each review in data.review
-        h3 Name
-        p #{review.name}
-        h3 Title
-        p #{locale === 'pt' ? review.titlePT : review.titleEN}
-        h3 Review
-        p #{locale === 'pt' ? review.commentPT : review.commentEN}
-        br   
-
       #reviewimg
         #reviewimg1
-          img(src='../media/testimony.png')
-          br
-          br
           i
-            b - Reviewer 1
+            b #{data.review[0].name}
         #reviewimg2
-          img(src='../media/testimony.png')
-          br
-          br
           i
-            b - Reviewer 2
+            b #{data.review[1].name}
         #reviewimg3
-          img(src='../media/testimony.png')
-          br
-          br
           i
-            b - Reviewer 3
+            b #{data.review[2].name}
         #reviewimg4
-          img(src='../media/testimony.png')
-          br
-          br
           i
-            b - Reviewer 4
+            b #{data.review[2].name}
       #reviewbox
         #reviewbox1
           h5 &ldquo;
-          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          | &thinsp; #{locale === 'pt' ? data.review[0].commentPT : data.review[0].commentEN}
           br
           br
           h5 &rdquo;
         #reviewbox2
           h5 &ldquo;
-          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          | &thinsp; #{locale === 'pt' ? data.review[1].commentPT : data.review[1].commentEN}
           br
           br
           h5 &rdquo;
         #reviewbox3
           h5 &ldquo;
-          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
           br
           br
           h5 &rdquo;
         #reviewbox4
           h5 &ldquo;
-          | &thinsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
           br
           br
           h5 &rdquo;
