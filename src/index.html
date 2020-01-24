@@ -13,10 +13,11 @@
 
 <body>
 <div id="menubuttondiv">
-<img id="menubutton" src="../public/media/menu.png" height="40" width="40">
+<img id="menubutton" src="../public/media/menu.png">
 </div>
 <div id="navbar">
 <ul>
+<li><a href="#home" id="homeid">HM Finance</a></li>
 <li><a href="#clients">Clients</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#simulators">Simulators</a></li>
@@ -33,30 +34,29 @@
 <img src="../public/media/logo.png" alt="HM Finance">
 <h2>Financial Personal Trainer</h2>
 </div>
+<div id="describox">
 <div id="descri">
 <h3 id="descri1">O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos.</h3>
 <h3 id="descri2">O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado. </h3>
 <h3 id="descri3">Com experiência em PME's e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais. </h3>
 <h3 id="descri4">A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua. </h3>
 </div>
-<div id="describox"></div>
+</div>
 </div>
 <a class="anchor" id="clients"></a>
 <div id="clients">
 <div class="clientsgrid">
 <div class="clientsgrid1"><img src="../public/media/companylogo.png">
-<div><h3>Company 1</h3></div><br>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+<div><h3>Company 1</h3><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 </div>
 <div class="clientsgrid2"><img src="../public/media/companylogo.png">
-<div><h3>Company 2</h3></div><br>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+<div><h3>Company 2</h3><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 </div>
 <div class="clientsgrid3"><img src="../public/media/companylogo.png">
-<div><h3>Company 3</h3></div><br>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+<div><h3>Company 3</h3><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 </div>
 </div>
+<div id="mid"></div>
 </div>
 <div id="services">
 <div id="whitetograyseparator"><h1>SERVICES</h1></div>
@@ -146,7 +146,74 @@ Av. do Brasil, Nr. 4<br>2700-129 Amadora</a><br><br>
 <div class="footergrid6"><h4>Designed by Wild Code School</h4></div>
 </div>
 </div>
-<script>$("textarea#question").focus(function(){$(this).val("")}),$(".pimage").each(function(){var c=$(this),e=$(this).parent();function s(){var s=c.data("speed"),o=e.offset().top,r=$(this).scrollTop(),i=$(this).height(),l=e.innerHeight(),d=r+i;if(o<d&&r<o+l)var a=(d-o)*s/(i+l)*100+(50-50*s);c.css({top:a+"%",transform:"translate(-50%, -"+a+"%)"})}$(document).on({scroll:function(){s()},ready:function(){s()}})}),function(a,r){a.fn.inViewport=function(d){return this.each(function(s,l){function o(){var s=a(this).height(),o=l.getBoundingClientRect(),r=o.top,i=o.bottom;return d.call(l,Math.max(0,0<r?s-r:i<s?i:s))}o(),a(r).on("resize scroll",o)})}}(jQuery,window),$("#services").inViewport(function(s){s&&$(".clientsgrid1").addClass("showscroll1"),s&&$(".clientsgrid2").addClass("showscroll2"),s&&$(".clientsgrid3").addClass("showscroll3")}),$(".servicesgrid").inViewport(function(s){s&&$(".servicesgrid1").addClass("showscroll1"),s&&$(".servicesgrid2").addClass("showscroll2"),s&&$(".servicesgrid3").addClass("showscroll3"),s&&$(".servicesgrid4").addClass("showscroll1"),s&&$(".servicesgrid5").addClass("showscroll2"),s&&$(".servicesgrid6").addClass("showscroll3"),s&&$(".servicesgrid7").addClass("showscroll4"),s&&$(".servicesgrid8").addClass("showscroll5"),s&&$(".servicesgrid9").addClass("showscroll6"),s&&$(".servicesgrid10").addClass("showscroll4"),s&&$(".servicesgrid11").addClass("showscroll5"),s&&$(".servicesgrid12").addClass("showscroll6")}),$(".footergrid").inViewport(function(s){s&&$(".footergrid1").addClass("showscroll1"),s&&$(".footergrid2").addClass("showscroll2"),s&&$(".footergrid3").addClass("showscroll3"),s&&$(".footergrid4").addClass("showscroll4"),s&&$(".footergrid5").addClass("showscroll5"),s&&$(".footergrid6").addClass("showscroll6")}),$(".contactusgrid").inViewport(function(s){s&&$(".contactusgrid1").addClass("showscroll1"),s&&$(".contactusgrid2").addClass("showscroll2")})</script>
-</body>
+<script> 
+		$("textarea#question").focus(function() {
+    $(this).val("")
+    }),
+    $(".pimage").each(function() {
+        var c = $(this),
+            e = $(this).parent();
+
+        function s() {
+            var s = c.data("speed"),
+                o = e.offset().top,
+                r = $(this).scrollTop(),
+                i = $(this).height(),
+                l = e.innerHeight(),
+                d = r + i;
+            if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+            c.css({
+                top: a + "%",
+                transform: "translate(-50%, -" + a + "%)"
+            })
+        }
+        $(document).on({
+            scroll: function() {
+                s()
+            },
+            ready: function() {
+                s()
+            }
+        })
+    }),
+    function(a, r) {
+        a.fn.inViewport = function(d) {
+            return this.each(function(s, l) {
+                function o() {
+                    var s = a(this).height(),
+                        o = l.getBoundingClientRect(),
+                        r = o.top,
+                        i = o.bottom;
+                    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+                }
+                o(), a(r).on("resize scroll", o)
+            })
+        }
+    }(jQuery, window), $("#mid").inViewport(function(s) {
+				s && $(".clientsgrid1").addClass("showscroll1"), 
+				s && $(".clientsgrid2").addClass("showscroll2"), 
+				s && $(".clientsgrid3").addClass("showscroll3")
+    }), $(".servicesgrid").inViewport(function(s) {
+				s && $(".servicesgrid1").addClass("showscroll1"), 
+				s && $(".servicesgrid2").addClass("showscroll2"), 
+				s && $(".servicesgrid3").addClass("showscroll3"), 
+				s && $(".servicesgrid4").addClass("showscroll4"), 
+				s && $(".servicesgrid5").addClass("showscroll5"), 
+				s && $(".servicesgrid6").addClass("showscroll6")
+    }), $(".footergrid").inViewport(function(s) {
+				s && $(".footergrid1").addClass("showscroll1"), 
+				s && $(".footergrid2").addClass("showscroll2"), 
+				s && $(".footergrid3").addClass("showscroll3"), 
+				s && $(".footergrid4").addClass("showscroll4"), 
+				s && $(".footergrid5").addClass("showscroll5"), 
+				s && $(".footergrid6").addClass("showscroll6")
+    }), $(".contactusgrid").inViewport(function(s) {
+				s && $(".contactusgrid1").addClass("showscroll1")	 
+		}), $(".contactusgrid2").inViewport(function(s) { 
+				s && $(".contactusgrid2").addClass("showscroll2")
+		});
+	</script>
+	
+	</body>
 
 </html>
