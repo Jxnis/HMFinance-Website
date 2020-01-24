@@ -44,13 +44,13 @@ block content
     #describox
       #descri
         h3#descri1
-          | O nosso projeto teve in&iacute;cio em 2016, com a constitui&ccedil;&atilde;o de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gest&atilde;o de Recursos Humanos.
+          p #{locale === 'pt' ? PTaboutUS[0] : ENaboutUS[0]}
         h3#descri2
-          | O nosso quadro de pessoal, constitu&iacute;do por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, din&acirc;mico e empenhado.
+          p #{locale === 'pt' ? PTaboutUS[1] : ENaboutUS[1]}
         h3#descri3
-          | Com experi&ecirc;ncia em PME&apos;s e Multinacionais, a HMFinance encontra-se em fase de consolida&ccedil;&atilde;o e expans&atilde;o nos Distritos de Lisboa e Cascais.
+          p #{locale === 'pt' ? PTaboutUS[2] : ENaboutUS[2]}
         h3#descri4
-          | A qualidade dos nossos servi&ccedil;os e a sua satisfa&ccedil;&atilde;o motivam a nossa melhoria cont&iacute;nua.
+          p #{locale === 'pt' ? PTaboutUS[3] : ENaboutUS[3]}
   a#clients.anchor
   #clients
     .clientsgrid
@@ -86,7 +86,7 @@ block content
         .servicesgrid2
           img(src='../media/chrome_reader_mode.png')
           h3
-            | #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
+            | #{translations[locale].Services.Titles.Accounting} 
         .servicesgrid3
           img(src='../media/find_in_page.png')
           h3
@@ -309,13 +309,13 @@ block content
   <!-- From here down is just testing stuff -->
   div(onscroll='mailchimptoggle();')
 
+
+
     h1 Homepage
 
     h1 primeiro cliente 
     p #{data.clients[0].name}
     
-    
-
     h3 Newsletter Singup Form
 
     p There is a hidden message for you. Click to see it.
@@ -332,8 +332,6 @@ block content
         label.form-label(for='email') Email
         input#email.form-input(type='text', name='email')
       input.btn.btn-primary(type='submit', value='Submit')
-
-
 
     h1 #{translations[locale].SectionsTitles.Simulators}
 

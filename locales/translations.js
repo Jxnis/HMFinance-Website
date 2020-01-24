@@ -61,7 +61,7 @@ const Translations = {
 				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'European citizens Legalization, IRS Statements, independet workers'
+				Others: 'Mailing Domiciliation, IRS Declaration, Independet Workers, and others'
 			}
 		},
 		Simulators: {
@@ -148,11 +148,11 @@ const Translations = {
 
 			SubTitles: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Your Business Financial pt',
+				Accounting: 'O seu PT financeiro',
 				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',				
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'European citizens Legalization, IRS Statements, independet workers'
+				Others: 'Domiciliação da correspondência, Declaração de IRS, Trabalhadores independentes, entre outros'
 			}
 		},
 		Simulators: {
