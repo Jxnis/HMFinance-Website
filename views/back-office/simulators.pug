@@ -6,50 +6,8 @@ block content
         a(href='/dashboard') Dashboard
     br
     div
-       form(action="/dashboard/simulators", method="post")
-            div
-                label Tax ENI
-                br
-                input(type="number", name="taxENI" step=0.0001 value=simulator.taxENI)
-            div
-                label Tax TI
-                br
-                input(type="number", name="taxTI" step=0.0001 value=simulator.taxTI)      
-            div
-                label % Services
-                br
-                input(type="number", name="percentageServices" step=0.0001 value=simulator.percentageServices)
-            div
-                label % Goods
-                br
-                input(type="number", name="percentageGoods" step=0.0001 value=simulator.percentageGoods)
-            div
-                label % Others
-                br
-                input(type="number", name="percentageOthers" step=0.0001 value=simulator.percentageOthers)
-            div
-                label min ENICO
-                br
-                input(type="number", name="minENICO" step=0.01 value=simulator.minENICO)
-            div
-                label min TICO
-                br
-                input(type="number", name="minTICO" step=0.01 value=simulator.minTICO)
-            div
-                label min TI Simplificado
-                br
-                input(type="number", name="minTISimplificado" step=0.01 value=simulator.minTISimplificado)
-            div
-                label Revenue Exemption
-                br
-                input(type="number", name="revenueExemption" step=0.01 value=simulator.revenueExemption)
-            div
-                label % Revenue Exemption
-                br
-                input(type="number", name="percentageRevenueExemption" step=0.0001 value=simulator.percentageRevenueExemption)
-            div
-                label Gross Wage Exemption
-                br
-                input(type="number", name="grossWageExemption" step=0.01 value=simulator.grossWageExemption)            
-            div
-                input(type="submit", value="Editar") 
+        a(href='/dashboard/simulators/segsocial') Simulador Segurança Social
+        br
+        a(href='/dashboard/simulators/maisvalias') Simulador Mais Valias
+        br
+        a(href='/dashboard/simulators/imt') Simulador IMT

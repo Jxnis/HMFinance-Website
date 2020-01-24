@@ -37,17 +37,19 @@ connection.query(`CREATE TABLE client (
 	console.log('query complete');
 });
 
+
 connection.query(`CREATE TABLE contactUs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     address1 VARCHAR(250),
     address2 VARCHAR(250),
     email VARCHAR(250),
     phone VARCHAR(250),
-    locationURL VARCHAR(250)
+    locationURL VARCHAR(20000)
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
 });
+
 
 connection.query(`CREATE TABLE simulatorSegSocial (
     taxENI DECIMAL(4,4),
@@ -77,5 +79,29 @@ connection.query(`CREATE TABLE homepage (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
+	// connection.end();
+});
+
+connection.query(`CREATE TABLE imt (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    type VARCHAR(250),
+    location VARCHAR(250),
+    lowEnd DECIMAL(9,2) default null,
+    highEnd DECIMAL(9,2) default null,
+    marginal DECIMAL(4,3)
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
+});
+
+connection.query(`CREATE TABLE simulatorMaisValias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    year SMALLINT,
+    coeficient DECIMAL(5,2),
+    taxIRS DECIMAL(4,4)
+)`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
 	connection.end();
 });
+

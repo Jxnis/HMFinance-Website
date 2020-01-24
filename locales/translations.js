@@ -1,7 +1,7 @@
 const Translations = {
 	both: {
-		PT: 'pt',
-		EN: 'en',
+		pt: 'pt',
+		en: 'en',
 		Footer: {
 			Face: 'Facebook',
 			Insta: 'Instagram',
@@ -57,7 +57,7 @@ const Translations = {
 
 			SubTitles: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Your Business Financial PT',
+				Accounting: 'Your Business Financial pt',
 				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
@@ -148,7 +148,7 @@ const Translations = {
 
 			SubTitles: {
 				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Your Business Financial PT',
+				Accounting: 'Your Business Financial pt',
 				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',				
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',

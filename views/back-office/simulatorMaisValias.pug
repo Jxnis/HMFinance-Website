@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Simulador Mais Valias
+    div
+        a(href='/dashboard/simulators') Simuladores
+    div 
+        tr
+            th Ano
+            th Coeficiente
+            th Taxa IRS
+            div
+                form(action='/dashboard/simulators/maisvalias', method='post')
+                    each year in simulatorMaisValias
+                        input(type="number", name="year" step=1 value=year.year)
+                        input(type="number", name="coeficient" step=0.0001 value=year.coeficient)
+                        input(type="number", name="taxIRS" step=0.0001 value=year.taxIRS)
+                        br
+                        input(type="hidden" value=year.id)
+                    input(type="submit", value="Editar") 

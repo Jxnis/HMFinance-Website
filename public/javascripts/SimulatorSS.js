@@ -10,7 +10,9 @@ const profitYearMerchandise = document.getElementById('profitYearMerchandise');
 const profitYearOthers = document.getElementById('profitYearOthers');
 const resultsOutput = document.getElementById('output');
 
-console.log(simulator)
+console.log(simulator);
+
+//Add also the max value
 
 const Tax = (e) => {
 	e.preventDefault();
@@ -29,6 +31,9 @@ const Tax = (e) => {
 	if(typeOfWork === 'ENI'){
 		if(profit/12 >= simulator.minENICO){
 			output = (profit/12) * simulator.taxENI;
+			if(output > 12 * simulator.grossWageExemption * simulator.taxENI){
+				output = 12 * simulator.grossWageExemption * simulator.taxENI;
+			}
 		} else {
 			output = 0;
 		}
@@ -37,6 +42,9 @@ const Tax = (e) => {
 	if(typeOfWork === 'TI' && typeOfRegime === 'CO'){
 		if(profit/12 >= simulator.minTICO){
 			output = (profit/12) * simulator.taxTI;
+			if(output > 12 * simulator.grossWageExemption * simulator.taxTI){
+				output = 12 * simulator.grossWageExemption * simulator.taxTI;
+			}
 		} else {
 			output = 0;
 		}
@@ -73,6 +81,9 @@ const Tax = (e) => {
 			taxOthers = grossRevenueOnOthers * simulator.percentageOthers;
 		}
 		output = (taxServices + taxMerchandise + taxOthers) * (1/3) * (simulator.taxTI);
+		if(output > 12 * simulator.grossWageExemption * simulator.taxTI){
+			output = 12 * simulator.grossWageExemption * simulator.taxTI;
+		}
 	}
 
 	if(grossWageValue <= simulator.grossWageExemption && grossWageValue != 0) {
@@ -98,6 +109,9 @@ const Tax = (e) => {
 			taxOthers = grossRevenueOnOthers * simulator.percentageOthers;
 		}
 		output = (taxServices + taxMerchandise + taxOthers) * (1/3) * (simulator.taxTI);
+		if(output > 12 * simulator.grossWageExemption * simulator.taxTI){
+			output = 12 * simulator.grossWageExemption * simulator.taxTI;
+		}
 	}
 
 	if(grossWageValue > simulator.grossWageExemption && grossWageValue != 0) {
@@ -132,11 +146,12 @@ const Tax = (e) => {
 			}
 		}
 		output = (taxServices + taxMerchandise + taxOthers) * simulator.taxTI;
+		if(output > 12 * simulator.grossWageExemption * simulator.taxTI){
+			output = 12 * simulator.grossWageExemption * simulator.taxTI;
+		}
 	}
 	return resultsOutput.innerHTML = output.toFixed(2);
 };
-
-
 
 formSS.addEventListener('submit', Tax);
 
