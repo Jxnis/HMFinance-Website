@@ -10,8 +10,6 @@ const profitYearMerchandise = document.getElementById('profitYearMerchandise');
 const profitYearOthers = document.getElementById('profitYearOthers');
 const resultsOutput = document.getElementById('output');
 
-console.log(simulator)
-
 const Tax = (e) => {
 	e.preventDefault();
 	let profit = profitYear.value;
