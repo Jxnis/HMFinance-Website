@@ -5,3 +5,34 @@ block content
     div
         a(href='/dashboard/simulators') Simuladores
     
+    table
+        tbody
+            tr
+                th 
+                    h3 Tipo de Imóvel  
+                th 
+                    h3 Localização
+                th 
+                    h3 Valor do Imóvel Mínimo
+                th 
+                    h3 Valor do Imóvel Máximo
+                th 
+                    h3 Taxa Marginal
+
+        form(action=`/dashboard/simulators/imt/edit`, method="post")
+            each entry in imtsimulator
+                tr
+                    td
+                        input(type="text", name="type" value=entry.type)
+                    td
+                        input(type="text", name="location" value=entry.location)      
+                    td
+                        input(type="number", name="lowEnd" value=entry.lowEnd)       
+                    td
+                        input(type="number", name="highEnd" value=entry.highEnd)       
+                    td
+                        input(type="number", name="marginal" value=entry.marginal) 
+                    td
+                        input(type="hidden", name="id", value=entry.id)   
+            div
+                input(type="submit", value="Edit")

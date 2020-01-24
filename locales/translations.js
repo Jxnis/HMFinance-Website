@@ -24,7 +24,8 @@ const Translations = {
 			AboutUs: 'About us',
 			ContactUs: 'Contact us',
 			Clients: 'Clients',
-			Reviews: 'Reviews'
+			Reviews: 'Reviews',
+			HMFinance: 'HM Finance'
 
 		},
 		Services: {
@@ -113,7 +114,8 @@ const Translations = {
 			AboutUs: 'Sobre Nós',
 			ContactUs: 'Contacte-nos',
 			Clients: 'Clientes',
-			Reviews: 'Comentários'
+			Reviews: 'Comentários',
+			HMFinance: 'HM Finance'
 
 		},
 		Services: {

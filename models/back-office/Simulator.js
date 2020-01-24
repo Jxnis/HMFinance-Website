@@ -1,6 +1,7 @@
 const connection = require('../../db/config');
 
 const Simulator = {};
+const SimulatorIMT = {};
 
 Simulator.get = (callback) => {
 	connection.query(
@@ -89,4 +90,38 @@ Simulator.edit = (simulatorEdited, callback) => {
 	);
 };
 
-module.exports = Simulator;
+
+
+SimulatorIMT.get = (callback) => {
+	connection.query(
+		'SELECT * FROM imt',
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+SimulatorIMT.edit = (simulatorEdited, callback) => {
+	connection.query(
+		`UPDATE imt
+		SET 
+			type=?,
+			location=?,
+			lowEnd=?,
+			highEnd=?,
+			marginal=?
+		WHERE
+			id=?			
+        `, [
+			simulatorEdited.type,
+			simulatorEdited.location,
+			simulatorEdited.lowEnd,
+			simulatorEdited.highEnd,
+			simulatorEdited.marginal,
+			simulatorEdited.id,
+		],
+		(err, results, fields) => callback(err, results, fields)
+	);
+}; 
+
+module.exports = {
+	Simulator,
+	SimulatorIMT
+};
