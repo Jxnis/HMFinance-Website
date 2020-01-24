@@ -144,10 +144,13 @@ block content
 
     #reviews
       each review in data.review
-        p #{review.company}
+        h3 Name
+        p #{review.name}
+        h3 Title
         p #{locale === 'pt' ? review.titlePT : review.titleEN}
+        h3 Review
         p #{locale === 'pt' ? review.commentPT : review.commentEN}
-        //- p(id=`comment${review.id}`)   
+        br   
 
     #footer
       .footergrid
