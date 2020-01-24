@@ -37,13 +37,13 @@ block content
     #describox
       #descri
         h3#descri1
-          | O nosso projeto teve in&iacute;cio em 2016, com a constitui&ccedil;&atilde;o de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gest&atilde;o de Recursos Humanos.
+          p #{locale === 'pt' ? PTaboutUS[0] : ENaboutUS[0]}
         h3#descri2
-          | O nosso quadro de pessoal, constitu&iacute;do por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, din&acirc;mico e empenhado.
+          p #{locale === 'pt' ? PTaboutUS[1] : ENaboutUS[1]}
         h3#descri3
-          | Com experi&ecirc;ncia em PME&apos;s e Multinacionais, a HMFinance encontra-se em fase de consolida&ccedil;&atilde;o e expans&atilde;o nos Distritos de Lisboa e Cascais.
+          p #{locale === 'pt' ? PTaboutUS[2] : ENaboutUS[2]}
         h3#descri4
-          | A qualidade dos nossos servi&ccedil;os e a sua satisfa&ccedil;&atilde;o motivam a nossa melhoria cont&iacute;nua.
+          p #{locale === 'pt' ? PTaboutUS[3] : ENaboutUS[3]}
   a#clients.anchor
   #clients
     .clientsgrid
@@ -79,7 +79,7 @@ block content
         .servicesgrid2
           img(src='../media/chrome_reader_mode.png')
           h3
-            | #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
+            | #{translations[locale].Services.Titles.Accounting} 
         .servicesgrid3
           img(src='../media/find_in_page.png')
           h3
@@ -95,7 +95,7 @@ block content
         .servicesgrid6 
           img(src='../media/people.png')
           h3
-            | #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
+            | #{translations[locale].Services.Titles.Others} 
 
       #graytowhiteseparator
         h1 #{translations[locale].SectionsTitles.Simulators}
@@ -256,13 +256,6 @@ block content
   <!-- From here down is just testing stuff -->
   div(onscroll='mailchimptoggle();')
 
-    h1 Homepage
-
-    h1 primeiro cliente 
-    //- p #{data.clients[0].name}
-    
-    
-
     h3 Newsletter Singup Form
 
     p There is a hidden message for you. Click to see it.
@@ -280,70 +273,7 @@ block content
         input#email.form-input(type='text', name='email')
       input.btn.btn-primary(type='submit', value='Submit')
 
-    h1 #{translations[locale].SectionsTitles.Simulators}
-
-    h2 #{translations[locale].Services.Titles.Party}
-
-    h3 #{translations[locale].Services.ServicesText.HR}
-
-    h4 #{translations[locale].AboutUs.Subtitle}
-
-    h5 #{translations[locale].ContactUs.FormTitle}
-
-    div
-      h2 Reviews
-
-      each review in data.review
-        p #{review.id}
-        p #{review.name}
-        p #{review.email}
-        p #{review.commentPT}
-        p #{review.titlePT}
-        p #{review.company}
-        p #{review.isApproved}
-        p #{review.isShowing}
-        p #{review.commentEN}
-        p #{review.titleEN}
-        br
-        br
-
-    div
-      h2 Homepage Data
-      
-      //- p #{data.homepage[0].id}
-      //- p #{data.homepage[0].titlePT}
-      //- p #{data.homepage[0].introPT}
-      //- p #{data.homepage[0].aboutUsPT}
-      //- p #{data.homepage[0].aboutUsEN}
-      //- p #{data.homepage[0].introEN}
-      //- p #{data.homepage[0].titleEN}
-      br
-      br
-
-    div
-      h2 Contact Us
-      
-      //- p #{data.contactUs[0].id}
-      //- p #{data.contactUs[0].address1}
-      //- p #{data.contactUs[0].address2}
-      //- p #{data.contactUs[0].email}
-      //- p #{data.contactUs[0].phone}
-      //- p #{data.contactUs[0].locationURL}
-      br
-      br
-
-    div
-      h2 Clients
-
-      each client in data.clients
-        p #{client.id}
-        p #{client.name}
-        p #{client.logoURL}
-        p #{client.isShowing}
-        p #{client.clientURL}
-        br
-        br
-
+   
     script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
     script(src='/javascripts/mailchimp.js')
 
