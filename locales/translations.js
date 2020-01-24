@@ -15,7 +15,12 @@ const Translations = {
 	en: {
 		Others: {
 			Language: 'Language',
-			PersonalT: 'Financial Personal Trainer'
+			PersonalT: 'Financial Personal Trainer',
+			ContactUsForm: {
+				Name: 'Your Name',
+				Email: 'Your E-mail',
+				Help: 'How can we help you?'
+			},
 		},
 
 		SectionsTitles: {
@@ -104,8 +109,12 @@ const Translations = {
 	pt: {
 		Others: {
 			Language: 'Lingua',
-			PersonalT: 'Personal Trainer Financeiro'
-
+			PersonalT: 'Personal Trainer Financeiro',
+			ContactUsForm: {
+				Name: 'Insira o seu Nome',
+				Email: 'Insira o seu E-mail',
+				Help: 'Como é que o podemos ajudar?'
+			}
 		},
 
 		SectionsTitles: {

@@ -8,7 +8,7 @@ Homepage.getAll = (callback) => {
 	let homepage;
 	let review;
 	connection.query(
-		'SELECT * FROM client',
+		'SELECT * FROM client WHERE isShowing = 1',
 		(err, results) => {
 			if(err) {
 				callback(err);
