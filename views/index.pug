@@ -3,9 +3,11 @@ extends layout
 block content
 
   #menubuttondiv
-    img#menubutton(src='/media/menu.png', width='40', height='40')
+    img#menubutton(src='/media/menu.png')
   #navbar
     ul
+      li
+        a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
       li
         a(href='#clients') #{translations[locale].SectionsTitles.Clients}
       li
@@ -29,7 +31,7 @@ block content
       option(value="pt") #{translations.both.PT}
       option(value="en") 
     //input(type="submit" value="Submit")
-  
+
 
   #home
     .pcontainer
@@ -39,18 +41,38 @@ block content
     #logo
       img(src='../media/logo.png', alt='HM Finance')
       h2 #{translations[locale].Others.PersonalT}
-    #descri
-      h3#descri1
-        p O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos.
-      h3#descri2
-        p O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado.
-      h3#descri3
-        p Com experiência em PME's e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais.
-      h3#descri4
-        p A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua.
     #describox
-
-
+      #descri
+        h3#descri1
+          | O nosso projeto teve in&iacute;cio em 2016, com a constitui&ccedil;&atilde;o de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gest&atilde;o de Recursos Humanos.
+        h3#descri2
+          | O nosso quadro de pessoal, constitu&iacute;do por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, din&acirc;mico e empenhado.
+        h3#descri3
+          | Com experi&ecirc;ncia em PME&apos;s e Multinacionais, a HMFinance encontra-se em fase de consolida&ccedil;&atilde;o e expans&atilde;o nos Distritos de Lisboa e Cascais.
+        h3#descri4
+          | A qualidade dos nossos servi&ccedil;os e a sua satisfa&ccedil;&atilde;o motivam a nossa melhoria cont&iacute;nua.
+  a#clients.anchor
+  #clients
+    .clientsgrid
+      .clientsgrid1
+        img(src='../media/companylogo.png')
+        div
+          h3 Company 1
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .clientsgrid2
+        img(src='../media/companylogo.png')
+        div
+          h3 Company 2
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .clientsgrid3
+        img(src='../media/companylogo.png')
+        div
+          h3 Company 3
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    #mid
   #services
     #whitetograyseparator
       h1 #{translations[locale].SectionsTitles.Services}
@@ -58,23 +80,29 @@ block content
       img.pimage(src='../media/2.jpg', data-speed='-1')
       .servicesgrid
         .servicesgrid1
-          img(src='../media/business.png', width='70', height='70')
+          img(src='../media/business.png')
+          h3
+            | #{translations[locale].Services.Titles.Company}
         .servicesgrid2
-          img(src='../media/chrome_reader_mode.png', width='70', height='70')
+          img(src='../media/chrome_reader_mode.png')
+          h3
+            | #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
         .servicesgrid3
-          img(src='../media/find_in_page.png', width='70', height='70')
-        .servicesgrid4 #{translations[locale].Services.Titles.Company}
-        .servicesgrid5 #{translations[locale].Services.Titles.Accounting} - #{translations[locale].Services.SubTitles.Accounting}
-        .servicesgrid6 #{translations[locale].Services.Titles.Analytical}
-        .servicesgrid7
-          img(src='../media/folder_shared.png', width='70', height='70')
-        .servicesgrid8
-          img(src='../media/note_add.png', width='70', height='70')
-        .servicesgrid9
-          img(src='../media/people.png', width='70', height='70')
-        .servicesgrid10 #{translations[locale].Services.Titles.HR}
-        .servicesgrid11 #{translations[locale].Services.Titles.Party}
-        .servicesgrid12 #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
+          img(src='../media/find_in_page.png')
+          h3
+            | #{translations[locale].Services.Titles.Analytical}
+        .servicesgrid4 
+          img(src='../media/folder_shared.png')
+          h3
+            | #{translations[locale].Services.Titles.HR}
+        .servicesgrid5
+          img(src='../media/security.png')
+          h3
+            | #{translations[locale].Services.Titles.Party}
+        .servicesgrid6 
+          img(src='../media/people.png')
+          h3
+            | #{translations[locale].Services.Titles.Others} - #{translations[locale].Services.SubTitles.Others}
       #graytowhiteseparator
         h1 #{translations[locale].SectionsTitles.Simulators}
     a#simulators.anchor
@@ -195,19 +223,19 @@ block content
         });
       };
     }(jQuery, window));
+    $("#mid").inViewport(function(px){
+      if(px) $(".clientsgrid1").addClass("showscroll1")
+      if(px) $(".clientsgrid2").addClass("showscroll2")
+      if(px) $(".clientsgrid3").addClass("showscroll3")
+      ;
+    });
     $(".servicesgrid1").inViewport(function(px){
       if(px) $(".servicesgrid1").addClass("showscroll1")
       if(px) $(".servicesgrid2").addClass("showscroll2")
       if(px) $(".servicesgrid3").addClass("showscroll3")
-      if(px) $(".servicesgrid4").addClass("showscroll1")
-      if(px) $(".servicesgrid5").addClass("showscroll2")
-      if(px) $(".servicesgrid6").addClass("showscroll3")
-      if(px) $(".servicesgrid7").addClass("showscroll4")
-      if(px) $(".servicesgrid8").addClass("showscroll5")
-      if(px) $(".servicesgrid9").addClass("showscroll6")
-      if(px) $(".servicesgrid10").addClass("showscroll4")
-      if(px) $(".servicesgrid11").addClass("showscroll5")
-      if(px) $(".servicesgrid12").addClass("showscroll6")
+      if(px) $(".servicesgrid4").addClass("showscroll4")
+      if(px) $(".servicesgrid5").addClass("showscroll5")
+      if(px) $(".servicesgrid6").addClass("showscroll6")
       ;
     });
     $(".footergrid1").inViewport(function(px){
@@ -221,13 +249,12 @@ block content
     });
     $(".contactusgrid").inViewport(function(px){
       if(px) $(".contactusgrid1").addClass("showscroll1")
+      ;
+    });
+    $(".contactusgrid2").inViewport(function(px){
       if(px) $(".contactusgrid2").addClass("showscroll2")
       ;
     });
-
-  
-
-
 
   <!-- From here down is just testing stuff -->
   div(onscroll='mailchimptoggle();')
