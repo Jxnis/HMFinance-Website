@@ -99,26 +99,37 @@ SimulatorIMT.get = (callback) => {
 	);
 };
 SimulatorIMT.edit = (simulatorEdited, callback) => {
-	connection.query(
-		`UPDATE imt
-		SET 
+	//let resultQuery = '';
+	//debugger;
+	for (let i = 0 ; i < simulatorEdited.type.length; i++) {
+		//console.log(simulatorEdited.type[i]);
+		connection.query(
+			`UPDATE imt
+			SET 
 			type=?,
 			location=?,
 			lowEnd=?,
 			highEnd=?,
 			marginal=?
-		WHERE
+			WHERE
 			id=?			
-        `, [
-			simulatorEdited.type,
-			simulatorEdited.location,
-			simulatorEdited.lowEnd,
-			simulatorEdited.highEnd,
-			simulatorEdited.marginal,
-			simulatorEdited.id,
-		],
-		(err, results, fields) => callback(err, results, fields)
-	);
+        	`, [
+				simulatorEdited.type[i],
+				simulatorEdited.location[i],
+				simulatorEdited.lowEnd[i],
+				simulatorEdited.highEnd[i],
+				simulatorEdited.marginal[i],
+				simulatorEdited.id[i]
+			],
+			(err) => {
+				if(err) callback(err);
+			}
+			//(err) => console.log(err)
+
+		);
+	}
+	callback(null);
+
 }; 
 
 module.exports = {
