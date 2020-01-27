@@ -81,15 +81,56 @@ block content
                 p Se for residente em Portugal por favor contacte-nos para fazermos uma simulação à sua medida.
                 p Se tiver comprado o ativo antes de 2016 por favor contacte-nos para fazermos uma simulação à sua medida.
     
-    script.
-        const simulator = !{JSON.stringify(simulator[0])}
+    div
+        h2 Simulador IMT
+        form(id="IMTSimulator") 
+            div
+                label Local
+                select(id="location")
+                    option(value='PC') Portugal Continental
+                    option(value='RA') Regiões Autónomas
+            div
+                label Tipo de Imóvel
+                    select(id="type")
+                        option(value='HPP') Habitação Própria Permanente 
+                        option(value='HSA') Habitação Secundária ou Arrendamento 
+                        option(value='Rustico') Prédios Rústicos
+                        option(value='Outros') Outros Prédios Urbanos
+                        
+            div
+                label Valor do Imóvel
+                input(type="text" id="imovelValue")
+         
+            div
+                input(type="submit" value="Calcular")
+            div
+                p IMT a pagar
+                p(id="outputIMT")
+            div
+                p IS a pagar
+                p(id="outputIS")
+            div
+                p Total a pagar
+                p(id="outputTotal")
 
+    <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+    script.
+        const IMT = !{JSON.stringify(IMT)};
+        const IStax = !{JSON.stringify(IStax)};
+    
+    script(src='/javascripts/IMTsimulator.js')
+
+    script.
+        const simulator = !{JSON.stringify(simulator[0])};
+    
     script(src='/javascripts/SimulatorSS.js')
     
     script.
         const maisValias = !{JSON.stringify(maisValias)}
     
     script(src='/javascripts/maisValiasSimulator.js')
+
+    
         
 
             

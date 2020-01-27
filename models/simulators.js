@@ -14,4 +14,15 @@ Simulator.getMaisValias = (callback) => {
 	);
 };
 
+Simulator.getIMTIS = (callback) => {
+	connection.query('SELECT * FROM imtIS',
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+Simulator.getIMT = (callback) => {
+	connection.query('SELECT * FROM imt',
+		(err, results, fields) => callback(err, results, fields)
+	);
+};
+
 module.exports = Simulator;

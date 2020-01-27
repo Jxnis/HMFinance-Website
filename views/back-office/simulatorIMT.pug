@@ -36,3 +36,14 @@ block content
                         input(type="hidden", name="id", value=entry.id)   
             div
                 input(type="submit", value="Edit")
+        
+        tbody
+            tr
+                th 
+                    h3 Taxa de Imposto de selo
+        form(action=`/dashboard/simulators/imt/editIS`, method="post")
+            tr
+                td
+                    input(type="text", name="type" value=IStax[0].value)
+                td
+                    input(type="submit", value="Edit")
