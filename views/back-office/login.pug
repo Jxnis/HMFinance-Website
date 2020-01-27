@@ -1,15 +1,18 @@
 extends layout
 
 block content
-  h1 Login
-  div
-    a(href="/") Home
+    div.log-form 
+        h2 Login to your account
+        form(action="/auth/login", method="post" class="form-signin")
+            #error
+                if error
+                    p.text-danger Error!!
+ 
+            input(type="email", name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus)
+               
+            input(type="password", name="password" id="inputPassword" class="form-control" placeholder="Password" required)
+            
+            button(class="btn" type="submit") Sign in
 
-  form(action="/auth/login", method="post")
-    div
-        input(type="email", name="email" placeholder="email" required)
-    div
-        input(type="password", name="password" placeholder="password" required)
-    div
-        input(type="submit", value="Login")
+            
 
