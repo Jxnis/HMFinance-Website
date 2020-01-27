@@ -1,5 +1,13 @@
 const connection = require('./config');
 
+connection.query('INSERT INTO imtIS (value) VALUES (0.08)',
+	(err) => {
+		if(err) console.log(err);
+		console.log('query complete');
+	// connection.end();
+	}); 
+
+
 /* connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal) VALUES 
 ('Rustico','PC', NULL, NULL,'0.05'),
 ('Rustico','RA', NULL, NULL,'0.05'),
@@ -106,7 +114,7 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 	//connection.end();
 });
 
- */
+ 
 connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
 	VALUES ('Monark', 'http://www.monark.pt/files/uploads/16.jpg', 1, 'http://www.monark.pt/'),
 	('Eva Barros - Interior Design', 'http://www.evabarrosdesign.com/img/logo.svg', 1, 'http://www.evabarrosdesign.com/'),
@@ -117,3 +125,4 @@ connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL)
 	console.log('query complete');
 	connection.end();
 });
+*/

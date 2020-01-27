@@ -4,7 +4,7 @@ const { authorize } = require('../../controllers/back-office/auth-controller');
 const { getContactus, editContactus } = require('../../controllers/back-office/contactus-controller');
 const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, deleteReview } = require('../../controllers/back-office/review-controller');
 const { getClients, getNewClientPage, addNewClient, toggleClientisShowing, getEditClientPage, editClients, deleteClients } = require('../../controllers/back-office/clients-controller');
-const { getSegSocialSimulatorPage, editSegSocialSimulator, getAllSimulatorsPage, getMaisValiasSimulatorPage, getIMTSimulatorsPage, editMaisValiasSimulator, editIMTSimulatorsPage } = require('../../controllers/back-office/simulators-controller');
+const { getSegSocialSimulatorPage, editSegSocialSimulator, getAllSimulatorsPage, getMaisValiasSimulatorPage, getIMTSimulatorsPage, editMaisValiasSimulator, editIMTSimulatorsPage, editISimulatorValue } = require('../../controllers/back-office/simulators-controller');
 const { getHomepage, editHomepage } = require('../../controllers/back-office/homepage-controller');
 
 
@@ -19,7 +19,7 @@ router.get('/', authorize, (req, res) => {
 router.get('/reviews', authorize, getReviews);
 // Render add review page backoffice
 router.get('/reviews/new', authorize, getAddReviewPage);
-// Render edit review page backoffice
+// Edit review page backoffice
 router.get('/reviews/:id/edit', authorize, getEditReviewPage);
 // Add a review
 router.post('/reviews', authorize, addReview);
@@ -50,6 +50,8 @@ router.post('/simulators/maisvalias', authorize, editMaisValiasSimulator);
 router.get('/simulators/imt', authorize, getIMTSimulatorsPage);
 // Edit SS simulator values backoffice
 router.post('/simulators/imt/edit', authorize, editIMTSimulatorsPage);
+// Edit IS value backoffice
+router.post('/simulators/imt/editIS', authorize, editISimulatorValue);
 
 
 //ContactUs

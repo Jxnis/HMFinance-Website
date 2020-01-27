@@ -8,6 +8,7 @@ const estadoResidencia = document.getElementById('estadoResidencia');
 
 const calculation = (e) => {
 	e.preventDefault();
+	console.log('maisvalias');
 	let coeficient = 1;
 	let maisValiasValue = 0;
 	let output = 0;
