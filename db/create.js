@@ -81,18 +81,28 @@ connection.query(`CREATE TABLE homepage (
 	console.log('query complete');
 	// connection.end();
 });
-
+*/
+connection.query('DROP TABLE imt',
+	(err) => {
+		if(err) console.log(err);
+		console.log('query complete');
+		//connection.end();
+	});
 connection.query(`CREATE TABLE imt (
     id INT AUTO_INCREMENT PRIMARY KEY,
     type VARCHAR(250),
     location VARCHAR(250),
     lowEnd DECIMAL(9,2) default null,
     highEnd DECIMAL(9,2) default null,
-    marginal DECIMAL(4,3)
+    marginal DECIMAL(4,3),
+    benefitTaxRate DECIMAL(9,2) default null
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-}); */
+	connection.end();
+}); 
+/*
+
 connection.query(`CREATE TABLE imtIS (
     id INT AUTO_INCREMENT PRIMARY KEY,
     value DECIMAL(4,3))`,
@@ -102,7 +112,7 @@ connection.query(`CREATE TABLE imtIS (
 	connection.end();
 });
 
-/* 
+
 connection.query(`CREATE TABLE simulatorMaisValias (
     id INT AUTO_INCREMENT PRIMARY KEY,
     year SMALLINT,
