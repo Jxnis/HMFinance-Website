@@ -80,13 +80,16 @@ connection.query(`CREATE TABLE homepage (
 	if(err) console.log(err);
 	console.log('query complete');
 });
-*/
+
+/*
 connection.query('DROP TABLE imt',
 	(err) => {
 		if(err) console.log(err);
 		console.log('query complete');
 		//connection.end();
-	});
+});
+*/
+
 connection.query(`CREATE TABLE imt (
     id INT AUTO_INCREMENT PRIMARY KEY,
     type VARCHAR(250),
@@ -98,9 +101,9 @@ connection.query(`CREATE TABLE imt (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
+	// connection.end();
 }); 
-/*
+
 
 connection.query(`CREATE TABLE imtIS (
     id INT AUTO_INCREMENT PRIMARY KEY,

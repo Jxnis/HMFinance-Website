@@ -45,7 +45,7 @@ connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal, be
  `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
+	// connection.end();
 });
 
 
@@ -128,14 +128,14 @@ connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL)
 `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
+	// connection.end();
 });
 
 connection.query(`INSERT INTO review (name, email, commentPT, titlePT, company, isApproved, isShowing, commentEN, titleEN) 
 	VALUES ('Maria Pereira', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
 	('Alberto Jardim', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
-	('João Gomes', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance''),
-	('Alfredo Costa', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'')
+	('João Gomes', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
+	('Alfredo Costa', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance')
 `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
