@@ -120,7 +120,7 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 });
 
  
-/* connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
+connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
 	VALUES ('Monark', 'http://www.monark.pt/files/uploads/16.jpg', 1, 'http://www.monark.pt/'),
 	('Eva Barros - Interior Design', 'http://www.evabarrosdesign.com/img/logo.svg', 1, 'http://www.evabarrosdesign.com/'),
 	('Move Cycle', 'https://i.imgur.com/VPaY2F6.jpg', 1, 'https://www.moovecycle.com/'),
@@ -130,4 +130,15 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 	console.log('query complete');
 	connection.end();
 });
- */
+
+connection.query(`INSERT INTO review (name, email, commentPT, titlePT, company, isApproved, isShowing, commentEN, titleEN) 
+	VALUES ('Maria Pereira', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
+	('Alberto Jardim', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
+	('João Gomes', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance''),
+	('Alfredo Costa', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'')
+`, (err) => {
+	if(err) console.log(err);
+	console.log('query complete');
+	connection.end();
+});
+
