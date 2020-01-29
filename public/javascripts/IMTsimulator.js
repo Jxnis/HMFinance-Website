@@ -33,7 +33,7 @@ const simulate = (e) => {
 	let isTax = IStax[0].value;
 
 	//IMT value to pay
-	let IMTvalue = marTax * valueImovel.value;
+	let IMTvalue = marTax * valueImovel.value - filterByValue[0].benefitTaxRate;
 	//IS value to pay
 	let ISvalue = isTax * valueImovel.value;
 	//Total value to pay

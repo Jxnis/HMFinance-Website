@@ -48,7 +48,11 @@ const getIMTSimulatorsPage = (req, res)  => {
 			//  If an error has occurred, then the user is informed of the error
 			res.status(500).json({ message: 'Error getting all the imt simulator information' });
 		} else {
-			//console.log(IStax);
+			/* for(let i=0; i<imtInfo.length; i++){
+				imtInfo[i].lowEnd == 0 ? imtInfo[i].lowEnd = 'Please don\'t change this value!' : imtInfo[i].lowEnd;
+				console.log(imtInfo[i].lowEnd);
+			} */
+			//console.log(imtInfo);
 			res.render('back-office/simulatorIMT', {user: req.user, imtsimulator : imtInfo, IStax});
 		}		
 	});
