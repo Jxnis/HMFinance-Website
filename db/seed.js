@@ -1,46 +1,51 @@
 const connection = require('./config');
 
-connection.query('INSERT INTO imtIS (value) VALUES (0.08)',
+// connection.query('INSERT INTO imtIS (value) VALUES (0.08)',
+// 	(err) => {
+// 		if(err) console.log(err);
+// 		console.log('query complete');
+// 	// connection.end();
+// 	}); 
+connection.query('TRUNCATE TABLE imt',
 	(err) => {
 		if(err) console.log(err);
 		console.log('query complete');
-	// connection.end();
+		// connection.end();
 	}); 
 
-
-connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal) VALUES 
-('Rustico','PC', NULL, NULL,'0.05'),
-('Rustico','RA', NULL, NULL,'0.05'),
-('Outros','PC', NULL, NULL,'0.065'),
-('Outros','RA', NULL, NULL,'0.065'),
-('HPP','PC','0.00','92407.00','0.00'),
-('HPP','PC','92407.00','126403.00','0.02'),
-('HPP','PC','126403.00','172348.00','0.05'),
-('HPP','PC','172348.00','287213.00','0.07'),
-('HPP','PC','287213.00','574323.00','0.08'),
-('HPP','PC','574323.00', NULL,'0.06'),
-('HSA','PC','0.00','92407.00','0.01'),
-('HSA','PC','92407.00','126403.00','0.02'),
-('HSA','PC','126403.00','172348.00','0.05'),
-('HSA','PC','172348.00','287213.00','0.07'),
-('HSA','PC','287213.00','550836.00','0.08'),
-('HSA','PC','550836.00', NULL,'0.06'),
-('HPP','RA','0.00','115508.75','0.00'),
-('HPP','RA','115508.75','158003.75','0.02'),
-('HPP','RA','158003.75','215435.00','0.05'),
-('HPP','RA','215435.00','359016.25','0.07'),
-('HPP','RA','359016.25','717903.75','0.08'),
-('HPP','RA','717903.75', NULL,'0.06'),
-('HSA','RA','0.00','115508.75','0.01'),
-('HSA','RA','115508.75','158003.75','0.02'),
-('HSA','RA','158003.75','215435.00','0.05'),
-('HSA','RA','215435.00','359016.25','0.07'),
-('HSA','RA','359016.25','688545.00','0.08'),
-('HSA','RA','688545.00', NULL,'0.06')
-`, (err) => {
+connection.query(`INSERT INTO imt (type, location, lowEnd, highEnd, marginal, benefitTaxRate) VALUES 
+ ('Rustico','PC', NULL, NULL,'0.05', NULL),
+ ('Rustico','RA', NULL, NULL,'0.05', NULL),
+ ('Outros','PC', NULL, NULL,'0.065', NULL),
+ ('Outros','RA', NULL, NULL,'0.065', NULL),
+ ('HPP','PC','0.00','92407.00','0.00', '0.00'),
+ ('HPP','PC','92407.00','126403.00','0.02', '1848.14'),
+ ('HPP','PC','126403.00','172348.00','0.05', '5640.23'),
+ ('HPP','PC','172348.00','287213.00','0.07', '9087.19 '),
+ ('HPP','PC','287213.00','574323.00','0.08', '11959.32'),
+ ('HPP','PC','574323.00', NULL,'0.06', '0.00'),
+ ('HSA','PC','0.00','92407.00','0.01', '0.00'),
+ ('HSA','PC','92407.00','126403.00','0.02', '924.07'),
+ ('HSA','PC','126403.00','172348.00','0.05', '4716.16'),
+ ('HSA','PC','172348.00','287213.00','0.07', '8163.12'),
+ ('HSA','PC','287213.00','550836.00','0.08', '11035.25 '),
+ ('HSA','PC','550836.00', NULL,'0.06', '0.00'),
+ ('HPP','RA','0.00','115508.75','0.00', '0.00'),
+ ('HPP','RA','115508.75','158003.75','0.02', '2310.18'),
+ ('HPP','RA','158003.75','215435.00','0.05', '7050.29'),
+ ('HPP','RA','215435.00','359016.25','0.07', '11358.99'),
+ ('HPP','RA','359016.25','717903.75','0.08', '14949.15'),
+ ('HPP','RA','717903.75', NULL,'0.06', '0.00'),
+ ('HSA','RA','0.00','115508.75','0.01', '0.00'),
+ ('HSA','RA','115508.75','158003.75','0.02', '1155.09'),
+ ('HSA','RA','158003.75','215435.00','0.05', '5895.20'),
+ ('HSA','RA','215435.00','359016.25','0.07', '10203.90'),
+ ('HSA','RA','359016.25','688545.00','0.08', '13794.06'),
+ ('HSA','RA','688545.00', NULL,'0.06', '0.00')
+ `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	// connection.end();
+	connection.end();
 });
 
 
@@ -115,7 +120,7 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 });
 
  
-connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
+/* connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
 	VALUES ('Monark', 'http://www.monark.pt/files/uploads/16.jpg', 1, 'http://www.monark.pt/'),
 	('Eva Barros - Interior Design', 'http://www.evabarrosdesign.com/img/logo.svg', 1, 'http://www.evabarrosdesign.com/'),
 	('Move Cycle', 'https://i.imgur.com/VPaY2F6.jpg', 1, 'https://www.moovecycle.com/'),
@@ -125,3 +130,4 @@ connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL)
 	console.log('query complete');
 	connection.end();
 });
+ */
