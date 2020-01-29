@@ -1,6 +1,6 @@
 const connection = require('./config');
 
-/* connection.query(`CREATE TABLE review (
+connection.query(`CREATE TABLE review (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(250),
     email VARCHAR(250),
@@ -79,7 +79,6 @@ connection.query(`CREATE TABLE homepage (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	// connection.end();
 });
 
 connection.query(`CREATE TABLE imt (
@@ -92,17 +91,17 @@ connection.query(`CREATE TABLE imt (
 )`, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-}); */
+});
+
 connection.query(`CREATE TABLE imtIS (
     id INT AUTO_INCREMENT PRIMARY KEY,
     value DECIMAL(4,3))`,
 (err) => {
 	if(err) console.log(err);
 	console.log('query complete');
-	connection.end();
 });
 
-/* 
+
 connection.query(`CREATE TABLE simulatorMaisValias (
     id INT AUTO_INCREMENT PRIMARY KEY,
     year SMALLINT,
@@ -114,4 +113,3 @@ connection.query(`CREATE TABLE simulatorMaisValias (
 	connection.end();
 });
 
- */
