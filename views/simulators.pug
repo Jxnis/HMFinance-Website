@@ -1,134 +1,151 @@
-block content
-    h1 Simulator
-    div
-        h2 Simulador Segurança Social
-        form(id="simulatorSS") 
-            div    
-                label Trabalhador:
-                select(id="workers")
-                    option(value="TI") Trabalhador Independente
-                    option(value="ENI") Empresário em Nome Individual
-            div    
-                label Regime:
-                select(id="regime")
-                    option(value="Simp") Regime Simplificado
-                    option(value="CO") Contabilidade Organizada
-            div    
-                label Quantos meses abriu atividade:
-                select(id="monthsOfActivity")
-                    option(value=">12") Mais que 1 ano de atividade
-                    option(value="<=12") Menos que 1 ano de atividade
-            div    
-                label Tipo de atividade:
-                select(id="typeOfActivity")
-                    option(value="Work Contract") Tem outro contrato de trabalho
-                    option(value="Freela") Apenas freelancing
-                    option(value="Pensionist") Reformado  
-            div
-                label Salário Mensal Bruto noutro Contrato
-                input(type="text" id="grossWage")
-            div    
-                label Lucro Anual
-                input(type="text" id="profitYear")
-            div
-                label Receitas Brutas Anuais Serviços:
-                input(type="text" id="profitYearServices")
-                br
-                label Receitas Brutas Anuais Mercadorias:
-                input(type="text" id="profitYearMerchandise")
-                br
-                label Receitas Brutas Anuais Outros:
-                input(type="text" id="profitYearOthers")
+doctype html
+html
+  head
+    //- Meta Tag Google
+    title Simuladores Financeiros HM Finance
+    meta(charset='UTF-8')
+    meta(name='description' content='Simulador de segurança social, simulador de mais valias e simulador de IMT')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    //- Meta Tags Facebook (Quanto tivermos o URL final descomentar e adicionar + adicionar imagens à cloud para termos URL e ficar acessível ao Facebook)
+    //- meta(property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html")
+    meta(property="og:title" content="Simuladores Financeiros HM Finance")
+    meta(property="og:description" content="Simulador de segurança social, simulador de mais valias e simulador de IMT")
+    //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
+
+    link(rel='stylesheet', href='/stylesheets/homepage.css')
+  body
+    block content
+        h1 Simulator
+        div
+            h2 Simulador Segurança Social
+            form(id="simulatorSS") 
+                div    
+                    label Trabalhador:
+                    select(id="workers")
+                        option(value="TI") Trabalhador Independente
+                        option(value="ENI") Empresário em Nome Individual
+                div    
+                    label Regime:
+                    select(id="regime")
+                        option(value="Simp") Regime Simplificado
+                        option(value="CO") Contabilidade Organizada
+                div    
+                    label Quantos meses abriu atividade:
+                    select(id="monthsOfActivity")
+                        option(value=">12") Mais que 1 ano de atividade
+                        option(value="<=12") Menos que 1 ano de atividade
+                div    
+                    label Tipo de atividade:
+                    select(id="typeOfActivity")
+                        option(value="Work Contract") Tem outro contrato de trabalho
+                        option(value="Freela") Apenas freelancing
+                        option(value="Pensionist") Reformado  
+                div
+                    label Salário Mensal Bruto noutro Contrato
+                    input(type="text" id="grossWage")
+                div    
+                    label Lucro Anual
+                    input(type="text" id="profitYear")
+                div
+                    label Receitas Brutas Anuais Serviços:
+                    input(type="text" id="profitYearServices")
+                    br
+                    label Receitas Brutas Anuais Mercadorias:
+                    input(type="text" id="profitYearMerchandise")
+                    br
+                    label Receitas Brutas Anuais Outros:
+                    input(type="text" id="profitYearOthers")
+                
+                div
+                    input(type="submit" value="Calcular")
+                div
+                    p Imposto
+                    p(id="output")
+        div
+            h2 Simulador Mais Valias
+            form(id="maisValiasSimulator") 
+                div
+                    label Valor de Aquisição
+                    input(type="text" id="acquisitionValue")
+                    label Ano de Aquisição
+                    select(id="acquisitionYear")
+                        option(value=maisValias[0].year) #{maisValias[0].year}
+                        option(value=maisValias[1].year) #{maisValias[1].year}
+                        option(value=maisValias[2].year) #{maisValias[2].year}
+                        option(value=maisValias[3].year) #{maisValias[3].year}
+                        option(value=maisValias[4].year) #{maisValias[4].year}
+                div
+                    label Valor de Venda
+                    input(type="text" id="saleValue")
+                    label Ano de Venda
+                    select(id="acquisitionYear")
+                        option(value=2020) 2020
+                div
+                    label Despesas
+                    input(type="text" id="expenses")
+                div
+                    label Estado de Residência:
+                    select(id="estadoResidencia")
+                        option(value="residente") Residente
+                        option(value="naoResidente") Não Residente
+                div
+                    input(type="submit" value="Calcular")
+                div
+                    p Imposto
+                    p(id="outputMaisValias")
+                div
+                    p Se for residente em Portugal por favor contacte-nos para fazermos uma simulação à sua medida.
+                    p Se tiver comprado o ativo antes de 2016 por favor contacte-nos para fazermos uma simulação à sua medida.
+        
+        div
+            h2 Simulador IMT
+            form(id="IMTSimulator") 
+                div
+                    label Local
+                    select(id="location")
+                        option(value='PC') Portugal Continental
+                        option(value='RA') Regiões Autónomas
+                div
+                    label Tipo de Imóvel
+                        select(id="type")
+                            option(value='HPP') Habitação Própria Permanente 
+                            option(value='HSA') Habitação Secundária ou Arrendamento 
+                            option(value='Rustico') Prédios Rústicos
+                            option(value='Outros') Outros Prédios Urbanos
+                            
+                div
+                    label Valor do Imóvel
+                    input(type="text" id="imovelValue")
             
-            div
-                input(type="submit" value="Calcular")
-            div
-                p Imposto
-                p(id="output")
-    div
-        h2 Simulador Mais Valias
-        form(id="maisValiasSimulator") 
-            div
-                label Valor de Aquisição
-                input(type="text" id="acquisitionValue")
-                label Ano de Aquisição
-                select(id="acquisitionYear")
-                    option(value=maisValias[0].year) #{maisValias[0].year}
-                    option(value=maisValias[1].year) #{maisValias[1].year}
-                    option(value=maisValias[2].year) #{maisValias[2].year}
-                    option(value=maisValias[3].year) #{maisValias[3].year}
-                    option(value=maisValias[4].year) #{maisValias[4].year}
-            div
-                label Valor de Venda
-                input(type="text" id="saleValue")
-                label Ano de Venda
-                select(id="acquisitionYear")
-                    option(value=2020) 2020
-            div
-                label Despesas
-                input(type="text" id="expenses")
-            div
-                label Estado de Residência:
-                select(id="estadoResidencia")
-                    option(value="residente") Residente
-                    option(value="naoResidente") Não Residente
-            div
-                input(type="submit" value="Calcular")
-            div
-                p Imposto
-                p(id="outputMaisValias")
-            div
-                p Se for residente em Portugal por favor contacte-nos para fazermos uma simulação à sua medida.
-                p Se tiver comprado o ativo antes de 2016 por favor contacte-nos para fazermos uma simulação à sua medida.
-    
-    div
-        h2 Simulador IMT
-        form(id="IMTSimulator") 
-            div
-                label Local
-                select(id="location")
-                    option(value='PC') Portugal Continental
-                    option(value='RA') Regiões Autónomas
-            div
-                label Tipo de Imóvel
-                    select(id="type")
-                        option(value='HPP') Habitação Própria Permanente 
-                        option(value='HSA') Habitação Secundária ou Arrendamento 
-                        option(value='Rustico') Prédios Rústicos
-                        option(value='Outros') Outros Prédios Urbanos
-                        
-            div
-                label Valor do Imóvel
-                input(type="text" id="imovelValue")
-         
-            div
-                input(type="submit" value="Calcular")
-            div
-                p IMT a pagar
-                p(id="outputIMT")
-            div
-                p IS a pagar
-                p(id="outputIS")
-            div
-                p Total a pagar
-                p(id="outputTotal")
+                div
+                    input(type="submit" value="Calcular")
+                div
+                    p IMT a pagar
+                    p(id="outputIMT")
+                div
+                    p IS a pagar
+                    p(id="outputIS")
+                div
+                    p Total a pagar
+                    p(id="outputTotal")
 
-    <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
-    script.
-        const IMT = !{JSON.stringify(IMT)};
-        const IStax = !{JSON.stringify(IStax)};
-    
-    script(src='/javascripts/IMTsimulator.js')
+        <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+        script.
+            const IMT = !{JSON.stringify(IMT)};
+            const IStax = !{JSON.stringify(IStax)};
+        
+        script(src='/javascripts/IMTsimulator.js')
 
-    script.
-        const simulator = !{JSON.stringify(simulator[0])};
-    
-    script(src='/javascripts/SimulatorSS.js')
-    
-    script.
-        const maisValias = !{JSON.stringify(maisValias)}
-    
-    script(src='/javascripts/maisValiasSimulator.js')
+        script.
+            const simulator = !{JSON.stringify(simulator[0])};
+        
+        script(src='/javascripts/SimulatorSS.js')
+        
+        script.
+            const maisValias = !{JSON.stringify(maisValias)}
+        
+        script(src='/javascripts/maisValiasSimulator.js')
 
     
         

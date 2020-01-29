@@ -1,40 +1,56 @@
-block content
+doctype html
+html
+  head
+    //- Meta Tag Google
+    title Oferta de Serviços HM Finance:
+    meta(charset='UTF-8')
+    meta(name='description' content='Recursos humanos, contabilidade, criação de empresa e outros serviços.')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
-  h1 Services page
+    //- Meta Tags Facebook (Quanto tivermos o URL final descomentar e adicionar + adicionar imagens à cloud para termos URL e ficar acessível ao Facebook)
+    //- meta(property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html")
+    meta(property="og:title" content="Oferta de Serviços HM Finance:")
+    meta(property="og:description" content="Recursos humanos, contabilidade, criação de empresa e outros serviços.")
+    //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
 
-  h3 Language Option
-    form(action="/setlanguage", method="post")
-      select(name="language" id="language")
-        option(value="pt") pt
-        option(value="en") en
-      br
-      input(type="submit" value="Submit")
+    link(rel='stylesheet', href='/stylesheets/homepage.css')
+  body
+    block content
+      h1 Services page
 
-  p #{locale}
+      h3 Language Option
+        form(action="/setlanguage", method="post")
+          select(name="language" id="language")
+            option(value="pt") pt
+            option(value="en") en
+          br
+          input(type="submit" value="Submit")
 
-  h2 #{translations[locale].Services.Titles.HR}
-  h3 #{translations[locale].Services.SubTitles.HR}
-  p #{translations[locale].Services.ServicesText.HR}
+      p #{locale}
 
-  h2 #{translations[locale].Services.Titles.Accounting}
-  h3 #{translations[locale].Services.SubTitles.Accounting}
-  p #{translations[locale].Services.ServicesText.Accounting}
-  
-  h2 #{translations[locale].Services.Titles.Analytical}
-  h3 #{translations[locale].Services.SubTitles.Analytical}
-  p #{translations[locale].Services.ServicesText.Analytical}
+      h2 #{translations[locale].Services.Titles.HR}
+      h3 #{translations[locale].Services.SubTitles.HR}
+      p #{translations[locale].Services.ServicesText.HR}
 
-  h2 #{translations[locale].Services.Titles.Company}
-  h3 #{translations[locale].Services.SubTitles.Company}
-  p #{translations[locale].Services.ServicesText.Company}
+      h2 #{translations[locale].Services.Titles.Accounting}
+      h3 #{translations[locale].Services.SubTitles.Accounting}
+      p #{translations[locale].Services.ServicesText.Accounting}
+      
+      h2 #{translations[locale].Services.Titles.Analytical}
+      h3 #{translations[locale].Services.SubTitles.Analytical}
+      p #{translations[locale].Services.ServicesText.Analytical}
 
-  h2 #{translations[locale].Services.Titles.Party}
-  h3 #{translations[locale].Services.SubTitles.Party}
-  p #{translations[locale].Services.ServicesText.Party}
+      h2 #{translations[locale].Services.Titles.Company}
+      h3 #{translations[locale].Services.SubTitles.Company}
+      p #{translations[locale].Services.ServicesText.Company}
 
-  h2 #{translations[locale].Services.Titles.Others}
-  h3 #{translations[locale].Services.SubTitles.Others}
-  p #{translations[locale].Services.ServicesText.Others}
+      h2 #{translations[locale].Services.Titles.Party}
+      h3 #{translations[locale].Services.SubTitles.Party}
+      p #{translations[locale].Services.ServicesText.Party}
+
+      h2 #{translations[locale].Services.Titles.Others}
+      h3 #{translations[locale].Services.SubTitles.Others}
+      p #{translations[locale].Services.ServicesText.Others}
 
 
 
