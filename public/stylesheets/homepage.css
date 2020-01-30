@@ -348,80 +348,80 @@
 	#mid { position: absolute; top: 70%; left: 50%; width: 1px; height: 1px;}
 
 	@keyframes descri1  { 
-		0%,10% { left: 30%; opacity: 0 }
-		10%,20% { left: 10%; opacity: 1 }
-		25%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes descri2  { 
-		0%,25% { left: 30%; opacity: 0 }
-		35%,45% { left: 10%; opacity: 1 }
-		50%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes descri3  { 
-		0%,50% { left: 30%; opacity: 0 }
-		60%,70% { left: 10%; opacity: 1 }
-		75%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes descri4  { 
-		0%,75% { left: 30%; opacity: 0 }
-		85%,95% { left: 10%; opacity: 1 }
-		100% { left: 0; opacity: 0 }
-		}
+	0%,10% { left: 30%; opacity: 0 }
+	10%,20% { left: 10%; opacity: 1 }
+	25%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes descri2  { 
+	0%,25% { left: 30%; opacity: 0 }
+	35%,45% { left: 10%; opacity: 1 }
+	50%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes descri3  { 
+	0%,50% { left: 30%; opacity: 0 }
+	60%,70% { left: 10%; opacity: 1 }
+	75%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes descri4  { 
+	0%,75% { left: 30%; opacity: 0 }
+	85%,95% { left: 10%; opacity: 1 }
+	100% { left: 0; opacity: 0 }
+	}
 
-		@keyframes reviewimg1  { 
-		0%,10% { opacity: 0 }
-		10%,20% { opacity: 1 }
-		25%,100% { opacity: 0 }
-		}
-		@keyframes reviewimg2  { 
-		0%,25% { opacity: 0 }
-		35%,45% { opacity: 1 }
-		50%,100% { opacity: 0 }
-		}
-		@keyframes reviewimg3  { 
-		0%,50% { opacity: 0 }
-		60%,70% { opacity: 1 }
-		75%,100% { opacity: 0 }
-		}
-		@keyframes reviewimg4  { 
-		0%,75% { opacity: 0 }
-		85%,95% { opacity: 1 }
-		100% { opacity: 0 }
-		}
-		@keyframes fadein  { 
-		from { opacity: 0 }
-		to { opacity: 1 }
-		}
-		@keyframes fadein2  { 
-		from { opacity: 0 }
-		to { opacity: 1 }
-		}
-		@keyframes fadein3  { 
-		from { opacity: 0 }
-		to { opacity: 1 }
-		}
-		@keyframes fadein4  { 
-		from { opacity: 0 }
-		to { opacity: 1 }
-		}
-		@keyframes reviewbox1  { 
-		0%,10% { left: 40%; opacity: 0 }
-		10%,20% { left: 20%; opacity: 1 }
-		25%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes reviewbox2  { 
-		0%,25% { left: 40%; opacity: 0 }
-		35%,45% { left: 20%; opacity: 1 }
-		50%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes reviewbox3  { 
-		0%,50% { left: 40%; opacity: 0 }
-		60%,70% { left: 20%; opacity: 1 }
-		75%,100% { left: 0; opacity: 0 }
-		}
-		@keyframes reviewbox4  { 
-		0%,75% { left: 40%; opacity: 0 }
-		85%,95% { left: 20%; opacity: 1 }
-		100% { left: 0; opacity: 0 }
-		}
+	@keyframes reviewimg1  { 
+	0%,10% { opacity: 0 }
+	10%,20% { opacity: 1 }
+	25%,100% { opacity: 0 }
+	}
+	@keyframes reviewimg2  { 
+	0%,25% { opacity: 0 }
+	35%,45% { opacity: 1 }
+	50%,100% { opacity: 0 }
+	}
+	@keyframes reviewimg3  { 
+	0%,50% { opacity: 0 }
+	60%,70% { opacity: 1 }
+	75%,100% { opacity: 0 }
+	}
+	@keyframes reviewimg4  { 
+	0%,75% { opacity: 0 }
+	85%,95% { opacity: 1 }
+	100% { opacity: 0 }
+	}
+	@keyframes fadein  { 
+	from { opacity: 0 }
+	to { opacity: 1 }
+	}
+	@keyframes fadein2  { 
+	from { opacity: 0 }
+	to { opacity: 1 }
+	}
+	@keyframes fadein3  { 
+	from { opacity: 0 }
+	to { opacity: 1 }
+	}
+	@keyframes fadein4  { 
+	from { opacity: 0 }
+	to { opacity: 1 }
+	}
+	@keyframes reviewbox1  { 
+	0%,10% { left: 40%; opacity: 0 }
+	10%,20% { left: 20%; opacity: 1 }
+	25%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes reviewbox2  { 
+	0%,25% { left: 40%; opacity: 0 }
+	35%,45% { left: 20%; opacity: 1 }
+	50%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes reviewbox3  { 
+	0%,50% { left: 40%; opacity: 0 }
+	60%,70% { left: 20%; opacity: 1 }
+	75%,100% { left: 0; opacity: 0 }
+	}
+	@keyframes reviewbox4  { 
+	0%,75% { left: 40%; opacity: 0 }
+	85%,95% { left: 20%; opacity: 1 }
+	100% { left: 0; opacity: 0 }
+	}
 }
