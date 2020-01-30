@@ -294,7 +294,7 @@ svg {
 .page-content .grid > article {
   display: flex;
   height: 300px;
-  background: var(--page-content-blockColor);
+  background: var(--page-content-blockColor) !important;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow); }
 
@@ -388,5 +388,53 @@ svg {
   .collapsed .page-content {
     left: 40px;
     width: calc(100% - 40px); } }
+
+.table-grid {
+  background-color: white; }
+
+.user-table {
+  text-align: center;
+  margin: auto; }
+
+.user-table p {
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: bold;
+  border-left: 1px solid #f3f3f3; }
+
+.user-table h2 {
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: 400;
+  padding-top: 20px; }
+
+.addUser > h2 {
+  display: inline-block;
+  overflow: auto; }
+
+.addUser form {
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  color: #29516d;
+  font-size: 14px;
+  border-spacing: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  table th,
+  table td {
+    padding: 20px; }
+  table td {
+    border-bottom: 1px solid #f3f3f3; }
+  table th {
+    text-align: center;
+    border-bottom: 3.5px solid #d8d7d7; }
+  table tbody tr:hover {
+    background-color: #e7e3e3; }
 
 /*# sourceMappingURL=backoffices.css.map */

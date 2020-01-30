@@ -1,39 +1,55 @@
 extends layout
 
 block content
-    
-    h1 Homepage 
-    div
-        a(href="/dashboard") Dashboard
+    section.page-content
+        section.title-and-user
+                h1 Homepage
+                
+                .admin-profile
+                    span.greeting Hi, #{user.email}
+                    .notifications
+                        span.badge 1
+                        svg
+                            use(xlink:href='#users')
 
-    h3 Information
-    p Here you have the general information on the website:
-    div
-        form(action="/dashboard/homepage", method="post")
-            div
-                h4 Title in portuguese
-                input(type="text", name="titlePT" value=homepageInfo.titlePT)
-            div
-                h4 Title in english
-                input(type="text", name="titleEN" value=homepageInfo.titleEN)      
-            div
-                h4 Intro in portuguese
-                input(type="text", name="introPT" value=homepageInfo.introPT)
-            div
-                h4 Intro in english
-                input(type="text", name="introEN" value=homepageInfo.introEN)
-            div
-                h4 About Us text in portuguese
-                input(type="text", name="aboutUsPT" value=homepageInfo.aboutUsPT)
-            div
-                h4 About Us text in english
-                input(type="text", name="aboutUsEN" value=homepageInfo.aboutUsEN)
+                div
+                    a(href="/dashboard") Dashboard
 
-            div 
-                input(type="hidden", name="id" value=homepageInfo.id)
+        section.homepage
+            div.homepage-main-content
+                h3 Information
+                p Here you have the general information on the website:
+                form(action="/dashboard/homepage", method="post")
+                    div.panel-wrapper
+                        div.panel-head
+                            h4 Title in portuguese
+                        input.panel-body(type="text", name="titlePT" value=homepageInfo.titlePT)
+                    div.panel-wrapper
+                        div.panel-head
+                            h4 Title in english
+                        input.panel-body(type="text", name="titleEN" value=homepageInfo.titleEN)
+                    div.panel-wrapper  
+                        div.panel-head
+                            h4 Intro in portuguese
+                        input.panel-body(type="text", name="introPT" value=homepageInfo.introPT)
+                    div.panel-wrapper
+                        div.panel-head
+                            h4 Intro in english
+                        input.panel-body(type="text", name="introEN" value=homepageInfo.introEN)
+                    div.panel-wrapper
+                        div.panel-head
+                            h4 About Us text in portuguese
+                        input.panel-body(type="text", name="aboutUsPT" value=homepageInfo.aboutUsPT)
+                    div.panel-wrapper
+                        div.panel-head
+                            h4 About Us text in english
+                        input.panel-body(type="text", name="aboutUsEN" value=homepageInfo.aboutUsEN)
 
-            div 
-                input(type="submit", value="Save")
+                        div 
+                            input(type="hidden", name="id" value=homepageInfo.id)
+
+                        div 
+                            input(type="submit", value="Save")
 
 
         
