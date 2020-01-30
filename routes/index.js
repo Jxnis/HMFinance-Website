@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAllInfo} = require('../controllers/homepage-controller-front');
+const { getAllInfo, renderPrivacyPage} = require('../controllers/homepage-controller-front');
 const {getSimulatorInfo, getMaisValiasInfo, getimtInfo} = require('../controllers/simulators-controller-front');
 const {getBrowserLang, setCookie} = require('../controllers/language-controller-front');
 const {sendEmail} = require('../controllers/email-controller');
@@ -18,6 +18,7 @@ router.get('/simulators', getSimulatorInfo, getMaisValiasInfo, getimtInfo);
 /* Render the services Page */
 router.get('/services', getBrowserLang, getServices);
 
+router.get('/privacy-policy', renderPrivacyPage);
 
 router.post('/sendmessage', sendEmail);
 
