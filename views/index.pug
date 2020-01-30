@@ -286,6 +286,8 @@ block content
 
   script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
   script(src='/javascripts/mailchimp.js')
+  //- Script to display the cookies banner. The link is currently sending the user to an empty page, the privacy policy should be put here
+  script(type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js" data-message=`${translations[locale].CookiesText}` data-moreinfo="/privacy-policy")
 
 
 
