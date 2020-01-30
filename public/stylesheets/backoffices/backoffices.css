@@ -50,11 +50,11 @@
   font-size: 1.35em;
   display: block;
   text-align: center;
-  background: #2a2a2a;
+  background: #52555a;
   text-transform: uppercase;
   padding: .75em 1em .75em 1.5em;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.05);
-  border: 1px solid #1d1d1d;
+  border: 1px solid #52555a;
   margin: 0;
   font-weight: 200; }
 
@@ -450,10 +450,10 @@ table {
   box-shadow: 0px 1px 5px #777; }
 
 .homepage-main-content .panel-wrapper .panel-head {
-  background-color: #242e42;
+  background-color: #52555a;
   color: #fff;
   padding: 10px 10px;
-  border: 1px solid #242e42; }
+  border: 1px solid #52555a; }
 
 .homepage-main-content .panel-wrapper .panel-body {
   padding: 20px 10px;
