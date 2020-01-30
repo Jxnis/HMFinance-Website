@@ -1,28 +1,46 @@
+extends layout
+
 block content
-  h1 Users
-  div
-    a(href="/dashboard") Dashboard
-  
-  
-  h3 Users List
-  p Here you can delete users
-  table
-    tbody
-        tr
-            th 
-                h3 User  
-            th
-                p       
-    each user in users
-        tr
-            td #{user.email}
-            td
-              form(action=`/auth/${user.id}/delete` method="post")
-                  input(
-                  type="submit"
-                  value="Delete"
-                  )
-  h3 New User
-  div
-    a(href="/auth/signup") Add New User
+  section.page-content
+    section.title-and-user
+        h1 Users
+        
+        .admin-profile
+          span.greeting Hi, #{user.email}
+          .notifications
+            span.badge 1
+            svg
+              use(xlink:href='#users')
+
+        div
+          a(href="/dashboard") Dashboard
+    
+    section.table-grid
+      div.user-table
+        h2 Users List
+        p Here you can add and delete users
+
+        div.addUser
+          form(action="/auth/signup") 
+            input(type="submit" value="Add User" class="btn btn-success")
+      
+        table
+          tbody
+              tr
+                  th 
+                      h4 User  
+                  th
+                      h4 Delete  
+          each user in users
+              tr
+                  td #{user.email}
+                  td
+                    form(action=`/auth/${user.id}/delete` method="post")
+                        input(
+                        type="submit"
+                        value="Delete"
+                        class="btn btn-danger"
+                        ) 
+        
+      
 
