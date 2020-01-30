@@ -3,14 +3,14 @@ extends layout
 block content
 
   #menubuttondiv
-    img#menubutton(src='/media/menu.png')
+    img#menubutton(src='../media/menu.png')
+  #langbuttondiv
+    a(href='/setlanguage/pt')
+      img#langbutton(src='../media/langpt.png')
+    a(href='/setlanguage/en')
+      img#langbutton(src='../media/langen.png')
   #navbar
     ul
-      li
-        //Clicking here it changes the language
-        div 
-          a(href='/setlanguage/pt') #{translations.both.pt}
-          a(href='/setlanguage/en') #{translations.both.en}
       li
         a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
       li
