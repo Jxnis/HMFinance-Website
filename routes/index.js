@@ -3,7 +3,7 @@ const router = express.Router();
 const { getAllInfo} = require('../controllers/homepage-controller-front');
 const {getSimulatorInfo, getMaisValiasInfo, getimtInfo} = require('../controllers/simulators-controller-front');
 const {getBrowserLang, setCookie} = require('../controllers/language-controller-front');
-const {renderTestPage} = require('../controllers/test-controller');
+const {sendEmail} = require('../controllers/email-controller');
 const { getServices} = require('../controllers/services-controller-front');
 
 
@@ -19,7 +19,7 @@ router.get('/simulators', getSimulatorInfo, getMaisValiasInfo, getimtInfo);
 router.get('/services', getBrowserLang, getServices);
 
 
-router.get('/test', renderTestPage);
+router.post('/sendmessage', sendEmail);
 
 
 module.exports = router;
