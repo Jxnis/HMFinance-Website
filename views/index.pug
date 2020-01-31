@@ -4,12 +4,13 @@ block content
 
   #menubuttondiv
     img#menubutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400487/HMFinance/menu_mbgzym.png')
+  #langbuttondiv
+    a(href='/setlanguage/pt')
+      img#langbutton(src='../media/langpt.png')
+    a(href='/setlanguage/en')
+      img#langbutton(src='../media/langen.png')
   #navbar
     ul
-      li.languages
-        //Clicking here it changes the language
-        a.pt(href='/setlanguage/pt') #{translations.both.pt}
-        a.en(href='/setlanguage/en') #{translations.both.en}
       li
         a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
       li
