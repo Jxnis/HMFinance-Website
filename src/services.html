@@ -1,0 +1,98 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../public/stylesheets/styletest.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	</head>	
+<body>
+	<div id="main">
+		<div class="pcontainer">
+			<img class="pimage" src="../public/media/1.jpg" data-speed="-2">
+		</div>
+	<div id="title"><h1>Serviços</h1></div>
+	<div class="servicespagegrid">
+		<div class="servicespagegrid1">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3><br>Company Constitution</h3></div>
+		<div class="servicespagedescri">A HMFinance apoia-o no desenvolvimento da sua linha de negócio, acompanhando-o desde a ideia embrionária, passando pelo estudo de mercado, até à reta da meta, indicando-lhe para isso qual o tipo de empresa e regime fiscal mais vantajoso e eficiente para atingir os seus objetivos.
+		</div>
+		</div>
+		<div class="servicespagegrid2">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3>Accounting:<br>The Financial PT<br>of your Business</h3></div>
+			<div class="servicespagedescri">Destacamos um Personal Trainer para o acompanhar nas tarefas, processos e organização do seu negócio. Treinamos a sua empresa e orientamo-la de modo a que esteja no seu melhor estado económico, para atingir as suas metas.
+		</div></div>
+		<div class="servicespagegrid3">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3><br>Analytical Accounting</h3></div>
+			<div class="servicespagedescri">A Contabilidade analítica é um ramo da contabilidade que dispõe de uma abordagem mais interno e detalhado, por isso, torna-se fundamental no controle dos custos, margem de lucro e tomada de decisões na gestão das suas atividades. A HMFinance dá-lhe os dados necessários para que possa tomar as suas decisões atempadamente.
+		</div></div>
+			<div class="servicespagegrid4">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3><br>Human Resources</h3></div>
+			<div class="servicespagedescri">O departamento de RH é responsável pela gestão e processamento salarial, tendo em atenção as especificidades da atividade da sua empresa. Pode contar com o nosso apoio para a submissão de candidaturas de incentivos ao emprego do IEFP e da Segurança Social.
+		</div></div>
+			<div class="servicespagegrid5">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3><br>Third Party Management</h3></div>
+			<div class="servicespagedescri">A Gestão de Terceiros é uma ferramenta essencial na gestão da sua empresa. A HMFinance disponibiliza através do software PHC um programa de faturação certificado para a: - Elaboração da faturação a clientes (até 5 faturas por mês); - Validação e submissão do ficheiro SAFT-pt;
+		</div></div>
+			<div class="servicespagegrid6">
+			<img src="../public/media/1.jpg">
+			<div class="servicespagetitle"><h3>Other Services:<br>(Domiciliation of Correspondence,<br> IRS, Self-Employed)</h3></div>
+			<div class="servicespagedescri">Legalização de cidadãos europeus e não europeus;<br>Declaração de IRS<br>Modelo 3;<br>Anexo G - Mais Valias de imóveis;<br>Estudos de mercado;<br>Eventos Networking Group HMFinance;
+			</div></div>
+	</div>
+		<a href="mailto:geral@hmfinance.pt" class="contactusbutton">Contacte-nos</a>
+</div>
+
+	<script> 
+		$("textarea#question").focus(function() {
+    $(this).val("")
+    }),
+    $(".pimage").each(function() {
+        var c = $(this),
+            e = $(this).parent();
+
+        function s() {
+            var s = c.data("speed"),
+                o = e.offset().top,
+                r = $(this).scrollTop(),
+                i = $(this).height(),
+                l = e.innerHeight(),
+                d = r + i;
+            if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+            c.css({
+                top: a + "%",
+                transform: "translate(-50%, -" + a + "%)"
+            })
+        }
+        $(document).on({
+            scroll: function() {
+                s()
+            },
+            ready: function() {
+                s()
+            }
+        })
+    }),
+    function(a, r) {
+        a.fn.inViewport = function(d) {
+            return this.each(function(s, l) {
+                function o() {
+                    var s = a(this).height(),
+                        o = l.getBoundingClientRect(),
+                        r = o.top,
+                        i = o.bottom;
+                    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+                }
+                o(), a(r).on("resize scroll", o)
+            })
+        }
+    }
+	</script>
+
+</body></html>
+
+
+
