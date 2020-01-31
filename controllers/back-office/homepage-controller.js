@@ -16,7 +16,7 @@ const getHomepage = (req, res) => {
 };
 
 const editHomepage = (req, res) => {
-	console.log(req);
+	//console.log(req.body);
 	Homepage.edit(req.body, (err) => {
 		if (err) return res.render('error', { err });
 		res.redirect('/dashboard');
