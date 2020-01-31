@@ -13,6 +13,7 @@ const Translations = {
 	},
 
 	en: {
+		CookiesText: 'We use cookies to improve your browsing experience. By continuing to visit this site you agree to our use of cookies.',
 		Others: {
 			Language: 'Language',
 			PersonalT: 'Financial Personal Trainer',
@@ -107,6 +108,7 @@ const Translations = {
 
 
 	pt: {
+		CookiesText: 'Utilizamos cookies para melhorar sua experiência de navegação. Ao continuar a visitar este site, você concorda com o uso de cookies.',
 		Others: {
 			Language: 'Lingua',
 			PersonalT: 'Personal Trainer Financeiro',

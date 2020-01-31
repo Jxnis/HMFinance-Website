@@ -35,6 +35,11 @@ const getAllInfo = (req, res) => {
 	});
 };
 
+const renderPrivacyPage = (req, res) => {
+	res.render('privacy-policy');
+};
+
 module.exports = {
-	getAllInfo
+	getAllInfo,
+	renderPrivacyPage
 };
