@@ -27,7 +27,7 @@ const sendEmail = (req, res, next) => {
     `;
 
 	const mailOptions = {
-		from: '"HMFinance Website" <tilda2123@gmail.com>', // sender address
+		from: '"HMFinance Website" <tilda_26@hotmail.com>', // sender address
 		to: 'tilda_26@hotmail.com', // list of receivers
 		subject: 'HMFinance - Client Message', // Subject line
 		text: 'Hello world?', // plain text body
