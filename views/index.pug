@@ -46,17 +46,17 @@ block content
   a#clients.anchor
   #clients
     .clientsgrid
-      .clientsgrid1
+      a.clientsgrid1(href=`${data.clients[0].clientURL}`)
         img(src=`${data.clients[0].logoURL}`)
         div
           h3 #{data.clients[0].name}
           
-      .clientsgrid2
+      a.clientsgrid2(href=`${data.clients[1].clientURL}`)
         img(src=`${data.clients[1].logoURL}`)
         div
           h3 #{data.clients[1].name}
           
-      .clientsgrid3
+      a.clientsgrid3(href=`${data.clients[2].clientURL}`)
         img(src=`${data.clients[2].logoURL}`)
         div
           h3 #{data.clients[2].name}
