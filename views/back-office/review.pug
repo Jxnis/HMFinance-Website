@@ -23,8 +23,9 @@ block content
                     input(type="submit" value="Adicionar Review" class="btn btn-primary btn-lg")
             div.review-wrapper
                 each review in reviews
-                    div
+                    div.review-header
                         p.nome Nome: #{review.name}
+                    div.review-body
                         p.commentario Comentário: #{review.commentPT}
                     div
                         form.review-button(action="/dashoboard/review" + review.id + "/edit")
