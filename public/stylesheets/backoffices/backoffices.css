@@ -132,7 +132,9 @@ button {
   cursor: pointer; }
 
 input {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  text-align: center;
+  max-width: 100%; }
 
 button,
 input {
@@ -395,7 +397,8 @@ svg {
 
 .user-table {
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  width: 100%; }
 
 .user-table p {
   font-family: 'Montserrat';
@@ -419,9 +422,14 @@ svg {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+tr.fontMais {
+  font-size: 16px;
+  height: 30px; }
+
 table {
   margin-top: 20px;
   width: 100%;
+  max-width: 900px;
   color: #29516d;
   font-size: 14px;
   border-spacing: 0;
@@ -429,7 +437,9 @@ table {
   overflow-y: scroll; }
   table th,
   table td {
-    padding: 20px; }
+    padding: 0px;
+    text-align: center;
+    max-width: 30px; }
   table td {
     border-bottom: 1px solid #f3f3f3; }
   table th {

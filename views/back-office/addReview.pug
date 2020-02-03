@@ -1,35 +1,46 @@
 extends layout
 
 block content
-    div
-        a(href="/dashboard") Dashboard
+    section.page-content
+        section.title-and-user
+            h1 Review
+            
+            .admin-profile
+                span.greeting Hi, #{user.email}
+                .notifications
+                    span.badge 1
+                    svg
+                        use(xlink:href='#users')
 
-    div
-        h1 Adicionar uma Review
-        form(action="/dashboard/reviews", method="post")
             div
-                input(type="text", name="name" placeholder="Nome")
-            div
-                input(type="email", name="email" placeholder="Email")      
-            div
-                input(type="text", name="commentPT" placeholder="Comentário em Português")
-            div
-                input(type="text", name="titlePT" placeholder="Título em Português")
-            div
-                input(type="text", name="company" placeholder="Empresa")
-            div
-                input(type="text", name="commentEN" placeholder="Comentário em Inglês")
-            div
-                input(type="text", name="titleEN" placeholder="Título em Inglês")
-            div
-                input(type="radio" name="isApproved" value="0" id="notApproved")
-                label(for="notApproved") Não Aprovado
-                input(type="radio" name="isApproved" value="1" id="approved")
-                label(for="approved") Aprovado 
-            div
-                input(type="radio" name="isShowing" value="0" id="notShowing")
-                label(for="notShowing") Não Mostrar
-                input(type="radio" name="isShowing" value="1" id="showing")
-                label(for="showing") Mostrar        
-            div
-                input(type="submit", value="Adicionar")
+                a(href="/dashboard") Dashboard
+
+        section.homepage
+            div.homepage-main-content
+                h2 Adicionar uma Review
+                form(action="/dashboard/reviews", method="post")
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="name" placeholder="Nome")
+                    div.panel-wrapper 
+                        input.panel-body(type="email", name="email" placeholder="Email")      
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="commentPT" placeholder="Comentário em Português")
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="titlePT" placeholder="Título em Português")
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="company" placeholder="Empresa")
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="commentEN" placeholder="Comentário em Inglês")
+                    div.panel-wrapper 
+                        input.panel-body(type="text", name="titleEN" placeholder="Título em Inglês")
+                    div
+                        label 0- Não Aprovado 1- Aprovado
+                        br
+                        input(type="number" name="isApproved" value=0 step=1 min=0 max=1)
+                    div
+                        label 0-Não Mostrar 1-Mostrar
+                        br 
+                        input(type="number" name="isShowing" value=0 step=1 min=0 max=1)
+                             
+                    div.button
+                        input(type="submit", value="Adicionar" class="btn btn-success btn-lg")

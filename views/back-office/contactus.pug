@@ -17,16 +17,16 @@ block content
         
         section.homepage
             div.homepage-main-content
-                h2 Information
-                p Here you have the contact information that is on the website:
+                h2 Informação
+                p Aqui é possível alterar toda a informação da secção Contacte-nos do website:
                 form(action="/dashboard/contactus", method="post")
                     div.panel-wrapper    
                         div.panel-head
-                            h4 Address 1
+                            h4 Endereço 1
                         input.panel-body(type="text", name="address1" value=contactInfo.address1)
                     div.panel-wrapper    
                         div.panel-head
-                            h4 Address 2
+                            h4 Endereço 2
                         input.panel-body(type="text", name="address2" value=contactInfo.address2)      
                     div.panel-wrapper    
                         div.panel-head
@@ -34,18 +34,18 @@ block content
                         input.panel-body(type="email", name="email" value=contactInfo.email)
                     div.panel-wrapper    
                         div.panel-head
-                            h4 Phone Number
+                            h4 Número de telemóvel
                         input.panel-body(type="number", name="phone" value=contactInfo.phone)
                     div.panel-wrapper    
                         div.panel-head
-                            h4 Location URL
+                            h4 Localização - URL
                         input.panel-body(type="url", name="locationURL" value=contactInfo.locationURL)
                       
                         div
                             input(type="hidden", name="id" value=contactInfo.id)
 
                     div.button
-                        input(type="submit", value="Save")
+                        input(type="submit", value="Save" class="btn btn-success btn-lg")
 
 
                     

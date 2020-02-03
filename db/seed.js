@@ -72,7 +72,7 @@ const connection = require('./config');
 // });
 
 
-connection.query(
+/* connection.query(
 	`INSERT INTO simulatorSegSocial (taxENI, taxTI, percentageServices, percentageGoods, percentageOthers, minENICO, minTICO, minTISimplificado, revenueExemption, percentageRevenueExemption, grossWageExemption) VALUES (
 	0.252, 0.214, 0.7, 0.2, 0.2, 164.73, 139.88, 20, 2490, 0.7, 438.81	
 )`, (err) => {
@@ -80,7 +80,7 @@ connection.query(
 		console.log('query complete');
 		// connection.end();
 	}
-);
+); */
 
 // connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, aboutUsPT, aboutUsEN) VALUES (
 // 	'HMFinance',
@@ -107,7 +107,7 @@ connection.query(
 // 	// connection.end();
 // });
 
-connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
+/* connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
 	VALUES (2020, 1, 0.28),
 	(2019, 1, 0.28),
 	(2018, 1.01, 0.28),
@@ -117,7 +117,7 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 	if(err) console.log(err);
 	console.log('query complete');
 	//connection.end();
-});
+}); */
 
  
 // connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 

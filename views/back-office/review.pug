@@ -39,7 +39,7 @@ block content
                                 td.nome #{review.name}
                                 td.commentario #{review.commentPT}
                                 td
-                                    form.review-button(action="/dashoboard/review" + review.id + "/edit")
+                                    form.review-button(action="/dashboard/reviews/" + review.id + "/edit")
                                         input(type="submit" value="Edit Review" class="btn btn-warning")
                     
 
