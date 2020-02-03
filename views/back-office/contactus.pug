@@ -1,40 +1,53 @@
 extends layout
 
 block content
-    
-  
-    h1 Contact Us
-    div
-        a(href="/dashboard") Dashboard
+    section.page-content
+        section.title-and-user
+            h1 Contact Us
+            
+            .admin-profile
+                span.greeting Hi, #{user.email}
+                .notifications
+                    span.badge 1
+                    svg
+                        use(xlink:href='#users')
 
-    h3 Information
-    p Here you have the contact information that is on the website:
-
-    div
-        form(action="/dashboard/contactus", method="post")
             div
-                h4 Address 1
-                input(type="text", name="address1" value=contactInfo.address1)
-            div
-                h4 Address 2
-                input(type="text", name="address2" value=contactInfo.address2)      
-            div
-                h4 E-mail
-                input(type="email", name="email" value=contactInfo.email)
-            div
-                h4 Phone Number
-                input(type="number", name="phone" value=contactInfo.phone)
-            div
-                h4 Location URL
-                input(type="url", name="locationURL" value=contactInfo.locationURL)
-
-            div 
-                input(type="hidden", name="id" value=contactInfo.id)
-
-            div 
-                input(type="submit", value="Save")
-
-
+                a(href="/dashboard") Dashboard
         
+        section.homepage
+            div.homepage-main-content
+                h2 Information
+                p Here you have the contact information that is on the website:
+                form(action="/dashboard/contactus", method="post")
+                    div.panel-wrapper    
+                        div.panel-head
+                            h4 Address 1
+                        input.panel-body(type="text", name="address1" value=contactInfo.address1)
+                    div.panel-wrapper    
+                        div.panel-head
+                            h4 Address 2
+                        input.panel-body(type="text", name="address2" value=contactInfo.address2)      
+                    div.panel-wrapper    
+                        div.panel-head
+                            h4 E-mail
+                        input.panel-body(type="email", name="email" value=contactInfo.email)
+                    div.panel-wrapper    
+                        div.panel-head
+                            h4 Phone Number
+                        input.panel-body(type="number", name="phone" value=contactInfo.phone)
+                    div.panel-wrapper    
+                        div.panel-head
+                            h4 Location URL
+                        input.panel-body(type="url", name="locationURL" value=contactInfo.locationURL)
+                      
+                        div
+                            input(type="hidden", name="id" value=contactInfo.id)
 
-        
+                    div.button
+                        input(type="submit", value="Save")
+
+
+                    
+
+                
