@@ -22,17 +22,30 @@ block content
                 form.addReviewButton(action="/dashboard/reviews/new")
                     input(type="submit" value="Adicionar Review" class="btn btn-primary btn-lg")
             div.review-wrapper
-                each review in reviews
-                    div
-                        p.nome Nome: #{review.name}
-                        p.commentario Comentário: #{review.commentPT}
-                    div
-                        form.review-button(action="/dashoboard/review" + review.id + "/edit")
-                            input(type="submit" value="Edit Review" class="btn btn-warning")
-        
+                section.table-grid
+                div.user-table
+                    table
+                        tbody
+                            tr
+                                th 
+                                    h3 Nome
+                                th 
+                                    h3 Comentário
+                                th
+                                    h3 Editar
+                                
+                             
+                        each review in reviews
+                            tr
+                                td.nome #{review.name}
+                                td.commentario #{review.commentPT}
+                                td
+                                    form.review-button(action="/dashoboard/review" + review.id + "/edit")
+                                        input(type="submit" value="Edit Review" class="btn btn-warning")
+                    
 
-    
-    
-    
+            
+            
+            
                       
 
