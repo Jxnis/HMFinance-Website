@@ -1,0 +1,116 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../public/stylesheets/styletest.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+</head>	
+<body>
+	<div id="mainservices">
+		<div class="pcontainerservices">
+			<img class="pimageservices" src="../public/media/1.jpg" data-speed="-2">
+		</div>
+		<div id="title"><h1>Simuladores</h1></div>
+		
+		<div class="simulatorsgsgrid">
+			<div class="simulatorsgsgrid1"> </div>
+			<div class="simulatorsgsgrid2"> </div>
+			<div class="simulatorsgsgrid3"> </div>
+			<div class="simulatorsgsgrid4"> </div>
+			<div class="simulatorsgsgrid5"> </div>
+			<div class="simulatorsgsgrid6"> </div>
+			<div class="simulatorsgsgrid7"> </div>
+			<div class="simulatorsgsgrid8"> </div>
+			<div class="simulatorsgsgrid9"> </div>
+			<div class="simulatorsgsgrid10"> </div>
+			<div class="simulatorsgsgrid11"> </div>
+			<div class="simulatorsgsgrid12"> </div>
+			<div class="simulatorsgsgrid13"> </div>
+			<div class="simulatorsgsgrid14"> </div>
+			<div class="simulatorsgsgrid15"> </div>
+			<div class="simulatorsgsgrid16"> </div>
+			<div class="simulatorsgsgrid17"> </div>
+			<div class="simulatorsgsgrid18"> </div>
+			<div class="simulatorsgsgrid19"> </div>
+			<div class="simulatorsgsgrid20"> </div>
+			</div>
+
+		<div class="simulatormvagrid">
+			<div class="simulatormvagrid1"> </div>
+			<div class="simulatormvagrid2"> </div>
+			<div class="simulatormvagrid3"> </div>
+			<div class="simulatormvagrid4"> </div>
+			<div class="simulatormvagrid5"> </div>
+			<div class="simulatormvagrid6"> </div>
+			<div class="simulatormvagrid7"> </div>
+			<div class="simulatormvagrid8"> </div>
+			<div class="simulatormvagrid9"> </div>
+			<div class="simulatormvagrid10"> </div>
+			<div class="simulatormvagrid11"> </div>
+			<div class="simulatormvagrid12"> </div>
+			<div class="simulatormvagrid13"> </div>
+			<div class="simulatormvagrid14"> </div>
+			</div>
+
+			<div class="simulatorimtgrid">
+				<div class="simulatorimtgrid1"> </div>
+				<div class="simulatorimtgrid2"> </div>
+				<div class="simulatorimtgrid3"> </div>
+				<div class="simulatorimtgrid4"> </div>
+				<div class="simulatorimtgrid5"> </div>
+				<div class="simulatorimtgrid6"> </div>
+				<div class="simulatorimtgrid7"> </div>
+				<div class="simulatorimtgrid8"> </div>
+				</div>
+
+</div>
+
+	<script> 
+		$("textarea#question").focus(function() {
+    $(this).val("")
+    }),
+    $(".pimageservices").each(function() {
+        var c = $(this),
+            e = $(this).parent();
+
+        function s() {
+            var s = c.data("speed"),
+                o = e.offset().top,
+                r = $(this).scrollTop(),
+                i = $(this).height(),
+                l = e.innerHeight(),
+                d = r + i;
+            if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+            c.css({
+                top: a + "%",
+                transform: "translate(-50%, -" + a + "%)"
+            })
+        }
+        $(document).on({
+            scroll: function() {
+                s()
+            },
+            ready: function() {
+                s()
+            }
+        })
+    }),
+    function(a, r) {
+        a.fn.inViewport = function(d) {
+            return this.each(function(s, l) {
+                function o() {
+                    var s = a(this).height(),
+                        o = l.getBoundingClientRect(),
+                        r = o.top,
+                        i = o.bottom;
+                    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+                }
+                o(), a(r).on("resize scroll", o)
+            })
+        }
+    }
+	</script>
+
+</body></html>
+
+
+

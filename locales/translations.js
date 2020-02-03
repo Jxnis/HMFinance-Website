@@ -154,7 +154,7 @@ const Translations = {
 				Analytical: 'A Contabilidade analítica é um ramo da contabilidade que dispõe de uma abordagem mais interno e detalhado, por isso, torna-se fundamental no controle dos custos, margem de lucro e tomada de decisões na gestão das suas atividades. A HMFinance dá-lhe os dados necessários para que possa tomar as suas decisões atempadamente.',
 				Company: 'A HMFinance apoia-o no desenvolvimento da sua linha de negócio, acompanhando-o desde a ideia embrionária, passando pelo estudo de mercado, até à reta da meta, indicando-lhe para isso qual o tipo de empresa e regime fiscal mais vantajoso e eficiente para atingir os seus objetivos.',
 				Party: 'A Gestão de Terceiros é uma ferramenta essencial na gestão da sua empresa. A HMFinance disponibiliza através do software PHC um programa de faturação certificado para a: - Elaboração da faturação a clientes (até 5 faturas por mês); - Validação e submissão do ficheiro SAFT-pt;',
-				Others: '- Legalização de cidadãos europeus e não europeus; - Declaração de IRS – Modelo 3; - Anexo G - Mais Valias de imóveis; - Abertura da empresa; - Estudos de mercado; - Eventos Networking Group HMFinance;'
+				Others: 'Domiciliação da correspondência; Legalização de cidadãos europeus e não europeus; Declaração de IRS: Anexo G - Mais Valias de imóveis; Abertura da empresa; Estudos de mercado; Eventos Networking Group HMFinance.'
 			},
 
 			SubTitles: {
@@ -163,7 +163,7 @@ const Translations = {
 				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',				
 				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
 				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Domiciliação da correspondência, Declaração de IRS, Trabalhadores independentes, entre outros'
+				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
 			}
 		},
 		Simulators: {
@@ -191,7 +191,7 @@ const Translations = {
 			MapTitle: 'Estamos aqui para sí, venha conhecer-nos.',
 			FormTitle: 'Por favor, Contacte-nos',
 			FormName: 'Insira Nome',
-			FormEmail: 'Insira Nome',
+			FormEmail: 'Insira E-Mail',
 			FormMessage: 'Insira Mensagem',
 		},
 
