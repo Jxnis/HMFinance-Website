@@ -72,15 +72,15 @@ const connection = require('./config');
 // });
 
 
-connection.query(
-	`INSERT INTO simulatorSegSocial (taxENI, taxTI, percentageServices, percentageGoods, percentageOthers, minENICO, minTICO, minTISimplificado, revenueExemption, percentageRevenueExemption, grossWageExemption) VALUES (
-	0.252, 0.214, 0.7, 0.2, 0.2, 164.73, 139.88, 20, 2490, 0.7, 438.81	
-)`, (err) => {
-		if(err) console.log(err);
-		console.log('query complete');
-		// connection.end();
-	}
-);
+// connection.query(
+// 	`INSERT INTO simulatorSegSocial (taxENI, taxTI, percentageServices, percentageGoods, percentageOthers, minENICO, minTICO, minTISimplificado, revenueExemption, percentageRevenueExemption, grossWageExemption) VALUES (
+// 	0.252, 0.214, 0.7, 0.2, 0.2, 164.73, 139.88, 20, 2490, 0.7, 438.81	
+// )`, (err) => {
+// 		if(err) console.log(err);
+// 		console.log('query complete');
+// 		// connection.end();
+// 	}
+// );
 
 // connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, aboutUsPT, aboutUsEN) VALUES (
 // 	'HMFinance',
@@ -107,17 +107,17 @@ connection.query(
 // 	// connection.end();
 // });
 
-connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
-	VALUES (2020, 1, 0.28),
-	(2019, 1, 0.28),
-	(2018, 1.01, 0.28),
-	(2017, 1.02, 0.28),
-	(2016, 1.02, 0.28)
-`, (err) => {
-	if(err) console.log(err);
-	console.log('query complete');
-	//connection.end();
-});
+// connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
+// 	VALUES (2020, 1, 0.28),
+// 	(2019, 1, 0.28),
+// 	(2018, 1.01, 0.28),
+// 	(2017, 1.02, 0.28),
+// 	(2016, 1.02, 0.28)
+// `, (err) => {
+// 	if(err) console.log(err);
+// 	console.log('query complete');
+// 	//connection.end();
+// });
 
  
 // connection.query(`INSERT INTO client (name, logoURL, isShowing, clientURL) 
@@ -132,10 +132,7 @@ connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS)
 // });
 
 connection.query(`INSERT INTO review (name, email, commentPT, titlePT, company, isApproved, isShowing, commentEN, titleEN) 
-	VALUES ('Maria Pereira', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
-	('Alberto Jardim', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
-	('João Gomes', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance'),
-	('Alfredo Costa', 'maria.pereira@gmail.com', 'A HM Finance é fantástica', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'HM Finance is Fantastic', 'Review HM Finance')
+	VALUES ('Mario Sexy', 'mario.sexy@gmail.com', 'On the West coast, 30 mins drive from Lisbon is Guincho beach. This beautiful long 1km beach is one of the best beach breaks in the area. Summer is nice and mellow, outside of this it can get punchy. You can get great rights off the cliffs to the North in the right swell. It is a bit exposed and from mid afternoon onwards can get windy and attracts kitesurfers.', 'Review da HMFinance', 'A Loja da Maria', 1, 1, 'On the West coast, 30 mins drive from Lisbon is Guincho beach. This beautiful long 1km beach is one of the best beach breaks in the area. Summer is nice and mellow, outside of this it can get punchy. You can get great rights off the cliffs to the North in the right swell. It is a bit exposed and from mid afternoon onwards can get windy and attracts kitesurfers.', 'Review HM Finance')
 `, (err) => {
 	if(err) console.log(err);
 	console.log('query complete');

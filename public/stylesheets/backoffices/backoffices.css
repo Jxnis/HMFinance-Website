@@ -150,7 +150,7 @@ svg {
   right: 0;
   bottom: 0;
   overflow: auto;
-  padding-top: 20px;
+  padding-top: 30px;
   width: var(--page-header-width);
   color: var(--page-header-txtColor);
   background: var(--page-header-bgColor);
@@ -181,7 +181,7 @@ svg {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-top: 35px; }
+  margin-top: 55px; }
 
 .page-header .admin-menu li:nth-last-child(2) {
   margin-bottom: 35px; }
@@ -192,13 +192,13 @@ svg {
 
 .page-header .admin-menu li > * {
   width: 100%;
-  padding: 12px 15px; }
+  padding: 20px 15px; }
 
 .page-header .admin-menu .menu-heading h3 {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.18em;
-  font-size: 14px;
+  font-size: 15.5px;
   margin-top: 12px;
   color: var(--page-header-headingColor); }
 
@@ -213,7 +213,7 @@ svg {
 .page-header .admin-menu button {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.12rem;
   transition: background 0.2s, color 0.2s; }
 
 .page-header .admin-menu a:hover,
@@ -221,7 +221,7 @@ svg {
 .page-header .admin-menu button:hover,
 .page-header .admin-menu button:focus {
   background: var(--page-header-bgColor-hover);
-  color: var(--red);
+  color: var(--white);
   outline: none; }
 
 .page-header .admin-menu a:hover svg,
@@ -445,6 +445,18 @@ table {
   overflow-y: scroll;
   overflow-x: hidden; }
 
+.homepage-main-content h2 {
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: 400;
+  padding-top: 20px; }
+
+.homepage-main-content p {
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: bold;
+  text-align: center; }
+
 .homepage-main-content .panel-wrapper {
   margin: 20px 0;
   box-shadow: 0px 1px 5px #777; }
@@ -465,9 +477,6 @@ table {
 .homepage .button {
   padding-top: 20px; }
 
-.review-wrapper .review-button {
-  border-bottom: 1px solid #d8d7d7; }
-
 .review-button {
   margin: auto;
   padding-top: 20px;
@@ -482,9 +491,6 @@ table {
   color: #797979;
   font-weight: 400;
   text-align: center; }
-
-.homepage-main-content .addReviewButton {
-  border-bottom: 3.5px solid #d8d7d7; }
 
 .review-wrapper {
   text-align: center; }
