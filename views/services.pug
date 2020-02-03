@@ -14,36 +14,113 @@ html
     //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
 
     link(rel='stylesheet', href='/stylesheets/homepage.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    
   body
     block content
-      h1 #{translations[locale].SectionsTitles.Services}
+  #langbuttondiv
+    a(href='/setlanguage/pt')
+      img#langbutton(src='../media/langpt.png')
+    a(href='/setlanguage/en')
+      img#langbutton(src='../media/langen.png')
+    #mainservices
+  .pcontainerservices
+    img.pimageservices(src='../media/1.jpg', data-speed='-2')
+  #title
+    h1 Serviços
+  .servicespagegrid
+    .servicespagegrid1
+      img(src='../media/services1.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.Company}
+        //- h3 #{translations[locale].Services.SubTitles.Company}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.Company}
+    .servicespagegrid2
+      img(src='../media/services2.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.Accounting}
+        //- h3 #{translations[locale].Services.SubTitles.Accounting}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.Accounting}
+    .servicespagegrid3
+      img(src='../media/services3.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.Analytical}
+        //- h3 #{translations[locale].Services.SubTitles.Analytical}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.Analytical}
+    .servicespagegrid4
+      img(src='../media/services4.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.HR}
+        //- h3 #{translations[locale].Services.SubTitles.HR}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.HR}
+    .servicespagegrid5
+      img(src='../media/services5.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.Party}
+        //- h3 #{translations[locale].Services.SubTitles.Party}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.Party}
+    .servicespagegrid6
+      img(src='../media/services6.jpg')
+      .servicespagetitle
+        br
+        h3 #{translations[locale].Services.Titles.Others}
+      .servicespagedescri
+        p #{translations[locale].Services.ServicesText.Others}
+    .servicespagegrid7
+        a.contactusbutton(href="mailto:geral@hmfinance.pt") Contacte-nos
 
-      h2 #{translations[locale].Services.Titles.HR}
-      h3 #{translations[locale].Services.SubTitles.HR}
-      p #{translations[locale].Services.ServicesText.HR}
 
-      h2 #{translations[locale].Services.Titles.Accounting}
-      h3 #{translations[locale].Services.SubTitles.Accounting}
-      p #{translations[locale].Services.ServicesText.Accounting}
-      
-      h2 #{translations[locale].Services.Titles.Analytical}
-      h3 #{translations[locale].Services.SubTitles.Analytical}
-      p #{translations[locale].Services.ServicesText.Analytical}
+  script.
+    $("textarea#question").focus(function() {
+    $(this).val("")
+    }),
+    $(".pimageservices").each(function() {
+    var c = $(this),
+    e = $(this).parent();
+    function s() {
+    var s = c.data("speed"),
+    o = e.offset().top,
+    r = $(this).scrollTop(),
+    i = $(this).height(),
+    l = e.innerHeight(),
+    d = r + i;
+    if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+    c.css({
+    top: a + "%",
+    transform: "translate(-50%, -" + a + "%)"
+    })
+    }
+    $(document).on({
+    scroll: function() {
+    s()
+    },
+    ready: function() {
+    s()
+    }
+    })
+    }),
+    function(a, r) {
+    a.fn.inViewport = function(d) {
+    return this.each(function(s, l) {
+    function o() {
+    var s = a(this).height(),
+    o = l.getBoundingClientRect(),
+    r = o.top,
+    i = o.bottom;
+    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+    }
+    o(), a(r).on("resize scroll", o)
+    })
+    }
+    }
 
-      h2 #{translations[locale].Services.Titles.Company}
-      h3 #{translations[locale].Services.SubTitles.Company}
-      p #{translations[locale].Services.ServicesText.Company}
-
-      h2 #{translations[locale].Services.Titles.Party}
-      h3 #{translations[locale].Services.SubTitles.Party}
-      p #{translations[locale].Services.ServicesText.Party}
-
-      h2 #{translations[locale].Services.Titles.Others}
-      h3 #{translations[locale].Services.SubTitles.Others}
-      p #{translations[locale].Services.ServicesText.Others}
-
-
-
-
- 
-  
