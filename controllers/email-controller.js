@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 	}
 });
 
-const sendEmail = (req, res, next) => {
+const sendEmail = (req, res) => {
 	const output = `
     <p>Nova mensagem do seu website</p>
     <h3>Informações do contacto</h3>
@@ -27,7 +27,7 @@ const sendEmail = (req, res, next) => {
     `;
 
 	const mailOptions = {
-		from: '"HMFinance Website" <tilda_26@hotmail.com>', // sender address
+		from: '"HMFinance Website" <tilda2123@gmail.com>', // sender address
 		to: 'tilda_26@hotmail.com', // list of receivers
 		subject: 'HMFinance - Client Message', // Subject line
 		text: 'Hello world?', // plain text body
@@ -42,9 +42,6 @@ const sendEmail = (req, res, next) => {
 			console.log('Message sent.', response);
 		}
 	});
-
-	//console.log('Message sent: %s', info.messageId);
-	console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     
 	res.redirect('/');
 };
