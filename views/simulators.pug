@@ -14,140 +14,235 @@ html
     //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
 
     link(rel='stylesheet', href='/stylesheets/homepage.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+
   body
+  #title
+    <br>
+    h1 Simuladores
     block content
-        h1 Simulator
-        div
-            h2 Simulador Segurança Social
-            form(id="simulatorSS") 
-                div    
-                    label Trabalhador:
-                    select(id="workers")
-                        option(value="TI") Trabalhador Independente
-                        option(value="ENI") Empresário em Nome Individual
-                div    
-                    label Regime:
-                    select(id="regime")
-                        option(value="Simp") Regime Simplificado
-                        option(value="CO") Contabilidade Organizada
-                div    
-                    label Quantos meses abriu atividade:
-                    select(id="monthsOfActivity")
-                        option(value=">12") Mais que 1 ano de atividade
-                        option(value="<=12") Menos que 1 ano de atividade
-                div    
-                    label Tipo de atividade:
-                    select(id="typeOfActivity")
-                        option(value="Work Contract") Tem outro contrato de trabalho
-                        option(value="Freela") Apenas freelancing
-                        option(value="Pensionist") Reformado  
-                div
-                    label Salário Mensal Bruto noutro Contrato
-                    input(type="text" id="grossWage")
-                div    
-                    label Lucro Anual
-                    input(type="text" id="profitYear")
-                div
-                    label Receitas Brutas Anuais Serviços:
-                    input(type="text" id="profitYearServices")
-                    br
-                    label Receitas Brutas Anuais Mercadorias:
-                    input(type="text" id="profitYearMerchandise")
-                    br
-                    label Receitas Brutas Anuais Outros:
-                    input(type="text" id="profitYearOthers")
-                
-                div
-                    input(type="submit" value="Calcular")
-                div
-                    p Imposto
-                    p(id="output")
-        div
-            h2 Simulador Mais Valias
-            form(id="maisValiasSimulator") 
-                div
-                    label Valor de Aquisição
-                    input(type="text" id="acquisitionValue")
-                    label Ano de Aquisição
-                    select(id="acquisitionYear")
-                        option(value=maisValias[0].year) #{maisValias[0].year}
-                        option(value=maisValias[1].year) #{maisValias[1].year}
-                        option(value=maisValias[2].year) #{maisValias[2].year}
-                        option(value=maisValias[3].year) #{maisValias[3].year}
-                        option(value=maisValias[4].year) #{maisValias[4].year}
-                div
-                    label Valor de Venda
-                    input(type="text" id="saleValue")
-                    label Ano de Venda
-                    select(id="acquisitionYear")
-                        option(value=2020) 2020
-                div
-                    label Despesas
-                    input(type="text" id="expenses")
-                div
-                    label Estado de Residência:
-                    select(id="estadoResidencia")
-                        option(value="residente") Residente
-                        option(value="naoResidente") Não Residente
-                div
-                    input(type="submit" value="Calcular")
-                div
-                    p Imposto
-                    p(id="outputMaisValias")
-                div
-                    p Se for residente em Portugal por favor contacte-nos para fazermos uma simulação à sua medida.
-                    p Se tiver comprado o ativo antes de 2016 por favor contacte-nos para fazermos uma simulação à sua medida.
-        
-        div
-            h2 Simulador IMT
-            form(id="IMTSimulator") 
-                div
-                    label Local
-                    select(id="location")
-                        option(value='PC') Portugal Continental
-                        option(value='RA') Regiões Autónomas
-                div
-                    label Tipo de Imóvel
-                        select(id="type")
-                            option(value='HPP') Habitação Própria Permanente 
-                            option(value='HSA') Habitação Secundária ou Arrendamento 
-                            option(value='Rustico') Prédios Rústicos
-                            option(value='Outros') Outros Prédios Urbanos
-                            
-                div
-                    label Valor do Imóvel
-                    input(type="text" id="imovelValue")
-            
-                div
-                    input(type="submit" value="Calcular")
-                div
-                    p IMT a pagar
-                    p(id="outputIMT")
-                div
-                    p IS a pagar
-                    p(id="outputIS")
-                div
-                    p Total a pagar
-                    p(id="outputTotal")
+    #mainservices
+  .pcontainersimulators
+    img.pimagesimulators(src='../media/1.jpg', data-speed='-2')
+  
+  .simulatorsgsgrid
+        .simulatorsgsgrid1
+          <br>
+          h3 Simulador Segurança Social
+          form(id="simulatorSS")
+        .simulatorsgsgrid2
+          label Trabalhador:
+        .simulatorsgsgrid3
+          select(id="workers")
+            option(value="TI") Trabalhador Independente
+            option(value="ENI") Empresário em Nome Individual
+        .simulatorsgsgrid4
+          label Regime:
+        .simulatorsgsgrid5
+          select(id="regime")
+            option(value="Simp") Regime Simplificado
+            option(value="CO") Contabilidade Organizada
+        .simulatorsgsgrid6
+          label Quantos meses abriu atividade:
+        .simulatorsgsgrid7
+          select(id="monthsOfActivity")
+            option(value=">12") Mais que 1 ano de atividade
+            option(value="<=12") Menos que 1 ano de atividade
+        .simulatorsgsgrid8
+          label Tipo de atividade:
+        .simulatorsgsgrid9
+          select(id="typeOfActivity")
+            option(value="Work Contract") Tem outro contrato de trabalho
+            option(value="Freela") Apenas freelancing
+            option(value="Pensionist") Reformado  
+        .simulatorsgsgrid10
+          label Salário Mensal Bruto noutro Contrato:
+        .simulatorsgsgrid11
+          input(type="text" id="grossWage")
+        .simulatorsgsgrid12
+          label Lucro Anual:
+        .simulatorsgsgrid13
+          input(type="text" id="profitYear")
+        .simulatorsgsgrid14
+          label Receitas Brutas Anuais Serviços:
+        .simulatorsgsgrid15
+          input(type="text" id="profitYearServices")
+        .simulatorsgsgrid16
+          label Receitas Brutas Anuais Mercadorias:
+        .simulatorsgsgrid17
+          input(type="text" id="profitYearMerchandise")
+        .simulatorsgsgrid18
+          label Receitas Brutas Anuais Outros:
+        .simulatorsgsgrid19
+          input(type="text" id="profitYearOthers")
+        .simulatorsgsgrid20
+          input(type="submit" value="Calcular")
+        .simulatorsgsgrid21
+          <br>
+          h3 Impostos:
+          <br>
+        .simulatorsgsgrid22
+          <h3>
+          <br>
+          p(id="output")
 
-        <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
-        script.
-            const IMT = !{JSON.stringify(IMT)};
-            const IStax = !{JSON.stringify(IStax)};
-        
-        script(src='/javascripts/IMTsimulator.js')
+  .simulatormvagrid
+        .simulatormvagrid1
+          <br>
+          h3 Simulador Mais Valias
+          form(id="maisValiasSimulator")
+        .simulatormvagrid2
+          label Valor de Aquisição:
+        .simulatormvagrid3
+          input(type="text" id="acquisitionValue")
+        .simulatormvagrid4
+          label Ano de Aquisição
+        .simulatormvagrid5
+          select(id="acquisitionYear")
+            option(value=maisValias[0].year) #{maisValias[0].year}
+            option(value=maisValias[1].year) #{maisValias[1].year}
+            option(value=maisValias[2].year) #{maisValias[2].year}
+            option(value=maisValias[3].year) #{maisValias[3].year}
+            option(value=maisValias[4].year) #{maisValias[4].year}
+        .simulatormvagrid6
+          label Valor de Venda
+        .simulatormvagrid7
+          input(type="text" id="saleValue")
+        .simulatormvagrid8
+          label Ano de Venda
+        .simulatormvagrid9
+          select(id="acquisitionYear")
+            option(value=2020) 2020
+        .simulatormvagrid10
+          label Despesas
+        .simulatormvagrid11
+          input(type="text" id="expenses")
+        .simulatormvagrid12
+          label Estado de Residência:
+        .simulatormvagrid13
+          select(id="estadoResidencia")
+            option(value="residente") Residente
+            option(value="naoResidente") Não Residente
+        .simulatormvagrid14
+          input(type="submit" value="Calcular")
+        .simulatormvagrid15
+          <br>
+          h3 Impostos:
+          <br>
+        .simulatormvagrid16
+          <h3>
+          <br>
+          p(id="outputMaisValias")
 
-        script.
-            const simulator = !{JSON.stringify(simulator[0])};
-        
-        script(src='/javascripts/SimulatorSS.js')
-        
-        script.
-            const maisValias = !{JSON.stringify(maisValias)}
-        
-        script(src='/javascripts/maisValiasSimulator.js')
+  .simulatorimtgrid
+        .simulatorimtgrid1
+          <br>
+          h3 Simulador IMT
+          form(id="IMTSimulator")
+        .simulatorimtgrid2
+          label Local:
+        .simulatorimtgrid3
+          select(id="location")
+            option(value='PC') Portugal Continental
+            option(value='RA') Regiões Autónomas
+        .simulatorimtgrid4
+                    label Tipo de Imóvel:
+        .simulatorimtgrid5
+          select(id="type")
+            option(value='HPP') Habitação Própria Permanente 
+            option(value='HSA') Habitação Secundária ou Arrendamento 
+            option(value='Rustico') Prédios Rústicos
+            option(value='Outros') Outros Prédios Urbanos
+        .simulatorimtgrid6
+          label Valor do Imóvel:
+        .simulatorimtgrid7
+          input(type="text" id="imovelValue")
+        .simulatorimtgrid8
+          input(type="submit" value="Calcular")
+        .simulatorimtgrid9
+          <h3>
+          <br>
+          p IMT a pagar:
+        .simulatorimtgrid10
+          <h3>
+          <br>
+          p(id="outputIMT")
+        .simulatorimtgrid11
+          <h3>
+          <br>
+          p IS a pagar:
+        .simulatorimtgrid12
+          <h3>
+          <br>
+          p(id="outputIS")
+        .simulatorimtgrid13
+          <h3>
+          <br>
+          p Total a pagar:
+        .simulatorimtgrid14
+          <h3>
+          <br>
+          p(id="outputTotal")
 
-    
-        
+script.
+    $("textarea#question").focus(function() {
+    $(this).val("")
+    }),
+    $(".pimagesimulators").each(function() {
+    var c = $(this),
+    e = $(this).parent();
+    function s() {
+    var s = c.data("speed"),
+    o = e.offset().top,
+    r = $(this).scrollTop(),
+    i = $(this).height(),
+    l = e.innerHeight(),
+    d = r + i;
+    if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+    c.css({
+    top: a + "%",
+    transform: "translate(-50%, -" + a + "%)"
+    })
+    }
+    $(document).on({
+    scroll: function() {
+    s()
+    },
+    ready: function() {
+    s()
+    }
+    })
+    }),
+    function(a, r) {
+    a.fn.inViewport = function(d) {
+    return this.each(function(s, l) {
+    function o() {
+    var s = a(this).height(),
+    o = l.getBoundingClientRect(),
+    r = o.top,
+    i = o.bottom;
+    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+    }
+    o(), a(r).on("resize scroll", o)
+    })
+    }
+    }
 
-            
+  <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+script.
+    const IMT = !{JSON.stringify(IMT)};
+    const IStax = !{JSON.stringify(IStax)};
+  script(src='/javascripts/IMTsimulator.js')
+
+
+script.
+  const maisValias = !{JSON.stringify(maisValias)}
+  script(src='/javascripts/maisValiasSimulator.js')
+
+script.
+    const simulator = !{JSON.stringify(simulator[0])}
+    script(src='/javascripts/SimulatorSS.js')
+
+
+
+
