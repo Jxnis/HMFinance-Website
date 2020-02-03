@@ -3,12 +3,12 @@ extends layout
 block content
 
   #menubuttondiv
-    img#menubutton(src='../media/menu.png')
+    img#menubutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400487/HMFinance/menu_mbgzym.png')
   #langbuttondiv
     a(href='/setlanguage/pt')
-      img#langbutton(src='../media/langpt.png')
+      img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580490753/HMFinance/langpt_g0kx2x.png')
     a(href='/setlanguage/en')
-      img#langbutton(src='../media/langen.png')
+      img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580490756/HMFinance/langen_mfgugx.png')
   #navbar  
     ul
       li
@@ -27,11 +27,11 @@ block content
 
   #home
     .pcontainer
-      img.pimage(src='../media/1.jpg', data-speed='-1')
+      img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400514/HMFinance/1_apounu.jpg', data-speed='-1')
       #graytowhiteseparator
         h1 #{translations[locale].SectionsTitles.Clients}
     #logo
-      img(src='../media/logo.png', alt='HM Finance')
+      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400548/HMFinance/logo_o95cr6.png', alt='HM Finance')
       h2 #{translations[locale].Others.PersonalT}
     #describox
       #descri
@@ -46,17 +46,17 @@ block content
   a#clients.anchor
   #clients
     .clientsgrid
-      .clientsgrid1
+      a.clientsgrid1(href=`${data.clients[0].clientURL}`)
         img(src=`${data.clients[0].logoURL}`)
         div
           h3 #{data.clients[0].name}
           
-      .clientsgrid2
+      a.clientsgrid2(href=`${data.clients[1].clientURL}`)
         img(src=`${data.clients[1].logoURL}`)
         div
           h3 #{data.clients[1].name}
           
-      .clientsgrid3
+      a.clientsgrid3(href=`${data.clients[2].clientURL}`)
         img(src=`${data.clients[2].logoURL}`)
         div
           h3 #{data.clients[2].name}
@@ -66,31 +66,31 @@ block content
     #whitetograyseparator
       h1 #{translations[locale].SectionsTitles.Services}
     .pcontainer
-      img.pimage(src='../media/2.jpg', data-speed='-1')
+      img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400630/HMFinance/2_vcmkd1.jpg', data-speed='-1')
       .servicesgrid
         .servicesgrid1
-          a(target='_blank' href='/services')
-            img(src='../media/business.png')
+          a(target='_blank' href='/services/#company')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400635/HMFinance/business_iwqxby.png')
             h3 #{translations[locale].Services.Titles.Company}
         .servicesgrid2
-          a(target='_blank' href='/services')
-            img(src='../media/chrome_reader_mode.png')
+          a(target='_blank' href='/services/#accounting')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400640/HMFinance/chrome_reader_mode_wkvu7r.png')
             h3 #{translations[locale].Services.Titles.Accounting} 
         .servicesgrid3
-          a(target='_blank' href='/services')
-            img(src='../media/find_in_page.png')
+          a(target='_blank' href='/services/#analytical')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400651/HMFinance/find_in_page_tymyis.png')
             h3 #{translations[locale].Services.Titles.Analytical}
         .servicesgrid4
-          a(target='_blank' href='/services')
-            img(src='../media/folder_shared.png')
+          a(target='_blank' href='/services/#humanresources')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400657/HMFinance/folder_shared_trdzmq.png')
             h3 #{translations[locale].Services.Titles.HR}
         .servicesgrid5
-          a(target='_blank' href='/services')
-            img(src='../media/security.png')
+          a(target='_blank' href='/services/#party')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400664/HMFinance/security_jnmi63.png')
             h3 #{translations[locale].Services.Titles.Party}
         .servicesgrid6
-          a(target='_blank' href='/services') 
-            img(src='../media/people.png')
+          a(target='_blank' href='/services/#others') 
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400674/HMFinance/people_edlhre.png')
             h3 #{translations[locale].Services.Titles.Others} 
 
       #graytowhiteseparator
@@ -102,17 +102,17 @@ block content
       .simsgrid
         .simsgrid1
           <br>
-          a(href='/simulators' target='_blank')
+          a(href='/simulators/#simulatorSS' target='_blank')
             h3 Simulador<br>Segurança Social
             img(src='../media/sims1.png')
         .simsgrid2
           <br>
-          a(href='/simulators' target='_blank')
+          a(href='/simulators/#simulatorMV' target='_blank')
              h3 Simulador<br>Mais Valias
              img(src='../media/sims2.png')
         .simsgrid3
           <br>
-          a(href='/simulators' target='_blank')
+          a(href='/simulators/#simulatorIMT' target='_blank')
              h3 Simulador<br>IMT
              img(src='../media/sims3.png')
 
@@ -120,7 +120,7 @@ block content
       #whitetograyseparator
         h1 #{translations[locale].SectionsTitles.ContactUs}
       .pcontainer
-        img.pimage(src='../media/3.jpg', data-speed='-1')
+        img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400685/HMFinance/3_mfe5ys.jpg', data-speed='-1')
         .contactusgrid
           .contactusgrid1
             h3 #{translations[locale].ContactUs.Email}
@@ -199,19 +199,19 @@ block content
       .footergrid
         .footergrid1
           a(href='')
-            img(src='../media/thumb_up.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400724/HMFinance/thumb_up_qvazx4.png', width='30', height='30')
             | #{translations.both.Footer.Face}
         .footergrid2
           a(href='')
-            img(src='../media/camera_alt.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400733/HMFinance/camera_alt_cf6vl3.png', width='30', height='30')
             | #{translations.both.Footer.Insta}
         .footergrid3
           a(href='')
-            img(src='../media/email.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400739/HMFinance/email_ixwfqo.png', width='30', height='30')
             | #{translations.both.Footer.LinkIn}
         .footergrid4
           a(href='')
-            img(src='../media/email.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400739/HMFinance/email_ixwfqo.png', width='30', height='30')
             | #{translations.both.Footer.Email}
         .footergrid5
           h10 #{translations.both.Footer.HMFin}
