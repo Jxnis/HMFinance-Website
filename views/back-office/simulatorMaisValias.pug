@@ -1,20 +1,44 @@
 extends layout
 
 block content
-    h1 Simulador Mais Valias
-    div
-        a(href='/dashboard/simulators') Simuladores
-    div 
-        tr
-            th Ano
-            th Coeficiente
-            th Taxa IRS
+   section.page-content
+        section.title-and-user
+            h1 Simulador Mais Valias
+            
+            .admin-profile
+                span.greeting Hi, #{user.email}
+                .notifications
+                    span.badge 1
+                    svg
+                        use(xlink:href='#users')
+
             div
-                form(action='/dashboard/simulators/maisvalias', method='post')
-                    each year in simulatorMaisValias
-                        input(type="number", name="year" step=1 value=year.year)
-                        input(type="number", name="coeficient" step=0.0001 value=year.coeficient)
-                        input(type="number", name="taxIRS" step=0.0001 value=year.taxIRS)
-                        br
-                        input(type="hidden" value=year.id)
-                    input(type="submit", value="Editar") 
+                a(href="/dashboard") Dashboard
+
+        section.homepage
+            div.homepage-main-content 
+                div.review-wrapper
+                    section.table-grid
+                        div.user-table  
+                            table
+                                tbody
+                                    tr
+                                        th
+                                            h4 Ano
+                                        th 
+                                            h4 Coeficiente
+                                        th 
+                                            h4 Taxa IRS
+                                form(action='/dashboard/simulators/maisvalias', method='post')
+                                    each year in simulatorMaisValias
+                                        tr.fontMais
+                                            td
+                                                input(type="number", name="year" step=1 value=year.year)
+                                            td
+                                                input(type="number", name="coeficient" step=0.0001 value=year.coeficient)
+                                            td
+                                                input(type="number", name="taxIRS" step=0.0001 value=year.taxIRS)
+                                            td
+                                                input(type="hidden" value=year.id)
+                                    div
+                                        input(type="submit" value="Editar" class="btn btn-warning") 
