@@ -8,7 +8,7 @@ const dbOptions = {
 	password: process.env.MYSQL_PASSWORD,
 	database: process.env.MYSQL_DB_NAME,
 };
-//const dbURL = `mysql://${dbOptions.user}:${dbOptions.password}@${dbOptions.host}:3306/${dbOptions.database}`;
+
 const connection = mysql.createConnection(dbOptions);
 
 module.exports = connection;
