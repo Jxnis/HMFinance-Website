@@ -2,12 +2,12 @@ const nodemailer = require('nodemailer');
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-	host: 'in-v3.mailjet.com',
-	port: 587,
+	host: process.env.EMAIL_HOST,
+	port: process.env.EMAIL_PORT,
 	secure: false, // true for 465, false for other ports
 	auth: {
-		user: '4c0eb978f0d40ae18319d51e0571b950', // generated ethereal user
-		pass: '19c037ca9cc515f4df6eb165c99385fb' // generated ethereal password
+		user: process.env.EMAIL_USER, // generated ethereal user
+		pass: process.env.EMAIL_PASS // generated ethereal password
 	},
 	tls:{
 		rejectUnauthorized:false
@@ -27,8 +27,8 @@ const sendEmail = (req, res) => {
     `;
 
 	const mailOptions = {
-		from: '"HMFinance Website" <tilda2123@gmail.com>', // sender address
-		to: 'tilda_26@hotmail.com', // list of receivers
+		from: `"HMFinance Website" <${process.env.EMAIL_SENDER}>`, // sender address
+		to: process.env.EMAIL_RECEIVER, // list of receivers
 		subject: 'HMFinance - Client Message', // Subject line
 		text: 'Hello world?', // plain text body
 		html: output // html body
