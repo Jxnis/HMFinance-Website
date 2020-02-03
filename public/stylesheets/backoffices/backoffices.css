@@ -465,4 +465,28 @@ table {
 .homepage .button {
   padding-top: 20px; }
 
+.review-wrapper .review-button {
+  border-bottom: 1px solid #d8d7d7; }
+
+.review-button {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.review-wrapper .nome {
+  padding-top: 15px; }
+
+.homepage-main-content h2 {
+  padding-top: 10px;
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: 400;
+  text-align: center; }
+
+.homepage-main-content .addReviewButton {
+  border-bottom: 3.5px solid #d8d7d7; }
+
+.review-wrapper {
+  text-align: center; }
+
 /*# sourceMappingURL=backoffices.css.map */
