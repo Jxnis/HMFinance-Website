@@ -6,8 +6,78 @@ html
     link(rel='stylesheet', href='/stylesheets/backoffices/backoffices.css')
 
   body
+    header.page-header
+        nav
+            a(href='#0')
+                img.logo(src='https://res.cloudinary.com/dzvkdhu9c/image/upload/v1580302813/HMFinance/hmfinanceNoBackground_m06o2l.png', alt='HMFinance logo')
+            button.toggle-mob-menu(aria-expanded='false', aria-label='open menu')
+                svg(width='30', height='30', aria-hidden='true')
+                    use(xlink:href='#down')
+            ul.admin-menu
+                li.menu-heading
+                    h3 Admin
+                li
+                    a(href='/auth')
+                        svg
+                            use(xlink:href='#pages')
+                        span Users Management
+                li
+                    a(href='/dashboard/homepage')
+                        svg
+                            use(xlink:href='#users')
+                        span Homepage
+                li
+                    a(href='/dashboard/reviews')
+                        svg
+                            use(xlink:href='#trends')
+                        span Reviews
+                li
+                    a(href='/dashboard/contactus')
+                        svg
+                            use(xlink:href='#collection')
+                        span Contact Us
+                li
+                    a(href='/dashboard/clients')
+                        svg
+                            use(xlink:href='#comments')
+                        span Clients
+                li
+                    a(href='/dashboard/simulators')
+                        svg
+                            use(xlink:href='#appearance')
+                        span Simulators
+                li.menu-heading
+                    h3 Settings
+                li
+                    a(href='#0')
+                        svg
+                            use(xlink:href='#settings')
+                        span Settings
+                li
+                    a(href='#0')
+                        svg
+                            use(xlink:href='#options')
+                        span Options
+                li
+                    a(href='#0')
+                        svg
+                            use(xlink:href='#charts')
+                        span Charts
+                li
+                    if user 
+                        a(href="/auth/logout")
+                            svg(aria-hidden='true')
+                                use(xlink:href='#collapse')
+                            span Logout
+                    else  
+                        a(href="/auth/login")
+                            svg(aria-hidden='true')
+                                use(xlink:href='#collapse')   
+                            span Login
+
     
     block content
+      
 
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
