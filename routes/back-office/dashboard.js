@@ -6,7 +6,7 @@ const { addReview, getReviews, editReview, getAddReviewPage, getEditReviewPage, 
 const { getClients, getNewClientPage, addNewClient, toggleClientisShowing, getEditClientPage, editClients, deleteClients } = require('../../controllers/back-office/clients-controller');
 const { getSegSocialSimulatorPage, editSegSocialSimulator, getAllSimulatorsPage, getMaisValiasSimulatorPage, getIMTSimulatorsPage, editMaisValiasSimulator, editIMTSimulatorsPage, editISimulatorValue } = require('../../controllers/back-office/simulators-controller');
 const { getHomepage, editHomepage } = require('../../controllers/back-office/homepage-controller');
-
+const { getDesktopOnlyPage } = require('../../controllers/back-office/desktopOnly-controller');
 
 //Dashboard
 router.get('/', authorize, (req, res) => {
@@ -83,5 +83,9 @@ router.post('/clients/:id/delete', authorize, deleteClients);
 router.get('/homepage', authorize, getHomepage);
 // Add a client
 router.post('/homepage', authorize, editHomepage);
+
+
+//Alert - Not available for mobile
+router.get('/warning', getDesktopOnlyPage);
 
 module.exports = router;

@@ -9,14 +9,14 @@ block content
       img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580490753/HMFinance/langpt_g0kx2x.png')
     a(href='/setlanguage/en')
       img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580490756/HMFinance/langen_mfgugx.png')
-  #navbar
+  #navbar  
     ul
       li
         a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
       li
         a(href='#clients') #{translations[locale].SectionsTitles.Clients}
       li
-        a(href='#services') #{translations[locale].SectionsTitles.Services}
+        a(href='/services') #{translations[locale].SectionsTitles.Services}
       li
         a(href='#simulators') #{translations[locale].SectionsTitles.Simulators}
       li
@@ -46,17 +46,17 @@ block content
   a#clients.anchor
   #clients
     .clientsgrid
-      .clientsgrid1
+      a.clientsgrid1(href=`${data.clients[0].clientURL}`)
         img(src=`${data.clients[0].logoURL}`)
         div
           h3 #{data.clients[0].name}
           
-      .clientsgrid2
+      a.clientsgrid2(href=`${data.clients[1].clientURL}`)
         img(src=`${data.clients[1].logoURL}`)
         div
           h3 #{data.clients[1].name}
           
-      .clientsgrid3
+      a.clientsgrid3(href=`${data.clients[2].clientURL}`)
         img(src=`${data.clients[2].logoURL}`)
         div
           h3 #{data.clients[2].name}
@@ -69,29 +69,29 @@ block content
       img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400630/HMFinance/2_vcmkd1.jpg', data-speed='-1')
       .servicesgrid
         .servicesgrid1
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400635/HMFinance/business_iwqxby.png')
-          h3
-            | #{translations[locale].Services.Titles.Company}
+          a(target='_blank' href='/services/#company')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400635/HMFinance/business_iwqxby.png')
+            h3 #{translations[locale].Services.Titles.Company}
         .servicesgrid2
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400640/HMFinance/chrome_reader_mode_wkvu7r.png')
-          h3
-            | #{translations[locale].Services.Titles.Accounting} 
+          a(target='_blank' href='/services/#accounting')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400640/HMFinance/chrome_reader_mode_wkvu7r.png')
+            h3 #{translations[locale].Services.Titles.Accounting} 
         .servicesgrid3
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400651/HMFinance/find_in_page_tymyis.png')
-          h3
-            | #{translations[locale].Services.Titles.Analytical}
-        .servicesgrid4 
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400657/HMFinance/folder_shared_trdzmq.png')
-          h3
-            | #{translations[locale].Services.Titles.HR}
+          a(target='_blank' href='/services/#analytical')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400651/HMFinance/find_in_page_tymyis.png')
+            h3 #{translations[locale].Services.Titles.Analytical}
+        .servicesgrid4
+          a(target='_blank' href='/services/#humanresources')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400657/HMFinance/folder_shared_trdzmq.png')
+            h3 #{translations[locale].Services.Titles.HR}
         .servicesgrid5
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400664/HMFinance/security_jnmi63.png')
-          h3
-            | #{translations[locale].Services.Titles.Party}
-        .servicesgrid6 
-          img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400674/HMFinance/people_edlhre.png')
-          h3
-            | #{translations[locale].Services.Titles.Others} 
+          a(target='_blank' href='/services/#party')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400664/HMFinance/security_jnmi63.png')
+            h3 #{translations[locale].Services.Titles.Party}
+        .servicesgrid6
+          a(target='_blank' href='/services/#others') 
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400674/HMFinance/people_edlhre.png')
+            h3 #{translations[locale].Services.Titles.Others} 
 
       #graytowhiteseparator
         h1 #{translations[locale].SectionsTitles.Simulators}
@@ -99,10 +99,22 @@ block content
 
 
     #simulators
-      br
-      #sims
-        a(href='' target='_blank')
-      br
+      .simsgrid
+        .simsgrid1
+          <br>
+          a(href='/simulators/#simulatorSS' target='_blank')
+            h3 Simulador<br>Segurança Social
+            img(src='../media/sims1.png')
+        .simsgrid2
+          <br>
+          a(href='/simulators/#simulatorMV' target='_blank')
+             h3 Simulador<br>Mais Valias
+             img(src='../media/sims2.png')
+        .simsgrid3
+          <br>
+          a(href='/simulators/#simulatorIMT' target='_blank')
+             h3 Simulador<br>IMT
+             img(src='../media/sims3.png')
 
     #contactus
       #whitetograyseparator
@@ -121,7 +133,6 @@ block content
             br
             h3 #{translations[locale].ContactUs.Address}
             p #{data.contactUs[0].address1}
-            br
             p #{data.contactUs[0].address2}
             br
             br
@@ -129,11 +140,15 @@ block content
           .contactusgrid2
             form.contactusMessage(action="/sendmessage", method="post")
               h3 #{translations[locale].ContactUs.FormName}
-              input.inputMargins(type='text', name='name', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Name}`)
+              br
+              input(type='text', name='name', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Name}`)
               h3 #{translations[locale].ContactUs.FormEmail}
-              input.inputMargins(type='text', name='email', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Email}`)
+              br
+              input(type='text', name='email', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Email}`)
               h3 #{translations[locale].ContactUs.FormMessage}
-              textarea#question.inputMargins(name='question', rows='11') #{translations[locale].Others.ContactUsForm.Help}
+              br
+              textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
+
               input(type='submit', value='SEND')
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}
@@ -185,19 +200,19 @@ block content
         .footergrid1
           a(href='')
             img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400724/HMFinance/thumb_up_qvazx4.png', width='30', height='30')
-            p #{translations.both.Footer.Face}
+            | #{translations.both.Footer.Face}
         .footergrid2
           a(href='')
             img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400733/HMFinance/camera_alt_cf6vl3.png', width='30', height='30')
-            p #{translations.both.Footer.Insta}
+            | #{translations.both.Footer.Insta}
         .footergrid3
           a(href='')
             img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400739/HMFinance/email_ixwfqo.png', width='30', height='30')
-            p #{translations.both.Footer.LinkIn}
+            | #{translations.both.Footer.LinkIn}
         .footergrid4
           a(href='')
             img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400739/HMFinance/email_ixwfqo.png', width='30', height='30')
-            p #{translations.both.Footer.Email}
+            | #{translations.both.Footer.Email}
         .footergrid5
           h10 #{translations.both.Footer.HMFin}
         .footergrid6
@@ -266,6 +281,12 @@ block content
       if(px) $(".servicesgrid6").addClass("showscroll6")
       ;
     });
+    $("#simulators").inViewport(function(px){
+      if(px) $(".simsgrid1").addClass("showscroll1")
+      if(px) $(".simsgrid2").addClass("showscroll2")
+      if(px) $(".simsgrid3").addClass("showscroll3")
+      ;
+    });		
     $(".footergrid1").inViewport(function(px){
       if(px) $(".footergrid1").addClass("showscroll1")
       if(px) $(".footergrid2").addClass("showscroll2")
@@ -284,12 +305,8 @@ block content
       ;
     });
 
-
   script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
   script(src='/javascripts/mailchimp.js')
-  //- Script to display the cookies banner. The link is currently sending the user to an empty page, the privacy policy should be put here
-  script(type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js" data-message=`${translations[locale].CookiesText}` data-moreinfo="/privacy-policy")
-
 
 
 

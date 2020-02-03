@@ -14,6 +14,9 @@ const dashboardRouter = require('./routes/back-office/dashboard');
 
 const app = express();
 
+require('dotenv').config();
+
+
 // config db
 require('./db/config');
 
