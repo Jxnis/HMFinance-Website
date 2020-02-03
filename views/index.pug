@@ -138,7 +138,7 @@ block content
             br
             iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739', allowfullscreen='', width='100%', height='100%', frameborder='0')
           .contactusgrid2
-            form(action="/sendmessage", method="post")
+            form.contactusMessage(action="/sendmessage", method="post")
               h3 #{translations[locale].ContactUs.FormName}
               br
               input(type='text', name='name', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Name}`)
@@ -148,6 +148,7 @@ block content
               h3 #{translations[locale].ContactUs.FormMessage}
               br
               textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
+
               input(type='submit', value='SEND')
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}
@@ -213,9 +214,9 @@ block content
             img(src='../media/email.png', width='20', height='20')
             | #{translations.both.Footer.Email}
         .footergrid5
-          h4 #{translations.both.Footer.HMFin}
+          h10 #{translations.both.Footer.HMFin}
         .footergrid6
-          h4 #{translations.both.Footer.WCS}
+          h10 #{translations.both.Footer.WCS}
 
   script.
     $('textarea#question').focus(function() {

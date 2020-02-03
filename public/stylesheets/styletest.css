@@ -8,20 +8,6 @@ a { color: #404040; text-decoration: none }
 a:hover { color: #A00000}
 ::-webkit-scrollbar { display:none; }
 
-#mainservices { position: relative; z-index: 2; overflow: hidden }
-
-.pcontainerservices { width: 100%; position: relative; overflow: hidden; 
-	z-index: -10; min-height: 1980px; height: 220vh; max-height: 400vh;}
-.pimageservices { position: absolute; top: 0; left: 50%; 
-	transform: translate(-50%,0); filter: grayscale(100%); opacity: .25; 
-	height: 150%; min-width: 100vw; z-index: -10 }
-
-
-.contactusbutton { width: 200px; margin: 0 auto;
-	border: solid 2px #A00000; background: #A00000; 
-	color: #fff; border-radius: 10px; padding: 11px 50px 9px; 
-	font-size: large; z-index: 0}
-
 .contactusbutton:hover { border: solid 2px #FFF; border-radius: 10px; background-color: #A00000; color: #fff; box-shadow: 0 2px 5px 0 #404040 }
 a.contactusbutton:active { padding: 13px 50px 7px }
 
@@ -33,7 +19,7 @@ a.contactusbutton:active { padding: 13px 50px 7px }
 .servicespagegrid {
 	position: absolute; 
 	top: 100px;
-	bottom: 100px;
+
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -44,36 +30,7 @@ a.contactusbutton:active { padding: 13px 50px 7px }
 	grid-column-gap: 60px;
 	grid-row-gap: 60px;
 	max-width: 960px; 
-	line-height: 1.5;
-	text-align: left;
-	z-index: -0;
-}
-	
 
-
-.servicespagegrid1 { overflow:hidden;grid-area: 1 / 1 / 2 / 2; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid2 { overflow:hidden;grid-area: 1 / 2 / 2 / 3; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid3 { overflow:hidden;grid-area: 2 / 1 / 3 / 2; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid4 { overflow:hidden;grid-area: 2 / 2 / 3 / 3; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid5 { overflow:hidden;grid-area: 3 / 1 / 4 / 2; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid6 { overflow:hidden;grid-area: 3 / 2 / 4 / 3; border: solid 2px #A00000; border-radius: 10px; background-color: #ffffff}
-.servicespagegrid7 { grid-area: 4 / 1 / 5 / 3; text-align: center;}
-
-.servicespagegrid1:hover {box-shadow: 0 2px 5px 0 #404040 }
-.servicespagegrid2:hover {box-shadow: 0 2px 5px 0 #404040 }
-.servicespagegrid3:hover {box-shadow: 0 2px 5px 0 #404040 }
-.servicespagegrid4:hover {box-shadow: 0 2px 5px 0 #404040 }
-.servicespagegrid5:hover {box-shadow: 0 2px 5px 0 #404040 }
-.servicespagegrid6:hover {box-shadow: 0 2px 5px 0 #404040 }
-
-
-.servicespagegrid * img {
-	width: 100%;
-	min-height: 50px;
-	max-height: 200px;
-	object-fit: cover;
-	filter: grayscale(100%);
-	z-index: 0;
 }
 .servicespagegrid1:hover > img {	filter: grayscale(0); width: 101%;}
 .servicespagegrid2:hover > img {	filter: grayscale(0); width: 101%;}

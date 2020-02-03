@@ -43,13 +43,13 @@ block content
                     div.panel-wrapper
                         div.panel-head
                             h4 About Us text in english
-                        input.panel-body(type="text", name="aboutUsEN" value=homepageInfo.aboutUsEN)
+                        textarea.panel-body(type="text", name="aboutUsEN") #{homepageInfo.aboutUsEN}
 
                         div 
                             input(type="hidden", name="id" value=homepageInfo.id)
 
-            div.button 
-                input(type="submit", value="Save" class="btn btn-success btn-lg")
+                    div.button 
+                        input(type="submit", value="Save" class="btn btn-success btn-lg")
 
 
         
