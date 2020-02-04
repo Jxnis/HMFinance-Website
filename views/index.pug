@@ -150,7 +150,7 @@ block content
               h3 #{translations[locale].ContactUs.FormMessage}
               br
               textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
-              input(type='submit', value='SEND')
+              input(type='submit', value=`${translations[locale].Others.Button}`)
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}
       a#reviews.anchor

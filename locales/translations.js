@@ -22,6 +22,7 @@ const Translations = {
 				Email: 'Your E-mail',
 				Help: 'How can we help you?'
 			},
+			Button: 'Send',
 		},
 
 		SectionsTitles: {
@@ -72,7 +73,7 @@ const Translations = {
 		},
 		Simulators: {
 			Titles: {
-				SS: 'Social Secuirty',
+				SS: 'Social Security',
 				IMT: 'City Tax on Real Estate Transfers',
 
 			},
@@ -102,8 +103,7 @@ const Translations = {
 		Review: {
 			Title: 'We Rock'
 		}        
-
-            
+       
 	},
 
 
@@ -116,7 +116,8 @@ const Translations = {
 				Name: 'Insira o seu Nome',
 				Email: 'Insira o seu E-mail',
 				Help: 'Como é que o podemos ajudar?'
-			}
+			},
+			Button: 'Enviar',
 		},
 
 		SectionsTitles: {
