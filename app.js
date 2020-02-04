@@ -39,11 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 let RedisStore = require('connect-redis')(session);
-let redisClient = redis.createClient(3306, 'e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
+let redisClient = redis.createClient(process.env.JAWSDB_PORT, process.env.JAWSDB_HOST);
 app.use(
 	session({
 		store: new RedisStore({ client: redisClient }),
-		secret: 'keyboard cat',
+		secret: process.env.SESSION_PASS,
 		resave: false,
 		saveUninitialized: true
 	})
@@ -54,7 +54,7 @@ app.use(
 	saveUninitialized: true
 })); */
 app.use(passport.initialize());
-//app.use(passport.session());
+app.use(passport.session());
 // config passport:
 require('./services/passport');
 
