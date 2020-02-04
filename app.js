@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 let RedisStore = require('connect-redis')(session);
-let redisClient = redis.createClient(process.env.JAWSDB_PORT, process.env.JAWSDB_HOST);
+let redisClient = redis.createClient(process.env.PORT, process.env.HOST);
 app.use(
 	session({
 		store: new RedisStore({ client: redisClient }),
