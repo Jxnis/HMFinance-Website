@@ -110,8 +110,8 @@
 ------------------------------------------------- */
 
 :root {
-	--page-header-bgColor: #242e42;
-	--page-header-bgColor-hover: #1d2636;
+	--page-header-bgColor: #1D2731;
+	--page-header-bgColor-hover: rgb(24, 33, 43);
 	--page-header-txtColor: #dde9f8;
 	--page-header-headingColor: #7889a4;
 	--page-header-width: 280px;
@@ -192,8 +192,13 @@
   
   .page-header .logo {
 	display: block;
-	max-width: 120px;
-	margin: 0 15px 
+	max-width: 150px;
+	margin: 0 50px;
+	transition: transform .3s ease;
+  }
+
+  .page-header .logo:hover {
+	  transform: scale(1.1);
   }
   
   .page-header .toggle-mob-menu {
@@ -245,6 +250,11 @@
 	fill: var(--page-header-txtColor);
 	margin-right: 10px;
 	transition: fill 0.2s;
+	padding-right: 10px;
+  }
+
+  .page-header .admin-menu .menu-heading i {
+	  padding-right: 15px;
   }
   
   .page-header .admin-menu a,
@@ -300,7 +310,7 @@
 	position: relative;
 	font-family: 'Montserrat';
 	font-weight: bold;
-	letter-spacing: 0.18em;
+	letter-spacing: 0.10em;
 	color: rgb(121, 121, 121);
   }
   
@@ -322,24 +332,6 @@
 	height: 30px;
   }
   
-  .title-and-user .admin-profile .notifications {
-	position: relative;
-  }
-  
-  .title-and-user .admin-profile .badge {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: -10px;
-	right: -3px;
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	font-size: 10px;
-	color: var(--white);
-	background: var(--red);
-  }
   
   .page-content .grid {
 	display: grid;
@@ -360,8 +352,10 @@
 	grid-column: 1 / -1;
   }
 
+  //-------------
+
   .page-content .grid .no1 {
-	  background-color: #AEC6CF;
+	  background-color: #A9B7C0;
 	  opacity: 0.7;
   }
 
@@ -376,11 +370,15 @@
   }
   
   .page-content .grid .no1 .no1-image:hover {
-	opacity: 0.7;
+	opacity: 1;
   }
   
+
+//-------------
+
   .page-content .grid .no2 {
-	  background-color: #DEA5A4
+	  background-color: #B4DBC0;
+	  opacity: 0.7;
   }
 
   .page-content .grid .no2 .no2-image {
@@ -395,6 +393,70 @@
   .page-content .grid .no2 .no2-image:hover {
 	  opacity: 1;
   }
+
+
+//--------------
+
+
+.page-content .grid .no3 {
+	background-color: #DEA5A4;
+	opacity: 0.7;
+}
+
+.page-content .grid .no3 .no3-image {
+	width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.page-content .grid .no3 .no3-image:hover {
+	opacity: 1;
+}
+
+
+//--------
+
+
+.page-content .grid .no4 {
+	background-color: #CF6766;
+	opacity: 0.7;
+}
+
+.page-content .grid .no4 .no4-image {
+	width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.page-content .grid .no4 .no4-image:hover {
+	opacity: 1;
+}
+
+//---------
+
+.page-content .grid .no5 {
+	background-color: #8EAEBD;
+	opacity: 0.7;
+}
+
+.page-content .grid .no5 .no5-image {
+	width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.page-content .grid .no5 .no5-image:hover {
+	opacity: 1;
+}
 
   /* MQ RULES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */

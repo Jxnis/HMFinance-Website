@@ -4,11 +4,12 @@ html
     title= title
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/backoffices/backoffices.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
   body
     header.page-header
         nav
-            a(href='#0')
+            a(href='/dashboard')
                 img.logo(src='https://res.cloudinary.com/dzvkdhu9c/image/upload/v1580302813/HMFinance/hmfinanceNoBackground_m06o2l.png', alt='HMFinance logo')
             button.toggle-mob-menu(aria-expanded='false', aria-label='open menu')
                 svg(width='30', height='30', aria-hidden='true')
@@ -50,13 +51,13 @@ html
                     if user 
                         a(href="/auth/logout")
                             svg(aria-hidden='true')
-                                use(xlink:href='#collapse')
-                            span Logout
+                              i(class="fa fa-sign-out")
+                            span.logoutbtn Logout
                     else  
                         a(href="/auth/login")
                             svg(aria-hidden='true')
-                                use(xlink:href='#collapse')   
-                            span Login
+                                i(class="fa fa-sign-in")   
+                            span.logoutbtn Login
 
     
     block content
