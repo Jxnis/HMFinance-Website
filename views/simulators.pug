@@ -17,22 +17,20 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 
   body
+  #title
+    <br>
+    h1 Simuladores
     block content
-  #langbuttondiv
-    a(href='/setlanguage/pt')
-      img#langbutton(src='../media/langpt.png')
-    a(href='/setlanguage/en')
-      img#langbutton(src='../media/langen.png')
+
     #mainservices
   .pcontainersimulators
-    img.pimageservices(src='../media/1.jpg', data-speed='-2')
-  #title
-    h1 Simuladores
-
+    img.pimagesimulators(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
+  
   .simulatorsgsgrid
         .simulatorsgsgrid1
           <br>
-          h3#simulatorSS Simulador Segurança Social
+          h3 Simulador Segurança Social
+
           form(id="simulatorSS")
         .simulatorsgsgrid2
           label Trabalhador:
@@ -93,7 +91,9 @@ html
   .simulatormvagrid
         .simulatormvagrid1
           <br>
-          h3#simulatorMV Simulador Mais Valias
+
+          h3 Simulador Mais Valias
+
           form(id="maisValiasSimulator")
         .simulatormvagrid2
           label Valor de Aquisição:
@@ -141,7 +141,9 @@ html
   .simulatorimtgrid
         .simulatorimtgrid1
           <br>
-          h3#simulatorIMT Simulador IMT
+
+          h3 Simulador IMT
+
           form(id="IMTSimulator")
         .simulatorimtgrid2
           label Local:
@@ -192,7 +194,9 @@ script.
     $("textarea#question").focus(function() {
     $(this).val("")
     }),
-    $(".pimageservices").each(function() {
+
+    $(".pimagesimulators").each(function() {
+
     var c = $(this),
     e = $(this).parent();
     function s() {
@@ -232,7 +236,9 @@ script.
     }
     }
 
-<!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+
+  <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+
 script.
     const IMT = !{JSON.stringify(IMT)};
     const IStax = !{JSON.stringify(IStax)};
