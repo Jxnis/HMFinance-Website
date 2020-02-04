@@ -161,15 +161,15 @@ block content
         #reviewimg1
           i
             b #{data.review[0].name}
-        //- #reviewimg2
-        //-   i
-        //-     b #{data.review[1].name}
-        //- #reviewimg3
-        //-   i
-        //-     b #{data.review[2].name}
-        //- #reviewimg4
-        //-   i
-        //-     b #{data.review[2].name}
+        #reviewimg2
+          i
+            b #{data.review[0].name}
+        #reviewimg3
+          i
+            b #{data.review[0].name}
+        #reviewimg4
+          i
+            b #{data.review[0].name}
       #reviewbox
         #reviewbox1
           h5 &ldquo;
@@ -179,19 +179,19 @@ block content
           h5 &rdquo;
         #reviewbox2
           h5 &ldquo;
-          | &thinsp; #{locale === 'pt' ? data.review[1].commentPT : data.review[1].commentEN}
+          | &thinsp; #{locale === 'pt' ? data.review[0].commentPT : data.review[0].commentEN}
           br
           br
           h5 &rdquo;
         #reviewbox3
           h5 &ldquo;
-          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
+          | &thinsp; #{locale === 'pt' ? data.review[0].commentPT : data.review[0].commentEN}
           br
           br
           h5 &rdquo;
         #reviewbox4
           h5 &ldquo;
-          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
+          | &thinsp; #{locale === 'pt' ? data.review[0].commentPT : data.review[0].commentEN}
           br
           br
           h5 &rdquo;
