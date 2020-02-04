@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,700|Montserrat+SemiBold:400,300,600);
  * {
 	 box-sizing: border-box;
+
+	//  margin: 0 auto;
 }
 
 // LOGIN -------------------------------------------- LOGIN //
@@ -12,6 +14,7 @@
 	 -moz-background-size: cover;
 	 -o-background-size: cover;
 	 background-size: cover;
+
 }
  .log-form {
 	 width: 40%;
@@ -108,6 +111,10 @@
 
 /* GENERAL 
 ------------------------------------------------- */
+
+html {
+    zoom: 0.8; 
+}
 
 :root {
 	--page-header-bgColor: #1D2731;
@@ -372,6 +379,11 @@
   
   .page-content .grid .no1 .no1-image:hover {
 	opacity: 1;
+  }
+
+  .page-content .grid .no1 a {
+	  width: 100%;
+	  height: 100%;
   }
   
 
