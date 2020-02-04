@@ -1,7 +1,8 @@
 extends layout
 
 block content
-
+  video#video
+    source(src='https://res.cloudinary.com/dcpwkfvej/video/upload/v1580730158/HMFinance/logo_u2ckij.mp4' autoplay='' muted='' preload='auto')
   #menubuttondiv
     img#menubutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730159/HMFinance/menu_gbcjny.png')
   #langbuttondiv
@@ -219,6 +220,17 @@ block content
           h10 #{translations.both.Footer.WCS}
 
   script.
+    var video = document.getElementById("video");
+    video.oncanplaythrough = function() {
+    video.muted = true;
+    video.play();
+    }
+
+    $('#video').bind('ended', function() {
+    $(this).fadeOut();
+   	$(this).parent().fadeIn()
+    });
+
     $('textarea#question').focus(function() {
       $(this).val('');
     });
