@@ -1,14 +1,30 @@
 extends layout
 
 block content
-    h1 Simulators
-    div
-        a(href='/dashboard') Dashboard
-    br
-    div
-        div
-            a(href='/dashboard/simulators/imt') IMT
-        div
-            a(href='/dashboard/simulators/maisvalias') Mais valias
-        div
-            a(href='/dashboard/simulators/segsocial') Segurança Social
+    section.page-content
+        section.title-and-user
+            h1 Simulators
+            
+            .admin-profile
+                span.greeting Hi, #{user.email}
+                .notifications
+                    span.badge 1
+                    svg
+                        use(xlink:href='#users')
+
+            div
+                a(href="/dashboard") Dashboard
+        
+        br
+        section.homepage
+            div.homepage-main-content
+                h2 Selecione um simulador para editar:
+                    div.panel-wrapper 
+                        a(href='/dashboard/simulators/imt') 
+                            h4 IMT
+                    div.panel-wrapper 
+                        a(href='/dashboard/simulators/maisvalias') 
+                            h4 Mais valias
+                    div.panel-wrapper 
+                        a(href='/dashboard/simulators/segsocial') 
+                            h4 Segurança Social
