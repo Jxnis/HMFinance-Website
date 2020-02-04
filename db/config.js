@@ -1,8 +1,8 @@
 const  mysql = require('mysql');
 
-const connection = mysql.createConnection(process.env.JAWSDB_URL);
+//const connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-/* const dbOptions = {
+const dbOptions = {
 	host: process.env.MYSQL_HOST,
 	user: process.env.MYSQL_USERNAME,
 	password: process.env.MYSQL_PASSWORD,
@@ -10,5 +10,5 @@ const connection = mysql.createConnection(process.env.JAWSDB_URL);
 };
 
 const connection = mysql.createConnection(dbOptions);
- */
+ 
 module.exports = connection;
