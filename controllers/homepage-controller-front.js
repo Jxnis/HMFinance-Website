@@ -25,7 +25,6 @@ const getAllInfo = (req, res) => {
 			let ENaboutUS = data.homepage[0].aboutUsEN.split('.');
 			//console.log(`ENaboutUS part1 ${ENaboutUS[0]}\n ENaboutUS part2 ${ENaboutUS[1]}\n ENaboutUS part3 ${ENaboutUS[2]}\n ENaboutUS part4 ${ENaboutUS[3]} `);
 
-
 			// data is all the text that is coming from the db
 			// PTaboutUS and ENaboutUS are split into 2 arrays of 4 parts, to access each part of them in the index.pug do for example ENaboutUS[2]
 			// translations is all the text that is coming from the object translations.js and has all the text that is in the website that isn't coming from the db

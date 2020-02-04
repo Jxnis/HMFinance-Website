@@ -115,11 +115,16 @@ SimulatorIMT.get = (callback) => {
 SimulatorIMT.edit = (simulatorEdited, callback) => {
 	//let resultQuery = '';
 	//debugger;
-	console.log(simulatorEdited.lowEnd);
+	//console.log(simulatorEdited.lowEnd);
 	for (let i = 0 ; i < simulatorEdited.type.length; i++) {
-		//console.log(simulatorEdited.lowEnd[i]);
-		simulatorEdited.lowEnd[i] == 'Campo Bloqueado' ? simulatorEdited.lowEnd[i] = 0 : simulatorEdited.lowEnd[i] = simulatorEdited.lowEnd[i];
-		//console.log('unblocked ',simulatorEdited.lowEnd[i]);
+		console.log(simulatorEdited.marginal[i]);
+		//console.log('blocked ',simulatorEdited.lowEnd[i]);
+		simulatorEdited.lowEnd[i] == 'Campo Bloqueado' ? simulatorEdited.lowEnd[i] = '0' : simulatorEdited.lowEnd[i] = simulatorEdited.lowEnd[i];
+		simulatorEdited.highEnd[i] == 'Campo Bloqueado' ? simulatorEdited.highEnd[i] = '0' : simulatorEdited.highEnd[i] = simulatorEdited.highEnd[i];
+		//console.log('location ',simulatorEdited.location[i]);
+		//console.log('lowEnd ',simulatorEdited.lowEnd[i]);
+		//console.log('highEnd ',simulatorEdited.highEnd[i]);
+		//console.log('marginal ',simulatorEdited.marginal[i]);
 		connection.query(
 			`UPDATE imt
 			SET 

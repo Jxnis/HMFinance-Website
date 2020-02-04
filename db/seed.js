@@ -82,6 +82,7 @@ const connection = require('./config');
 // 	}
 // );
 
+
 // connection.query(`INSERT INTO homepage (titlePT, titleEN, introPT, introEN, aboutUsPT, aboutUsEN) VALUES (
 // 	'HMFinance',
 // 	'HMFinance',
@@ -106,6 +107,7 @@ const connection = require('./config');
 // 	console.log('query complete');
 // 	// connection.end();
 // });
+
 
 // connection.query(`INSERT INTO simulatorMaisValias(year, coeficient, taxIRS) 
 // 	VALUES (2020, 1, 0.28),
