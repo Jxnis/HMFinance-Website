@@ -6,7 +6,6 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const passport = require('passport');
 const session = require('express-session');
-const redis = require('redis');
 
 
 const indexRouter = require('./routes/index');
@@ -37,24 +36,15 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-let RedisStore = require('connect-redis')(session);
-let redisClient = redis.createClient(3306, 'e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
-app.use(
-	session({
-		store: new RedisStore({ client: redisClient }),
-		secret: 'keyboard cat',
-		resave: false,
-		saveUninitialized: true
-	})
-);
-/* app.use(session({
+app.use(session({
 	secret: 'keyboard cat',
 	resave: true,
 	saveUninitialized: true
-})); */
+})); 
+
 app.use(passport.initialize());
-//app.use(passport.session());
+app.use(passport.session());
+
 // config passport:
 require('./services/passport');
 
