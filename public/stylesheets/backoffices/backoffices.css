@@ -275,7 +275,10 @@ svg {
   align-items: center; }
 
 .title-and-user .admin-profile .greeting {
-  margin: 0 10px 0 20px; }
+  margin: 0 10px 0 20px;
+  font-family: 'Montserrat';
+  color: #797979;
+  font-weight: bold; }
 
 .title-and-user .admin-profile svg {
   width: 30px;

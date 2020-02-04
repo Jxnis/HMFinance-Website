@@ -10,5 +10,5 @@ const connection = mysql.createConnection(process.env.JAWSDB_URL);
 };
 
 const connection = mysql.createConnection(dbOptions);
- */
+  */
 module.exports = connection;
