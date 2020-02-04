@@ -1,4 +1,4 @@
-/* CREATE TABLE review 
+CREATE TABLE review 
 (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(250),
@@ -94,7 +94,7 @@ CREATE TABLE simulatorMaisValias (
     PRIMARY KEY (id)
 );
 
- */
+
 
 INSERT INTO imtIS (value) VALUES (0.08);
 	
