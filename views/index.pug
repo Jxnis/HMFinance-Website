@@ -150,7 +150,7 @@ block content
               h3 #{translations[locale].ContactUs.FormMessage}
               br
               textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
-              input(type='submit', value='SEND')
+              input(type='submit', value=`${translations[locale].Others.Button}`)
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}
       a#reviews.anchor
@@ -169,7 +169,7 @@ block content
             b #{data.review[2].name}
         #reviewimg4
           i
-            b #{data.review[2].name}
+            b #{data.review[3].name}
       #reviewbox
         #reviewbox1
           h5 &ldquo;
@@ -191,7 +191,7 @@ block content
           h5 &rdquo;
         #reviewbox4
           h5 &ldquo;
-          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
+          | &thinsp; #{locale === 'pt' ? data.review[3].commentPT : data.review[3].commentEN}
           br
           br
           h5 &rdquo;
