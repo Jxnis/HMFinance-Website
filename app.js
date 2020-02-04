@@ -45,6 +45,7 @@ app.use(
 		store: new RedisStore({ client: redisClient }),
 		secret: 'keyboard cat',
 		resave: false,
+		saveUninitialized: true
 	})
 );
 /* app.use(session({
