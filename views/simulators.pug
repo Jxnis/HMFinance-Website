@@ -21,6 +21,7 @@ html
     <br>
     h1 Simuladores
     block content
+
     #mainservices
   .pcontainersimulators
     img.pimagesimulators(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
@@ -29,6 +30,7 @@ html
         .simulatorsgsgrid1
           <br>
           h3 Simulador Segurança Social
+
           form(id="simulatorSS")
         .simulatorsgsgrid2
           label Trabalhador:
@@ -89,7 +91,9 @@ html
   .simulatormvagrid
         .simulatormvagrid1
           <br>
+
           h3 Simulador Mais Valias
+
           form(id="maisValiasSimulator")
         .simulatormvagrid2
           label Valor de Aquisição:
@@ -137,7 +141,9 @@ html
   .simulatorimtgrid
         .simulatorimtgrid1
           <br>
+
           h3 Simulador IMT
+
           form(id="IMTSimulator")
         .simulatorimtgrid2
           label Local:
@@ -188,7 +194,9 @@ script.
     $("textarea#question").focus(function() {
     $(this).val("")
     }),
+
     $(".pimagesimulators").each(function() {
+
     var c = $(this),
     e = $(this).parent();
     function s() {
@@ -228,7 +236,9 @@ script.
     }
     }
 
+
   <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+
 script.
     const IMT = !{JSON.stringify(IMT)};
     const IStax = !{JSON.stringify(IStax)};

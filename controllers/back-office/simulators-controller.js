@@ -61,6 +61,7 @@ const getIMTSimulatorsPage = (req, res)  => {
 const editIMTSimulatorsPage = (req, res) => {
 	//console.log(req.body);
 	SimulatorIMT.edit(req.body, (err) => {
+		console.log(err);
 		if (err) return res.render('error', { err });
 		res.redirect('/dashboard/simulators');
 	});

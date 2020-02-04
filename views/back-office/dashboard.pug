@@ -1,76 +1,7 @@
 extends layout
 
 block content
-    header.page-header
-        nav
-            a(href='#0')
-                img.logo(src='https://res.cloudinary.com/dzvkdhu9c/image/upload/v1580302813/HMFinance/hmfinanceNoBackground_m06o2l.png', alt='HMFinance logo')
-            button.toggle-mob-menu(aria-expanded='false', aria-label='open menu')
-                svg(width='30', height='30', aria-hidden='true')
-                    use(xlink:href='#down')
-            ul.admin-menu
-                li.menu-heading
-                    h3 Admin
-                li
-                    a(href='/auth')
-                        svg
-                            use(xlink:href='#pages')
-                        span Users Management
-                li
-                    a(href='/dashboard/homepage')
-                        svg
-                            use(xlink:href='#users')
-                        span Homepage
-                li
-                    a(href='/dashboard/reviews')
-                        svg
-                            use(xlink:href='#trends')
-                        span Reviews
-                li
-                    a(href='/dashboard/contactus')
-                        svg
-                            use(xlink:href='#collection')
-                        span Contact Us
-                li
-                    a(href='/dashboard/clients')
-                        svg
-                            use(xlink:href='#comments')
-                        span Clients
-                li
-                    a(href='/dashboard/simulators')
-                        svg
-                            use(xlink:href='#appearance')
-                        span Simulators
-                li.menu-heading
-                    h3 Settings
-                li
-                    a(href='#0')
-                        svg
-                            use(xlink:href='#settings')
-                        span Settings
-                li
-                    a(href='#0')
-                        svg
-                            use(xlink:href='#options')
-                        span Options
-                li
-                    a(href='#0')
-                        svg
-                            use(xlink:href='#charts')
-                        span Charts
-                li
-                    if user 
-                        a(href="/auth/logout")
-                            svg(aria-hidden='true')
-                                use(xlink:href='#collapse')
-                            span Logout
-                    else  
-                        a(href="/auth/login")
-                            svg(aria-hidden='true')
-                                use(xlink:href='#collapse')   
-                            span Login
-
-
+    
     section.page-content
         section.title-and-user
             h1 This is your Dasboard. 
@@ -82,10 +13,12 @@ block content
                     svg
                         use(xlink:href='#users')
         section.grid
-            article
-            article
-            article
-            article
-            article
-            article
+            article.no1
+                img.no1-image(src="https://res.cloudinary.com/dcpwkfvej/image/upload/v1580757659/HMFinance/Backoffice_Preview_Images/homepage1_k1fmcs.png" alt="homepage")
+            article.no2
+                img.no2-image(src="https://res.cloudinary.com/dcpwkfvej/image/upload/v1580756262/HMFinance/Backoffice_Preview_Images/homepage2_rkyjhq.png" alt="clients")
+            article.no3
+            article.no4
+            article.no5
+            article.no6
         

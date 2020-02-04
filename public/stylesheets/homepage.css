@@ -6,6 +6,7 @@
 	* { margin: 0; padding: 0 }
 	html { animation: fadein 2s; background: #FFF; letter-spacing: 2px; text-align: center; color: #404040; scroll-behavior: smooth; font: calc(10px + 1vmin) 'Roboto',sans-serif }
 	
+
 	h1 { text-align: center; 'Montserrat',sans-serif; line-height: 50px; position: relative; z-index: 88 }
 	h2,h3,h4,h5 { text-align: center; font-family: "Roboto",sans-serif; }
 	h4 { font-size: 15px; font-weight: 100 }
@@ -37,6 +38,7 @@
 	#menubutton:hover { padding: 0; border: solid 2px #FFF; 
 		border-radius: 10px; color: #fff; box-shadow: 0 2px 5px 0 #404040; filter: contrast(150%);transition: filter 1s; }
 
+
 	#langbuttondiv { text-align: right; height: 40px; width: 40px;
 		position: absolute; top: 0; left: 0; z-index: 99;  padding: 15px; border: 2px solid transparent;}
 	#langbutton { width: 18px; height: 40px; 
@@ -47,6 +49,7 @@
 	ul { list-style: none; text-align: center; max-width: 960px; margin: auto;}
 	li { display: inline-block; width: 15%; }
 	#navbar a { margin-top: 27px; margin-bottom: 24px; display: block; transition: .5s }
+
 	#navbar:hover { color: #A00000; box-shadow: 0 2px 5px 0 #404040 }
 	a.anchor { display: block; position: relative; top: -50px; visibility: hidden }
 
@@ -93,6 +96,7 @@
 	.servicesgrid6 { opacity: 0; grid-area: 2 / 3 / 3 / 4 }
 	#services a:hover img{ filter: contrast(150%);transition: filter 1s; border-radius: 10px; border: solid 2px #FFF; box-shadow: 0 2px 5px 0 #404040 }
 
+
 	.simsgrid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -112,12 +116,12 @@
 			border-radius: 10px; 
 			object-fit: cover;
 			margin: 20px 0px;
-			
 		}
 
 		.simsgrid1:hover * img{filter: contrast(150%);transition: filter 1s; border-radius: 10px; border: solid 2px #FFF; box-shadow: 0 2px 5px 0 #404040}
 		.simsgrid2:hover * img{filter: contrast(150%);transition: filter 1s; border-radius: 10px; border: solid 2px #FFF; box-shadow: 0 2px 5px 0 #404040}
 		.simsgrid3:hover * img{filter: contrast(150%);transition: filter 1s; border-radius: 10px; border: solid 2px #FFF; box-shadow: 0 2px 5px 0 #404040}
+
 
 	.contactusgrid { display: grid; grid-template-columns: repeat(2,1fr); grid-template-rows: 1fr; grid-column-gap: 60px; grid-row-gap: 20px; max-width: 960px; margin: 120px auto 150px; }
 	.contactusgrid1 { opacity: 0; grid-area: 1 / 1 / 2 / 2 }
@@ -188,15 +192,19 @@
 	a.contactusbutton:active { padding: 13px 50px 7px }
 
 
+
 	/* SERVICES PAGE CSS STARTS HERE */
 
 	.servicespagegrid h3 { text-align: center !important; 
 		font-family: "Roboto",sans-serif; color:#ffffff; background-color: #A00000;}
 
+
 	#mainservices { position: relative; z-index: 2; overflow: hidden }
 
 	.pcontainerservices { width: 100%; position: relative; overflow: hidden; 
+
 		z-index: -10; min-height: 1900px; height: 210vh; max-height: 300vh;}
+
 	.pimageservices { position: absolute; top: 0; left: 50%; 
 		transform: translate(-50%,0); filter: grayscale(100%); opacity: .25; 
 		height: 150%; min-width: 100vw; z-index: -10 }
@@ -209,11 +217,13 @@
 		.contactusbutton:hover { border: solid 2px #FFF; border-radius: 10px; background-color: #A00000; color: #fff; box-shadow: 0 2px 5px 0 #404040 }
 		a.contactusbutton:active { padding: 13px 50px 7px }
 	
+
 		#title {	position: absolute;
 			margin: auto;
 			position: absolute;
 			top: 20px; left: 0; bottom: 0; right: 0;
 		}
+
 	
 	.servicespagegrid {
 		position: absolute; 
@@ -270,10 +280,12 @@
 /* SIMULATORS CSS STARTS HERE */
 
 .pcontainersimulators { width: 100%; position: relative; overflow: hidden; 
+
 	z-index: -10; min-height: 2350px; height: 222vh; max-height: 325vh;}
 	
 	.pimagesimulators { position: absolute; top: 0; left: 50%; transform: translate(-50%,0); filter: grayscale(100%); opacity: .25; 
 		object-fit: cover; min-height: 3000px; height: 300vh; min-width: 100vw; z-index: -10 }
+
 
 .simulatorsgsgrid h3, .simulatormvagrid h3, .simulatorimtgrid h3 { text-align: center; font-family: "Roboto",sans-serif; color:#ffffff; background-color: #A00000;}
 .simulatorsgsgrid21 h3, .simulatormvagrid15 h3, .simulatorimtgrid9 h3, .simulatorimtgrid11 h3, .simulatorimtgrid13 h3 { text-align: right;}
@@ -288,6 +300,7 @@ select {
 	color: #404040;
 	font: calc(10px + 1vmin) 'Roboto',sans-serif; 
 	}
+
 
 .simulatorsgsgrid {
 	position: absolute; 
@@ -616,6 +629,7 @@ select {
 		animation-duration: 30s; animation-timing-function: ease-in-out; 
 		animation-iteration-count: infinite; font-family: "Aludra"; font-weight: 400; 
 		font-style: normal; text-align: justify; text-justify: inter-word; }
+
 	#reviewimg1,#reviewimg2,#reviewimg3,#reviewimg4 { position: absolute; 
 		left: 55vw;	bottom: 10vh; height: 150px; width: 150px; 
 		margin-right: 10px; z-index: 2; user-select: none; float: right; 

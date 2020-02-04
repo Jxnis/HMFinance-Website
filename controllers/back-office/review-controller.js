@@ -28,7 +28,7 @@ const editReview = (req, res) => {
 
 // Renders the Page with the Form to add a new review
 const getAddReviewPage = (req, res) => {
-	res.render('back-office/addReview');
+	res.render('back-office/addReview', {user: req.user});
 };
 
 // Renders the Page with the Form to edit the review

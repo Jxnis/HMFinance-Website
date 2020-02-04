@@ -1,13 +1,14 @@
 const  mysql = require('mysql');
-const keys = require('../keys');
 
-const dbOptions = {
-	host: 'localhost',
-	user: keys.MYSQL_USERNAME,
-	password: keys.MYSQL_PASSWORD,
-	database: keys.MYSQL_DB_NAME,
+const connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+/* const dbOptions = {
+	host: process.env.MYSQL_HOST,
+	user: process.env.MYSQL_USERNAME,
+	password: process.env.MYSQL_PASSWORD,
+	database: process.env.MYSQL_DB_NAME,
 };
-//const dbURL = `mysql://${dbOptions.user}:${dbOptions.password}@${dbOptions.host}:3306/${dbOptions.database}`;
-const  connection = mysql.createConnection(dbOptions);
 
+const connection = mysql.createConnection(dbOptions);
+ */
 module.exports = connection;

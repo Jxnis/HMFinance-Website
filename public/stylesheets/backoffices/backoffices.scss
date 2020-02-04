@@ -152,6 +152,8 @@
   
   input {
 	-webkit-appearance: none;
+	text-align: center;
+	max-width: 100%;
   }
   
   button,
@@ -175,7 +177,7 @@
 	right: 0;
 	bottom: 0;
 	overflow: auto;
-	padding-top: 20px;
+	padding-top: 30px;
 	width: var(--page-header-width);
 	color: var(--page-header-txtColor);
 	background: var(--page-header-bgColor);
@@ -211,7 +213,7 @@
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	margin-top: 35px;
+	margin-top: 55px;
   }
   
   .page-header .admin-menu li:nth-last-child(2) {
@@ -225,14 +227,14 @@
   
   .page-header .admin-menu li > * {
 	width: 100%;
-	padding: 12px 15px;
+	padding: 20px 15px;
   }
   
   .page-header .admin-menu .menu-heading h3 {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.18em;
-	font-size: 14px;
+	font-size: 15.5px;
 	margin-top: 12px;
 	color: var(--page-header-headingColor);
   }
@@ -249,7 +251,8 @@
   .page-header .admin-menu button {
 	display: flex;
 	align-items: center;
-	font-size: 1rem;
+	font-size: 1.12rem;
+	font-weight: 500;
 	transition: background 0.2s, color 0.2s;
   }
   
@@ -258,7 +261,7 @@
   .page-header .admin-menu button:hover,
   .page-header .admin-menu button:focus {
 	background: var(--page-header-bgColor-hover);
-	color: var(--red);
+	color: var(--white);
 	outline: none;
   }
   
@@ -347,7 +350,7 @@
   .page-content .grid > article {
 	display: flex;
 	height: 300px;
-	background: var(--page-content-blockColor) !important;
+	// background: var(--page-content-blockColor) !important;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
   }
@@ -356,8 +359,43 @@
   .page-content .grid > article:last-child {
 	grid-column: 1 / -1;
   }
+
+  .page-content .grid .no1 {
+	  background-color: #AEC6CF;
+	  opacity: 0.7;
+  }
+
+  .page-content .grid .no1 .no1-image {
+	background-size: cover;
+	width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+  }
   
+  .page-content .grid .no1 .no1-image:hover {
+	opacity: 0.7;
+  }
   
+  .page-content .grid .no2 {
+	  background-color: #DEA5A4
+  }
+
+  .page-content .grid .no2 .no2-image {
+	  width: 100%;
+	  opacity: 0.3;
+	  -webkit-transition: opacity .5s ease-in-out;
+	  -moz-transition: opacity .5s ease-in-out;
+	  -o-transition: opacity .5s ease-in-out;
+	  transition: opacity .5s ease-in-out;
+  }
+
+  .page-content .grid .no2 .no2-image:hover {
+	  opacity: 1;
+  }
+
   /* MQ RULES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   @media screen and (max-width: 767px) {
@@ -502,6 +540,7 @@
 .user-table {
 	text-align: center;
 	margin: auto;
+	width: 100%;
 }
 
 .user-table p {
@@ -534,10 +573,15 @@
 	padding-bottom: 20px;
 
 }
+tr.fontMais {
+	font-size: 16px;
+	height: 30px;
+}
 
 table {
 	margin-top: 20px;
 	width: 100%;
+	
 	color: #29516d;
 	font-size: 14px;
 	border-spacing: 0;
@@ -548,7 +592,9 @@ table {
 	
 	th,
 	td {
-	  padding: 20px;
+	  padding: 0px;
+	  text-align: center;
+	  max-width: 30px;
 	}
 
 	td {
@@ -584,6 +630,22 @@ table {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+.homepage-main-content h2 {
+	font-family: 'Montserrat';
+	color: rgb(121, 121, 121);
+	font-weight: 400;
+	padding-top: 20px;
+}
+
+.homepage-main-content p {
+	font-family: 'Montserrat';
+	color: rgb(121, 121, 121);
+	font-weight: bold;
+	text-align: center;
+	
+}
+
 .homepage-main-content .panel-wrapper {
 	margin: 20px 0;
 	box-shadow: 0px 1px 5px #777;
@@ -606,3 +668,38 @@ table {
 .homepage .button {
 	padding-top: 20px;
 }
+
+
+// CLIENTS ---------------------------------------------------------------- CLIENTS //
+
+
+// REVIEWS ---------------------------------------------------------------- REVIEWS //
+
+.review-button {
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.review-wrapper .nome {
+	padding-top: 15px;
+	// margin: auto;
+
+}
+
+.homepage-main-content h2 {
+	padding-top: 10px;
+	font-family: 'Montserrat';
+	color: rgb(121, 121, 121);
+	font-weight: 400;
+	text-align: center;
+}
+
+.review-wrapper {
+	text-align: center;
+}
+
+// .review-wrapper .review-header {
+// 	padding: 10px 10px;
+// 	border-bottom: 1px solid #52555a;
+// }

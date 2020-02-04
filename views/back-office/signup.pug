@@ -1,14 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/backoffices/backoffices.css')
+
+  body
+
 block content
-  h1 Add User
-  div
-    a(href="/dashboard") Dashboard
+    div
+      a(href="/dashboard") Dashboard
+    div.log-form
+        h2 Add User
+        form(action="/auth/signup", method="post" class="form-signin")
+            #error
+                if error
+                    p.text-danger Error!!
 
+            input(type="email", name="email" id="inputEmail" class="form-control" placeholder="email" required)
 
-  form(action="/auth/signup", method="post")
-    div
-        input(type="email", name="email" placeholder="email" required)
-    div
-        input(type="password", name="password" placeholder="password" required)
-    div
-        input(type="submit", value="Signup")
+            input(type="password", name="password" id="inputPassword" class="form-control" placeholder="password" required)
+            
+            button(class="btn" type="submit") Sign up
 

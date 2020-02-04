@@ -1,53 +1,72 @@
 extends layout
 
 block content
-    
+    section.page-content
+        section.title-and-user
+                h1 Clients
 
-    h1 Clients 
-    div
-        a(href="/dashboard") Dashboard
-    
+                .admin-profile
+                    span.greeting Hi, #{user.email}
+                    .notifications
+                        span.badge 1
+                        svg
+                            use(xlink:href='#users')
 
-    table
-        tbody
-            tr
-                th 
-                    h3 Name
-                th 
-                    h3 Logo URL
-                th
-                    h3 Client URL
-                th  
-                    h3 Showing
-                
-        each client in clients
-            tr
-                td #{client.name}
-                td #{client.logoURL} 
-                td #{client.clientURL}
-                td
-                    form(action=`/dashboard/clients/${client.id}/toggle` method="post")
-                        input(
-                        type="submit" 
-                        value=`${client.isShowing ?
-                            "Showing" : "Not Showing"}`
-                        )
-                td
-                    form(action=`/dashboard/clients/${client.id}/edit` method="get")
-                            input(
-                            type="submit" 
-                            value="Edit")                 
-                td
-                    form(action=`/dashboard/clients/${client.id}/delete` method="post")
-                        input(
-                        value=client.id 
-                        type="hidden" 
-                        name="id"
-                        )
-                        input(
-                        type="submit"
-                        value="Delete"
-                        )
-    div
-        a(href="/dashboard/clients/new") Add Client
+                div
+                    a(href="/dashboard") Dashboard
+    
+        section.table-grid
+            div.user-table
+                table
+                    tbody
+                        tr
+                            th 
+                                h3 Name
+                            th 
+                                h3 Logo URL
+                            th
+                                h3 Client URL
+                            th 
+                                
+                            th  
+                                
+                            th  
+                                
+                                
+                            
+                    each client in clients
+                        tr
+                            td #{client.name}
+                            td #{client.logoURL} 
+                            td #{client.clientURL}
+                            td.showing-button
+                                form(action=`/dashboard/clients/${client.id}/toggle` method="post")
+                                    input(
+                                    type="submit" 
+                                    value=`${client.isShowing ?
+                                        "Showing" : "Not Showing"}`
+                                    class="btn btn-success"
+                                    )
+                            td.edit-button
+                                form(action=`/dashboard/clients/${client.id}/edit` method="get")
+                                        input(
+                                        type="submit" 
+                                        value="Edit"
+                                        class="btn btn-warning"
+                                        )                 
+                            td.delete-button
+                                form(action=`/dashboard/clients/${client.id}/delete` method="post")
+                                    input(
+                                    value=client.id 
+                                    type="hidden" 
+                                    name="id"
+                                    )
+                                    input(
+                                    type="submit"
+                                    value="Delete"
+                                    class="btn btn-danger"
+                                    )
+                div.addUser
+                    form(action="/dashboard/clients/new")
+                        input(type="submit" value="Add Client" class="btn btn-primary btn-lg")
                         
