@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 let RedisStore = require('connect-redis')(session);
-let redisClient = redis.createClient();
+let redisClient = redis.createClient(3306, 'e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
 app.use(
 	session({
 		store: new RedisStore({ client: redisClient }),
