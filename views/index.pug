@@ -8,9 +8,7 @@ block content
     a(href='/setlanguage/pt')
       img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730159/HMFinance/langpt_cckbaa.png')
     a(href='/setlanguage/en')
-
       img#langbutton(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730159/HMFinance/langen_i0dtxi.png')
-
   #navbar  
     ul
       li
@@ -109,12 +107,12 @@ block content
             img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730159/HMFinance/sims1_rem8cj.png')
         .simsgrid2
           <br>
-          a(href='/simulators#simulatorMV' target='_blank')
+          a(href='/simulators/#simulatorMV' target='_blank')
              h3 Simulador<br>Mais Valias
              img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730160/HMFinance/sims2_fetvgf.png')
         .simsgrid3
           <br>
-          a(href='/simulators#simulatorIMT' target='_blank')
+          a(href='/simulators/#simulatorIMT' target='_blank')
              h3 Simulador<br>IMT
              img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730159/HMFinance/sims3_idlpwv.png')
 
@@ -122,7 +120,7 @@ block content
       #whitetograyseparator
         h1 #{translations[locale].SectionsTitles.ContactUs}
       .pcontainer
-        img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730157/HMFinance/3_cienct.jpg', data-speed='-1')
+        img.pimage(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580400685/HMFinance/3_mfe5ys.jpg', data-speed='-1')
         .contactusgrid
           .contactusgrid1
             h3 #{translations[locale].ContactUs.Email}
@@ -140,7 +138,7 @@ block content
             br
             iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3393594753975!2d-9.229967885011321!3d38.75591977959266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd05db2f959d%3A0x16d90a25b997894d!2sHM+Finance!5e0!3m2!1spt-PT!2spt!4v1488308784739', allowfullscreen='', width='100%', height='100%', frameborder='0')
           .contactusgrid2
-            form(action="/sendmessage", method="post")
+            form.contactusMessage(action="/sendmessage", method="post")
               h3 #{translations[locale].ContactUs.FormName}
               br
               input(type='text', name='name', onfocus="this.value=''", value=`${translations[locale].Others.ContactUsForm.Name}`)
@@ -150,7 +148,8 @@ block content
               h3 #{translations[locale].ContactUs.FormMessage}
               br
               textarea#question(name='question', rows='10') #{translations[locale].Others.ContactUsForm.Help}
-              input(type='submit', value=`${translations[locale].Others.Button}`)
+
+              input(type='submit', value='SEND')
         #graytowhiteseparator
           h1 #{translations[locale].SectionsTitles.Reviews}
       a#reviews.anchor
@@ -169,7 +168,7 @@ block content
             b #{data.review[2].name}
         #reviewimg4
           i
-            b #{data.review[3].name}
+            b #{data.review[2].name}
       #reviewbox
         #reviewbox1
           h5 &ldquo;
@@ -191,7 +190,7 @@ block content
           h5 &rdquo;
         #reviewbox4
           h5 &ldquo;
-          | &thinsp; #{locale === 'pt' ? data.review[3].commentPT : data.review[3].commentEN}
+          | &thinsp; #{locale === 'pt' ? data.review[2].commentPT : data.review[2].commentEN}
           br
           br
           h5 &rdquo;
@@ -200,24 +199,24 @@ block content
       .footergrid
         .footergrid1
           a(href='')
-            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730160/HMFinance/thumb_up_cttdpb.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730160/HMFinance/thumb_up_cttdpb.png', width='30', height='30')
             | #{translations.both.Footer.Face}
         .footergrid2
           a(href='')
-            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/camera_alt_pmxjl0.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/camera_alt_pmxjl0.png', width='30', height='30')
             | #{translations.both.Footer.Insta}
         .footergrid3
           a(href='')
-            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/account_circle_eoq61g.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/account_circle_eoq61g.png', width='30', height='30')
             | #{translations.both.Footer.LinkIn}
         .footergrid4
           a(href='')
-            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/email_phqlzj.png', width='20', height='20')
+            img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/email_phqlzj.png', width='30', height='30')
             | #{translations.both.Footer.Email}
         .footergrid5
-          h4 #{translations.both.Footer.HMFin}
+          h10 #{translations.both.Footer.HMFin}
         .footergrid6
-          h4 #{translations.both.Footer.WCS}
+          h10 #{translations.both.Footer.WCS}
 
   script.
     $('textarea#question').focus(function() {
