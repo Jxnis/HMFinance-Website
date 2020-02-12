@@ -70,7 +70,7 @@
 		box-shadow: 0 -2px 5px 0 #404040
 	}
 	#home .pcontainer {
-		height: 110vh
+		height: 110vh;
 	}
 	.pcontainer {
 		width: 100%;
@@ -225,9 +225,9 @@
 	#describox {
 		position: absolute;
 		opacity: 0;
-		left: 60vw;
+		left: 65vw;
 		top: 55vh;
-		height: calc(30vh + 20vw);
+		height: calc(40vh + 20vw);
 		width: calc(45vw - 5vh);
 		max-width: 380px;
 		z-index: 2;
@@ -1379,7 +1379,7 @@
 		transition: .5s box-shadow
 	}
 	#home .pcontainer {
-		height: 110vh
+		height: 110vh;
 	}
 	#home .pimage {
 		height: 220vh;
@@ -1391,6 +1391,7 @@
 		overflow: hidden;
 		z-index: -10
 	}
+
 	.pimage {
 		position: absolute;
 		top: 0;
@@ -1399,9 +1400,13 @@
 		filter: grayscale(100%);
 		opacity: .25;
 		object-fit: cover;
-		height: 150vh;
+		height: 100vh;
 		min-width: 100vw;
 		z-index: -10
+	}
+
+	#contactus .pimage {
+		height: 200vh;
 	}
 	#graytowhiteseparator {
 		position: absolute;
@@ -1983,7 +1988,7 @@
 	position: relative;
 	overflow: hidden;
 	z-index: -10;
-	min-height: 2860px;
+	min-height: 3000px;
 	height: 350vh;
 	max-height: 400vh;
 }
