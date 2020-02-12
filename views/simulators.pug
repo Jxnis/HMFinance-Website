@@ -24,7 +24,7 @@ html
 
       #mainservices
     .pcontainersimulators
-      img.pimageservices(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
+      img.pimagesimulators(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
     
     form(id="simulatorSS")
       .simulatorsgsgrid
@@ -189,7 +189,7 @@ html
     $("textarea#question").focus(function() {
     $(this).val("")
     }),
-    $(".pimageservices").each(function() {
+    $(".pimagesimulators").each(function() {
     var c = $(this),
     e = $(this).parent();
     function s() {
@@ -230,7 +230,6 @@ html
     }
 
 <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
-
   script.
     const IMT = !{JSON.stringify(IMT)};
     const IStax = !{JSON.stringify(IStax)};
