@@ -7,8 +7,11 @@ const IMToutput = document.getElementById('outputIMT');
 const ISoutput = document.getElementById('outputIS');
 const Totaloutput = document.getElementById('outputTotal');
 
+console.log('IMTsimulator.js is connected to the file simulators.pug');
+
 const simulate = (e) => {
 	e.preventDefault();
+	console.log('function simulate IMT called');
 	/* console.log(local.value);
 	console.log(typeImovel.value);
 	console.log(IMT); */
