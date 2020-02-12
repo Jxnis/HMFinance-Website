@@ -17,21 +17,21 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 
   body
-  #title
-    <br>
-    h1 Simuladores
-    block content
+    #title
+      <br>
+      h1 Simuladores
+      block content
 
-    #mainservices
-  .pcontainersimulators
-    img.pimagesimulators(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
-  
-  .simulatorsgsgrid
+      #mainservices
+    .pcontainersimulators
+      img.pimagesimulators(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
+    
+    form(id="simulatorSS")
+      .simulatorsgsgrid
         .simulatorsgsgrid1
-          <br>
+          br
           h3 Simulador Segurança Social
 
-          form(id="simulatorSS")
         .simulatorsgsgrid2
           label Trabalhador:
         .simulatorsgsgrid3
@@ -80,21 +80,18 @@ html
         .simulatorsgsgrid20
           input(type="submit" value="Calcular")
         .simulatorsgsgrid21
-          <br>
+          br
           h3 Impostos:
-          <br>
+          br
         .simulatorsgsgrid22
-          <h3>
-          <br>
-          p(id="output")
-
-  .simulatormvagrid
+          br
+          h3(id="output")
+          br
+    form(id="maisValiasSimulator")
+      .simulatormvagrid
         .simulatormvagrid1
-          <br>
-
+          br
           h3 Simulador Mais Valias
-
-          form(id="maisValiasSimulator")
         .simulatormvagrid2
           label Valor de Aquisição:
         .simulatormvagrid3
@@ -138,13 +135,11 @@ html
           <br>
           p(id="outputMaisValias")
 
-  .simulatorimtgrid
+    form(id="IMTSimulator")
+      .simulatorimtgrid
         .simulatorimtgrid1
-          <br>
-
+          br
           h3 Simulador IMT
-
-          form(id="IMTSimulator")
         .simulatorimtgrid2
           label Local:
         .simulatorimtgrid3
@@ -152,7 +147,7 @@ html
             option(value='PC') Portugal Continental
             option(value='RA') Regiões Autónomas
         .simulatorimtgrid4
-                    label Tipo de Imóvel:
+          label Tipo de Imóvel:
         .simulatorimtgrid5
           select(id="type")
             option(value='HPP') Habitação Própria Permanente 
@@ -166,35 +161,35 @@ html
         .simulatorimtgrid8
           input(type="submit" value="Calcular")
         .simulatorimtgrid9
-          <h3>
-          <br>
+          h3
+          br
           p IMT a pagar:
         .simulatorimtgrid10
-          <h3>
-          <br>
+          h3
+          br
           p(id="outputIMT")
         .simulatorimtgrid11
-          <h3>
-          <br>
+          h3
+          br
           p IS a pagar:
         .simulatorimtgrid12
-          <h3>
-          <br>
+          h3
+          br
           p(id="outputIS")
         .simulatorimtgrid13
-          <h3>
-          <br>
+          h3
+          br
           p Total a pagar:
         .simulatorimtgrid14
-          <h3>
-          <br>
+          h3
+          br
           p(id="outputTotal")
 
   script.
     $("textarea#question").focus(function() {
     $(this).val("")
     }),
-    $(".pimageservices").each(function() {
+    $(".pimagesimulators").each(function() {
     var c = $(this),
     e = $(this).parent();
     function s() {
@@ -234,21 +229,23 @@ html
     }
     }
 
-  <!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
-
-script.
+<!-- Passing the simulators (IMT, SS and MaisValias) to each js file to make the calculations -->
+  script.
     const IMT = !{JSON.stringify(IMT)};
     const IStax = !{JSON.stringify(IStax)};
   script(src='/javascripts/IMTsimulator.js')
 
 
-script.
-  const maisValias = !{JSON.stringify(maisValias)}
+  script.
+    const maisValias = !{JSON.stringify(maisValias)}
   script(src='/javascripts/maisValiasSimulator.js')
 
-script.
+
+  script.
     const simulator = !{JSON.stringify(simulator[0])}
-    script(src='/javascripts/SimulatorSS.js')
+  script(src='/javascripts/SimulatorSS.js')
+
+  
 
 
 
