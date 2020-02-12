@@ -2,6 +2,7 @@ const Simulator = require('../models/simulators');
 
 //Simulator Segurança Social
 const getSimulatorInfo = (req, res, next) => {
+	//console.log('getSimulatorInfo called');
 	Simulator.getAll((err, results) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the Segurança Social data' });
@@ -14,6 +15,7 @@ const getSimulatorInfo = (req, res, next) => {
 
 //Simulator Mais Valias
 const getMaisValiasInfo = (req, res, next) => {
+	//console.log('getMaisValiasInfo called');
 	Simulator.getMaisValias((err, results) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the Mais Valias data' });
@@ -26,6 +28,7 @@ const getMaisValiasInfo = (req, res, next) => {
 };
 
 const getimtInfo = (req, res) => {
+	//console.log('getimtInfo called');
 	Simulator.getIMTIS((err, resultsIMT) => {
 		if(err) {
 			res.status(500).json({ message: 'Error getting all the contact information' });

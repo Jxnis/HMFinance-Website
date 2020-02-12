@@ -871,6 +871,12 @@
 		color: #ffffff;
 		background-color: #A00000;
 	}
+	
+	.simulatorsgsgrid p,
+	.simulatormvagrid p,
+	.simulatorimtgrid p {
+		color: #fff;
+	}
 	.simulatorsgsgrid21 h3,
 	.simulatormvagrid15 h3,
 	.simulatorimtgrid9 h3,
