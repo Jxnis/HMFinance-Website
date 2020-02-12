@@ -1963,6 +1963,621 @@
 		height: 1px;
 	}
 
+/* SERVICES CSS STARTS HERE */
+
+.servicespagegrid h3 {
+	text-align: center !important;
+	font-family: "Roboto", sans-serif;
+	color: #ffffff;
+	background-color: #A00000;
+}
+
+#mainservices {
+	position: relative;
+	z-index: 2;
+	overflow: hidden
+}
+
+.pcontainerservices {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: -10;
+	min-height: 2860px;
+	height: 350vh;
+	max-height: 400vh;
+}
+
+.pimageservices {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	filter: grayscale(100%);
+	opacity: .25;
+	object-fit: cover;
+	min-height: 3500px;
+	height: 400vh;
+	height: 400vh;
+	min-width: 100vw;
+	z-index: -10
+}
+
+.contactusbutton {
+	width: 200px;
+	margin: 0 auto;
+	border: solid 2px #A00000;
+	background: #A00000;
+	color: #fff;
+	border-radius: 10px;
+	padding: 11px 50px 9px;
+	font-size: large;
+	z-index: 0
+}
+
+.contactusbutton:hover {
+	border: solid 2px #FFF;
+	border-radius: 10px;
+	background-color: #A00000;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+a.contactusbutton:active {
+	padding: 13px 50px 7px
+}
+
+#title {
+	position: absolute;
+	margin: auto;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.servicespagegrid {
+	grid-template-columns: repeat(1, 1fr);
+	grid-auto-rows: minmax(min-content, max-content);
+	position: absolute;
+	top: 140px;
+	left: 0;
+	right: 0;
+	display: grid;
+	width: 80vw;
+	z-index: -0;
+	overflow: hidden;
+	;
+	margin: auto;
+	row-gap: 20px;
+}
+
+.servicespagegrid1 {
+	overflow: hidden;
+	grid-area: 1 / 1 / 2 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid2 {
+	overflow: hidden;
+	grid-area: 2 / 1 / 3 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid3 {
+	overflow: hidden;
+	grid-area: 3 / 1 / 4 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid4 {
+	overflow: hidden;
+	grid-area: 4 / 1 / 5 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid5 {
+	overflow: hidden;
+	grid-area: 5 / 1 / 6 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid6 {
+	overflow: hidden;
+	grid-area: 6 / 1 / 7 / 2;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff
+}
+
+.servicespagegrid7 {
+	grid-area: 7 / 1 / 8 / 2;
+	text-align: center;
+	height: 46px;
+}
+
+.servicespagegrid1:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid2:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid3:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid4:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid5:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid6:hover {
+	box-shadow: 0 2px 5px 0 #404040
+}
+
+.servicespagegrid * img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.servicespagedescri {
+	padding: 20px;
+	z-index: -10;
+	line-height: 1.5;
+}
+
+.servicespagetitle {
+	background-color: #A00000;
+	min-height: 65px;
+	z-index: -10;
+	margin: -5px;
+}
+
+
+/* SIMULATORS CSS STARTS HERE */
+
+.pcontainersimulators {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: -10;
+	min-height: 1750px;
+	height: 200vh;
+	max-height: 250vh;
+}
+
+.pimagesimulators {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	filter: grayscale(100%);
+	opacity: .25;
+	object-fit: cover;
+	min-height: 2200px;
+	height: 250vh;
+	min-width: 100vw;
+	z-index: -10
+}
+
+.simulatorsgsgrid h3,
+.simulatormvagrid h3,
+.simulatorimtgrid h3 {
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	color: #ffffff;
+	background-color: #A00000;
+}
+
+.simulatorsgsgrid21 h3,
+.simulatormvagrid15 h3,
+.simulatorimtgrid9 h3,
+.simulatorimtgrid11 h3,
+.simulatorimtgrid13 h3 {
+	text-align: right;
+}
+
+.simulatorsgsgrid input[type=text],
+.simulatormvagrid input[type=text],
+.simulatorimtgrid input[type=text] {
+	margin: 0px;
+}
+
+select {
+	width: 95%;
+	height: 40px;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	color: #404040;
+	font: calc(10px + 1vmin) 'Roboto', sans-serif;
+}
+
+.simulatorsgsgrid {
+	position: absolute;
+	top: 140px;
+	left: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 60px;
+	width: 80vw;
+	z-index: -0;
+	overflow: hidden;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff;
+	max-width: 100vw;
+	margin: auto;
+}
+
+.simulatorsgsgrid1 {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorsgsgrid2 {
+	grid-area: 2 / 1 / 3 / 2;
+	padding-top: 10px;
+}
+
+.simulatorsgsgrid3 {
+	grid-area: 2 / 2 / 3 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid4 {
+	grid-area: 3 / 1 / 4 / 2;
+	padding-top: 10px;
+}
+
+.simulatorsgsgrid5 {
+	grid-area: 3 / 2 / 4 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid6 {
+	grid-area: 4 / 1 / 5 / 2;
+	padding-top: 5px;
+}
+
+.simulatorsgsgrid7 {
+	grid-area: 4 / 2 / 5 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid8 {
+	grid-area: 5 / 1 / 6 / 2;
+	padding-top: 10px;
+}
+
+.simulatorsgsgrid9 {
+	grid-area: 5 / 2 / 6 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid10 {
+	grid-area: 6 / 1 / 7 / 2;
+}
+
+.simulatorsgsgrid11 {
+	grid-area: 6 / 2 / 7 / 3;
+	width: 92%;
+}
+
+.simulatorsgsgrid12 {
+	grid-area: 7 / 1 / 8 / 2;
+	padding-top: 10px;
+}
+
+.simulatorsgsgrid13 {
+	grid-area: 7 / 2 / 8 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid14 {
+	grid-area: 8 / 1 / 9 / 2;
+	padding-top: 5px;
+}
+
+.simulatorsgsgrid15 {
+	grid-area: 8 / 2 / 9 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid16 {
+	grid-area: 9 / 1 / 10 / 2;
+}
+
+.simulatorsgsgrid17 {
+	grid-area: 9 / 2 / 10 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid18 {
+	grid-area: 10 / 1 / 11 / 2;
+	padding-top: 5px;
+}
+
+.simulatorsgsgrid19 {
+	grid-area: 10 / 2 / 11 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid20 {
+	grid-area: 11 / 1 / 12 / 3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.simulatorsgsgrid21 {
+	grid-area: 12 / 1 / 13 / 2;
+	text-align: right;
+	background-color: #A00000;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.simulatorsgsgrid22 {
+	grid-area: 12 / 2 / 13 / 3;
+	text-align: left;
+	background-color: #A00000;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.simulatormvagrid {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 60px;
+	position: absolute;
+	top: 800px;
+	left: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 60px;
+	width: 80vw;
+	z-index: -0;
+	overflow: hidden;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff;
+	max-width: 100vw;
+	margin: auto;
+}
+
+.simulatormvagrid1 {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatormvagrid2 {
+	grid-area: 2 / 1 / 3 / 2;
+	padding-top: 5px;
+}
+
+.simulatormvagrid3 {
+	grid-area: 2 / 2 / 3 / 3;
+	width: 92%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid4 {
+	grid-area: 3 / 1 / 4 / 2;
+	padding-top: 10px;
+}
+
+.simulatormvagrid5 {
+	grid-area: 3 / 2 / 4 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid6 {
+	grid-area: 4 / 1 / 5 / 2;
+	padding-top: 10px;
+}
+
+.simulatormvagrid7 {
+	grid-area: 4 / 2 / 5 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid8 {
+	grid-area: 5 / 1 / 6 / 2;
+	padding-top: 10px;
+}
+
+.simulatormvagrid9 {
+	grid-area: 5 / 2 / 6 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid10 {
+	grid-area: 6 / 1 / 7 / 2;
+	padding-top: 10px;
+}
+
+.simulatormvagrid11 {
+	grid-area: 6 / 2 / 7 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid12 {
+	grid-area: 7 / 1 / 8 / 2;
+	padding-top: 5px;
+}
+
+.simulatormvagrid13 {
+	grid-area: 7 / 2 / 8 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid14 {
+	grid-area: 8 / 1 / 9 / 3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.simulatormvagrid15 {
+	grid-area: 9 / 1 / 10 / 2;
+	right;
+	background-color: #A00000;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.simulatormvagrid16 {
+	grid-area: 9 / 2 / 10 / 3;
+	text-align: left;
+	background-color: #A00000;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.simulatorimtgrid {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 60px;
+	position: absolute;
+	top: 1315px;
+	left: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 60px;
+	width: 80vw;
+	z-index: -0;
+	overflow: hidden;
+	border: solid 2px #A00000;
+	border-radius: 10px;
+	background-color: #ffffff;
+	max-width: 100vw;
+	margin: auto;
+}
+
+.simulatorimtgrid1 {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid2 {
+	grid-area: 2 / 1 / 3 / 2;
+	padding-top: 10px;
+}
+
+.simulatorimtgrid3 {
+	grid-area: 2 / 2 / 3 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorimtgrid4 {
+	grid-area: 3 / 1 / 4 / 2;
+	padding-top: 10px;
+}
+
+.simulatorimtgrid5 {
+	grid-area: 3 / 2 / 4 / 3;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.simulatorimtgrid6 {
+	grid-area: 4 / 1 / 5 / 2;
+	padding-top: 10px;
+}
+
+.simulatorimtgrid7 {
+	grid-area: 4 / 2 / 5 / 3;
+	width: 92%;
+	margin-bottom: 10px;
+}
+
+.simulatorimtgrid8 {
+	grid-area: 5 / 1 / 6 / 3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.simulatorimtgrid9 {
+	grid-area: 6 / 1 / 7 / 2;
+	text-align: right;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid10 {
+	grid-area: 6 / 2 / 7 / 3;
+	text-align: left;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid11 {
+	grid-area: 7 / 1 / 8 / 2;
+	text-align: right;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid12 {
+	grid-area: 7 / 2 / 8 / 3;
+	text-align: left;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid13 {
+	grid-area: 8 / 1 / 9 / 2;
+	text-align: right;
+	background-color: #A00000;
+	height: 50px;
+}
+
+.simulatorimtgrid14 {
+	grid-area: 8 / 2 / 9 / 3;
+	text-align: left;
+	background-color: #A00000;
+	height: 50px;
+}
+	
 	@keyframes descri1  { 
 		0%,10% { left: 30%; opacity: 0 }
 		10%,20% { left: 10%; opacity: 1 }
