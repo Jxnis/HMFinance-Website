@@ -563,6 +563,10 @@ table {
 .homepage .button {
   padding-top: 20px; }
 
+.table-grid {
+  max-width: 100%;
+  max-height: 100%; }
+
 .review-button {
   margin: auto;
   padding-top: 20px;
