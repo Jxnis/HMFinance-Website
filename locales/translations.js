@@ -18,8 +18,8 @@ const Translations = {
 			Language: 'Language',
 			PersonalT: 'Financial Personal Trainer',
 			ContactUsForm: {
-				Name: 'Your Name',
-				Email: 'Your E-mail',
+				Name: 'Insert your Name',
+				Email: 'Insert your E-mail',
 				Help: 'How can we help you?'
 			},
 			Button: 'Send',
@@ -45,29 +45,22 @@ const Translations = {
 				Others: 'Other Services'
                 
 			},
-			HomeText: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
-			},
 
 			ServicesText: {
-				HR: 'The HR department is responsible for salary management and processing, taking into account the specifics of your companys activity. You can count on our support to submit applications for employment incentives from IEFP and Social Security.',
-				Accounting: 'We select a Personal Trainer to help you with the  tasks, processes and organization of your business. We train your business and guide it so that it is in its best economic state to achieve its goals.',
+				HR: 'The HR department are responsible for the wage management and wage receipts, we take in consideration the specifics of your company&#39;s activity. You can count on our support to submit applications for employment incentives from IEFP and Social Security.',
+				Accounting: 'We highlight a Personal Trainer to help you give strong steps and pushes you to improve. An accountant that is side by side with you in the tasks, processes and organization of your business. We train your company and improve it so it can be in its best economic health, to achieve its objectives.',
 				Analytical: 'Analytical accounting is a branch of accounting that has a more internal and detailed approach, so it becomes critical in controlling costs, profit margin and decision making in the management of its activities. HMFinance gives you the data you need to make your decisions on time.',
-				Company: 'HMFinance supports you in the development of your line of business, accompanying you from the beginning of your idea through market research to the goal, indicating to you which type of company and tax regime is most advantageous and efficient for you to achieve your goals.',
-				Party: 'Third Party Management is an essential tool in managing your business. HMFinance makes available through PHC software a certified billing program for: - Billing preparation to customers (up to 5 invoices per month); - Validation and submission of SAFT-pt file;',
-				Others: '- Legalization of European and non-European citizens; - IRS Declaration - Model 3; - Annex G - Property gains; - Opening of the company; - Market studies; - Networking Group HMFinance Events;'
+				Company: 'HMFinance supports you in the development of your business guideline, following you from the embryonic stage, through the market study, going in straight line to achieve	your goal. Showing you the best tax regime and the ideal type of company and to	achieve your objectives.',
+				Party: 'It´s an important tool responsible for managing and processing invoice documents from vendors and suppliers. The invoice management process usually involves the following steps: receiving the invoice, extracting invoice information, validating and verifying the invoice information, approving payments and finally archiving the invoice for future reference.',
+				Others: '- Legalization of European and non-European citizens; - IRS Declaration - Model 3; - Annex G - Property gains; - Start up a Portuguese company; - Market studies; - Networking Evens clients and HMFinance partners.'
 			},
 
 			SubTitles: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				HR: '',
 				Accounting: 'Your Business Financial pt',
-				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				Analytical: '',
+				Company: '',
+				Party: '',
 				Others: 'Mailing Domiciliation, IRS Declaration, Independet Workers, and others'
 			}
 		},
@@ -78,26 +71,18 @@ const Translations = {
 
 			},
 			HomeText: {
-				SS: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				IMT: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				SS: '',
+				IMT: '',
 			}
-		},
-            
-		AboutUs: {
-			Title: 'Born in Lisbon',
-			SubTitle: 'i fuckn hate finance stuff',
-			Text: 'Our project started in 2016 with the formation of a team formed in Accounting (ISCAL), Taxation, Auditing and Human Resources Management. Our staff, made up of a team of 7, is characterized by being young, skilled, dynamic and committed. With experience in SMEs and Multinationals, HMFinance is currently being consolidated and expanded in the Lisbon and Cascais Districts. The quality of our services and your satisfaction motivate the our continuous improvement.',                    
 		},
 
 		ContactUs: {
 			Email: 'E-mail',
 			Phone: 'Phone Number',
 			Address: 'Address',
-			MapTitle: 'We are here for you. Say hi.',
-			FormTitle: 'We love you, contact us',
-			FormName: 'Insert name',
-			FormEmail: 'Insert email',
-			FormMessage: 'Insert message',
+			FormName: 'Name',
+			FormEmail: 'E-mail',
+			FormMessage: 'Message',
 		},
 
 		Review: {
@@ -111,7 +96,7 @@ const Translations = {
 		CookiesText: 'Utilizamos cookies para melhorar sua experiência de navegação. Ao continuar a visitar este site, você concorda com o uso de cookies.',
 		Others: {
 			Language: 'Lingua',
-			PersonalT: 'Personal Trainer Financeiro',
+			PersonalT: 'O PT Financeiro do seu negócio',
 			ContactUsForm: {
 				Name: 'Insira o seu Nome',
 				Email: 'Insira o seu E-mail',
@@ -140,14 +125,6 @@ const Translations = {
 				Others: 'Outros serviços'
                 
 			},
-			HomeText: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Accounting: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
-			},
 
 			ServicesText: {
 				HR: 'O departamento de RH é responsável pela gestão e processamento salarial, tendo em atenção as especificidades da atividade da sua empresa. Pode contar com o nosso apoio para a submissão de candidaturas de incentivos ao emprego do IEFP e da Segurança Social.',
@@ -159,12 +136,12 @@ const Translations = {
 			},
 
 			SubTitles: {
-				HR: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				HR: '',
 				Accounting: 'O seu PT financeiro',
-				Analytical: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',				
-				Company: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Party: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				Others: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'
+				Analytical: '',				
+				Company: '',
+				Party: '',
+				Others: ''
 			}
 		},
 		Simulators: {
@@ -174,26 +151,18 @@ const Translations = {
 
 			},
 			HomeText: {
-				SS: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
-				IMT: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+				SS: '',
+				IMT: '',
 			}
-		},
-            
-		AboutUs: {
-			Title: 'Nascida em Lisboa',
-			SubTitle: 'Eu adoro Finanças e Contabilidade',
-			Text: 'O nosso projeto teve início em 2016, com a constituição de uma equipa formada em Contabilidade (ISCAL), Fiscalidade, Auditoria e Gestão de Recursos Humanos. O nosso quadro de pessoal, constituído por uma equipa de 7 elementos, caracteriza-se por ser jovem, capacitado, dinâmico e empenhado. Com experiência em PME&#39;s e Multinacionais, a HMFinance encontra-se em fase de consolidação e expansão nos Distritos de Lisboa e Cascais. A qualidade dos nossos serviços e a sua satisfação motivam a nossa melhoria contínua.',                    
 		},
 
 		ContactUs: {
 			Email: 'E-mail',
 			Phone: 'Telemóvel',
 			Address: 'Morada',
-			MapTitle: 'Estamos aqui para sí, venha conhecer-nos.',
-			FormTitle: 'Por favor, Contacte-nos',
-			FormName: 'Insira Nome',
-			FormEmail: 'Insira E-Mail',
-			FormMessage: 'Insira Mensagem',
+			FormName: 'Nome',
+			FormEmail: 'E-Mail',
+			FormMessage: 'Mensagem',
 		},
 
 		Review: {
