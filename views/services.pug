@@ -15,120 +15,154 @@ html
 
     link(rel='stylesheet', href='/stylesheets/homepage.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    script.
+      $(document).ready(function(){
+        $("#menubutton").click(function(){
+            $("#navbar").slideToggle();
+        });
+      });
+      $(document).ready(function(){
+        $("#navbar").click(function(){
+            $("#navbar").slideToggle();
+        });
+      });
     
   body
-  #title
-    <br>
-    h1 Serviços
-    block content
 
-    #mainservices
-  .pcontainerservices
-    img.pimageservices(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
- 
-  .servicespagegrid
-    .servicespagegrid1
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730157/HMFinance/services1_fpkjb0.jpg')
+    #menubuttondiv
+      img#menubutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581699410/Site/menu_gbcjny_l54ey3.png')
+    #langbuttondiv
+      a(href='/setlanguage/pt')
+        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langpt_g1kkml.png')
+      a(href='/setlanguage/en')
+        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langen_xhjegj.png')
+    #navbar  
+      ul
+        li
+          a#homeid(href='/#home') #{translations[locale].SectionsTitles.HMFinance}
+        li
+          a(href='/#clients') #{translations[locale].SectionsTitles.Clients}
+        li
+          a(href='/#services') #{translations[locale].SectionsTitles.Services}
+        li
+          a(href='/#simulators') #{translations[locale].SectionsTitles.Simulators}
+        li
+          a(href='/#contactus') #{translations[locale].SectionsTitles.ContactUs}
+        li
+          a(href='/#reviews') #{translations[locale].SectionsTitles.Reviews}
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.Company}
-        //- h3 #{translations[locale].Services.SubTitles.Company}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.Company}
+    #title
+      <br>
+      h1 Serviços
+      block content
 
-    .servicespagegrid2
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730157/HMFinance/services2_u83b8q.jpg')
+      #mainservices
+    .pcontainerservices
+      img.pimageservices(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
+  
+    .servicespagegrid
+      .servicespagegrid1
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525384/Site/services%20page/A_-_Constitui%C3%A7%C3%A3o_da_empresa_xbscka.jpg')
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.Accounting}
-        //- h3 #{translations[locale].Services.SubTitles.Accounting}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.Accounting}
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.Company}
+          //- h3 #{translations[locale].Services.SubTitles.Company}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.Company}
 
-    .servicespagegrid3
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/services3_eh5bi7.jpg')
+      .servicespagegrid2
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581527060/Site/services%20page/Contabilidade_debddn.jpg')
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.Analytical}
-        //- h3 #{translations[locale].Services.SubTitles.Analytical}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.Analytical}
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.Accounting}
+          //- h3 #{translations[locale].Services.SubTitles.Accounting}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.Accounting}
 
-    .servicespagegrid4
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/services4_c6eu5f.jpg')
+      .servicespagegrid3
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/C-money-2696229_1920_jxbpa4.jpg')
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.HR}
-        //- h3 #{translations[locale].Services.SubTitles.HR}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.HR}
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.Analytical}
+          //- h3 #{translations[locale].Services.SubTitles.Analytical}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.Analytical}
 
-    .servicespagegrid5
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/services5_mk7swn.jpg')
+      .servicespagegrid4
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/D-sunrise-mountaineering-glacier-team-mexico-orizaba_vowroa.jpg')
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.Party}
-        //- h3 #{translations[locale].Services.SubTitles.Party}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.Party}
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.HR}
+          //- h3 #{translations[locale].Services.SubTitles.HR}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.HR}
 
-    .servicespagegrid6
-      img(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730158/HMFinance/services6_h7djux.jpg')
+      .servicespagegrid5
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581701646/Site/services%20page/services6_h7djux_qp4owt.jpg')
 
-      .servicespagetitle
-        br
-        h3 #{translations[locale].Services.Titles.Others}
-      .servicespagedescri
-        p #{translations[locale].Services.ServicesText.Others}
-    .servicespagegrid7
-        a.contactusbutton(href="mailto:geral@hmfinance.pt") Contacte-nos
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.Party}
+          //- h3 #{translations[locale].Services.SubTitles.Party}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.Party}
+
+      .servicespagegrid6
+        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/F-tree_spx4op.jpg')
+
+        .servicespagetitle
+          br
+          h3 #{translations[locale].Services.Titles.Others}
+        .servicespagedescri
+          p #{translations[locale].Services.ServicesText.Others}
+      .servicespagegrid7
+          a.contactusbutton(href="mailto:geral@hmfinance.pt") Contacte-nos
 
 
-  script.
-    $("textarea#question").focus(function() {
-    $(this).val("")
-    }),
-    $(".pimageservices").each(function() {
-    var c = $(this),
-    e = $(this).parent();
-    function s() {
-    var s = c.data("speed"),
-    o = e.offset().top,
-    r = $(this).scrollTop(),
-    i = $(this).height(),
-    l = e.innerHeight(),
-    d = r + i;
-    if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
-    c.css({
-    top: a + "%",
-    transform: "translate(-50%, -" + a + "%)"
-    })
-    }
-    $(document).on({
-    scroll: function() {
-    s()
-    },
-    ready: function() {
-    s()
-    }
-    })
-    }),
-    function(a, r) {
-    a.fn.inViewport = function(d) {
-    return this.each(function(s, l) {
-    function o() {
-    var s = a(this).height(),
-    o = l.getBoundingClientRect(),
-    r = o.top,
-    i = o.bottom;
-    return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
-    }
-    o(), a(r).on("resize scroll", o)
-    })
-    }
-    }
+    script.
+      $("textarea#question").focus(function() {
+      $(this).val("")
+      }),
+      $(".pimageservices").each(function() {
+      var c = $(this),
+      e = $(this).parent();
+      function s() {
+      var s = c.data("speed"),
+      o = e.offset().top,
+      r = $(this).scrollTop(),
+      i = $(this).height(),
+      l = e.innerHeight(),
+      d = r + i;
+      if (o < d && r < o + l) var a = (d - o) * s / (i + l) * 100 + (50 - 50 * s);
+      c.css({
+      top: a + "%",
+      transform: "translate(-50%, -" + a + "%)"
+      })
+      }
+      $(document).on({
+      scroll: function() {
+      s()
+      },
+      ready: function() {
+      s()
+      }
+      })
+      }),
+      function(a, r) {
+      a.fn.inViewport = function(d) {
+      return this.each(function(s, l) {
+      function o() {
+      var s = a(this).height(),
+      o = l.getBoundingClientRect(),
+      r = o.top,
+      i = o.bottom;
+      return d.call(l, Math.max(0, 0 < r ? s - r : i < s ? i : s))
+      }
+      o(), a(r).on("resize scroll", o)
+      })
+      }
+      }
