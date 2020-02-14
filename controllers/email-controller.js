@@ -36,6 +36,7 @@ const sendEmail = (req, res) => {
 
 	// send mail with defined transport object
 	let info = transporter.sendMail(mailOptions, (err, response) => {
+		console.log('This are the mail options: ', mailOptions);
 		if (err) {
 			console.log(err);
 		} else {
