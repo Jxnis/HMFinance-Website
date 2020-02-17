@@ -36,6 +36,7 @@ const getimtInfo = (req, res) => {
 	let browserLang = req.language;
 	let cookieLang = req.cookies.language;
 	cookieLang ? language = cookieLang : language = browserLang; 
+	//console.log('language: ', language);
 
 	//console.log('getimtInfo called');
 	Simulator.getIMTIS((err, resultsIMT) => {

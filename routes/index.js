@@ -13,7 +13,7 @@ router.get('/', getBrowserLang, getAllInfo);
 router.get('/setlanguage/:language', setCookie);
 
 /* Render the simulator page */
-router.get('/simulators', getSimulatorInfo, getMaisValiasInfo, getimtInfo);
+router.get('/simulators', getBrowserLang, getSimulatorInfo, getMaisValiasInfo, getimtInfo);
 
 /* Render the services Page */
 router.get('/services', getBrowserLang, getServices);
