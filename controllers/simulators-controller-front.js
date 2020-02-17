@@ -1,4 +1,6 @@
 const Simulator = require('../models/simulators');
+const Translations = require('../locales/translations');
+
 
 //Simulator Segurança Social
 const getSimulatorInfo = (req, res, next) => {
@@ -28,6 +30,13 @@ const getMaisValiasInfo = (req, res, next) => {
 };
 
 const getimtInfo = (req, res) => {
+
+	//we need to set the language as the browser language or the language coming from the cookies
+	let language = '';
+	let browserLang = req.language;
+	let cookieLang = req.cookies.language;
+	cookieLang ? language = cookieLang : language = browserLang; 
+
 	//console.log('getimtInfo called');
 	Simulator.getIMTIS((err, resultsIMT) => {
 		if(err) {
@@ -42,7 +51,7 @@ const getimtInfo = (req, res) => {
 					const maisValias = req.maisValias;
 					const simulator = req.segurancaSocial;
 					const IMT = results;
-					res.render('simulators', {maisValias, simulator, IMT, IStax});
+					res.render('simulators', {maisValias, simulator, IMT, IStax, translations: Translations, locale: language });
 				}
 			});
 		}

@@ -28,8 +28,8 @@ const Translations = {
 		SectionsTitles: {
 			Services: 'Services',
 			Simulators: 'Simulators',
-			AboutUs: 'About us',
-			ContactUs: 'Contact us',
+			AboutUs: 'About Us',
+			ContactUs: 'Contact Us',
 			Clients: 'Clients',
 			Reviews: 'Reviews',
 			HMFinance: 'HM Finance'
@@ -57,7 +57,7 @@ const Translations = {
 
 			SubTitles: {
 				HR: '',
-				Accounting: 'Your Business Financial pt',
+				Accounting: 'Your Financial Business PT',
 				Analytical: '',
 				Company: '',
 				Party: '',
