@@ -712,13 +712,8 @@ table {
 	
 	th {
 	  text-align: center;
-	  border-bottom: 3.5px solid #d8d7d7;
-	//   background-color: rgb(165, 158, 158);    
+	  border-bottom: 3.5px solid #d8d7d7;   
 	}
-	
-	// tbody tr:nth-of-type(odd) {
-	//   background-color: #f6f6f6;
-	// }
 	
 	tbody tr:hover {
 	  background-color: #e7e3e3;
@@ -733,7 +728,6 @@ table {
 
 .homepage-main-content {
 	background-color: #fafafa;
-	// width: calc(100% - 250px);
 	height: 670px;
 	padding: 20px 30px;
 	overflow-y: scroll;
@@ -798,6 +792,34 @@ table {
 .table-grid h3 {
 	margin-top: 20px;
 }
+
+/* Add Client */
+
+.addUser {
+	text-align: center;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.user-table input[type=text], input[type=url], select {
+	width: 70%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #d8d7d7;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+
+  .addClientTable tr:hover {
+	background-color: white;
+  }
+
+  /* Edit Client */
+
+  
+
 
 // REVIEWS ---------------------------------------------------------------- REVIEWS //
 

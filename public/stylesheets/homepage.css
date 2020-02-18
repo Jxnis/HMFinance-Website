@@ -159,6 +159,12 @@
 		animation-fill-mode: forwards;
 		opacity: 0;
 	}
+
+	#langbutton:hover {
+		filter: contrast(1.25);
+		filter: brightness(1.25);
+	}
+
 	#navbar {
 		display: none;
 		position: fixed;
@@ -298,8 +304,17 @@
 	.clientsgrid2:hover,
 	.clientsgrid3:hover {
 		padding: 0;
-		box-shadow: 0 2px 5px 0 #404040
+		border-radius: 10px;
+		box-shadow: 0 2px 5px 0 #404040;
 	}
+
+	.clientsgrid1:hover img,
+	.clientsgrid2:hover img,
+	.clientsgrid3:hover img {
+	filter: contrast(1.25);
+	filter: brightness(1.25);
+	}
+
 	.clientsgrid1 {
 		opacity: 0;
 		border: 10px solid transparent;
@@ -393,8 +408,8 @@
 		margin: 20px 0px;
 	}
 	#simulators a:hover img {
-		filter: grayscale(0);
-		transition: filter 1s;
+		filter: contrast(1.1);
+		filter: brightness(1.1);
 	}
 	.contactusgrid {
 		display: grid;
@@ -425,7 +440,7 @@
 		margin-bottom: 30px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
 	}
-	input[type=text]:hover {
+	input[type=text]:hover:enabled {
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	label {
@@ -436,6 +451,12 @@
 	label.contactUs {
 		padding-bottom: 3px;
 	}
+
+	input[type=text]:disabled {
+		background :#606060;
+		filter: opacity(0.2);
+	}
+
 	textarea {
 		color: #404040;
 		width: 100%;
@@ -660,7 +681,9 @@
 	a.contactusbutton:active {
 		padding: 13px 50px 7px
 	}
+
 	/* SERVICES PAGE CSS STARTS HERE */
+
 	.servicespagegrid h3 {
 		text-align: center !important;
 		font-family: "Roboto", sans-serif;
@@ -677,9 +700,8 @@
 		position: relative;
 		overflow: hidden;
 		z-index: -10;
-		min-height: 1900px;
-		height: 205vh;
-		max-height: 400vh;
+		min-height: 2000px;
+		height: calc(350vh - 60vw);
 	}
 	.pimageservices {
 		position: absolute;
@@ -722,7 +744,7 @@
 	}
 	.servicespagegrid {
 		position: absolute;
-		top: 120px;
+		top: 125px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -838,7 +860,9 @@
 		z-index: -10;
 		margin: -5px;
 	}
+
 	/* SIMULATORS CSS STARTS HERE */
+
 	.pcontainersimulators {
 		width: 100%;
 		position: relative;
@@ -847,6 +871,17 @@
 		min-height: 2350px;
 		height: 225vh;
 		max-height: 325vh;
+	}
+	.pimagesimulators {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		filter: grayscale(100%);
+		opacity: .25;
+		height: 150%;
+		min-width: 100vw;
+		z-index: -10
 	}
 	.simulatorsgsgrid h3,
 	.simulatormvagrid h3,
@@ -884,7 +919,7 @@
 	}
 	.simulatorsgsgrid {
 		position: absolute;
-		top: 100px;
+		top: 125px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -1220,7 +1255,6 @@
 		margin: 0;
 		padding: 0;
 	}
-
 
 	/* ANIMATIONS */
 

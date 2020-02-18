@@ -2,7 +2,7 @@ doctype html
 html
   head
     //- Meta Tag Google
-    title Oferta de Serviços HM Finance:
+    title Oferta de Serviços HM Finance
     meta(charset='UTF-8')
     meta(name='description' content='Recursos humanos, contabilidade, criação de empresa e outros serviços.')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -43,9 +43,9 @@ html
         li
           a(href='/#clients') #{translations[locale].SectionsTitles.Clients}
         li
-          a(href='/#services') #{translations[locale].SectionsTitles.Services}
+          a(href='/services') #{translations[locale].SectionsTitles.Services}
         li
-          a(href='/#simulators') #{translations[locale].SectionsTitles.Simulators}
+          a(href='/simulators') #{translations[locale].SectionsTitles.Simulators}
         li
           a(href='/#contactus') #{translations[locale].SectionsTitles.ContactUs}
         li
@@ -53,7 +53,7 @@ html
 
     #title
       <br>
-      h1 Serviços
+      h1 #{translations[locale].Services.Title}
       block content
 
       #mainservices
@@ -119,8 +119,9 @@ html
           h3 #{translations[locale].Services.Titles.Others}
         .servicespagedescri
           p #{translations[locale].Services.ServicesText.Others}
+
       .servicespagegrid7
-          a.contactusbutton(href="mailto:geral@hmfinance.pt") Contacte-nos
+          a.contactusbutton(href='/#contactus') #{translations[locale].Services.ServicesText.Button}
 
 
     script.

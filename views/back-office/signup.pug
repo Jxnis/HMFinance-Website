@@ -14,13 +14,13 @@ block content
     div.log-form
         h2 Add User
         form(action="/auth/signup", method="post" class="form-signin")
-            #error
-                if error
-                    p.text-danger Error!!
+          #error
+              if error
+                  p.text-danger Error!!
 
-            input(type="email", name="email" id="inputEmail" class="form-control" placeholder="email" required)
+          input(type="email", name="email" id="inputEmail" class="form-control" placeholder="email" required)
 
-            input(type="password", name="password" id="inputPassword" class="form-control" placeholder="password" required)
-            
-            button(class="btn" type="submit") Sign up
+          input(type="password", name="password" id="inputPassword" class="form-control" placeholder="password" required)
+          
+          button(class="btn" type="submit") Sign up
 
