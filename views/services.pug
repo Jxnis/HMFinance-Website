@@ -1,127 +1,107 @@
-doctype html
-html
-  head
-    //- Meta Tag Google
-    title Oferta de Serviços HM Finance
-    meta(charset='UTF-8')
-    meta(name='description' content='Recursos humanos, contabilidade, criação de empresa e outros serviços.')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+extends layout
 
-    //- Meta Tags Facebook (Quanto tivermos o URL final descomentar e adicionar + adicionar imagens à cloud para termos URL e ficar acessível ao Facebook)
-    //- meta(property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html")
-    meta(property="og:title" content="Oferta de Serviços HM Finance:")
-    meta(property="og:description" content="Recursos humanos, contabilidade, criação de empresa e outros serviços.")
-    //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
+//- doctype html
+//- html
+//-   head
+//-     //- Meta Tag Google
+//-     title Oferta de Serviços HM Finance
+//-     meta(charset='UTF-8')
+//-     meta(name='description' content='Recursos humanos, contabilidade, criação de empresa e outros serviços.')
+//-     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
-    link(rel='stylesheet', href='/stylesheets/homepage.css')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
-    script.
-      $(document).ready(function(){
-        $("#menubutton").click(function(){
-            $("#navbar").slideToggle();
-        });
-      });
-      $(document).ready(function(){
-        $("#navbar").click(function(){
-            $("#navbar").slideToggle();
-        });
-      });
+//-     //- Meta Tags Facebook (Quanto tivermos o URL final descomentar e adicionar + adicionar imagens à cloud para termos URL e ficar acessível ao Facebook)
+//-     //- meta(property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html")
+//-     meta(property="og:title" content="Oferta de Serviços HM Finance:")
+//-     meta(property="og:description" content="Recursos humanos, contabilidade, criação de empresa e outros serviços.")
+//-     //- meta(property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg")
+
+//-     link(rel='stylesheet', href='/stylesheets/homepage.css')
+//-     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+//-     script.
+//-       $(document).ready(function(){
+//-         $("#menubutton").click(function(){
+//-             $("#navbar").slideToggle();
+//-         });
+//-       });
+//-       $(document).ready(function(){
+//-         $("#navbar").click(function(){
+//-             $("#navbar").slideToggle();
+//-         });
+//-       });
     
-  body
+//-   body
 
-    #menubuttondiv
-      img#menubutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581699410/Site/menu_gbcjny_l54ey3.png')
-    #langbuttondiv
-      a(href='/setlanguage/pt')
-        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langpt_g1kkml.png')
-      a(href='/setlanguage/en')
-        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langen_xhjegj.png')
-    #navbar  
-      ul
-        li
-          a#homeid(href='/#home') #{translations[locale].SectionsTitles.HMFinance}
-        li
-          a(href='/#clients') #{translations[locale].SectionsTitles.Clients}
-        li
-          a(href='/services') #{translations[locale].SectionsTitles.Services}
-        li
-          a(href='/simulators') #{translations[locale].SectionsTitles.Simulators}
-        li
-          a(href='/#contactus') #{translations[locale].SectionsTitles.ContactUs}
-        li
-          a(href='/#reviews') #{translations[locale].SectionsTitles.Reviews}
-
+block content
     #title
       <br>
       h1 #{translations[locale].Services.Title}
-      block content
 
-      #mainservices
-    .pcontainerservices
-      img.pimageservices(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
-  
-    .servicespagegrid
-      .servicespagegrid1
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525384/Site/services%20page/A_-_Constitui%C3%A7%C3%A3o_da_empresa_xbscka.jpg')
+    #mainservices
+      .pcontainerservices
+        img.pimageservices(src='https://res.cloudinary.com/dcpwkfvej/image/upload/v1580730162/HMFinance/1_phyg0f.jpg', data-speed='-2')
+    
+      .servicespagegrid
+        .servicespagegrid1
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525384/Site/services%20page/A_-_Constitui%C3%A7%C3%A3o_da_empresa_xbscka.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.Company}
-          //- h3 #{translations[locale].Services.SubTitles.Company}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.Company}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.Company}
+            //- h3 #{translations[locale].Services.SubTitles.Company}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.Company}
 
-      .servicespagegrid2
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581527060/Site/services%20page/Contabilidade_debddn.jpg')
+        .servicespagegrid2
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581527060/Site/services%20page/Contabilidade_debddn.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.Accounting}
-          //- h3 #{translations[locale].Services.SubTitles.Accounting}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.Accounting}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.Accounting}
+            //- h3 #{translations[locale].Services.SubTitles.Accounting}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.Accounting}
 
-      .servicespagegrid3
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/C-money-2696229_1920_jxbpa4.jpg')
+        .servicespagegrid3
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/C-money-2696229_1920_jxbpa4.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.Analytical}
-          //- h3 #{translations[locale].Services.SubTitles.Analytical}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.Analytical}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.Analytical}
+            //- h3 #{translations[locale].Services.SubTitles.Analytical}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.Analytical}
 
-      .servicespagegrid4
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/D-sunrise-mountaineering-glacier-team-mexico-orizaba_vowroa.jpg')
+        .servicespagegrid4
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/D-sunrise-mountaineering-glacier-team-mexico-orizaba_vowroa.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.HR}
-          //- h3 #{translations[locale].Services.SubTitles.HR}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.HR}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.HR}
+            //- h3 #{translations[locale].Services.SubTitles.HR}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.HR}
 
-      .servicespagegrid5
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581701646/Site/services%20page/services6_h7djux_qp4owt.jpg')
+        .servicespagegrid5
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581701646/Site/services%20page/services6_h7djux_qp4owt.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.Party}
-          //- h3 #{translations[locale].Services.SubTitles.Party}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.Party}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.Party}
+            //- h3 #{translations[locale].Services.SubTitles.Party}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.Party}
 
-      .servicespagegrid6
-        img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/F-tree_spx4op.jpg')
+        .servicespagegrid6
+          img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581525383/Site/services%20page/F-tree_spx4op.jpg')
 
-        .servicespagetitle
-          br
-          h3 #{translations[locale].Services.Titles.Others}
-        .servicespagedescri
-          p #{translations[locale].Services.ServicesText.Others}
+          .servicespagetitle
+            br
+            h3 #{translations[locale].Services.Titles.Others}
+          .servicespagedescri
+            p #{translations[locale].Services.ServicesText.Others}
 
-      .servicespagegrid7
-          a.contactusbutton(href='/#contactus') #{translations[locale].Services.ServicesText.Button}
+        .servicespagegrid7
+            a.contactusbutton(href='/#contactus') #{translations[locale].Services.ServicesText.Button}
 
 
     script.

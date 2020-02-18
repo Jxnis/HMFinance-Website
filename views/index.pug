@@ -3,28 +3,6 @@ extends layout
 block content
   video#video
     source(src='https://res.cloudinary.com/hmfinance/video/upload/v1581699491/Site/logo_u2ckij_expblz.mp4' autoplay='' muted='' preload='auto')
-  #menubuttondiv
-    img#menubutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581699410/Site/menu_gbcjny_l54ey3.png')
-  #langbuttondiv
-    a(href='/setlanguage/pt')
-      img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langpt_g1kkml.png')
-    a(href='/setlanguage/en')
-      img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langen_xhjegj.png')
-  #navbar  
-    ul
-      li
-        a#homeid(href='#home') #{translations[locale].SectionsTitles.HMFinance}
-      li
-        a(href='#clients') #{translations[locale].SectionsTitles.Clients}
-      li
-        a(href='/services') #{translations[locale].SectionsTitles.Services}
-      li
-        a(href='/simulators') #{translations[locale].SectionsTitles.Simulators}
-      li
-        a(href='#contactus') #{translations[locale].SectionsTitles.ContactUs}
-      li
-        a(href='#reviews') #{translations[locale].SectionsTitles.Reviews}
-
 
   #home
     .pcontainer
@@ -196,127 +174,30 @@ block content
           br
           h5 &rdquo;
 
-    #footer
-      .footergrid
-        .footergrid1
-          a(href='')
-            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/thumb_up_cttdpb_zdzxjb.png', width='30', height='30')
-            | #{translations.both.Footer.Face}
-        .footergrid2
-          a(href='')
-            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/camera_alt_pmxjl0_ksqqod.png', width='30', height='30')
-            | #{translations.both.Footer.Insta}
-        .footergrid3
-          a(href='')
-            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/account_circle_eoq61g_qx6jof.png', width='30', height='30')
-            | #{translations.both.Footer.LinkIn}
-        .footergrid4
-          a(href='')
-            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/email_phqlzj_r9j5dq.png', width='30', height='30')
-            | #{translations.both.Footer.Email}
-        .footergrid5
-          h10 #{translations.both.Footer.HMFin}
-        .footergrid6
-          h10 #{translations.both.Footer.WCS}
+    //- #footer
+    //-   .footergrid
+    //-     .footergrid1
+    //-       a(href='')
+    //-         img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/thumb_up_cttdpb_zdzxjb.png', width='30', height='30')
+    //-         | #{translations.both.Footer.Face}
+    //-     .footergrid2
+    //-       a(href='')
+    //-         img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/camera_alt_pmxjl0_ksqqod.png', width='30', height='30')
+    //-         | #{translations.both.Footer.Insta}
+    //-     .footergrid3
+    //-       a(href='')
+    //-         img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/account_circle_eoq61g_qx6jof.png', width='30', height='30')
+    //-         | #{translations.both.Footer.LinkIn}
+    //-     .footergrid4
+    //-       a(href='')
+    //-         img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/email_phqlzj_r9j5dq.png', width='30', height='30')
+    //-         | #{translations.both.Footer.Email}
+    //-     .footergrid5
+    //-       h10 #{translations.both.Footer.HMFin}
+    //-     .footergrid6
+    //-       h10 #{translations.both.Footer.WCS}
 
-  script.
-    var video = document.getElementById("video");
-    video.oncanplaythrough = function() {
-    video.muted = true;
-    video.play();
-    }
-
-    $('#video').bind('ended', function() {
-    $(this).fadeOut();
-   	$(this).parent().fadeIn()
-    });
-
-    $('textarea#question').focus(function() {
-      $(this).val('');
-    });
-    $('.pimage').each(function(){
-      var img = $(this);
-      var imgParent = $(this).parent();
-      
-      function parallaxImg () {
-        var speed = img.data('speed');
-        var imgY = imgParent.offset().top;
-        var winY = $(this).scrollTop();
-        var winH = $(this).height();
-        var parentH = imgParent.innerHeight();
-        var winBottom = winY + winH;
-
-        if (winBottom > imgY && winY < imgY + parentH) {
-          var imgBottom = ((winBottom - imgY) * speed);
-          var imgTop = winH + parentH;
-          var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
-        }
-        img.css({
-          top: imgPercent + '%',
-          transform: 'translate(-50%, -' + imgPercent + '%)'
-        });
-      }
-
-      $(document).on({
-        scroll: function () {
-          parallaxImg();
-        }, ready: function () {
-          parallaxImg();
-        }
-      });
-    });
-
-    ;(function($, win) {
-      $.fn.inViewport = function(cb) {
-        return this.each(function(i,el){
-          function visPx(){
-            var H = $(this).height(),
-            r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
-            return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
-          } visPx();
-          $(win).on("resize scroll", visPx);
-        });
-      };
-    }(jQuery, window));
-    $("#mid").inViewport(function(px){
-      if(px) $(".clientsgrid1").addClass("showscroll1")
-      if(px) $(".clientsgrid2").addClass("showscroll2")
-      if(px) $(".clientsgrid3").addClass("showscroll3")
-      ;
-    });
-    $(".servicesgrid1").inViewport(function(px){
-      if(px) $(".servicesgrid1").addClass("showscroll1")
-      if(px) $(".servicesgrid2").addClass("showscroll2")
-      if(px) $(".servicesgrid3").addClass("showscroll3")
-      if(px) $(".servicesgrid4").addClass("showscroll4")
-      if(px) $(".servicesgrid5").addClass("showscroll5")
-      if(px) $(".servicesgrid6").addClass("showscroll6")
-      ;
-    });
-    $("#simulators").inViewport(function(px){
-      if(px) $(".simsgrid1").addClass("showscroll1")
-      if(px) $(".simsgrid2").addClass("showscroll2")
-      if(px) $(".simsgrid3").addClass("showscroll3")
-      ;
-    });		
-    $(".footergrid1").inViewport(function(px){
-      if(px) $(".footergrid1").addClass("showscroll1")
-      if(px) $(".footergrid2").addClass("showscroll2")
-      if(px) $(".footergrid3").addClass("showscroll3")
-      if(px) $(".footergrid4").addClass("showscroll4")
-      if(px) $(".footergrid5").addClass("showscroll5")
-      if(px) $(".footergrid6").addClass("showscroll6")
-      ;
-    });
-    $(".contactusgrid").inViewport(function(px){
-      if(px) $(".contactusgrid1").addClass("showscroll1")
-      ;
-    });
-    $(".contactusgrid2").inViewport(function(px){
-      if(px) $(".contactusgrid2").addClass("showscroll2")
-      ;
-    });
-
+    
   script(type='text/javascript', src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
   script(src='/javascripts/mailchimp.js')
   //- Script to display the cookies banner. The link is currently sending the user to an empty page, the privacy policy should be put here
