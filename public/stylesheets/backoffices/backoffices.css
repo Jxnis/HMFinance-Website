@@ -604,6 +604,26 @@ table {
 .table-grid h3 {
   margin-top: 20px; }
 
+/* Add Client */
+.addUser {
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.user-table input[type=text], input[type=url], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #d8d7d7;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+.addClientTable tr:hover {
+  background-color: white; }
+
+/* Edit Client */
 .review-button {
   margin: auto;
   padding-top: 20px;
