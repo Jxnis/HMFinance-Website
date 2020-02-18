@@ -675,7 +675,9 @@
 	a.contactusbutton:active {
 		padding: 13px 50px 7px
 	}
+
 	/* SERVICES PAGE CSS STARTS HERE */
+
 	.servicespagegrid h3 {
 		text-align: center !important;
 		font-family: "Roboto", sans-serif;
@@ -692,9 +694,8 @@
 		position: relative;
 		overflow: hidden;
 		z-index: -10;
-		min-height: 1900px;
-		height: 205vh;
-		max-height: 400vh;
+		min-height: 2000px;
+		height: calc(350vh - 60vw);
 	}
 	.pimageservices {
 		position: absolute;
@@ -739,7 +740,7 @@
 	}
 	.servicespagegrid {
 		position: absolute;
-		top: 120px;
+		top: 125px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -861,7 +862,9 @@
 		z-index: -10;
 		margin: -5px;
 	}
+
 	/* SIMULATORS CSS STARTS HERE */
+
 	.pcontainersimulators {
 		width: 100%;
 		position: relative;
@@ -871,7 +874,6 @@
 		height: 225vh;
 		max-height: 325vh;
 	}
-
 	.pimagesimulators {
 		position: absolute;
 		top: 0;
@@ -879,13 +881,10 @@
 		transform: translate(-50%, 0);
 		filter: grayscale(100%);
 		opacity: .25;
-		object-fit: cover;
-		min-height: 2200px;
-		height: 250vh;
+		height: 150%;
 		min-width: 100vw;
 		z-index: -10
 	}
-	
 	.simulatorsgsgrid h3,
 	.simulatormvagrid h3,
 	.simulatorimtgrid h3 {
@@ -923,7 +922,7 @@
 	}
 	.simulatorsgsgrid {
 		position: absolute;
-		top: 100px;
+		top: 125px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -1259,7 +1258,6 @@
 		margin: 0;
 		padding: 0;
 	}
-
 
 	/* ANIMATIONS */
 
