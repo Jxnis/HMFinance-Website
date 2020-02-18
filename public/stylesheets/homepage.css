@@ -160,6 +160,12 @@
 		animation-fill-mode: forwards;
 		opacity: 0;
 	}
+
+	#langbutton:hover {
+		filter: contrast(1.25);
+		filter: brightness(1.25);
+	}
+
 	#navbar {
 		display: none;
 		position: fixed;
@@ -300,8 +306,16 @@
 	.clientsgrid3:hover {
 		padding: 0;
 		border-radius: 10px;
-		box-shadow: 0 2px 5px 0 #404040
+		box-shadow: 0 2px 5px 0 #404040;
 	}
+
+	.clientsgrid1:hover img,
+	.clientsgrid2:hover img,
+	.clientsgrid3:hover img {
+	filter: contrast(1.25);
+	filter: brightness(1.25);
+	}
+
 	.clientsgrid1 {
 		opacity: 0;
 		border: 10px solid transparent;
@@ -397,8 +411,8 @@
 		margin: 20px 0px;
 	}
 	#simulators a:hover img {
-		filter: grayscale(0);
-		transition: filter 1s;
+		filter: contrast(1.1);
+		filter: brightness(1.1);
 	}
 	.contactusgrid {
 		display: grid;
@@ -857,6 +871,21 @@
 		height: 225vh;
 		max-height: 325vh;
 	}
+
+	.pimagesimulators {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		filter: grayscale(100%);
+		opacity: .25;
+		object-fit: cover;
+		min-height: 2200px;
+		height: 250vh;
+		min-width: 100vw;
+		z-index: -10
+	}
+	
 	.simulatorsgsgrid h3,
 	.simulatormvagrid h3,
 	.simulatorimtgrid h3 {
