@@ -444,9 +444,15 @@
 		margin-bottom: 30px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
 	}
-	input[type=text]:hover {
+	input[type=text]:hover:enabled {
 		box-shadow: 0 2px 5px 0 #404040
 	}
+
+	input[type=text]:disabled {
+		background :#606060;
+		filter: opacity(0.2);
+	}
+
 	textarea {
 		width: 100%;
 		padding: 10px 0;
