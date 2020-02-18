@@ -136,8 +136,7 @@
 	}
 	#menubutton:hover {
 		padding: 0;
-		border: solid 2px #FFF;
-		border-radius: 10px;
+		border: solid 1px #FFF;
 		color: #fff;
 		box-shadow: 0 2px 5px 0 #404040
 	}
@@ -299,7 +298,6 @@
 	.clientsgrid2:hover,
 	.clientsgrid3:hover {
 		padding: 0;
-		border-radius: 10px;
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	.clientsgrid1 {
@@ -358,8 +356,7 @@
 		grid-area: 2 / 3 / 3 / 4
 	}
 	#services a:hover img {
-		border-radius: 10px;
-		border: solid 2px #FFF;
+		border: solid 1px #FFF;
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	.simsgrid {
@@ -391,8 +388,7 @@
 	}
 	.simsgrid * img {
 		width: 100%;
-		border: solid 2px #A00000 !important;
-		border-radius: 10px;
+		border: solid 1px #A00000 !important;
 		object-fit: cover;
 		margin: 20px 0px;
 	}
@@ -424,20 +420,27 @@
 	input[type=text] {
 		color: #404040;
 		width: 100%;
-		padding: 10px 0;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		padding: 10px;
+		border: solid 1px #A00000;
 		margin-bottom: 30px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
 	}
 	input[type=text]:hover {
 		box-shadow: 0 2px 5px 0 #404040
 	}
+	label {
+		float: left;
+		font-weight: bold;
+		padding-left: 8px;
+	}
+	label.contactUs {
+		padding-bottom: 3px;
+	}
 	textarea {
+		color: #404040;
 		width: 100%;
-		padding: 10px 0;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		padding: 10px;
+		border: solid 1px #A00000;
 		resize: none;
 		margin-bottom: 10px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
@@ -446,16 +449,14 @@
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	input[type=submit] {
-		border: solid 2px #A00000;
+		border: solid 1px #A00000;
 		background: #A00000;
 		color: #fff;
-		border-radius: 10px;
 		padding: 11px 50px 9px;
 		font-size: large
 	}
 	input[type=submit]:hover {
-		border: solid 2px #FFF;
-		border-radius: 10px;
+		border: solid 1px #FFF;
 		background-color: #A00000;
 		color: #fff;
 		box-shadow: 0 2px 5px 0 #404040
@@ -642,17 +643,15 @@
 		animation-fill-mode: forwards
 	}
 	.contactusbutton {
-		border: solid 2px #A00000;
+		border: solid 1px #A00000;
 		background: #A00000;
 		color: #fff;
-		border-radius: 10px;
 		padding: 11px 50px 9px;
 		font-size: large;
 		margin-bottom: 100px;
 	}
 	.contactusbutton:hover {
-		border: solid 2px #FFF;
-		border-radius: 10px;
+		border: solid 1px #FFF;
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	a.contactusbutton:hover {
@@ -696,17 +695,15 @@
 	.contactusbutton {
 		width: 200px;
 		margin: 0 auto;
-		border: solid 2px #A00000;
+		border: solid 1px #A00000;
 		background: #A00000;
 		color: #fff;
-		border-radius: 10px;
 		padding: 11px 50px 9px;
 		font-size: large;
 		z-index: 0
 	}
 	.contactusbutton:hover {
-		border: solid 2px #FFF;
-		border-radius: 10px;
+		border: solid 1px #FFF;
 		background-color: #A00000;
 		color: #fff;
 		box-shadow: 0 2px 5px 0 #404040
@@ -743,43 +740,37 @@
 	.servicespagegrid1 {
 		overflow: hidden;
 		grid-area: 1 / 1 / 2 / 2;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid2 {
 		overflow: hidden;
 		grid-area: 1 / 2 / 2 / 3;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid3 {
 		overflow: hidden;
 		grid-area: 2 / 1 / 3 / 2;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid4 {
 		overflow: hidden;
 		grid-area: 2 / 2 / 3 / 3;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid5 {
 		overflow: hidden;
 		grid-area: 3 / 1 / 4 / 2;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid6 {
 		overflow: hidden;
 		grid-area: 3 / 2 / 4 / 3;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff
 	}
 	.servicespagegrid7 {
@@ -886,8 +877,7 @@
 	select {
 		width: 120px;
 		height: 44px;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		width: 70%;
 		color: #404040;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif;
@@ -908,8 +898,7 @@
 		text-align: right;
 		z-index: -0;
 		overflow: hidden;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff;
 	}
 	.simulatorsgsgrid1 {
@@ -1002,6 +991,7 @@
 	.simulatorsgsgrid20 {
 		grid-area: 11 / 1 / 12 / 3;
 		text-align: center;
+		padding: 16px;
 	}
 	.simulatorsgsgrid21 {
 		grid-area: 12 / 1 / 13 / 2;
@@ -1035,8 +1025,7 @@
 		text-align: right;
 		z-index: -0;
 		overflow: hidden;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff;
 	}
 	.simulatormvagrid1 {
@@ -1103,6 +1092,7 @@
 	.simulatormvagrid14 {
 		grid-area: 8 / 1 / 9 / 3;
 		text-align: center;
+		padding: 16px;
 	}
 	.simulatormvagrid15 {
 		grid-area: 9 / 1 / 10 / 2;
@@ -1135,8 +1125,7 @@
 		text-align: right;
 		z-index: -0;
 		overflow: hidden;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		background-color: #ffffff;
 	}
 	.simulatorimtgrid1 {
@@ -1181,6 +1170,7 @@
 		grid-area: 5 / 1 / 6 / 3;
 		text-align: center;
 		margin-bottom: 20px;
+		padding: 16px;
 	}
 	.simulatorimtgrid9 {
 		grid-area: 6 / 1 / 7 / 2;
@@ -1700,8 +1690,7 @@
 	}
 	.simsgrid * img {
 		width: 60vw;
-		border: solid 2px #A00000 !important;
-		border-radius: 10px;
+		border: solid 1px #A00000 !important;
 		object-fit: cover;
 		margin: 20px 0px 0px 0px;
 	}
@@ -1724,26 +1713,23 @@
 		grid-area: 2 / 1 / 3 / 2
 	}
 	iframe {
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		height: 50%
 	}
-	input[type=text] {
+	/* input[type=text] {
 		width: 100%;
-		padding: 10px 0;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		padding: 10px;
+		border: solid 1px #A00000;
 		margin-bottom: 30px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
-	}
+	} */
 	input[type=text]:hover {
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	textarea {
 		width: 100%;
 		padding: 10px 0;
-		border: solid 2px #A00000;
-		border-radius: 10px;
+		border: solid 1px #A00000;
 		resize: none;
 		margin-bottom: 10px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
@@ -1752,16 +1738,14 @@
 		box-shadow: 0 2px 5px 0 #404040
 	}
 	input[type=submit] {
-		border: solid 2px #A00000;
+		border: solid 1px #A00000;
 		background: #A00000;
 		color: #fff;
-		border-radius: 10px;
 		padding: 11px 50px 9px;
 		font-size: large
 	}
 	input[type=submit]:hover {
-		border: solid 2px #FFF;
-		border-radius: 10px;
+		border: solid 1px #FFF;
 		background-color: #A00000;
 		color: #fff;
 		box-shadow: 0 2px 5px 0 #404040
@@ -1947,10 +1931,9 @@
 		animation-fill-mode: forwards
 	}
 	.contactusbutton {
-		border: solid 2px #A00000;
+		border: solid 1px #A00000;
 		background: #A00000;
 		color: #fff;
-		border-radius: 10px;
 		padding: 11px 50px 9px;
 		font-size: large
 	}
@@ -2008,10 +1991,9 @@
 .contactusbutton {
 	width: 200px;
 	margin: 0 auto;
-	border: solid 2px #A00000;
+	border: solid 1px #A00000;
 	background: #A00000;
 	color: #fff;
-	border-radius: 10px;
 	padding: 11px 50px 9px;
 	font-size: large;
 	z-index: 0
@@ -2019,7 +2001,6 @@
 
 .contactusbutton:hover {
 	border: solid 2px #FFF;
-	border-radius: 10px;
 	background-color: #A00000;
 	color: #fff;
 	box-shadow: 0 2px 5px 0 #404040
@@ -2058,48 +2039,42 @@ a.contactusbutton:active {
 .servicespagegrid1 {
 	overflow: hidden;
 	grid-area: 1 / 1 / 2 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
 .servicespagegrid2 {
 	overflow: hidden;
 	grid-area: 2 / 1 / 3 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
 .servicespagegrid3 {
 	overflow: hidden;
 	grid-area: 3 / 1 / 4 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
 .servicespagegrid4 {
 	overflow: hidden;
 	grid-area: 4 / 1 / 5 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
 .servicespagegrid5 {
 	overflow: hidden;
 	grid-area: 5 / 1 / 6 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
 .servicespagegrid6 {
 	overflow: hidden;
 	grid-area: 6 / 1 / 7 / 2;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff
 }
 
@@ -2205,8 +2180,7 @@ a.contactusbutton:active {
 select {
 	width: 95%;
 	height: 40px;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	color: #404040;
 	font: calc(10px + 1vmin) 'Roboto', sans-serif;
 }
@@ -2222,8 +2196,7 @@ select {
 	width: 80vw;
 	z-index: -0;
 	overflow: hidden;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff;
 	max-width: 100vw;
 	margin: auto;
@@ -2368,8 +2341,7 @@ select {
 	width: 80vw;
 	z-index: -0;
 	overflow: hidden;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff;
 	max-width: 100vw;
 	margin: auto;
@@ -2485,8 +2457,7 @@ select {
 	width: 80vw;
 	z-index: -0;
 	overflow: hidden;
-	border: solid 2px #A00000;
-	border-radius: 10px;
+	border: solid 1px #A00000;
 	background-color: #ffffff;
 	max-width: 100vw;
 	margin: auto;
