@@ -8,34 +8,33 @@ block content
             .admin-profile
                 span.greeting Hi, #{user.email}
                 .notifications
-                    span.badge 1
-                    svg
-                        use(xlink:href='#users')
+                    i(class="fa fa-user fa-lg")
 
         section.homepage
             div.homepage-main-content 
                 div.review-wrapper
                     section.table-grid
-                        div.user-table  
-                            table
-                                tbody
-                                    tr
-                                        th
-                                            h4 Ano
-                                        th 
-                                            h4 Coeficiente
-                                        th 
-                                            h4 Taxa IRS
-                                form(action='/dashboard/simulators/maisvalias', method='post')
-                                    each year in simulatorMaisValias
-                                        tr.fontMais
-                                            td
-                                                input(type="number", name="year" step=1 value=year.year)
-                                            td
-                                                input(type="number", name="coeficient" step=0.0001 value=year.coeficient)
-                                            td
-                                                input(type="number", name="taxIRS" step=0.0001 value=year.taxIRS)
-                                            td
-                                                input(type="hidden" value=year.id)
-                                    div
-                                        input(type="submit" value="Editar" class="btn btn-warning") 
+                        div.user-table
+                            form(action='/dashboard/simulators/maisvalias', method='post')  
+                                table
+                                    tbody
+                                        tr
+                                            th
+                                                h3 Ano
+                                            th 
+                                                h3 Coeficiente
+                                            th 
+                                                h3 Taxa IRS 
+                                    
+                                        each year in simulatorMaisValias
+                                            tr
+                                                td
+                                                    input(type="number", name="year" step=1 value=year.year)
+                                                td
+                                                    input(type="number", name="coeficient" step=0.0001 value=year.coeficient)
+                                                td
+                                                    input(type="number", name="taxIRS" step=0.0001 value=year.taxIRS)
+                                                td
+                                                    input(type="hidden" value=year.id)
+                                div.addUser
+                                    input(type="submit" value="Save" class="btn btn-success btn-lg") 

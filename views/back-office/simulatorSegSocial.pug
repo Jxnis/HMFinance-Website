@@ -8,9 +8,7 @@ block content
             .admin-profile
                 span.greeting Hi, #{user.email}
                 .notifications
-                    span.badge 1
-                    svg
-                        use(xlink:href='#users')
+                    i(class="fa fa-user fa-lg")
 
         section.homepage
             div.homepage-main-content 
@@ -61,5 +59,6 @@ block content
                             br
                             input(type="number", name="grossWageExemption" step=0.01 value=simulator.grossWageExemption)            
                         br
-                        div.button
-                            input(type="submit", value="Editar" class="btn btn-warning") 
+                        
+                        div.addUser
+                            input(type="submit", value="Save" class="btn btn-success btn-lg") 

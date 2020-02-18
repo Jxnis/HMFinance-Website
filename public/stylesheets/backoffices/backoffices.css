@@ -557,7 +557,7 @@ table {
     background-color: #e7e3e3; }
 
 .homepage-main-content {
-  background-color: #fafafa;
+  background-color: #ffffff;
   height: 670px;
   padding: 20px 30px;
   overflow-y: scroll;
@@ -593,7 +593,8 @@ table {
   width: 100%; }
 
 .homepage .button {
-  padding-top: 20px; }
+  padding-top: 20px;
+  text-align: center; }
 
 .table-grid {
   max-width: 100%;
@@ -616,7 +617,7 @@ table {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-.user-table input[type=text], input[type=url], select {
+.user-table input[type=text], input[type=url], input[type=number], select {
   width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -645,6 +646,9 @@ table {
   text-align: center; }
 
 .review-wrapper {
+  text-align: center; }
+
+.imt {
   text-align: center; }
 
 /*# sourceMappingURL=backoffices.css.map */

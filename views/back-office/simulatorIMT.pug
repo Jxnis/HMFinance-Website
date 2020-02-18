@@ -8,61 +8,65 @@ block content
             .admin-profile
                 span.greeting Hi, #{user.email}
                 .notifications
-                    span.badge 1
-                    svg
-                        use(xlink:href='#users')
+                    i(class="fa fa-user fa-lg")
 
         section.homepage
             div.homepage-main-content 
                 div.review-wrapper
                     section.table-grid
                         div.user-table  
-                            table
-                                tbody
-                                    tr
-                                        th 
-                                            h6 Tipo de Imóvel  
-                                        th 
-                                            h6 Localização
-                                        th 
-                                            h6 Valor do Imóvel Mínimo
-                                        th 
-                                            h6 Valor do Imóvel Máximo
-                                        th 
-                                            h6 Taxa Marginal
-                                        th 
-                                            h6 Parcela a Abater
+                            form(action=`/dashboard/simulators/imt/edit`, method="post")
+                                table
+                                    tbody
+                                        tr
+                                            th 
+                                                h3 Tipo de Imóvel  
+                                            th 
+                                                h3 Localização
+                                            th 
+                                                h3 Valor do Imóvel Mínimo
+                                            th 
+                                                h3 Valor do Imóvel Máximo
+                                            th 
+                                                h3 Taxa Marginal
+                                            th 
+                                                h3 Parcela a Abater
 
-                                form(action=`/dashboard/simulators/imt/edit`, method="post")
-                                    each entry in imtsimulator
+                                    
+                                        each entry in imtsimulator
+                                            tr
+                                                td
+                                                    input(type="text", name="type", value=entry.type)
+                                                td
+                                                    input(type="text", name="location", value=entry.location)      
+                                                td
+                                                    input(type="text", name="lowEnd", value=(entry.lowEnd == 0 ? entry.lowEnd = 'Campo Bloqueado' : entry.lowEnd), readonly=(entry.lowEnd == 'Campo Bloqueado'))       
+                                                td
+                                                    input(type="text", name="highEnd", value=(entry.highEnd == 0 ? entry.highEnd = 'Campo Bloqueado' : entry.highEnd), readonly=(entry.highEnd == 'Campo Bloqueado'))       
+                                                td
+                                                    input(type="text", name="marginal", value=entry.marginal) 
+                                                td
+                                                    input(type="text", name="benefitTaxRate", value=entry.benefitTaxRate) 
+                                                td
+                                                    input(type="hidden", name="id", value=entry.id) 
+
+                                div.addUser
+                                    input(type="submit", value="Save" class="btn btn-success btn-lg")  
+                                        
+
+                            form(action=`/dashboard/simulators/imt/editIS`, method="post")
+                                table
+                                    tbody
+                                        tr
+                                            th 
+                                                h3 Taxa de Imposto de selo
                                         tr
                                             td
-                                                input(type="text", name="type", value=entry.type)
-                                            td
-                                                input(type="text", name="location", value=entry.location)      
-                                            td
-                                                input(type="text", name="lowEnd", value=(entry.lowEnd == 0 ? entry.lowEnd = 'Campo Bloqueado' : entry.lowEnd), readonly=(entry.lowEnd == 'Campo Bloqueado'))       
-                                            td
-                                                input(type="text", name="highEnd", value=(entry.highEnd == 0 ? entry.highEnd = 'Campo Bloqueado' : entry.highEnd), readonly=(entry.highEnd == 'Campo Bloqueado'))       
-                                            td
-                                                input(type="text", name="marginal", value=entry.marginal) 
-                                            td
-                                                input(type="text", name="benefitTaxRate", value=entry.benefitTaxRate) 
-                                            td
-                                                input(type="hidden", name="id", value=entry.id)   
-                                    div
-                                        input(type="submit", value="Edit" class="btn btn-warning")
+                                                input(type="text", name="type" value=IStax[0].value)
+                                            
+                                div.addUser   
+                                    input(type="submit", value="Save" class="btn btn-success btn-lg")
 
                                 
-                                tbody
-                                    tr
-                                        th 
-                                            h3 Taxa de Imposto de selo
-                                form(action=`/dashboard/simulators/imt/editIS`, method="post")
-                                    tr
-                                        td
-                                            input(type="text", name="type" value=IStax[0].value)
-                                        td
-                                            input(type="submit", value="Edit" class="btn btn-warning")
 
                             
