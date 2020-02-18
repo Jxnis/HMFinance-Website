@@ -1,17 +1,41 @@
 extends layout
 
 block content
-    div
-        a(href="/dashboard") Dashboard
+    section.page-content
+        section.title-and-user
+            h1 Clients
+            
+            .admin-profile
+                span.greeting Hi, #{user.email}
+                .notifications
+                    i(class="fa fa-user fa-lg")
 
-    div
-        h1 Add a new Client
-        form(action="/dashboard/clients/new", method="post")
-            div
-                input(type="text", name="name" placeholder="Nome")
-            div
-                input(type="url", name="logoURL" placeholder="Logo URL")      
-            div
-                input(type="url", name="clientURL" placeholder="Client URL")      
-            div
-                input(type="submit", value="Add")
+        section.table-grid
+            div.user-table
+                h2 Add a new Client
+                form(action="/dashboard/clients/new", method="post")
+                    
+                        table
+                            tbody.addClientTable
+                                tr  
+                                    th
+                                        h3 Name
+                                    th 
+                                        h3 Logo URL
+                                    th
+                                        h3 Client URL
+
+                                tr
+                                    td
+                                        input(type="text", name="name" placeholder="Nome")
+                                    td
+                                        input(type="url", name="logoURL" placeholder="Logo URL")
+                                    td
+                                        input(type="url", name="clientURL" placeholder="Client URL")
+
+                    
+                            
+                
+                            
+                        div.addUser
+                            input(type="submit", value="Add new Client" class="btn btn-primary btn-lg")
