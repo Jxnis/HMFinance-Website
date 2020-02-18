@@ -1744,9 +1744,8 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 60px;
-		grid-row-gap: 20px;
-		max-width: 960px;
-		margin: 100px 10px;
+		width: 80vw;
+		margin: 80px auto;
 	}
 	.contactusgrid1 {
 		opacity: 0;
@@ -1759,7 +1758,8 @@
 	iframe {
 		border: solid 2px #A00000;
 		border-radius: 10px;
-		height: 50%
+		height: 70vw;
+		width: 80vw;
 	}
 	input[type=text] {
 		width: 100%;
@@ -1778,7 +1778,7 @@
 		border: solid 2px #A00000;
 		border-radius: 10px;
 		resize: none;
-		margin-bottom: 10px;
+		margin-bottom: 40px;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif
 	}
 	textarea:hover {
@@ -1802,9 +1802,7 @@
 	input[type=submit]:active {
 		padding: 12px 50px 8px
 	}
-	form.contactusMessage {
-		padding: 8% 0%;
-	}
+
 	#reviewbox {
 		position: relative;
 		margin-left: auto;
