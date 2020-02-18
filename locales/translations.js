@@ -79,7 +79,7 @@ const Translations = {
 
 		ContactUs: {
 			Email: 'E-mail',
-			Phone: 'Phone Number',
+			Phone: 'Phone / Mobile',
 			Address: 'Address',
 			FormName: 'Name',
 			FormEmail: 'E-mail',
@@ -160,7 +160,7 @@ const Translations = {
 
 		ContactUs: {
 			Email: 'E-mail',
-			Phone: 'Telemóvel',
+			Phone: 'Telefone / Telemóvel',
 			Address: 'Morada',
 			FormName: 'Nome',
 			FormEmail: 'E-Mail',
