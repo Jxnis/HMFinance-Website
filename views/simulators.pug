@@ -68,40 +68,40 @@ html
           h3 Simulador Segurança Social
 
         .simulatorsgsgrid2
-          label Trabalhador:
+          label Trabalhador
         .simulatorsgsgrid3
           select(id="workers")
             option(value="TI") Trabalhador Independente
             option(value="ENI") Empresário em Nome Individual
         .simulatorsgsgrid4
-          label Regime:
+          label Regime
         .simulatorsgsgrid5
           select(id="regime")
             option(value="Simp") Regime Simplificado
             option(value="CO") Contabilidade Organizada
         .simulatorsgsgrid6
-          label Quantos meses abriu atividade:
+          label Quantos meses abriu atividade
         .simulatorsgsgrid7
           select(id="monthsOfActivity")
             option(value=">12") Mais que 1 ano de atividade
             option(value="<=12") Menos que 1 ano de atividade
         .simulatorsgsgrid8
-          label Tipo de atividade:
+          label Tipo de atividade
         .simulatorsgsgrid9
           select(id="typeOfActivity")
             option(value="Work Contract") Tem outro contrato de trabalho
             option(value="Freela") Apenas freelancing
             option(value="Pensionist") Reformado  
         .simulatorsgsgrid10
-          label Salário Mensal Bruto noutro Contrato:
+          label Salário Mensal Bruto noutro Contrato
         .simulatorsgsgrid11
           input(type="text" id="grossWage")
         .simulatorsgsgrid12
-          label Lucro Anual:
+          label Lucro Anual
         .simulatorsgsgrid13
           input(type="text" id="profitYear")
         .simulatorsgsgrid14
-          label Receitas Brutas Anuais Serviços:
+          label Receitas Brutas Anuais Serviços
         .simulatorsgsgrid15
           input(type="text" id="profitYearServices")
         .simulatorsgsgrid16
@@ -109,14 +109,14 @@ html
         .simulatorsgsgrid17
           input(type="text" id="profitYearMerchandise")
         .simulatorsgsgrid18
-          label Receitas Brutas Anuais Outros:
+          label Receitas Brutas Anuais Outros
         .simulatorsgsgrid19
           input(type="text" id="profitYearOthers")
         .simulatorsgsgrid20
           input(type="submit" value="Calcular")
         .simulatorsgsgrid21
           br
-          h3 Impostos:
+          h3 Total Impostos:
           br
         .simulatorsgsgrid22
           br
@@ -128,7 +128,7 @@ html
           br
           h3 Simulador Mais Valias
         .simulatormvagrid2
-          label Valor de Aquisição:
+          label Valor de Aquisição
         .simulatormvagrid3
           input(type="text" id="acquisitionValue")
         .simulatormvagrid4
@@ -154,7 +154,7 @@ html
         .simulatormvagrid11
           input(type="text" id="expenses")
         .simulatormvagrid12
-          label Estado de Residência:
+          label Estado de Residência
         .simulatormvagrid13
           select(id="estadoResidencia")
             option(value="residente") Residente
@@ -163,12 +163,12 @@ html
           input(type="submit" value="Calcular")
         .simulatormvagrid15
           <br>
-          h3 Impostos:
+          h3 Total Impostos
           <br>
         .simulatormvagrid16
-          <h3>
-          <br>
-          p(id="outputMaisValias")
+          br
+          h3(id="outputMaisValias")
+          br
 
     form(id="IMTSimulator")
       .simulatorimtgrid
@@ -176,13 +176,13 @@ html
           br
           h3 Simulador IMT
         .simulatorimtgrid2
-          label Local:
+          label Local
         .simulatorimtgrid3
           select(id="location")
             option(value='PC') Portugal Continental
             option(value='RA') Regiões Autónomas
         .simulatorimtgrid4
-          label Tipo de Imóvel:
+          label Tipo de Imóvel
         .simulatorimtgrid5
           select(id="type")
             option(value='HPP') Habitação Própria Permanente 
@@ -190,35 +190,36 @@ html
             option(value='Rustico') Prédios Rústicos
             option(value='Outros') Outros Prédios Urbanos
         .simulatorimtgrid6
-          label Valor do Imóvel:
+          label Valor do Imóvel
         .simulatorimtgrid7
           input(type="text" id="imovelValue")
         .simulatorimtgrid8
           input(type="submit" value="Calcular")
         .simulatorimtgrid9
-          h3
-          br
-          p IMT a pagar:
+          <br>
+          h3 IMT A Pagar
+          <br>
         .simulatorimtgrid10
-          h3
           br
-          p(id="outputIMT")
+          h3(id="outputIMT")
+          br
         .simulatorimtgrid11
-          h3
-          br
-          p IS a pagar:
+          <br>
+          h3 IS A Pagar
+          <br>
         .simulatorimtgrid12
-          h3
           br
-          p(id="outputIS")
+          h3(id="outputIS")
+          br
+          
         .simulatorimtgrid13
-          h3
-          br
-          p Total a pagar:
+          <br>
+          h3 Total Impostos
+          <br>
         .simulatorimtgrid14
-          h3
           br
-          p(id="outputTotal")
+          h3(id="outputTotal")
+          br
 
   script.
     $("textarea#question").focus(function() {
