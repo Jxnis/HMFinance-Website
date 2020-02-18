@@ -18,7 +18,7 @@ const getClients = (req, res) => {
 
 const getNewClientPage = (req, res) => {
 	// console.log('We got the add new clients page');
-	res.render('back-office/addClient');
+	res.render('back-office/addClient', {user: req.user});
 };
 const addNewClient = (req, res) => {
 	// console.log('client added');
@@ -49,7 +49,7 @@ const getEditClientPage =  (req, res) => {
 		if(err) return res.render('error', { err });
 		// console.log(results[0]);
 		let client = results[0];
-		res.render('back-office/editClient', { client });
+		res.render('back-office/editClient', { user: req.user, client });
 	});
 	
 };

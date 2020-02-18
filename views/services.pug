@@ -43,9 +43,9 @@ html
         li
           a(href='/#clients') #{translations[locale].SectionsTitles.Clients}
         li
-          a(href='/#services') #{translations[locale].SectionsTitles.Services}
+          a(href='/services') #{translations[locale].SectionsTitles.Services}
         li
-          a(href='/#simulators') #{translations[locale].SectionsTitles.Simulators}
+          a(href='/simulators') #{translations[locale].SectionsTitles.Simulators}
         li
           a(href='/#contactus') #{translations[locale].SectionsTitles.ContactUs}
         li
@@ -119,8 +119,9 @@ html
           h3 #{translations[locale].Services.Titles.Others}
         .servicespagedescri
           p #{translations[locale].Services.ServicesText.Others}
+
       .servicespagegrid7
-          a.contactusbutton(href="mailto:geral@hmfinance.pt") #{translations[locale].Services.ServicesText.Button}
+          a.contactusbutton(href='/#contactus') #{translations[locale].Services.ServicesText.Button}
 
 
     script.

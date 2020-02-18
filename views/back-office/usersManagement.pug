@@ -15,27 +15,26 @@ block content
         h2 Users List
         p Here you can add and delete users
 
-        div.addUser
-          form(action="/auth/signup") 
-            input(type="submit" value="Add User" class="btn btn-primary btn-lg")
       
         table
           tbody
-              tr
-                  th 
-                      h4 User  
-                  th
-                      h4 Delete  
+            tr
+              th 
+                h4 User  
+              th
+                h4 Delete  
           each user in users
-              tr
-                  td #{user.email}
-                  td
-                    form(action=`/auth/${user.id}/delete` method="post")
-                        input(
-                        type="submit"
-                        value="Delete"
-                        class="btn btn-danger"
-                        ) 
+            tr
+              td #{user.email}
+              td
+                form(action=`/auth/${user.id}/delete` method="post")
+                  input(
+                  type="submit"
+                  value="Delete"
+                  class="btn btn-danger"
+                  ) 
         
-      
+        div.addUser
+          form(action="/auth/signup") 
+            input(type="submit" value="Add User" class="btn btn-primary btn-lg")      
 

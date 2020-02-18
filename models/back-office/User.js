@@ -25,7 +25,6 @@ User.delete = (params, callback) => {
 	);
 };
 
-
 //SignUp
 User.create = (userInfo, callback) => {
 	connection.query(

@@ -8,8 +8,10 @@ const showUsers = (req, res) => {
 			//  If an error has occurred, then the user is informed of the error
 			res.status(500).json({ message: 'Error getting all the users' });
 		} else {
-			//console.log('We got the users succefully');
-			
+			// console.log('We got the users succefully');
+			// console.log(results);
+			// We need to delete the passwordHash from the results object so it doesn't interfere with useres presented in the usersManagement page
+			delete results.passwordHash;
 			let users = results;
 			//console.log(users);
 			res.render('back-office/usersManagement', {user: req.user, users });
