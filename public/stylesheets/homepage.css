@@ -10,7 +10,7 @@
 	}
 	html {
 		background: #FFF;
-		letter-spacing: 2px;
+		letter-spacing: 0.75px;
 		text-align: center;
 		color: #404040;
 		scroll-behavior: smooth;
@@ -1306,7 +1306,7 @@
 	}
 	html {
 		background: #FFFFFF;
-		letter-spacing: 2px;
+		letter-spacing: 0.75px;
 		text-align: center;
 		scroll-behavior: smooth;
 		font: calc(10px + 1vmin) 'Roboto', sans-serif;
