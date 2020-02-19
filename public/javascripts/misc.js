@@ -1,13 +1,22 @@
 var video = document.getElementById("video");
-video.oncanplaythrough = function() {
-	video.muted = true;
-	video.play();
+
+const cannotPlayVideo = video.canPlayType('video/mp4') == '';
+
+if (cannotPlayVideo) {
+	video.remove();
+	console.log('can play', cannotPlayVideo, video.display)
+} else {
+	video.oncanplaythrough = function() {
+		video.muted = true;
+		video.play();
+	};
+	
+	$('#video').bind('ended', function() {
+		$(this).fadeOut();
+		// $(this).parent().fadeIn()
+	});
 }
 
-$('#video').bind('ended', function() {
-	$(this).fadeOut();
-	$(this).parent().fadeIn()
-});
 
 $('textarea#question').focus(function() {
 	$(this).val('');
