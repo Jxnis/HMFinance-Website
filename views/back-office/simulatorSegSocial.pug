@@ -14,48 +14,48 @@ block content
             div.homepage-main-content 
                 div.review-wrapper
                     form(action="/dashboard/simulators", method="post")
-                        div
-                            label Tax ENI
+                        div.ssheader
+                            h3 Tax ENI
                             br
                             input(type="number", name="taxENI" step=0.0001 value=simulator.taxENI)
-                        div 
-                            label Tax TI
+                        div.ssheader 
+                            h3 Tax TI
                             br
                             input(type="number", name="taxTI" step=0.0001 value=simulator.taxTI)      
-                        div
-                            label % Services
+                        div.ssheader
+                            h3 % Services
                             br
                             input(type="number", name="percentageServices" step=0.0001 value=simulator.percentageServices)
-                        div
-                            label % Goods
+                        div.ssheader
+                            h3 % Goods
                             br
                             input(type="number", name="percentageGoods" step=0.0001 value=simulator.percentageGoods)
-                        div
-                            label % Others
+                        div.ssheader
+                            h3 % Others
                             br
                             input(type="number", name="percentageOthers" step=0.0001 value=simulator.percentageOthers)
-                        div
-                            label min ENICO
+                        div.ssheader
+                            h3 min ENICO
                             br
                             input(type="number", name="minENICO" step=0.01 value=simulator.minENICO)
-                        div
-                            label min TICO
+                        div.ssheader
+                            h3 min TICO
                             br
                             input(type="number", name="minTICO" step=0.01 value=simulator.minTICO)
-                        div
-                            label min TI Simplificado
+                        div.ssheader
+                            h3 min TI Simplificado
                             br
                             input(type="number", name="minTISimplificado" step=0.01 value=simulator.minTISimplificado)
-                        div
-                            label Revenue Exemption
+                        div.ssheader
+                            h3 Revenue Exemption
                             br
                             input(type="number", name="revenueExemption" step=0.01 value=simulator.revenueExemption)
-                        div
-                            label % Revenue Exemption
+                        div.ssheader
+                            h3 % Revenue Exemption
                             br
                             input(type="number", name="percentageRevenueExemption" step=0.0001 value=simulator.percentageRevenueExemption)
-                        div
-                            label Gross Wage Exemption
+                        div.ssheader
+                            h3 Gross Wage Exemption
                             br
                             input(type="number", name="grossWageExemption" step=0.01 value=simulator.grossWageExemption)            
                         br

@@ -651,4 +651,41 @@ table {
 .imt {
   text-align: center; }
 
+.ssheader {
+  margin-top: 20px;
+  color: #29516d;
+  font-size: 14px; }
+
+.simoverview {
+  font-family: 'Montserrat';
+  color: white;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.simborder {
+  display: inline-block;
+  background: #2385d5;
+  border: 1px solid #1ba0a9;
+  border-radius: 8px;
+  padding: .5em 2em;
+  min-width: 351px;
+  margin-right: .5em;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+.simborder:hover {
+  background: #007BFF;
+  text-decoration: none;
+  color: white; }
+
+.simborder:active {
+  background: #007BFF;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.simborder:focus {
+  outline: none; }
+
+.simh2 {
+  padding-bottom: 50px; }
+
 /*# sourceMappingURL=backoffices.css.map */
