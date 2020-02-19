@@ -28,4 +28,52 @@ html
         });
       });
   body
+    #menubuttondiv
+      img#menubutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581699410/Site/menu_gbcjny_l54ey3.png')
+    #langbuttondiv
+      a(href='/setlanguage/pt')
+        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langpt_g1kkml.png')
+      a(href='/setlanguage/en')
+        img#langbutton(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694267/Site/langen_xhjegj.png')
+    #navbar  
+      ul
+        li
+          a#homeid(href='/#home') #{translations[locale].SectionsTitles.HMFinance}
+        li
+          a(href='/#clients') #{translations[locale].SectionsTitles.Clients}
+        li
+          a(href='/services') #{translations[locale].SectionsTitles.Services}
+        li
+          a(href='/simulators') #{translations[locale].SectionsTitles.Simulators}
+        li
+          a(href='/#contactus') #{translations[locale].SectionsTitles.ContactUs}
+        li
+          a(href='/#reviews') #{translations[locale].SectionsTitles.Reviews}
+          
     block content
+
+    #footer
+      .footergrid
+        .footergrid1
+          a(href='')
+            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/thumb_up_cttdpb_zdzxjb.png', width='30', height='30')
+            | #{translations.both.Footer.Face}
+        .footergrid2
+          a(href='')
+            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/camera_alt_pmxjl0_ksqqod.png', width='30', height='30')
+            | #{translations.both.Footer.Insta}
+        .footergrid3
+          a(href='')
+            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/account_circle_eoq61g_qx6jof.png', width='30', height='30')
+            | #{translations.both.Footer.LinkIn}
+        .footergrid4
+          a(href='')
+            img(src='https://res.cloudinary.com/hmfinance/image/upload/v1581700750/Site/footer/email_phqlzj_r9j5dq.png', width='30', height='30')
+            | #{translations.both.Footer.Email}
+        .footergrid5
+          h10 #{translations.both.Footer.HMFin}
+        .footergrid6
+          h10 #{translations.both.Footer.WCS}
+
+  script(src='/javascripts/misc.js')
+    
