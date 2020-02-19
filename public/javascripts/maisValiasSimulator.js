@@ -1,4 +1,4 @@
-const formMaisValias = document.getElementById('maisValiasSimulator');
+const formMaisValias = document.getElementById('simulatorMV');
 const acquisitionValue = document.getElementById('acquisitionValue');
 const saleValue = document.getElementById('saleValue');
 const acquisitionYear = document.getElementById('acquisitionYear');
