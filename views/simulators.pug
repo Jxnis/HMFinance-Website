@@ -11,167 +11,190 @@ block content
       img.pimagesimulators(src='https://res.cloudinary.com/hmfinance/image/upload/v1581694268/Site/1_phyg0f_flgctk.jpg', data-speed='-2')
     
     form(id="simulatorSS")
-      .simulatorsgsgrid
-        .simulatorsgsgrid1
+      .simulator
+        .simulator-group
           br
           h3 #{translations[locale].Simulators.Titles.SS}
 
-        .simulatorsgsgrid2
-          label #{translations[locale].Simulators.Categories.SS_Trab}
-        .simulatorsgsgrid3
-          select(id="workers")
-            option(value="TI") #{translations[locale].Simulators.Options.SS_Trab1}
-            option(value="ENI") #{translations[locale].Simulators.Options.SS_Trab2}
-        .simulatorsgsgrid4
-          label #{translations[locale].Simulators.Categories.SS_Regi}
-        .simulatorsgsgrid5
-          select(id="regime")
-            option(value="Simp") #{translations[locale].Simulators.Options.SS_Regi1}
-            option(value="CO") #{translations[locale].Simulators.Options.SS_Regi2}
-        .simulatorsgsgrid6
-          label #{translations[locale].Simulators.Categories.SS_Acti}
-        .simulatorsgsgrid7
-          select(id="monthsOfActivity")
-            option(value=">12") #{translations[locale].Simulators.Options.SS_Acti1}
-            option(value="<=12") #{translations[locale].Simulators.Options.SS_Acti2}
-        .simulatorsgsgrid8
-          label #{translations[locale].Simulators.Categories.SS_TiAc}
-        .simulatorsgsgrid9
-          select(id="typeOfActivity")
-            option(value="Work Contract") #{translations[locale].Simulators.Options.SS_TiAc1}
-            option(value="Freela") #{translations[locale].Simulators.Options.SS_TiAc2}
-            option(value="Pensionist") #{translations[locale].Simulators.Options.SS_TiAc3} 
-        .simulatorsgsgrid10
-          label #{translations[locale].Simulators.Categories.SS_OthC}
-        .simulatorsgsgrid11
-          input(type="text" id="grossWage")
-        .simulatorsgsgrid12
-          label #{translations[locale].Simulators.Categories.SS_LuAn}
-        .simulatorsgsgrid13
-          input(type="text" id="profitYear")
-        .simulatorsgsgrid14
-          label #{translations[locale].Simulators.Categories.SS_RBAS}
-        .simulatorsgsgrid15
-          input(type="text" id="profitYearServices")
-        .simulatorsgsgrid16
-          label #{translations[locale].Simulators.Categories.SS_RBAM}
-        .simulatorsgsgrid17
-          input(type="text" id="profitYearMerchandise")
-        .simulatorsgsgrid18
-          label #{translations[locale].Simulators.Categories.SS_RBAO}
-        .simulatorsgsgrid19
-          input(type="text" id="profitYearOthers")
-        .simulatorsgsgrid20
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_Trab}
+          .simulator-element
+            select(id="workers")
+              option(value="TI") #{translations[locale].Simulators.Options.SS_Trab1}
+              option(value="ENI") #{translations[locale].Simulators.Options.SS_Trab2}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_Regi}
+          .simulator-element
+            select(id="regime")
+              option(value="Simp") #{translations[locale].Simulators.Options.SS_Regi1}
+              option(value="CO") #{translations[locale].Simulators.Options.SS_Regi2}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_Acti}
+          .simulator-element
+            select(id="monthsOfActivity")
+              option(value=">12") #{translations[locale].Simulators.Options.SS_Acti1}
+              option(value="<=12") #{translations[locale].Simulators.Options.SS_Acti2}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_TiAc}
+          .simulator-element
+            select(id="typeOfActivity")
+              option(value="Work Contract") #{translations[locale].Simulators.Options.SS_TiAc1}
+              option(value="Freela") #{translations[locale].Simulators.Options.SS_TiAc2}
+              option(value="Pensionist") #{translations[locale].Simulators.Options.SS_TiAc3} 
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_OthC}
+          .simulator-element
+            input(type="text" id="grossWage")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_LuAn}
+          .simulator-element
+            input(type="text" id="profitYear")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_RBAS}
+          .simulator-element
+            input(type="text" id="profitYearServices")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_RBAM}
+          .simulator-element
+            input(type="text" id="profitYearMerchandise")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.SS_RBAO}
+          .simulator-element
+            input(type="text" id="profitYearOthers")
+        .simulator-group
           input(type="submit" value=`${translations[locale].Simulators.Categories.Button_Calc}`)
           
-        .simulatorsgsgrid21
-          br
-          h3 #{translations[locale].Simulators.Categories.Result}
-          br
-        .simulatorsgsgrid22
-          br
-          h3(id="output")
-          br
+        .simulator-group
+          .simulator-element
+            br
+            h3 #{translations[locale].Simulators.Categories.Result}
+            br
+          .simulator-element
+            br
+            h3(id="output")
+            br
     form(id="simulatorMV")
-      .simulatormvagrid
-        .simulatormvagrid1
+      .simulator
+        .simulator-group
           br
           h3 #{translations[locale].Simulators.Titles.MV}
-        .simulatormvagrid2
-          label #{translations[locale].Simulators.Categories.MV_VaAq}
-        .simulatormvagrid3
-          input(type="text" id="acquisitionValue")
-        .simulatormvagrid4
-          label #{translations[locale].Simulators.Categories.MV_AnAq}
-        .simulatormvagrid5
-          select(id="acquisitionYear")
-            option(value=maisValias[0].year) #{maisValias[0].year}
-            option(value=maisValias[1].year) #{maisValias[1].year}
-            option(value=maisValias[2].year) #{maisValias[2].year}
-            option(value=maisValias[3].year) #{maisValias[3].year}
-            option(value=maisValias[4].year) #{maisValias[4].year}
-        .simulatormvagrid6
-          label #{translations[locale].Simulators.Categories.MV_VaVe}
-        .simulatormvagrid7
-          input(type="text" id="saleValue")
-        .simulatormvagrid8
-          label #{translations[locale].Simulators.Categories.MV_AnVe}
-        .simulatormvagrid9
-          select(id="acquisitionYear")
-            option(value=2020) 2020
-        .simulatormvagrid10
-          label #{translations[locale].Simulators.Categories.MV_Desp}
-        .simulatormvagrid11
-          input(type="text" id="expenses")
-        .simulatormvagrid12
-          label #{translations[locale].Simulators.Categories.MV_EsRe}
-        .simulatormvagrid13
-          select(id="estadoResidencia")
-            option(value="residente") #{translations[locale].Simulators.Options.MV_EsRe1}
-            option(value="naoResidente") #{translations[locale].Simulators.Options.MV_EsRe2}
-        .simulatormvagrid14
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_VaAq}
+          .simulator-element
+            input(type="text" id="acquisitionValue")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_AnAq}
+          .simulator-element
+            select(id="acquisitionYear")
+              option(value=maisValias[0].year) #{maisValias[0].year}
+              option(value=maisValias[1].year) #{maisValias[1].year}
+              option(value=maisValias[2].year) #{maisValias[2].year}
+              option(value=maisValias[3].year) #{maisValias[3].year}
+              option(value=maisValias[4].year) #{maisValias[4].year}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_VaVe}
+          .simulator-element
+            input(type="text" id="saleValue")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_AnVe}
+          .simulator-element
+            select(id="acquisitionYear")
+              option(value=2020) 2020
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_Desp}
+          .simulator-element
+            input(type="text" id="expenses")
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.MV_EsRe}
+          .simulator-element
+            select(id="estadoResidencia")
+              option(value="residente") #{translations[locale].Simulators.Options.MV_EsRe1}
+              option(value="naoResidente") #{translations[locale].Simulators.Options.MV_EsRe2}
+        .simulator-group
           input(type="submit" value=`${translations[locale].Simulators.Categories.Button_Calc}`)
         
-        .simulatormvagrid15
-          <br>
-          h3 #{translations[locale].Simulators.Categories.Result}
-          <br>
-        .simulatormvagrid16
-          br
-          h3(id="outputMaisValias")
-          br
+        .simulator-group
+          .simulator-element
+            <br>
+            h3 #{translations[locale].Simulators.Categories.Result}
+            br
+          .simulator-element
+            br
+            h3(id="outputMaisValias")
+            br
 
     form(id="simulatorIMT")
-      .simulatorimtgrid
-        .simulatorimtgrid1
+      .simulator
+        .simulator-group
           br
           h3 #{translations[locale].Simulators.Titles.IMT}
-        .simulatorimtgrid2
-          label #{translations[locale].Simulators.Categories.IMT_Loca}
-        .simulatorimtgrid3
-          select(id="location") 
-            option(value='PC') #{translations[locale].Simulators.Options.IMT_Loca1}
-            option(value='RA') #{translations[locale].Simulators.Options.IMT_Loca2}
-        .simulatorimtgrid4
-          label #{translations[locale].Simulators.Categories.IMT_TpIm}
-        .simulatorimtgrid5
-          select(id="type")
-            option(value='HPP') #{translations[locale].Simulators.Options.IMT_TpIm1}
-            option(value='HSA') #{translations[locale].Simulators.Options.IMT_TpIm2}
-            option(value='Rustico') #{translations[locale].Simulators.Options.IMT_TpIm3}
-            option(value='Outros') #{translations[locale].Simulators.Options.IMT_TpIm4}
-        .simulatorimtgrid6
-          label #{translations[locale].Simulators.Categories.IMT_VaIM}
-        .simulatorimtgrid7
-          input(type="text" id="imovelValue")
-        .simulatorimtgrid8
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.IMT_Loca}
+          .simulator-element
+            select(id="location") 
+              option(value='PC') #{translations[locale].Simulators.Options.IMT_Loca1}
+              option(value='RA') #{translations[locale].Simulators.Options.IMT_Loca2}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.IMT_TpIm}
+          .simulator-element
+            select(id="type")
+              option(value='HPP') #{translations[locale].Simulators.Options.IMT_TpIm1}
+              option(value='HSA') #{translations[locale].Simulators.Options.IMT_TpIm2}
+              option(value='Rustico') #{translations[locale].Simulators.Options.IMT_TpIm3}
+              option(value='Outros') #{translations[locale].Simulators.Options.IMT_TpIm4}
+        .simulator-group
+          .simulator-element
+            label #{translations[locale].Simulators.Categories.IMT_VaIM}
+          .simulator-element
+            input(type="text" id="imovelValue")
+        .simulator-group
           input(type="submit" value="submit")
         
-        .simulatorimtgrid9
-          <br>
-          h3 #{translations[locale].Simulators.Categories.IMT_ReIM}
-          <br>
-        .simulatorimtgrid10
-          br
-          h3(id="outputIMT")
-          br
-        .simulatorimtgrid11
-          <br>
-          h3 #{translations[locale].Simulators.Categories.IMT_ReIS}
-          <br>
-        .simulatorimtgrid12
-          br
-          h3(id="outputIS")
-          br
+        .simulator-group
+          .simulator-element
+            br
+            h3 #{translations[locale].Simulators.Categories.IMT_ReIM}
+            br
+          .simulator-element
+            br
+            h3(id="outputIMT")
+            br
+        .simulator-group
+          .simulator-element
+            br
+            h3 #{translations[locale].Simulators.Categories.IMT_ReIS}
+            br
+          .simulator-element
+            br
+            h3(id="outputIS")
+            br
           
-        .simulatorimtgrid13
-          <br>
-          h3 #{translations[locale].Simulators.Categories.Result}
-          <br>
-        .simulatorimtgrid14
-          br
-          h3(id="outputTotal")
-          br
+        .simulator-group
+          .simulator-element
+            <br>
+            h3 #{translations[locale].Simulators.Categories.Result}
+            <br>
+          .simulator-element
+            br
+            h3(id="outputTotal")
+            br
   
     script.
       $("textarea#question").focus(function() {
