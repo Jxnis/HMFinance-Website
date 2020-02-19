@@ -135,6 +135,8 @@
 	#menubutton:hover {
 		padding-top:2px;
 		padding-bottom:0px;
+		cursor: pointer;
+		color: #A00000
 	}
 	#langbuttondiv {
 		text-align: right;
@@ -2384,7 +2386,7 @@ select {
 
 .simulatormvagrid15 {
 	grid-area: 9 / 1 / 10 / 2;
-	right;
+	text-align: right;
 	background-color: #A00000;
 	height: 50px;
 	margin: 0;
