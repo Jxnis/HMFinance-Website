@@ -185,9 +185,9 @@ const Translations = {
 		Simulators: {
 			Title: 'Simuladores',
 			Titles: {
-				SS: 'Simulador Segurança Social',
-				MV: 'Simulador Mais Valias ',
-				IMT: 'Simulador Transmissão'
+				SS: 'Simulador de Segurança Social',
+				MV: 'Simulador Mais Valias de Imóveis',
+				IMT: 'Simulador Trans. Imóveis (IMT)'
 			},
 			Categories: {
 				Button_Calc: 'Calcular',
