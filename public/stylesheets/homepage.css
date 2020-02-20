@@ -421,7 +421,7 @@
 		filter: brightness(1.1);
 	}
 	.simulatorTitle {
-		width: 75%;
+		width: 65%;
 		margin: auto;
 	}
 
@@ -1383,9 +1383,9 @@
 	}
 	iframe {
 		border: solid 2px #A00000;
-		border-radius: 10px;
 		height: 70vw;
 		width: 80vw;
+		margin-bottom: 40px;
 	}
 	/* input[type=text] {
 		width: 100%;
@@ -1401,7 +1401,8 @@
 		border: solid 1px #A00000;
 		resize: none;
 		margin-bottom: 40px;
-		font: calc(10px + 1vmin) 'Roboto', sans-serif
+		font: calc(10px + 1vmin) 'Roboto', sans-serif;
+		text-indent: 3px;
 	}
 
 	input[type=submit] {
@@ -1831,6 +1832,7 @@ select {
 	margin: 20px auto;
 	padding: 20px;
 	border: solid 1px #A00000;
+	border: hidden;
 }
 
 .simulator-group {
@@ -1859,6 +1861,27 @@ select {
 	font: calc(10px + 1vmin) 'Roboto', sans-serif;
 	text-indent: 4px;
 }
+
+
+label {
+	float: left;
+	font-weight: bold;
+	padding-left: 8px;
+}
+label.contactUs {
+	padding-bottom: 3px;
+}
+
+#simulatorSS {
+	padding-top: 100px;
+}
+
+.contactusMessage label {
+	margin-bottom: 16px;
+}
+
+.contactusMessage input {
+	margin-bottom: 16px;
 
 .policyContainer {
 	text-align: justify;
