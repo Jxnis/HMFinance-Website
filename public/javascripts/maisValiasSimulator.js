@@ -25,7 +25,7 @@ const calculation = (e) => {
 	
 	if(maisValiasValue <= 0){
 		output = 0;
-		outputMaisValias.innerHTML = output;
+		outputMaisValias.innerHTML = `${output} €`;
 	}
     
 	if(estadoResidencia.value == 'residente'){
