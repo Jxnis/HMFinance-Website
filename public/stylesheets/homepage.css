@@ -410,6 +410,9 @@
 		overflow: hidden;
 		padding: 5px;
 	}
+	.simsgrid h3 {
+		min-height: 50px;
+	}
 	.simsgrid * img {
 		width: 100%;
 		border: solid 1px #A00000 !important;
