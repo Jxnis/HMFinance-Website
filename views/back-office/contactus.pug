@@ -8,9 +8,7 @@ block content
             .admin-profile
                 span.greeting Hi, #{user.email}
                 .notifications
-                    span.badge 1
-                    svg
-                        use(xlink:href='#users')
+                    i(class="fa fa-user fa-lg")
         
         section.homepage
             div.homepage-main-content
@@ -42,7 +40,7 @@ block content
                             input(type="hidden", name="id" value=contactInfo.id)
 
                     div.button
-                        input(type="submit", value="Save" class="btn btn-success btn-lg")
+                        input(type="submit", value="Guardar" class="btn btn-success btn-lg")
 
 
                     

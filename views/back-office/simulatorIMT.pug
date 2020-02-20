@@ -6,7 +6,7 @@ block content
             h1 Simulador IMT
             
             .admin-profile
-                span.greeting Hi, #{user.email}
+                span.greeting Olá, #{user.email}
                 .notifications
                     i(class="fa fa-user fa-lg")
 
@@ -51,7 +51,7 @@ block content
                                                     input(type="hidden", name="id", value=entry.id) 
 
                                 div.addUser
-                                    input(type="submit", value="Save" class="btn btn-success btn-lg")  
+                                    input(type="submit", value="Guardar" class="btn btn-success btn-lg")  
                                         
 
                             form(action=`/dashboard/simulators/imt/editIS`, method="post")
@@ -65,7 +65,7 @@ block content
                                                 input(type="text", name="type" value=IStax[0].value)
                                             
                                 div.addUser   
-                                    input(type="submit", value="Save" class="btn btn-success btn-lg")
+                                    input(type="submit", value="Guardar" class="btn btn-success btn-lg")
 
                                 
 

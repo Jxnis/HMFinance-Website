@@ -6,7 +6,7 @@ block content
             h1 Simulador Segurança Social
             
             .admin-profile
-                span.greeting Hi, #{user.email}
+                span.greeting Olá, #{user.email}
                 .notifications
                     i(class="fa fa-user fa-lg")
 
@@ -15,23 +15,23 @@ block content
                 div.review-wrapper
                     form(action="/dashboard/simulators", method="post")
                         div.ssheader
-                            h3 Tax ENI
+                            h3 Imposto ENI
                             br
                             input(type="number", name="taxENI" step=0.0001 value=simulator.taxENI)
                         div.ssheader 
-                            h3 Tax TI
+                            h3 Imposto TI
                             br
                             input(type="number", name="taxTI" step=0.0001 value=simulator.taxTI)      
                         div.ssheader
-                            h3 % Services
+                            h3 % Serviços
                             br
                             input(type="number", name="percentageServices" step=0.0001 value=simulator.percentageServices)
                         div.ssheader
-                            h3 % Goods
+                            h3 % Bens
                             br
                             input(type="number", name="percentageGoods" step=0.0001 value=simulator.percentageGoods)
                         div.ssheader
-                            h3 % Others
+                            h3 % Outros
                             br
                             input(type="number", name="percentageOthers" step=0.0001 value=simulator.percentageOthers)
                         div.ssheader
@@ -47,18 +47,18 @@ block content
                             br
                             input(type="number", name="minTISimplificado" step=0.01 value=simulator.minTISimplificado)
                         div.ssheader
-                            h3 Revenue Exemption
+                            h3 Isenção da Receita
                             br
                             input(type="number", name="revenueExemption" step=0.01 value=simulator.revenueExemption)
                         div.ssheader
-                            h3 % Revenue Exemption
+                            h3 % Isenção da Receita
                             br
                             input(type="number", name="percentageRevenueExemption" step=0.0001 value=simulator.percentageRevenueExemption)
                         div.ssheader
-                            h3 Gross Wage Exemption
+                            h3 Isenção do Salário Bruto
                             br
                             input(type="number", name="grossWageExemption" step=0.01 value=simulator.grossWageExemption)            
                         br
                         
                         div.addUser
-                            input(type="submit", value="Save" class="btn btn-success btn-lg") 
+                            input(type="submit", value="Guardar" class="btn btn-success btn-lg") 
