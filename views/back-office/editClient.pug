@@ -3,16 +3,16 @@ extends layout
 block content
     section.page-content
         section.title-and-user
-            h1 Clients
+            h1 Clientes
             
             .admin-profile
-                span.greeting Hi, #{user.email}
+                span.greeting Olá, #{user.email}
                 .notifications
                     i(class="fa fa-user fa-lg")
 
         section.table-grid
             div.user-table
-                h2 Edit Client
+                h2 Editar Cliente
                 form(action=`/dashboard/clients/${client.id}/edit`, method="post")
                     div
                         input(type="text", name="name" value=client.name)
@@ -22,4 +22,4 @@ block content
                         input(type="url", name="clientURL" value=client.clientURL)
 
                     div.addUser
-                        input(type="submit", value="Edit Client", class="btn btn-primary btn-lg")
+                        input(type="submit", value="Guardar Cliente", class="btn btn-success btn-lg")

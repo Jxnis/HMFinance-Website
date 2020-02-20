@@ -283,6 +283,22 @@
 	#descri4 {
 		animation-name: descri4
 	}
+	.policyContainer {
+		text-align: justify;
+		width: 70%;
+		margin: 50px auto;
+	}
+	.policyContainer li {
+		display: block;
+		width: 100%;
+		text-align: justify;
+	}
+	.policyContainer h2 {
+		padding-bottom: 8px;
+	}
+	.policyContainer h1 {
+		padding-bottom: 8px;
+	}
 	.clientsgrid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -718,8 +734,8 @@
 		padding: 13px 50px 7px
 	}
 	#title {
-		/* position: absolute; */
 		margin: 50px auto;
+		
  	}
 	.servicespagegrid {
 		position: absolute;
@@ -1846,6 +1862,7 @@ select {
 	text-indent: 4px;
 }
 
+
 label {
 	float: left;
 	font-weight: bold;
@@ -1865,6 +1882,17 @@ label.contactUs {
 
 .contactusMessage input {
 	margin-bottom: 16px;
+
+.policyContainer {
+	text-align: justify;
+	width: 90%;
+	margin: 60px auto;
+}
+
+.policyContainer h1 {
+	padding-bottom: 8px;
+	font-size: 20px;
+	line-height: 25px;
 }
 	
 	@keyframes descri1  { 

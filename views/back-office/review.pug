@@ -6,13 +6,13 @@ block content
         h1 Reviews
 
         .admin-profile
-          span.greeting Hi, #{user.email}
+          span.greeting Olá, #{user.email}
           .notifications
             i(class="fa fa-user fa-lg")
 
     section.homepage
         div.homepage-main-content
-            h2 List of the Reviews
+            h2 Lista de Reviews
             
             div.review-wrapper
                 section.table-grid
@@ -33,11 +33,11 @@ block content
                                 td.commentario #{review.commentPT}
                                 td
                                     form.review-button(action="/dashboard/reviews/" + review.id + "/edit")
-                                        input(type="submit" value="Edit Review" class="btn btn-warning")
+                                        input(type="submit" value="Editar Review" class="btn btn-warning")
 
             div.addUser
                 form.addReviewButton(action="/dashboard/reviews/new")
-                    input(type="submit" value="Add Review" class="btn btn-primary btn-lg")
+                    input(type="submit" value="Adicionar Review" class="btn btn-primary btn-lg")
                     
 
 

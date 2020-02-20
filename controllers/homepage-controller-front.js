@@ -35,7 +35,13 @@ const getAllInfo = (req, res) => {
 };
 
 const renderPrivacyPage = (req, res) => {
-	res.render('privacy-policy');
+	//console.log(req.cookies.language);
+	let language = '';
+	let browserLang = req.language;
+	let cookieLang = req.cookies.language;
+	cookieLang ? language = cookieLang : language = browserLang; 
+
+	res.render('privacy-policy', {translations: Translations, locale: language});
 };
 
 module.exports = {

@@ -3,39 +3,39 @@ extends layout
 block content
     section.page-content
         section.title-and-user
-            h1 Clients
+            h1 Clientes
             
             .admin-profile
-                span.greeting Hi, #{user.email}
+                span.greeting Olá, #{user.email}
                 .notifications
                     i(class="fa fa-user fa-lg")
 
         section.table-grid
             div.user-table
-                h2 Add a new Client
+                h2 Adicionar Novo Cliente
                 form(action="/dashboard/clients/new", method="post")
                     
                         table
                             tbody.addClientTable
                                 tr  
                                     th
-                                        h3 Name
+                                        h3 Nome
                                     th 
-                                        h3 Logo URL
+                                        h3 URL Logo
                                     th
-                                        h3 Client URL
+                                        h3 URL Cliente
 
                                 tr
                                     td
                                         input(type="text", name="name" placeholder="Nome")
                                     td
-                                        input(type="url", name="logoURL" placeholder="Logo URL")
+                                        input(type="url", name="logoURL" placeholder="URL Logo")
                                     td
-                                        input(type="url", name="clientURL" placeholder="Client URL")
+                                        input(type="url", name="clientURL" placeholder="URL Cliente")
 
                     
                             
                 
                             
                         div.addUser
-                            input(type="submit", value="Add new Client" class="btn btn-primary btn-lg")
+                            input(type="submit", value="Adicionar Novo Cliente" class="btn btn-primary btn-lg")
