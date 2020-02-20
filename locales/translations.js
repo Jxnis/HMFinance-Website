@@ -186,9 +186,9 @@ const Translations = {
 			Title: 'Simuladores',
 			Titles: {
 				SS: 'Simulador Segurança Social',
-				MV: 'Simulador Mais Valias Venda Imóvel',
-				IMT: 'Simulador Imposto Transmissão'
-				},
+				MV: 'Simulador Mais Valias ',
+				IMT: 'Simulador Transmissão'
+			},
 			Categories: {
 				Button_Calc: 'Calcular',
 				Result: 'Total Imposto:',
