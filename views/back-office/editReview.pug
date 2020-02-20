@@ -8,9 +8,7 @@ block content
             .admin-profile
                 span.greeting Hi, #{user.email}
                 .notifications
-                    span.badge 1
-                    svg
-                        use(xlink:href='#users')
+                    i(class="fa fa-user fa-lg")
         
         section.homepage
             div.homepage-main-content
@@ -57,7 +55,7 @@ block content
                             input(type="hidden", name="id" value=review.id)
                     
                     div.button
-                        input(type="submit", value="Editar" class="btn btn-warning btn-lg")
+                        input(type="submit", value="Guardar" class="btn btn-success btn-lg")
                 br
                 form(action="/dashboard/reviews/" + review.id + "/delete" method="post")
                     div.button

@@ -12,39 +12,39 @@ block content
 
         section.homepage
             div.homepage-main-content
-                h2 Information
-                p Here you have the general information on the website:
+                h2 Informação
+                p  Informações do Website:
                 form(action="/dashboard/homepage", method="post")
                     div.panel-wrapper
                         div.panel-head
-                            h4 Title in portuguese
+                            h4 Título em Português
                         input.panel-body(type="text", name="titlePT" value=homepageInfo.titlePT)
                     div.panel-wrapper
                         div.panel-head
-                            h4 Title in english
+                            h4 Título em Inglês
                         input.panel-body(type="text", name="titleEN" value=homepageInfo.titleEN)
                     div.panel-wrapper  
                         div.panel-head
-                            h4 Intro in portuguese
+                            h4 Introdução em Português 
                         input.panel-body(type="text", name="introPT" value=homepageInfo.introPT)
                     div.panel-wrapper
                         div.panel-head
-                            h4 Intro in english
+                            h4 Introdução em Inglês
                         input.panel-body(type="text", name="introEN" value=homepageInfo.introEN)
                     div.panel-wrapper
                         div.panel-head
-                            h4 About Us text in portuguese
+                            h4 Sobre Nós em Português 
                         textarea.panel-body(type="text", name="aboutUsPT") #{homepageInfo.aboutUsPT}
                     div.panel-wrapper
                         div.panel-head
-                            h4 About Us text in english
+                            h4 Sobre Nós em Inglês
                         textarea.panel-body(type="text", name="aboutUsEN") #{homepageInfo.aboutUsEN}
 
                         div 
                             input(type="hidden", name="id" value=homepageInfo.id)
 
                     div.button 
-                        input(type="submit", value="Save" class="btn btn-success btn-lg")
+                        input(type="submit", value="Guardar" class="btn btn-success btn-lg")
 
 
         

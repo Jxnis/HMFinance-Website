@@ -3,26 +3,26 @@ extends layout
 block content
   section.page-content
     section.title-and-user
-        h1 Users
+        h1 Utilizadores
         
         .admin-profile
-          span.greeting Hi, #{user.email}
+          span.greeting Olá, #{user.email}
           .notifications
             i(class="fa fa-user fa-lg")
     
     section.table-grid
       div.user-table
-        h2 Users List
-        p Here you can add and delete users
+        h2 Lista de utilizadores
+        p Adicionar e remover utilizadores
 
       
         table
           tbody
             tr
               th 
-                h3 User  
+                h3 Utilizador  
               th
-                h3 Delete  
+                h3 Remover  
           each user in users
             tr
               td #{user.email}
@@ -30,11 +30,11 @@ block content
                 form(action=`/auth/${user.id}/delete` method="post")
                   input(
                   type="submit"
-                  value="Delete"
+                  value="Remover"
                   class="btn btn-danger"
                   ) 
         
         div.addUser
           form(action="/auth/signup") 
-            input(type="submit" value="Add User" class="btn btn-primary btn-lg")      
+            input(type="submit" value="Adicionar Utilizador" class="btn btn-primary btn-lg")      
 
