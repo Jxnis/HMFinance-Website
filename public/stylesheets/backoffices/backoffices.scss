@@ -425,7 +425,7 @@ html {
 //-------------
 
   .page-content .grid .no2 {
-	  background-color: #B4DBC0;
+	  background-color: rgb(135, 160, 179);
 	  opacity: 0.7;
   }
 
@@ -448,7 +448,7 @@ html {
 
 
 .page-content .grid .no3 {
-	background-color: #DEA5A4;
+	background-color: rgb(107, 137, 160);
 	opacity: 0.7;
 }
 
@@ -471,7 +471,7 @@ html {
 
 
 .page-content .grid .no4 {
-	background-color: #CF6766;
+	background-color: rgb(120, 161, 192);
 	opacity: 0.7;
 }
 
@@ -492,7 +492,7 @@ html {
 //---------
 
 .page-content .grid .no5 {
-	background-color: #8EAEBD;
+	background-color: rgb(145, 178, 204);
 	opacity: 0.7;
 }
 
@@ -507,6 +507,27 @@ html {
 }
 
 .page-content .grid .no5 .no5-image:hover {
+	opacity: 1;
+}
+
+//--------------
+
+.page-content .grid .no6 {
+	background-color: #8EAEBD;
+	opacity: 0.7;
+}
+
+.page-content .grid .no6 .no6-image {
+	width: 110%;
+	height: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.page-content .grid .no6 .no6-image:hover {
 	opacity: 1;
 }
 
@@ -908,4 +929,15 @@ table {
 
 .simh2 {
 	padding-bottom: 50px;
+}
+
+
+
+//-----------------
+
+
+.desktopOnly {
+	text-align: center;
+	margin: auto;
+	padding-top: 150px;
 }
