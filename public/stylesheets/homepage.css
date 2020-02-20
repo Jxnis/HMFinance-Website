@@ -10,7 +10,6 @@
 	}
 	html {
 		background: #FFF;
-		letter-spacing: 0.75px;
 		text-align: center;
 		color: #404040;
 		scroll-behavior: smooth;
@@ -405,6 +404,11 @@
 		filter: contrast(1.1);
 		filter: brightness(1.1);
 	}
+	.simulatorTitle {
+		width: 75%;
+		margin: auto;
+	}
+
 	.contactusgrid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -714,14 +718,9 @@
 		padding: 13px 50px 7px
 	}
 	#title {
-		position: absolute;
-		margin: auto;
-		position: absolute;
-		top: 50px;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
+		/* position: absolute; */
+		margin: 50px auto;
+ 	}
 	.servicespagegrid {
 		position: absolute;
 		top: 125px;
